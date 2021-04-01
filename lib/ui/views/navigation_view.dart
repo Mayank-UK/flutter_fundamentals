@@ -2,15 +2,23 @@
 
 import '../widgets/main_drawer.dart';
 
-class PageNotFoundView extends StatelessWidget {
+class NavigationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('404 error code'),
+          title: const Text('Navigation'),
+          leading: InkWell(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back_sharp,
+            ),
+          ),
         ),
         drawer: MainDrawer(),
-        body: Text('The page you are looking for do not exist.'));
+        body: Text('Navigation view'));
   }
 }
  */
@@ -20,10 +28,10 @@ import 'package:flutter/material.dart';
 import '../widgets/main_drawer.dart';
 import './../widgets/AppBarWithBackButton.dart';
 
-class PageNotFoundView extends StatelessWidget {
+class NavigationView extends StatelessWidget {
   String appBarTitle;
 
-  PageNotFoundView({@required this.appBarTitle});
+  NavigationView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +40,6 @@ class PageNotFoundView extends StatelessWidget {
           appBarTitle: this.appBarTitle,
         ),
         drawer: MainDrawer(),
-        body: Text('Page not found screen'));
+        body: Text('Navigation screen'));
   }
 }

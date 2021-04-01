@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/main_drawer.dart';
-import '../../../router.dart';
+import './../../widgets/AppBarWithBackButton.dart';
+import '../../../core/router/router.dart';
 import 'accessibility_widgets_view.dart';
 import 'animation_widgets_view.dart';
 import 'asset_widgets_view.dart';
@@ -17,12 +18,14 @@ import 'styling_widgets_view.dart';
 import 'text_widgets_view.dart';
 
 class WidgetCatalogView extends StatelessWidget {
+  String appBarTitle;
+
+  WidgetCatalogView({@required this.appBarTitle});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Widgets catalog'),
-      ),
+      appBar: AppBarWithBackButton(appBarTitle: this.appBarTitle),
       drawer: MainDrawer(),
       body: GridView.count(
         // without this property, GridView is not visible

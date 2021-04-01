@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../router.dart';
+import '../../core/router/router.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -23,14 +23,23 @@ class MainDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.link),
-            title: Text('Flutter fundamentals'),
+            title: Text('Dart fundamentals'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(RoutePaths.home);
+              Navigator.of(context)
+                  .pushReplacementNamed(RoutePaths.dartFundamentals);
             },
           ),
           ListTile(
             leading: Icon(Icons.link),
-            title: Text('UI manipulation'),
+            title: Text('Flutter fundamentals'),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(RoutePaths.flutterFundamentals);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.link),
+            title: Text('Basic UI manipulation'),
             onTap: () {
               Navigator.of(context)
                   .pushReplacementNamed(RoutePaths.uiManipulation);
@@ -46,10 +55,25 @@ class MainDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.link),
+            title: Text('Navigation'),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(RoutePaths.navigation);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.link),
             title: Text('State management'),
             onTap: () {
               Navigator.of(context)
                   .pushReplacementNamed(RoutePaths.stateManagement);
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.link),
+            title: Text('Native device features'),
+            onTap: () {
+              Navigator.of(context)
+                  .pushReplacementNamed(RoutePaths.nativeDeviceFeatures);
             },
           ),
           ListTile(

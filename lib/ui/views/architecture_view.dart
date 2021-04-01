@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/main_drawer.dart';
+import './../widgets/AppBarWithBackButton.dart';
 
 class ArchitectureView extends StatelessWidget {
+  String appBarTitle;
+
+  ArchitectureView({@required this.appBarTitle});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Architecture'),
+        appBar: AppBarWithBackButton(
+          appBarTitle: this.appBarTitle,
         ),
         drawer: MainDrawer(),
         body: Text('Architecture screen'));
