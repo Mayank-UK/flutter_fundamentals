@@ -1,0 +1,346 @@
+import 'package:flutter/material.dart';
+
+import './../../../../core/router/router.dart';
+import './../../../widgets/custom_listview.dart';
+
+import '../../../widgets/main_drawer.dart';
+import '../../../widgets/widget_info.dart';
+
+class CupertinoWidgetsView extends StatelessWidget {
+  List<ListViewItem> _itemList = [
+    ListViewItem(
+      title: 'CupertinoActionSheet',
+      description:
+          'An iOS-style modal bottom action sheet to choose an option among many.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoActivityIndicator',
+      description:
+          'An iOS-style activity indicator. Displays a circular \'spinner\'.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoAlertDialog',
+      description: 'An iOS-style alert dialog.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoButton',
+      description: 'An iOS-style button.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoContextMenu',
+      description:
+          'An iOS-style full-screen modal route that opens when the child is long-pressed. Used to display relevant actions for your content.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoDatePicker',
+      description: 'An iOS-style date or date and time picker.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoDialog',
+      description: 'An iOS-style dialog.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoDialogAction',
+      description: 'A button typically used in a CupertinoAlertDialog.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoFullscreenDialogTransition',
+      description:
+          'An iOS-style transition used for summoning fullscreen dialogs.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoNavigationBar',
+      description:
+          'An iOS-style top navigation bar. Typically used with CupertinoPageScaffold.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoScaffold',
+      description:
+          'Basic iOS style page layout structure. Positions a navigation bar and content on a background.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoPageTransition',
+      description: 'Provides an iOS-style page transition animation.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoPicker',
+      description:
+          'An iOS-style picker control. Used to select an item in a short list.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoPopupSurface',
+      description:
+          'Rounded rectangle surface that looks like an iOS popup surface, such as an alert dialog or action sheet.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoScrollbar',
+      description:
+          'An iOS-style scrollbar that indicates which portion of a scrollable widget is currently visible.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoSearchField',
+      description: 'An iOS-style search field.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoSegmentedControl',
+      description:
+          'An iOS-style segmented control. Used to select mutually exclusive options in a horizontal list.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoSlider',
+      description: 'Used to select from a range of values.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoSlidingSegmentedControl',
+      description:
+          'An iOS-13-style segmented control. Used to select mutually exclusive options in a horizontal list.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoSliverNavigationBar',
+      description:
+          'An iOS-styled navigation bar with iOS-11-style large titles using slivers.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoSwitch',
+      description:
+          'An iOS-style switch. Used to toggle the on/off state of a single setting.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoTabBar',
+      description:
+          'An iOS-style bottom tab bar. Typically used with CupertinoTabScaffold.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoTabScaffold',
+      description:
+          'Tabbed iOS app structure. Positions a tab bar on top of tabs of content.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoTabView',
+      description:
+          'Root content of a tab that supports parallel navigation between tabs. Typically used with CupertinoTabScaffold.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoTextField',
+      description: 'An iOS-style text field.',
+      route: RoutePaths.spacing,
+    ),
+    ListViewItem(
+      title: 'CupertinoTimerPicker',
+      description: 'An iOS-style countdown timer picker.',
+      route: RoutePaths.spacing,
+    ),
+  ];
+
+  String appBarTitle;
+
+  CupertinoWidgetsView({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(this.appBarTitle),
+      ),
+      // drawer: MainDrawer(),
+      body: TappableListView(
+        itemList: _itemList,
+      ),
+    );
+  }
+
+  /* String appBarTitle;
+
+  CupertinoWidgetsView({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      initialIndex: 0,
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(this.appBarTitle),
+          bottom: const TabBar(
+            tabs: <Widget>[
+              Tab(
+                child: Text('Demo'),
+              ),
+              Tab(
+                child: Text('Code'),
+              ),
+            ],
+          ),
+        ),
+        // drawer: MainDrawer(),
+        body: TabBarView(children: [
+          Center(
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    child: Text(
+                      'Cupertino widgets',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                    ),
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoActionSheet',
+                    description:
+                        '-An iOS-style modal bottom action sheet to choose an option among many.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoActivityIndicator',
+                    description:
+                        '-An iOS-style activity indicator. Displays a circular \'spinner\'.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoAlertDialog',
+                    description: '-An iOS-style alert dialog.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoButton',
+                    description: '-An iOS-style button.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoContextMenu',
+                    description:
+                        '-An iOS-style full-screen modal route that opens when the child is long-pressed. Used to display relevant actions for your content.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoDatePicker',
+                    description: '-An iOS-style date or date and time picker.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoDialog',
+                    description: '-An iOS-style dialog.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoDialogAction',
+                    description:
+                        '-A button typically used in a CupertinoAlertDialog.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoFullScreenDialogTransition',
+                    description:
+                        '-An iOS-style transition used for summoning fullscreen dialogs.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoNavigationBar',
+                    description:
+                        '-An iOS-style top navigation bar. Typically used with CupertinoPageScaffold.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoPageScaffold',
+                    description:
+                        '-Basic iOS style page layout structure. Positions a navigation bar and content on a background.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoPageTransition',
+                    description:
+                        '-Provides an iOS-style page transition animation.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoPicker',
+                    description:
+                        '-An iOS-style picker control. Used to select an item in a short list.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoPopupSurface',
+                    description:
+                        '-Rounded rectangle surface that looks like an iOS popup surface, such as an alert dialog or action sheet.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoScrollbar',
+                    description:
+                        '-An iOS-style scrollbar that indicates which portion of a scrollable widget is currently visible.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoSearchTextField',
+                    description: '-An iOS-style search field.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoSegmentedControl',
+                    description:
+                        '-An iOS-style segmented control. Used to select mutually exclusive options in a horizontal list.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoSlider',
+                    description: '-Used to select from a range of values.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoSlidingSegmentedControl',
+                    description:
+                        '-An iOS-13-style segmented control. Used to select mutually exclusive options in a horizontal list.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoSliverNavigationBar',
+                    description:
+                        '-An iOS-styled navigation bar with iOS-11-style large titles using slivers.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoSwitch',
+                    description:
+                        '-An iOS-style switch. Used to toggle the on/off state of a single setting.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoTabBar',
+                    description:
+                        '-An iOS-style bottom tab bar. Typically used with CupertinoTabScaffold.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoTabScaffold',
+                    description:
+                        '-Tabbed iOS app structure. Positions a tab bar on top of tabs of content.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoTabView',
+                    description:
+                        '-Root content of a tab that supports parallel navigation between tabs. Typically used with CupertinoTabScaffold.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoTextField',
+                    description: '-An iOS-style text field.',
+                  ),
+                  WidgetInfo(
+                    title: 'CupertinoTimePicker',
+                    description: '-An iOS-style countdown timer picker.',
+                  ),
+                ],
+              ),
+            ),
+          ),
+          Center(
+            child: Text('Demo code here'),
+          )
+        ]),
+      ),
+    );
+  } */
+}

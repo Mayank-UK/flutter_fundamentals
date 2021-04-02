@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../widgets/main_drawer.dart';
-import './todo_app.dart';
+import 'sub_views/todo_app.dart';
 
 class StateManagementView extends StatelessWidget {
   @override

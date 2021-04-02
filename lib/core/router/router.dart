@@ -1,34 +1,45 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_fundamentals/ui/views/ui_manipulation/sub_views/effects_view.dart';
 
-import '../../ui/views/page_not_found_view.dart';
+import '../../ui/views/page_not_found/page_not_found_view.dart';
 import '../../ui/views/home_view.dart';
-import '../../ui/views/dart_fundamentals_view.dart';
-import '../../ui/views/flutter_fundamentals_view.dart';
-import '../../ui/views/ui_manipulation_view.dart';
-import '../../ui/views/widget_catalog_views/widget_catalog_view.dart';
-import '../../ui/views/navigation_view.dart';
+import '../../ui/views/dart_fundamentals/dart_fundamentals_view.dart';
+import '../../ui/views/flutter_fundamentals/flutter_fundamentals_view.dart';
+import '../../ui/views/ui_manipulation/ui_manipulation_view.dart';
+import '../../ui/views/widget_catalog/widget_catalog_view.dart';
+import '../../ui/views/navigation/navigation_view.dart';
 import '../../ui/views/state_management/state_management_view.dart';
-import '../../ui/views/native_device_features_view.dart';
-import '../../ui/views/architecture_view.dart';
-import '../../ui/views/best_practices_view.dart';
-import '../../ui/views/widget_catalog_views/accessibility_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/animation_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/asset_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/async_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/cupertino_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/input_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/interactive_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/layout_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/material_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/painting_and_effects_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/scrolling_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/styling_widgets_view.dart';
-import '../../ui/views/widget_catalog_views/text_widgets_view.dart';
+import '../../ui/views/native_device_features/native_device_features_view.dart';
+import '../../ui/views/architecture/architecture_view.dart';
+import '../../ui/views/best_practices/best_practices_view.dart';
 
-import './../../ui/widgets/tappable_gridview.dart';
+import '../../ui/views/widget_catalog/sub_views/accessibility_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/animation_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/asset_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/async_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/cupertino_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/input_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/interactive_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/layout_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/material_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/painting_and_effects_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/scrolling_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/styling_widgets_view.dart';
+import '../../ui/views/widget_catalog/sub_views/text_widgets_view.dart';
+
+import './../../ui/views/ui_manipulation/sub_views/dimensions_constraints_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/spacing_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/colors_backgrounds_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/alignement_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/positioning_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/visibility_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/text_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/borders_view.dart';
+import './../../ui/views/ui_manipulation/sub_views/effects_view.dart';
 
 class RoutePaths {
+  // home paths
   static const String home = '/';
   static const String pageNotFound = '/page-not-found';
   static const String dartFundamentals = '/dart-fundamentals';
@@ -60,6 +71,18 @@ class RoutePaths {
   static const String scrollingWidgets = '/widgets-catalog/scrolling-widgets';
   static const String stylingWidgets = '/widgets-catalog/styling-widgets';
   static const String textWidgets = '/widgets-catalog/text-widgets';
+
+  // ui manipulation nested paths
+  static const String dimensionsConstraints =
+      '/ui-manipulation/dimensions-constraints';
+  static const String spacing = '/ui-manipulation/spacing';
+  static const String colorsBackgrounds = '/ui-manipulation/colorsBackgrounds';
+  static const String alignment = '/ui-manipulation/alignment';
+  static const String positioning = '/ui-manipulation/positioning';
+  static const String visibility = '/ui-manipulation/visibility';
+  static const String text = '/ui-manipulation/text';
+  static const String borders = '/ui-manipulation/borders';
+  static const String effects = '/ui-manipulation/effects';
 }
 
 class MyRouter {
@@ -119,34 +142,128 @@ class MyRouter {
             appBarTitle: arguments['appBarTitle'],
           ),
         );
+
       // widgetCatalog nested paths
       case RoutePaths.accessibilityWidgets:
-        return MaterialPageRoute(builder: (_) => AccessibilityWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => AccessibilityWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.animationMotionWidgets:
-        return MaterialPageRoute(builder: (_) => AnimationWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => AnimationWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.assetWidgets:
-        return MaterialPageRoute(builder: (_) => AssetWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => AssetWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.asyncWidgets:
-        return MaterialPageRoute(builder: (_) => AsyncWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => AsyncWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.cupertinoWidgets:
-        return MaterialPageRoute(builder: (_) => CupertinoWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => CupertinoWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.inputWidgets:
-        return MaterialPageRoute(builder: (_) => InputWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => InputWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.interactiveWidgets:
-        return MaterialPageRoute(builder: (_) => InteractiveWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => InteractiveWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.layoutWidgets:
-        return MaterialPageRoute(builder: (_) => LayoutWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => LayoutWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.materialWidgets:
-        return MaterialPageRoute(builder: (_) => MaterialWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => MaterialWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.paintingEffectWidgets:
         return MaterialPageRoute(
-            builder: (_) => PaintingAndEffectsWidgetsView());
+          builder: (_) => PaintingEffectsWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.scrollingWidgets:
-        return MaterialPageRoute(builder: (_) => ScrollingWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => ScrollingWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.stylingWidgets:
-        return MaterialPageRoute(builder: (_) => StylingWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => StylingWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
       case RoutePaths.textWidgets:
-        return MaterialPageRoute(builder: (_) => TextWidgetsView());
+        return MaterialPageRoute(
+          builder: (_) => TextWidgetsView(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+
+      // ui manipulation nested paths
+      case RoutePaths.dimensionsConstraints:
+        return MaterialPageRoute(
+          builder: (_) =>
+              DimesnionsContraintsView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.spacing:
+        return MaterialPageRoute(
+          builder: (_) => SpacingView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.colorsBackgrounds:
+        return MaterialPageRoute(
+          builder: (_) =>
+              ColorsBackgroundsView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.alignment:
+        return MaterialPageRoute(
+          builder: (_) => AlignmentView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.positioning:
+        return MaterialPageRoute(
+          builder: (_) =>
+              PositioningView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.visibility:
+        return MaterialPageRoute(
+          builder: (_) => VisibilityView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.text:
+        return MaterialPageRoute(
+          builder: (_) => TextView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.borders:
+        return MaterialPageRoute(
+          builder: (_) => BordersView(appBarTitle: arguments['appBarTitle']),
+        );
+      case RoutePaths.effects:
+        return MaterialPageRoute(
+          builder: (_) => EffectsView(appBarTitle: arguments['appBarTitle']),
+        );
+
       default:
         return MaterialPageRoute(builder: (_) => PageNotFoundView());
     }
