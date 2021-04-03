@@ -1237,14 +1237,434 @@ class MyRouter {
         );
 
       // widget catalog material widgets
+      case RoutePaths.appBar:
+        return MaterialPageRoute(
+          builder: (_) => AppBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.bottomNavigationBar:
+        return MaterialPageRoute(
+          builder: (_) => BottomNavigationBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.drawer:
+        return MaterialPageRoute(
+          builder: (_) => DrawerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.materialApp:
+        return MaterialPageRoute(
+          builder: (_) => MaterialAppWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.scaffold:
+        return MaterialPageRoute(
+          builder: (_) => ScaffoldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverAppBar:
+        return MaterialPageRoute(
+          builder: (_) => SliverAppBarMaterialWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.tabBar:
+        return MaterialPageRoute(
+          builder: (_) => TabBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.tabBarView:
+        return MaterialPageRoute(
+          builder: (_) => TabBarViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.tabController:
+        return MaterialPageRoute(
+          builder: (_) => TabControllerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.tabPageSelector:
+        return MaterialPageRoute(
+          builder: (_) => TabPageSelectorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.widgetsApp:
+        return MaterialPageRoute(
+          builder: (_) => WidgetsAppWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.dropdownButton:
+        return MaterialPageRoute(
+          builder: (_) => DropdownButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.elevatedButton:
+        return MaterialPageRoute(
+          builder: (_) => ElevatedButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.floatingActionButton:
+        return MaterialPageRoute(
+          builder: (_) => FloatingActionButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.iconButton:
+        return MaterialPageRoute(
+          builder: (_) => IconButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.outlineButton:
+        return MaterialPageRoute(
+          builder: (_) => OutlinedButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.popupMenuButton:
+        return MaterialPageRoute(
+          builder: (_) => PopupMenuButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.textButton:
+        return MaterialPageRoute(
+          builder: (_) => TextButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.checkBox:
+        return MaterialPageRoute(
+          builder: (_) => CheckboxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.showDatePicker:
+        return MaterialPageRoute(
+          builder: (_) => ShowDatePickerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.radio:
+        return MaterialPageRoute(
+          builder: (_) => RadioWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.slider:
+        return MaterialPageRoute(
+          builder: (_) => SliderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.switchMaterial:
+        return MaterialPageRoute(
+          builder: (_) => SwitchWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.textField:
+        return MaterialPageRoute(
+          builder: (_) => TextFieldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.alertDialog:
+        return MaterialPageRoute(
+          builder: (_) => AlertDialogWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.bottomSheet:
+        return MaterialPageRoute(
+          builder: (_) => BottomSheetWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.expansionPanel:
+        return MaterialPageRoute(
+          builder: (_) => ExpansionPanelWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.simpleDialog:
+        return MaterialPageRoute(
+          builder: (_) => SimpleDialogWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.snackBar:
+        return MaterialPageRoute(
+          builder: (_) => SnackBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.card:
+        return MaterialPageRoute(
+          builder: (_) => CardWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.chip:
+        return MaterialPageRoute(
+          builder: (_) => ChipWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.circularProgressIndicator:
+        return MaterialPageRoute(
+          builder: (_) => CircularProgressIndicatorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.dataTable:
+        return MaterialPageRoute(
+          builder: (_) => DataTableWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.gridViewMaterial:
+        return MaterialPageRoute(
+          builder: (_) => GridViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.iconMaterial:
+        return MaterialPageRoute(
+          builder: (_) => IconMaterialWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.imageMaterial:
+        return MaterialPageRoute(
+          builder: (_) => ImageMaterialWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.linearProgressIndicator:
+        return MaterialPageRoute(
+          builder: (_) => LinearProgressIndicatorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.tooltip:
+        return MaterialPageRoute(
+          builder: (_) => TooltipWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.divider:
+        return MaterialPageRoute(
+          builder: (_) => DividerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.listTile:
+        return MaterialPageRoute(
+          builder: (_) => ListTileWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.stepper:
+        return MaterialPageRoute(
+          builder: (_) => StepperWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog painting and effects widgets
+      case RoutePaths.backDropFilter:
+        return MaterialPageRoute(
+          builder: (_) => BackdropFilterWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.clipOval:
+        return MaterialPageRoute(
+          builder: (_) => ClipOvalWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.clipPath:
+        return MaterialPageRoute(
+          builder: (_) => ClipPathWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.clipRect:
+        return MaterialPageRoute(
+          builder: (_) => ClipRectWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.customPaint:
+        return MaterialPageRoute(
+          builder: (_) => CustomPaintWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.decoratedBox:
+        return MaterialPageRoute(
+          builder: (_) => DecoratedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.fractionalTranslation:
+        return MaterialPageRoute(
+          builder: (_) => FractionalTranslationWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.opacity:
+        return MaterialPageRoute(
+          builder: (_) => OpacityWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.rotatedBox:
+        return MaterialPageRoute(
+          builder: (_) => RotatedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.transform:
+        return MaterialPageRoute(
+          builder: (_) => TransformWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog scrolling widgets
+      case RoutePaths.customScrollView:
+        return MaterialPageRoute(
+          builder: (_) => CustomScrollViewScrollingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.draggableScrollableSheet:
+        return MaterialPageRoute(
+          builder: (_) => DraggableScrollableSheetScrollingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.gridView:
+        return MaterialPageRoute(
+          builder: (_) => GridViewScrollingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.listView:
+        return MaterialPageRoute(
+          builder: (_) => ListViewScrollingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.nestedScrollView:
+        return MaterialPageRoute(
+          builder: (_) => NestedScrollViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.notificationListener:
+        return MaterialPageRoute(
+          builder: (_) => NotificationListenerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.pageView:
+        return MaterialPageRoute(
+          builder: (_) => PageViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.refreshIndicator:
+        return MaterialPageRoute(
+          builder: (_) => RefreshIndicatorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.reorderableListView:
+        return MaterialPageRoute(
+          builder: (_) => ReorderableListViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.scrollConfiguration:
+        return MaterialPageRoute(
+          builder: (_) => ScrollConfigurationWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.scrollable:
+        return MaterialPageRoute(
+          builder: (_) => ScrollableScrollingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.scrollbar:
+        return MaterialPageRoute(
+          builder: (_) => ScrollbarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.singleChildScrollView:
+        return MaterialPageRoute(
+          builder: (_) => SingleChildScrollViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog styling widgets
+      case RoutePaths.mediaQuery:
+        return MaterialPageRoute(
+          builder: (_) => MediaQueryWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.paddingStyling:
+        return MaterialPageRoute(
+          builder: (_) => PaddingStyleWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.theme:
+        return MaterialPageRoute(
+          builder: (_) => ThemeWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog text widgets
+      case RoutePaths.defaultTextStyle:
+        return MaterialPageRoute(
+          builder: (_) => DefaultTextStyleWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.richText:
+        return MaterialPageRoute(
+          builder: (_) => RichTextWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.text:
+        return MaterialPageRoute(
+          builder: (_) => TextWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // ui manipulation nested paths
       case RoutePaths.dimensionsConstraints:
