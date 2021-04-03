@@ -12,147 +12,145 @@ class CupertinoWidgetsView extends StatelessWidget {
       title: 'CupertinoActionSheet',
       description:
           'An iOS-style modal bottom action sheet to choose an option among many.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoActionSheet,
     ),
     ListViewItem(
       title: 'CupertinoActivityIndicator',
       description:
           'An iOS-style activity indicator. Displays a circular \'spinner\'.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoActivityIndicator,
     ),
     ListViewItem(
       title: 'CupertinoAlertDialog',
       description: 'An iOS-style alert dialog.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoAlertDialog,
     ),
     ListViewItem(
       title: 'CupertinoButton',
       description: 'An iOS-style button.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoButton,
     ),
     ListViewItem(
       title: 'CupertinoContextMenu',
       description:
           'An iOS-style full-screen modal route that opens when the child is long-pressed. Used to display relevant actions for your content.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoContextMenu,
     ),
     ListViewItem(
       title: 'CupertinoDatePicker',
       description: 'An iOS-style date or date and time picker.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoDatePicker,
     ),
     ListViewItem(
       title: 'CupertinoDialog',
       description: 'An iOS-style dialog.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoDialog,
     ),
     ListViewItem(
       title: 'CupertinoDialogAction',
       description: 'A button typically used in a CupertinoAlertDialog.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoDialogAction,
     ),
     ListViewItem(
       title: 'CupertinoFullscreenDialogTransition',
       description:
           'An iOS-style transition used for summoning fullscreen dialogs.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoFullScreenDialogTransition,
     ),
     ListViewItem(
       title: 'CupertinoNavigationBar',
       description:
           'An iOS-style top navigation bar. Typically used with CupertinoPageScaffold.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoNavigationBar,
     ),
     ListViewItem(
       title: 'CupertinoScaffold',
       description:
           'Basic iOS style page layout structure. Positions a navigation bar and content on a background.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoScaffold,
     ),
     ListViewItem(
       title: 'CupertinoPageTransition',
       description: 'Provides an iOS-style page transition animation.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoPageTransition,
     ),
     ListViewItem(
       title: 'CupertinoPicker',
       description:
           'An iOS-style picker control. Used to select an item in a short list.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoPicker,
     ),
     ListViewItem(
       title: 'CupertinoPopupSurface',
       description:
           'Rounded rectangle surface that looks like an iOS popup surface, such as an alert dialog or action sheet.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoPopupSurface,
     ),
     ListViewItem(
-      title: 'CupertinoScrollbar',
-      description:
-          'An iOS-style scrollbar that indicates which portion of a scrollable widget is currently visible.',
-      route: RoutePaths.spacing,
-    ),
+        title: 'CupertinoScrollbar',
+        description:
+            'An iOS-style scrollbar that indicates which portion of a scrollable widget is currently visible.',
+        route: RoutePaths.cupertinoScrollbar),
     ListViewItem(
       title: 'CupertinoSearchField',
       description: 'An iOS-style search field.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoSearchField,
     ),
     ListViewItem(
       title: 'CupertinoSegmentedControl',
       description:
           'An iOS-style segmented control. Used to select mutually exclusive options in a horizontal list.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoSegmentedControl,
     ),
     ListViewItem(
       title: 'CupertinoSlider',
       description: 'Used to select from a range of values.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoSlider,
     ),
     ListViewItem(
-      title: 'CupertinoSlidingSegmentedControl',
-      description:
-          'An iOS-13-style segmented control. Used to select mutually exclusive options in a horizontal list.',
-      route: RoutePaths.spacing,
-    ),
+        title: 'CupertinoSlidingSegmentedControl',
+        description:
+            'An iOS-13-style segmented control. Used to select mutually exclusive options in a horizontal list.',
+        route: RoutePaths.cupertinoSlidingSegmentedControl),
     ListViewItem(
       title: 'CupertinoSliverNavigationBar',
       description:
           'An iOS-styled navigation bar with iOS-11-style large titles using slivers.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoSliverNavigationBar,
     ),
     ListViewItem(
       title: 'CupertinoSwitch',
       description:
           'An iOS-style switch. Used to toggle the on/off state of a single setting.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoSwitch,
     ),
     ListViewItem(
       title: 'CupertinoTabBar',
       description:
           'An iOS-style bottom tab bar. Typically used with CupertinoTabScaffold.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoTabBar,
     ),
     ListViewItem(
       title: 'CupertinoTabScaffold',
       description:
           'Tabbed iOS app structure. Positions a tab bar on top of tabs of content.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoTabScaffold,
     ),
     ListViewItem(
       title: 'CupertinoTabView',
       description:
           'Root content of a tab that supports parallel navigation between tabs. Typically used with CupertinoTabScaffold.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoTabView,
     ),
     ListViewItem(
       title: 'CupertinoTextField',
       description: 'An iOS-style text field.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoTextField,
     ),
     ListViewItem(
       title: 'CupertinoTimerPicker',
       description: 'An iOS-style countdown timer picker.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.cupertinoTimePicker,
     ),
   ];
 

@@ -12,18 +12,18 @@ class StylingWidgetsView extends StatelessWidget {
       title: 'MediaQuery',
       description:
           'Establishes a subtree in which media queries resolve to the given data.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.mediaQuery,
     ),
     ListViewItem(
       title: 'Padding',
       description: 'A widget that insets its child by the given padding.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.paddingStyling,
     ),
     ListViewItem(
       title: 'Theme',
       description:
           'Applies a theme to descendant widgets. A theme describes the colors and typographic choices of an application.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.theme,
     ),
   ];
 

@@ -13,57 +13,55 @@ class PaintingEffectsWidgetsView extends StatelessWidget {
       title: 'BackdropFilter',
       description:
           'A widget that applies a filter to the existing painted content and then paints a child. This effect is relatively expensive, especially if the filter is non-local, such as a blur.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.backDropFilter,
     ),
     ListViewItem(
       title: 'ClipOval',
       description: 'A widget that clips its child using an oval.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.clipOval,
     ),
     ListViewItem(
       title: 'ClipPath',
       description: 'A widget that clips its child using a path.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.clipPath,
     ),
     ListViewItem(
-      title: 'ClipRect',
-      description: 'A widget that clips its child using a rectangle.',
-      route: RoutePaths.spacing,
-    ),
+        title: 'ClipRect',
+        description: 'A widget that clips its child using a rectangle.',
+        route: RoutePaths.clipRect),
     ListViewItem(
       title: 'CustomPaint',
       description:
           'A widget that provides a canvas on which to draw during the paint phase.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.customPaint,
     ),
     ListViewItem(
       title: 'DecoratedBox',
       description:
           'A widget that paints a Decoration either before or after its child paints.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.decoratedBox,
     ),
     ListViewItem(
-      title: 'FractionTranslation',
+      title: 'FractionalTranslation',
       description:
           'A widget that applies a translation expressed as a fraction of the box\'s size before painting its child.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.fractionalTranslation,
     ),
     ListViewItem(
       title: 'Opacity',
       description: 'A widget that makes its child partially transparent.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.opacity,
     ),
     ListViewItem(
-      title: 'RotatedBox',
-      description:
-          'A widget that rotates its child by a integral number of quarter turns.',
-      route: RoutePaths.spacing,
-    ),
+        title: 'RotatedBox',
+        description:
+            'A widget that rotates its child by a integral number of quarter turns.',
+        route: RoutePaths.rotatedBox),
     ListViewItem(
       title: 'Transform',
       description:
           'A widget that applies a transformation before painting its child.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.transform,
     ),
   ];
 

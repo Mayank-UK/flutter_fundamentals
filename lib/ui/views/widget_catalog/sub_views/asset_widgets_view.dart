@@ -12,22 +12,22 @@ class AssetWidgetsView extends StatelessWidget {
       title: 'AssetBundle',
       description:
           'Asset bundles contain resources, such as images and strings, that can be used by an application. Access to these resources is asynchronous so that they can be transparently loaded over a network (e.g., from a NetworkAssetBundle) or from the local file system without blocking the application\'s user interface.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.assetBundle,
     ),
     ListViewItem(
       title: 'Icon',
       description: 'A Material Design icon.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.icon,
     ),
     ListViewItem(
       title: 'Image',
       description: 'A widget that displays an image.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.image,
     ),
     ListViewItem(
       title: 'RawImage',
       description: 'A widget that displays a dart:ui.Image directly.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.rawImage,
     ),
   ];
 

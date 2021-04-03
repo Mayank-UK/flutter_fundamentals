@@ -5,6 +5,7 @@ import '../../../widgets/widget_info.dart';
 
 import './../../../../core/router/router.dart';
 import './../../../widgets/custom_listview.dart';
+import './../../../widgets/code_preview.dart';
 
 class AccessibilityWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -12,18 +13,18 @@ class AccessibilityWidgetsView extends StatelessWidget {
       title: 'ExcludeSemantics',
       description:
           'A widget that drops all the semantics of its descendants. This can be used to hide subwidgets that would otherwise be reported but that would only be confusing. For example, the Material Components Chip widget hides the avatar since it is redundant with the chip label.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.excludeSemanticsWidget,
     ),
     ListViewItem(
       title: 'MergeSemantics',
       description: 'A widget that merges the semantics of its descendants.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.mergeSemanticsWidget,
     ),
     ListViewItem(
       title: 'Semantics',
       description:
           'A widget that annotates the widget tree with a description of the meaning of the widgets. Used by accessibility tools, search engines, and other semantic analysis software to determine the meaning of the application.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.semanticsWidget,
     ),
   ];
 
@@ -109,4 +110,52 @@ class AccessibilityWidgetsView extends StatelessWidget {
     );
   } */
 
+}
+
+class ExcludeSemanticsWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ExcludeSemanticsWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class MergeSemanticsWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  MergeSemanticsWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class SemanticsWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  SemanticsWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
 }

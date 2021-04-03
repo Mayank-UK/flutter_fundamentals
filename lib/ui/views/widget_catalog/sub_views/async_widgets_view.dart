@@ -9,16 +9,15 @@ import '../../../widgets/widget_info.dart';
 class AsyncWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'FutureBuilder',
-      description:
-          'Widget that builds itself based on the latest snapshot of interaction with a Future.',
-      route: RoutePaths.spacing,
-    ),
+        title: 'FutureBuilder',
+        description:
+            'Widget that builds itself based on the latest snapshot of interaction with a Future.',
+        route: RoutePaths.futureBuilder),
     ListViewItem(
       title: 'StreamBuilder',
       description:
           'Widget that builds itself based on the latest snapshot of interaction with a Stream.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.streamBuilder,
     ),
   ];
 
