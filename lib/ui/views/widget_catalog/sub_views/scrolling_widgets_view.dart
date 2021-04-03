@@ -5,6 +5,7 @@ import '../../../widgets/widget_info.dart';
 
 import './../../../../core/router/router.dart';
 import './../../../widgets/custom_listview.dart';
+import './../../../widgets/code_preview.dart';
 
 class ScrollingWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -424,6 +425,214 @@ class _MyReorderableListViewWidgetState
           _items.insert(newIndex, item);
         });
       },
+    );
+  }
+}
+
+class CustomScrollViewScrollingWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  CustomScrollViewScrollingWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class DraggableScrollableSheetScrollingWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  DraggableScrollableSheetScrollingWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class GridViewScrollingWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  GridViewScrollingWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ListViewScrollingWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ListViewScrollingWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class NestedScrollViewWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  NestedScrollViewWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class NotificationListenerWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  NotificationListenerWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class PageViewWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  PageViewWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class RefreshIndicatorWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  RefreshIndicatorWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ReorderableListViewWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ReorderableListViewWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ScrollConfigurationWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ScrollConfigurationWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ScrollableScrollingWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ScrollableScrollingWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ScrollbarWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ScrollbarWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class SingleChildScrollViewWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  SingleChildScrollViewWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
     );
   }
 }

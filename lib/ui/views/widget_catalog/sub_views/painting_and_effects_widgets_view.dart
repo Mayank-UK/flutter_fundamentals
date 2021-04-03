@@ -6,6 +6,7 @@ import '../../../widgets/widget_info.dart';
 
 import './../../../../core/router/router.dart';
 import './../../../widgets/custom_listview.dart';
+import './../../../widgets/code_preview.dart';
 
 class PaintingEffectsWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -289,6 +290,166 @@ class MyClipPathWidget extends StatelessWidget {
       clipper: TriangleClipper(),
       child: Image.network(
           "https://images.unsplash.com/photo-1513775192371-1b9d33760c3f"),
+    );
+  }
+}
+
+class BackdropFilterWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  BackdropFilterWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ClipOvalWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ClipOvalWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ClipPathWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ClipPathWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ClipRectWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ClipRectWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class CustomPaintWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  CustomPaintWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class DecoratedBoxWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  DecoratedBoxWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class FractionalTranslationWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  FractionalTranslationWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class OpacityWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  OpacityWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class RotatedBoxWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  RotatedBoxWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class TransformPaintingEffectsWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  TransformPaintingEffectsWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../widgets/main_drawer.dart';
 import '../../../widgets/widget_info.dart';
+import './../../../widgets/code_preview.dart';
 
 import './../../../../core/router/router.dart';
 import './../../../widgets/custom_listview.dart';
@@ -168,6 +169,70 @@ class MyCustomFormState extends State<MyCustomForm> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class AutoCompleteWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  AutoCompleteWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class FormWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  FormWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class FormFieldWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  FormFieldWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class RawKeyboardListenerWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  RawKeyboardListenerWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
     );
   }
 }

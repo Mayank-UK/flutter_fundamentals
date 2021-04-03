@@ -5,6 +5,7 @@ import './../../../widgets/custom_listview.dart';
 
 import '../../../widgets/main_drawer.dart';
 import '../../../widgets/widget_info.dart';
+import './../../../widgets/code_preview.dart';
 
 class AsyncWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -96,4 +97,36 @@ class AsyncWidgetsView extends StatelessWidget {
       ),
     );
   } */
+}
+
+class FutureBuilderWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  FutureBuilderWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class StreamBuilderWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  StreamBuilderWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
 }

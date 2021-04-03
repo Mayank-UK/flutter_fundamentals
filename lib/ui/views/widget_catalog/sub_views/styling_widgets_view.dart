@@ -5,6 +5,7 @@ import '../../../widgets/widget_info.dart';
 
 import './../../../../core/router/router.dart';
 import './../../../widgets/custom_listview.dart';
+import './../../../widgets/code_preview.dart';
 
 class StylingWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -138,6 +139,54 @@ class MyMediaQueryWidget extends StatelessWidget {
 
     return Container(
       child: Text('size: ${deviceInfo.size}\npadding: ${deviceInfo.padding}'),
+    );
+  }
+}
+
+class MediaQueryWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  MediaQueryWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class PaddingStyleWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  PaddingStyleWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class ThemeWidget extends StatelessWidget {
+  String appBarTitle;
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+
+  ThemeWidget({@required this.appBarTitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return CodePreviewTabs(
+      appBarTitle: this.appBarTitle,
+      previewTab: Text('preview'),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
     );
   }
 }

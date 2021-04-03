@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_fundamentals/ui/views/ui_manipulation/sub_views/effects_view.dart';
@@ -234,6 +235,37 @@ class RoutePaths {
   static const String sizedOverflowBox =
       '/widgets-catalog/layout/sized-overflow-box';
   static const String transform = '/widgets-catalog/layout/transform';
+  static const String column = '/widgets-catalog/layout/column';
+  static const String customMultiChildLayout =
+      '/widgets-catalog/layout/custom-multi-child-layout';
+  static const String flow = '/widgets-catalog/layout/flow';
+  static const String gridView = '/widgets-catalog/layout/grid-view';
+  static const String indexedStack = '/widgets-catalog/layout/indexed-stack';
+  static const String layoutBuilder = '/widgets-catalog/layout/layout-builder';
+  static const String listBody = '/widgets-catalog/layout/list-body';
+  static const String listView = '/widgets-catalog/layout/list-view';
+  static const String row = '/widgets-catalog/layout/row';
+  static const String stack = '/widgets-catalog/layout/stack';
+  static const String table = '/widgets-catalog/layout/table';
+  static const String wrap = '/widgets-catalog/layout/wrap';
+  static const String cupertinoSliverNavigationLayoutBar =
+      '/widgets-catalog/layout/cupertino-sliver-navigation-bar';
+  static const String customScrollView =
+      '/widgets-catalog/layout/custom-scroll-view';
+  static const String sliverAppBar = '/widgets-catalog/layout/sliver-app-bar';
+  static const String sliverChildBuilderDelegate =
+      '/widgets-catalog/layout/sliver-child-builder-delegate';
+  static const String sliverChildListDelegate =
+      '/widgets-catalog/layout/sliver-child-list-delegate';
+  static const String sliverFixedExtentList =
+      '/widgets-catalog/layout/sliver-fixed-extent-list';
+  static const String sliverGrid = '/widgets-catalog/layout/sliver-grid';
+  static const String sliverList = '/widgets-catalog/layout/sliver-list';
+  static const String sliverPadding = '/widgets-catalog/layout/sliver-padding';
+  static const String sliverPersistentHeader =
+      '/widgets-catalog/layout/sliver-persistent-header';
+  static const String sliverToBoxAdaptor =
+      '/widgets-catalog/layout/sliver-to-box-adaptor';
 
   // widget catalog material widgets
   static const String appBar = '/widgets-catalog/material/app-bar';
@@ -242,7 +274,8 @@ class RoutePaths {
   static const String drawer = '/widgets-catalog/material/drawer';
   static const String materialApp = '/widgets-catalog/material/material-app';
   static const String scaffold = '/widgets-catalog/material/scaffold';
-  static const String sliverAppBar = '/widgets-catalog/material/sliver-app-bar';
+  static const String sliverAppBarMaterial =
+      '/widgets-catalog/material/sliver-app-bar';
   static const String tabBar = '/widgets-catalog/material/tab-bar';
   static const String tabBarView = '/widgets-catalog/material/tab-bar-view';
   static const String tabController =
@@ -281,7 +314,7 @@ class RoutePaths {
   static const String circularProgressIndicator =
       '/widgets-catalog/material/circular-progress-indicator';
   static const String dataTable = '/widgets-catalog/material/data-table';
-  static const String gridView = '/widgets-catalog/material/grid-view';
+  static const String gridViewMaterial = '/widgets-catalog/material/grid-view';
   static const String iconMaterial = '/widgets-catalog/material/icon-material';
   static const String imageMaterial = '/widgets-catalog/material/image';
   static const String linearProgressIndicator =
@@ -310,13 +343,14 @@ class RoutePaths {
       '/widgets-catalog/painting-effects/transform';
 
   // widget catalog scrolling widgets
-  static const String customScrollView =
+  static const String customScrollViewScrolling =
       '/widgets-catalog/scrolling/custom-scroll-view';
   static const String draggableScrollableSheetScrolling =
       '/widgets-catalog/scrolling/draggable-scrollable-sheet';
   static const String gridViewScrolling =
       '/widgets-catalog/scrolling/grid-view';
-  static const String listView = '/widgets-catalog/scrolling/list-view';
+  static const String listViewScrolling =
+      '/widgets-catalog/scrolling/list-view';
   static const String nestedScrollView =
       '/widgets-catalog/scrolling/nested-scroll-view';
   static const String notificationListener =
@@ -517,18 +551,690 @@ class MyRouter {
         );
 
       // widget catalog animations and motion widgets
+      case RoutePaths.animatedAlign:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedAlignWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedBuilder:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedBuilderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedContainer:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedContainerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedCrossFade:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedCrossFadeWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedDefaultTextStyle:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedDefaultTextStyleWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedListState:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedListStateWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedModalBarrier:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedModalBarrierWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedOpacity:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedOpacityWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedPhysicalModel:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedPhysicalModelWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedPositioned:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedPositionedWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedSize:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedSizeWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedWidget:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedWidgetWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.animatedWidgetBaseState:
+        return MaterialPageRoute(
+          builder: (_) => AnimatedWidgetBaseStateWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.decoratedBoxTransition:
+        return MaterialPageRoute(
+          builder: (_) => DecoratedBoxTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.fadeTransition:
+        return MaterialPageRoute(
+          builder: (_) => FadeTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.hero:
+        return MaterialPageRoute(
+          builder: (_) => HeroWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.positionedTransition:
+        return MaterialPageRoute(
+          builder: (_) => PositionedTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.rotationTransition:
+        return MaterialPageRoute(
+          builder: (_) => RotationTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.scaleTransition:
+        return MaterialPageRoute(
+          builder: (_) => ScaleTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sizeTransition:
+        return MaterialPageRoute(
+          builder: (_) => SizeTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.slideTransition:
+        return MaterialPageRoute(
+          builder: (_) => SlideTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog assets, icons and images widgets
+      case RoutePaths.assetBundle:
+        return MaterialPageRoute(
+          builder: (_) => AssetBundleWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.icon:
+        return MaterialPageRoute(
+          builder: (_) => IconWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.image:
+        return MaterialPageRoute(
+          builder: (_) => ImageWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.rawImage:
+        return MaterialPageRoute(
+          builder: (_) => RawImageWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog async widgets
+      case RoutePaths.futureBuilder:
+        return MaterialPageRoute(
+          builder: (_) => FutureBuilderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.streamBuilder:
+        return MaterialPageRoute(
+          builder: (_) => StreamBuilderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog cupertino widgets
+      case RoutePaths.cupertinoActionSheet:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoActionSheetWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoActivityIndicator:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoActivityIndicatorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoAlertDialog:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoAlertDialogWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoButton:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoButtonWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoContextMenu:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoContextMenuWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoDatePicker:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoDatePickerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoDialog:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoDialogWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoDialogAction:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoDialogActionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoFullScreenDialogTransition:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoDialogFullScreenDialogTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoNavigationBar:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoNavigationBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoScaffold:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoScaffoldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoPageTransition:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoPageTransitionWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoPicker:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoPickerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoPopupSurface:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoPopupSurfaceWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoScrollbar:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoScrollbarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSearchField:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSearchFieldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSegmentedControl:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSegmentedControlWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSlider:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSliderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSlidingSegmentedControl:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSlidingSegmentedControlWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSliverNavigationBar:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSliverNavigationBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoNavigationBar:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoNavigationBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSwitch:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSwitchWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoTabBar:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoTabBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoTabScaffold:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoTabScaffoldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoTabView:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoTabViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoTextField:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoTextFieldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoTimePicker:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoTimePickerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog input widgets
+      case RoutePaths.autocomplete:
+        return MaterialPageRoute(
+          builder: (_) => AutoCompleteWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.form:
+        return MaterialPageRoute(
+          builder: (_) => FormWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.formField:
+        return MaterialPageRoute(
+          builder: (_) => FormFieldWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.rawKeyboardListener:
+        return MaterialPageRoute(
+          builder: (_) => RawKeyboardListenerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog interactive widgets
+      case RoutePaths.absorbPointer:
+        return MaterialPageRoute(
+          builder: (_) => AbsorbPointerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.dismissible:
+        return MaterialPageRoute(
+          builder: (_) => DismissibleWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.dragTarget:
+        return MaterialPageRoute(
+          builder: (_) => DragTargetWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.draggable:
+        return MaterialPageRoute(
+          builder: (_) => DraggableWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.draggableScrollableSheet:
+        return MaterialPageRoute(
+          builder: (_) => DraggableScrollableSheetWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.gestureDetector:
+        return MaterialPageRoute(
+          builder: (_) => GestureDetectorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.ignorePointer:
+        return MaterialPageRoute(
+          builder: (_) => IgnorePointerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.interactiveViewer:
+        return MaterialPageRoute(
+          builder: (_) => InteractiveViewerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.longPressDraggable:
+        return MaterialPageRoute(
+          builder: (_) => LongPressDraggableWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.scrollable:
+        return MaterialPageRoute(
+          builder: (_) => ScrollableWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.heroInteractive:
+        return MaterialPageRoute(
+          builder: (_) => HeroInteractiveWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.navigator:
+        return MaterialPageRoute(
+          builder: (_) => NavigatorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog layout widgets
+      case RoutePaths.align:
+        return MaterialPageRoute(
+          builder: (_) => AlignWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.aspectRatio:
+        return MaterialPageRoute(
+          builder: (_) => AspectRatioWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.baseline:
+        return MaterialPageRoute(
+          builder: (_) => BaselineWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.center:
+        return MaterialPageRoute(
+          builder: (_) => CenterWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.constrainedBox:
+        return MaterialPageRoute(
+          builder: (_) => ConstrainedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.container:
+        return MaterialPageRoute(
+          builder: (_) => ContainerWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.customSingleChildLayout:
+        return MaterialPageRoute(
+          builder: (_) => CustomSingleChildLayoutWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.expanded:
+        return MaterialPageRoute(
+          builder: (_) => ExpandedWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.fittedBox:
+        return MaterialPageRoute(
+          builder: (_) => FittedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.fractionallySizedBox:
+        return MaterialPageRoute(
+          builder: (_) => FractionallySizedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.intrinsicHeight:
+        return MaterialPageRoute(
+          builder: (_) => IntrinsicHeightWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.intrinsicWidth:
+        return MaterialPageRoute(
+          builder: (_) => IntrinsicWidthWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.limitedBox:
+        return MaterialPageRoute(
+          builder: (_) => LimitedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.offStage:
+        return MaterialPageRoute(
+          builder: (_) => OffStageWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.overflowBox:
+        return MaterialPageRoute(
+          builder: (_) => OverFlowBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.padding:
+        return MaterialPageRoute(
+          builder: (_) => PaddingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sizedBox:
+        return MaterialPageRoute(
+          builder: (_) => SizedBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sizedOverflowBox:
+        return MaterialPageRoute(
+          builder: (_) => SizedOverflowBoxWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.transform:
+        return MaterialPageRoute(
+          builder: (_) => TransformWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.column:
+        return MaterialPageRoute(
+          builder: (_) => ColumnWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.customMultiChildLayout:
+        return MaterialPageRoute(
+          builder: (_) => CustomMultiChildLayoutWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.flow:
+        return MaterialPageRoute(
+          builder: (_) => FlowWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.gridView:
+        return MaterialPageRoute(
+          builder: (_) => GridViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.indexedStack:
+        return MaterialPageRoute(
+          builder: (_) => IndexedStackWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.layoutBuilder:
+        return MaterialPageRoute(
+          builder: (_) => LayoutBuilderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.listBody:
+        return MaterialPageRoute(
+          builder: (_) => ListBodyWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.listView:
+        return MaterialPageRoute(
+          builder: (_) => ListViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.row:
+        return MaterialPageRoute(
+          builder: (_) => RowWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.stack:
+        return MaterialPageRoute(
+          builder: (_) => StackWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.table:
+        return MaterialPageRoute(
+          builder: (_) => TableWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.wrap:
+        return MaterialPageRoute(
+          builder: (_) => WrapWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.cupertinoSliverNavigationBar:
+        return MaterialPageRoute(
+          builder: (_) => CupertinoSliverNavigationBarLayoutWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.customScrollView:
+        return MaterialPageRoute(
+          builder: (_) => CustomScrollViewWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverAppBar:
+        return MaterialPageRoute(
+          builder: (_) => SliverAppBarWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverChildBuilderDelegate:
+        return MaterialPageRoute(
+          builder: (_) => SliverChildBuilderDelegateWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverChildListDelegate:
+        return MaterialPageRoute(
+          builder: (_) => SliverChildListDelegateWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverFixedExtentList:
+        return MaterialPageRoute(
+          builder: (_) => SliverFixedExtentListWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverGrid:
+        return MaterialPageRoute(
+          builder: (_) => SliverGridWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverList:
+        return MaterialPageRoute(
+          builder: (_) => SliverListWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverPadding:
+        return MaterialPageRoute(
+          builder: (_) => SliverPaddingWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverPersistentHeader:
+        return MaterialPageRoute(
+          builder: (_) => SliverPersistentHeaderWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
+      case RoutePaths.sliverToBoxAdaptor:
+        return MaterialPageRoute(
+          builder: (_) => SliverToBoxAdaptorWidget(
+            appBarTitle: arguments['appBarTitle'],
+          ),
+        );
 
       // widget catalog material widgets
 
