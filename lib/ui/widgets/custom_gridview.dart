@@ -7,12 +7,10 @@ class GridViewItem {
   GridViewItem({@required String this.title, @required String this.route});
 }
 
-class TappableGridView extends StatelessWidget {
+class CustomGridView extends StatelessWidget {
   List<GridViewItem> gridList;
-  bool hasPushReplacement;
 
-  TappableGridView(
-      {@required this.gridList, @required this.hasPushReplacement});
+  CustomGridView({@required this.gridList});
 
   @override
   Widget build(BuildContext context) {
@@ -27,15 +25,6 @@ class TappableGridView extends StatelessWidget {
       children: gridList.map((item) {
         return InkWell(
           onTap: () {
-            if (hasPushReplacement) {
-              Navigator.of(context).pushReplacementNamed(
-                item.route,
-                arguments: {"appBarTitle": '${item.title}'},
-              );
-
-              return;
-            }
-
             Navigator.of(context).pushNamed(
               item.route,
               arguments: {'appBarTitle': '${item.title}'},

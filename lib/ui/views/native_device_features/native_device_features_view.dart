@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_drawer.dart';
-
 class NativeDeviceFeaturesView extends StatelessWidget {
   String appBarTitle;
 
@@ -13,7 +11,7 @@ class NativeDeviceFeaturesView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        drawer: MainDrawer(),
+        // drawer: MainDrawer(),
         body: Text('Native device features screen'));
   }
 }

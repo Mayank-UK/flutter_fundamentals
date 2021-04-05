@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_drawer.dart';
-
 class BestPracticesView extends StatelessWidget {
   String appBarTitle;
 
@@ -13,7 +11,7 @@ class BestPracticesView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        drawer: MainDrawer(),
+        // drawer: MainDrawer(),
         body: Text('Best practices screen'));
   }
 }

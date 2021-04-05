@@ -28,9 +28,8 @@ class HomeView extends StatelessWidget {
         title: const Text('Home'),
       ),
       drawer: MainDrawer(),
-      body: TappableGridView(
+      body: CustomGridView(
         gridList: _gridList,
-        hasPushReplacement: false,
       ),
     );
   }

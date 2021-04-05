@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_fundamentals/ui/views/ui_manipulation/sub_views/effects_view.dart';
 
+// home
 import '../../ui/views/page_not_found/page_not_found_view.dart';
 import '../../ui/views/home_view.dart';
 import '../../ui/views/dart_fundamentals/dart_fundamentals_view.dart';
@@ -15,29 +15,241 @@ import '../../ui/views/native_device_features/native_device_features_view.dart';
 import '../../ui/views/architecture/architecture_view.dart';
 import '../../ui/views/best_practices/best_practices_view.dart';
 
-import '../../ui/views/widget_catalog/sub_views/accessibility_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/animation_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/asset_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/async_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/cupertino_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/input_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/interactive_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/layout_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/material_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/painting_and_effects_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/scrolling_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/styling_widgets_view.dart';
-import '../../ui/views/widget_catalog/sub_views/text_widgets_view.dart';
+// widget catalog main
+import '../../ui/views/widget_catalog/accessibility_widgets/accessibility_widgets_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/animation_widgets_view.dart';
+import '../../ui/views/widget_catalog/asset_widgets/asset_widgets_view.dart';
+import '../../ui/views/widget_catalog/async_widgets/async_widgets_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/cupertino_widgets_view.dart';
+import '../../ui/views/widget_catalog/input_widgets/input_widgets_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/interactive_widgets_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/layout_widgets_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/material_widgets_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/painting_effects_widgets_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/scrolling_widgets_view.dart';
+import '../../ui/views/widget_catalog/styling_widgets/styling_widgets_view.dart';
+import '../../ui/views/widget_catalog/text_widgets/text_widgets_view.dart';
 
-import './../../ui/views/ui_manipulation/sub_views/dimensions_constraints_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/spacing_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/colors_backgrounds_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/alignment_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/positioning_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/visibility_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/text_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/borders_view.dart';
-import './../../ui/views/ui_manipulation/sub_views/effects_view.dart';
+// widget catalog accessibility
+import '../../ui/views/widget_catalog/accessibility_widgets/sub_views/exclude_semantics_widget_view.dart';
+import '../../ui/views/widget_catalog/accessibility_widgets/sub_views/merge_semantics_widget_view.dart';
+import '../../ui/views/widget_catalog/accessibility_widgets/sub_views/semantics_widget_view.dart';
+
+// widget catalog animation and motion
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_align_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_builder_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_container_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_cross_fade_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_default_text_style_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_list_state_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_modal_barrier_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_opacity_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_physical_model_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_positioned_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_size_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_widget_base_state_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/animated_widget_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/decorated_box_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/fade_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/hero_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/positioned_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/rotation_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/scale_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/size_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/animation_motion_widgets/sub_views/slide_transition_widget_view.dart';
+
+// widget catalog assets
+import '../../ui/views/widget_catalog/asset_widgets/sub_views/asset_bundle_widget_view.dart';
+import '../../ui/views/widget_catalog/asset_widgets/sub_views/icon_widget_view.dart';
+import '../../ui/views/widget_catalog/asset_widgets/sub_views/image_widget_view.dart';
+import '../../ui/views/widget_catalog/asset_widgets/sub_views/raw_image_widget_view.dart';
+
+// widget catalog async
+import '../../ui/views/widget_catalog/async_widgets/sub_views/future_builder_widget_view.dart';
+import '../../ui/views/widget_catalog/async_widgets/sub_views/stream_builder_widget_view.dart';
+
+// widget catalog cupertino
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_action_sheet_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_activity_indicator_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_alert_dialog_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_button_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_context_menu_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_date_picker_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_dialog_action_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_dialog_full_screen_dialog_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_dialog_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_navigation_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_page_transition_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_picker_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_popup_surface_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_scaffold_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_scrollbar_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_search_field_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_segmented_control_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_slider_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_sliding_segmented_control_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_sliver_navigation_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_switch_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_tab_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_tab_scaffold_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_tab_view_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_text_field_widget_view.dart';
+import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_time_picker_widget_view.dart';
+
+// widget catalog input
+import '../../ui/views/widget_catalog/input_widgets/sub_views/auto_complete_widget_view.dart';
+import '../../ui/views/widget_catalog/input_widgets/sub_views/form_field_widget_view.dart';
+import '../../ui/views/widget_catalog/input_widgets/sub_views/form_widget_view.dart';
+import '../../ui/views/widget_catalog/input_widgets/sub_views/raw_keyboard_listener_widget_view.dart';
+
+// widget catalog interactive
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/absorb_pointer_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/dismissible_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/drag_target_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/draggable_scrollable_sheet_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/draggable_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/gesture_detector_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/hero_interactive_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/ignore_pointer_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/interactive_viewer_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/long_press_draggable_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/navigation_widget_view.dart';
+import '../../ui/views/widget_catalog/interactive_widgets/sub_views/scrollable_widget_view.dart';
+
+// widget catalog layout
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/align_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/aspect_ratio_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/baseline_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/center_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/column_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/constrained_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/constrained_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/cupertino_sliver_navigation_bar_layout_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/custom_multi_child_layout_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/custom_scroll_view_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/custom_single_child_layout_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/expanded_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/fitted_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/flow_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/fractionally_sized_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/grid_view_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/indexed_stack_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/intrinsic_height_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/intrinsic_width_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/layout_builder_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/limited_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/list_body_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/list_view_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/off_stage_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/over_flow_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/padding_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/row_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sized_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sized_overflow_box_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_app_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_child_builder_delegate_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_child_list_delegate_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_fixed_extent_list_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_grid_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_list_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_padding_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_persistent_header_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/sliver_to_box_adaptor_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/stack_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/table_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/transform_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/wrap_widget_view.dart';
+
+// widget catalog material
+import '../../ui/views/widget_catalog/material_widgets/sub_views/alert_dialog_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/app_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/bottom_navigation_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/bottom_sheet_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/card_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/checkbox_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/chip_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/circular_progress_indicator_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/data_table_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/divider_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/drawer_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/dropdown_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/elevated_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/expansion_panel_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/floating_action_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/grid_view_material_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/icon_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/icon_material_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/image_material_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/linear_progress_indicator_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/list_tile_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/material_app_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/outlined_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/popup_menu_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/radio_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/scaffold_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/show_date_picker_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/simple_dialog_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/slider_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/sliver_app_bar_material_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/snack_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/stepper_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/switch_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_bar_view_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_bar_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_controller_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_page_selector_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/text_button_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/text_field_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/tool_tip_widget_view.dart';
+import '../../ui/views/widget_catalog/material_widgets/sub_views/widget_app_widget_view.dart';
+
+// widget catalog painting
+import '../../ui/views/widget_catalog/painting_effects/sub_views/backdrop_filter_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/clip_oval_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/clip_path_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/clip_rect_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/custom_paint_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/decorated_box_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/fractional_translation_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/opacity_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/rotated_box_widget_view.dart';
+import '../../ui/views/widget_catalog/painting_effects/sub_views/transform_painting_effects_widget_view.dart';
+
+// widget catalog scrolling
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/custom_scroll_view_scrolling_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/draggable_scrollable_sheet_scrolling_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/grid_view_scrolling_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/list_view_scrolling_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/nested_scroll_view_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/notification_listener_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/page_view_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/refresh_indicator_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/reorderable_list_view_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scroll_configuration_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scrollable_scrolling_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scrollbar_widget_view.dart';
+import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/single_child_scroll_view_widget_view.dart';
+
+// widget catalog styling
+import '../../ui/views/widget_catalog/styling_widgets/sub_views/media_query_widget_view.dart';
+import '../../ui/views/widget_catalog/styling_widgets/sub_views/padding_style_widget_view.dart';
+import '../../ui/views/widget_catalog/styling_widgets/sub_views/theme_widget_view.dart';
+
+// widget catalog text
+import '../../ui/views/widget_catalog/text_widgets/sub_views/default_text_style_widget_view.dart';
+import '../../ui/views/widget_catalog/text_widgets/sub_views/rich_text_widget_view.dart';
+import '../../ui/views/widget_catalog/text_widgets/sub_views/text_widget_view.dart';
+
+// ui manipulation
+import '../../ui/views/ui_manipulation/dimensions_constraints/dimensions_constraints_view.dart';
+import '../../ui/views/ui_manipulation/spacing/spacing_view.dart';
+import '../../ui/views/ui_manipulation/colors_backgrounds/colors_backgrounds_view.dart';
+import '../../ui/views/ui_manipulation/alignment/alignment_view.dart';
+import '../../ui/views/ui_manipulation/positioning/positioning_view.dart';
+import '../../ui/views/ui_manipulation/visibility/visibility_view.dart';
+import '../../ui/views/ui_manipulation/text/text_view.dart';
+import '../../ui/views/ui_manipulation/borders/borders_view.dart';
+import '../../ui/views/ui_manipulation/effects/effects_view.dart';
 
 class RoutePaths {
   // home paths
@@ -533,19 +745,19 @@ class MyRouter {
       // widget catalog accessibility widgets
       case RoutePaths.excludeSemanticsWidget:
         return MaterialPageRoute(
-          builder: (_) => ExcludeSemanticsWidget(
+          builder: (_) => ExcludeSemanticsWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.mergeSemanticsWidget:
         return MaterialPageRoute(
-          builder: (_) => MergeSemanticsWidget(
+          builder: (_) => MergeSemanticsWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.semanticsWidget:
         return MaterialPageRoute(
-          builder: (_) => SemanticsWidget(
+          builder: (_) => SemanticsWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -553,127 +765,127 @@ class MyRouter {
       // widget catalog animations and motion widgets
       case RoutePaths.animatedAlign:
         return MaterialPageRoute(
-          builder: (_) => AnimatedAlignWidget(
+          builder: (_) => AnimatedAlignWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedBuilder:
         return MaterialPageRoute(
-          builder: (_) => AnimatedBuilderWidget(
+          builder: (_) => AnimatedBuilderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedContainer:
         return MaterialPageRoute(
-          builder: (_) => AnimatedContainerWidget(
+          builder: (_) => AnimatedContainerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedCrossFade:
         return MaterialPageRoute(
-          builder: (_) => AnimatedCrossFadeWidget(
+          builder: (_) => AnimatedCrossFadeWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedDefaultTextStyle:
         return MaterialPageRoute(
-          builder: (_) => AnimatedDefaultTextStyleWidget(
+          builder: (_) => AnimatedDefaultTextStyleWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedListState:
         return MaterialPageRoute(
-          builder: (_) => AnimatedListStateWidget(
+          builder: (_) => AnimatedListStateWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedModalBarrier:
         return MaterialPageRoute(
-          builder: (_) => AnimatedModalBarrierWidget(
+          builder: (_) => AnimatedModalBarrierWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedOpacity:
         return MaterialPageRoute(
-          builder: (_) => AnimatedOpacityWidget(
+          builder: (_) => AnimatedOpacityWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedPhysicalModel:
         return MaterialPageRoute(
-          builder: (_) => AnimatedPhysicalModelWidget(
+          builder: (_) => AnimatedPhysicalModelWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedPositioned:
         return MaterialPageRoute(
-          builder: (_) => AnimatedPositionedWidget(
+          builder: (_) => AnimatedPositionedWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedSize:
         return MaterialPageRoute(
-          builder: (_) => AnimatedSizeWidget(
+          builder: (_) => AnimatedSizeWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedWidget:
         return MaterialPageRoute(
-          builder: (_) => AnimatedWidgetWidget(
+          builder: (_) => AnimatedWidgetWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.animatedWidgetBaseState:
         return MaterialPageRoute(
-          builder: (_) => AnimatedWidgetBaseStateWidget(
+          builder: (_) => AnimatedWidgetBaseStateWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.decoratedBoxTransition:
         return MaterialPageRoute(
-          builder: (_) => DecoratedBoxTransitionWidget(
+          builder: (_) => DecoratedBoxTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.fadeTransition:
         return MaterialPageRoute(
-          builder: (_) => FadeTransitionWidget(
+          builder: (_) => FadeTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.hero:
         return MaterialPageRoute(
-          builder: (_) => HeroWidget(
+          builder: (_) => HeroWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.positionedTransition:
         return MaterialPageRoute(
-          builder: (_) => PositionedTransitionWidget(
+          builder: (_) => PositionedTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.rotationTransition:
         return MaterialPageRoute(
-          builder: (_) => RotationTransitionWidget(
+          builder: (_) => RotationTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.scaleTransition:
         return MaterialPageRoute(
-          builder: (_) => ScaleTransitionWidget(
+          builder: (_) => ScaleTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sizeTransition:
         return MaterialPageRoute(
-          builder: (_) => SizeTransitionWidget(
+          builder: (_) => SizeTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.slideTransition:
         return MaterialPageRoute(
-          builder: (_) => SlideTransitionWidget(
+          builder: (_) => SlideTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -681,25 +893,25 @@ class MyRouter {
       // widget catalog assets, icons and images widgets
       case RoutePaths.assetBundle:
         return MaterialPageRoute(
-          builder: (_) => AssetBundleWidget(
+          builder: (_) => AssetBundleWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.icon:
         return MaterialPageRoute(
-          builder: (_) => IconWidget(
+          builder: (_) => IconWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.image:
         return MaterialPageRoute(
-          builder: (_) => ImageWidget(
+          builder: (_) => ImageWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.rawImage:
         return MaterialPageRoute(
-          builder: (_) => RawImageWidget(
+          builder: (_) => RawImageWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -707,13 +919,13 @@ class MyRouter {
       // widget catalog async widgets
       case RoutePaths.futureBuilder:
         return MaterialPageRoute(
-          builder: (_) => FutureBuilderWidget(
+          builder: (_) => FutureBuilderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.streamBuilder:
         return MaterialPageRoute(
-          builder: (_) => StreamBuilderWidget(
+          builder: (_) => StreamBuilderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -721,163 +933,163 @@ class MyRouter {
       // widget catalog cupertino widgets
       case RoutePaths.cupertinoActionSheet:
         return MaterialPageRoute(
-          builder: (_) => CupertinoActionSheetWidget(
+          builder: (_) => CupertinoActionSheetWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoActivityIndicator:
         return MaterialPageRoute(
-          builder: (_) => CupertinoActivityIndicatorWidget(
+          builder: (_) => CupertinoActivityIndicatorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoAlertDialog:
         return MaterialPageRoute(
-          builder: (_) => CupertinoAlertDialogWidget(
+          builder: (_) => CupertinoAlertDialogWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoButton:
         return MaterialPageRoute(
-          builder: (_) => CupertinoButtonWidget(
+          builder: (_) => CupertinoButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoContextMenu:
         return MaterialPageRoute(
-          builder: (_) => CupertinoContextMenuWidget(
+          builder: (_) => CupertinoContextMenuWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoDatePicker:
         return MaterialPageRoute(
-          builder: (_) => CupertinoDatePickerWidget(
+          builder: (_) => CupertinoDatePickerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoDialog:
         return MaterialPageRoute(
-          builder: (_) => CupertinoDialogWidget(
+          builder: (_) => CupertinoDialogWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoDialogAction:
         return MaterialPageRoute(
-          builder: (_) => CupertinoDialogActionWidget(
+          builder: (_) => CupertinoDialogActionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoFullScreenDialogTransition:
         return MaterialPageRoute(
-          builder: (_) => CupertinoDialogFullScreenDialogTransitionWidget(
+          builder: (_) => CupertinoDialogFullScreenDialogTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoNavigationBar:
         return MaterialPageRoute(
-          builder: (_) => CupertinoNavigationBarWidget(
+          builder: (_) => CupertinoNavigationBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoScaffold:
         return MaterialPageRoute(
-          builder: (_) => CupertinoScaffoldWidget(
+          builder: (_) => CupertinoScaffoldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoPageTransition:
         return MaterialPageRoute(
-          builder: (_) => CupertinoPageTransitionWidget(
+          builder: (_) => CupertinoPageTransitionWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoPicker:
         return MaterialPageRoute(
-          builder: (_) => CupertinoPickerWidget(
+          builder: (_) => CupertinoPickerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoPopupSurface:
         return MaterialPageRoute(
-          builder: (_) => CupertinoPopupSurfaceWidget(
+          builder: (_) => CupertinoPopupSurfaceWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoScrollbar:
         return MaterialPageRoute(
-          builder: (_) => CupertinoScrollbarWidget(
+          builder: (_) => CupertinoScrollbarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSearchField:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSearchFieldWidget(
+          builder: (_) => CupertinoSearchFieldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSegmentedControl:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSegmentedControlWidget(
+          builder: (_) => CupertinoSegmentedControlWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSlider:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSliderWidget(
+          builder: (_) => CupertinoSliderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSlidingSegmentedControl:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSlidingSegmentedControlWidget(
+          builder: (_) => CupertinoSlidingSegmentedControlWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSliverNavigationBar:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSliverNavigationBarWidget(
+          builder: (_) => CupertinoSliverNavigationBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoNavigationBar:
         return MaterialPageRoute(
-          builder: (_) => CupertinoNavigationBarWidget(
+          builder: (_) => CupertinoNavigationBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSwitch:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSwitchWidget(
+          builder: (_) => CupertinoSwitchWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoTabBar:
         return MaterialPageRoute(
-          builder: (_) => CupertinoTabBarWidget(
+          builder: (_) => CupertinoTabBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoTabScaffold:
         return MaterialPageRoute(
-          builder: (_) => CupertinoTabScaffoldWidget(
+          builder: (_) => CupertinoTabScaffoldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoTabView:
         return MaterialPageRoute(
-          builder: (_) => CupertinoTabViewWidget(
+          builder: (_) => CupertinoTabViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoTextField:
         return MaterialPageRoute(
-          builder: (_) => CupertinoTextFieldWidget(
+          builder: (_) => CupertinoTextFieldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoTimePicker:
         return MaterialPageRoute(
-          builder: (_) => CupertinoTimePickerWidget(
+          builder: (_) => CupertinoTimePickerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -885,25 +1097,25 @@ class MyRouter {
       // widget catalog input widgets
       case RoutePaths.autocomplete:
         return MaterialPageRoute(
-          builder: (_) => AutoCompleteWidget(
+          builder: (_) => AutoCompleteWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.form:
         return MaterialPageRoute(
-          builder: (_) => FormWidget(
+          builder: (_) => FormWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.formField:
         return MaterialPageRoute(
-          builder: (_) => FormFieldWidget(
+          builder: (_) => FormFieldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.rawKeyboardListener:
         return MaterialPageRoute(
-          builder: (_) => RawKeyboardListenerWidget(
+          builder: (_) => RawKeyboardListenerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -911,73 +1123,73 @@ class MyRouter {
       // widget catalog interactive widgets
       case RoutePaths.absorbPointer:
         return MaterialPageRoute(
-          builder: (_) => AbsorbPointerWidget(
+          builder: (_) => AbsorbPointerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.dismissible:
         return MaterialPageRoute(
-          builder: (_) => DismissibleWidget(
+          builder: (_) => DismissibleWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.dragTarget:
         return MaterialPageRoute(
-          builder: (_) => DragTargetWidget(
+          builder: (_) => DragTargetWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.draggable:
         return MaterialPageRoute(
-          builder: (_) => DraggableWidget(
+          builder: (_) => DraggableWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.draggableScrollableSheet:
         return MaterialPageRoute(
-          builder: (_) => DraggableScrollableSheetWidget(
+          builder: (_) => DraggableScrollableSheetWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.gestureDetector:
         return MaterialPageRoute(
-          builder: (_) => GestureDetectorWidget(
+          builder: (_) => GestureDetectorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.ignorePointer:
         return MaterialPageRoute(
-          builder: (_) => IgnorePointerWidget(
+          builder: (_) => IgnorePointerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.interactiveViewer:
         return MaterialPageRoute(
-          builder: (_) => InteractiveViewerWidget(
+          builder: (_) => InteractiveViewerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.longPressDraggable:
         return MaterialPageRoute(
-          builder: (_) => LongPressDraggableWidget(
+          builder: (_) => LongPressDraggableWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.scrollable:
         return MaterialPageRoute(
-          builder: (_) => ScrollableWidget(
+          builder: (_) => ScrollableWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.heroInteractive:
         return MaterialPageRoute(
-          builder: (_) => HeroInteractiveWidget(
+          builder: (_) => HeroInteractiveWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.navigator:
         return MaterialPageRoute(
-          builder: (_) => NavigatorWidget(
+          builder: (_) => NavigatorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -985,253 +1197,253 @@ class MyRouter {
       // widget catalog layout widgets
       case RoutePaths.align:
         return MaterialPageRoute(
-          builder: (_) => AlignWidget(
+          builder: (_) => AlignWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.aspectRatio:
         return MaterialPageRoute(
-          builder: (_) => AspectRatioWidget(
+          builder: (_) => AspectRatioWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.baseline:
         return MaterialPageRoute(
-          builder: (_) => BaselineWidget(
+          builder: (_) => BaselineWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.center:
         return MaterialPageRoute(
-          builder: (_) => CenterWidget(
+          builder: (_) => CenterWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.constrainedBox:
         return MaterialPageRoute(
-          builder: (_) => ConstrainedBoxWidget(
+          builder: (_) => ConstrainedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.container:
         return MaterialPageRoute(
-          builder: (_) => ContainerWidget(
+          builder: (_) => ContainerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.customSingleChildLayout:
         return MaterialPageRoute(
-          builder: (_) => CustomSingleChildLayoutWidget(
+          builder: (_) => CustomSingleChildLayoutWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.expanded:
         return MaterialPageRoute(
-          builder: (_) => ExpandedWidget(
+          builder: (_) => ExpandedWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.fittedBox:
         return MaterialPageRoute(
-          builder: (_) => FittedBoxWidget(
+          builder: (_) => FittedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.fractionallySizedBox:
         return MaterialPageRoute(
-          builder: (_) => FractionallySizedBoxWidget(
+          builder: (_) => FractionallySizedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.intrinsicHeight:
         return MaterialPageRoute(
-          builder: (_) => IntrinsicHeightWidget(
+          builder: (_) => IntrinsicHeightWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.intrinsicWidth:
         return MaterialPageRoute(
-          builder: (_) => IntrinsicWidthWidget(
+          builder: (_) => IntrinsicWidthWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.limitedBox:
         return MaterialPageRoute(
-          builder: (_) => LimitedBoxWidget(
+          builder: (_) => LimitedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.offStage:
         return MaterialPageRoute(
-          builder: (_) => OffStageWidget(
+          builder: (_) => OffStageWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.overflowBox:
         return MaterialPageRoute(
-          builder: (_) => OverFlowBoxWidget(
+          builder: (_) => OverFlowBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.padding:
         return MaterialPageRoute(
-          builder: (_) => PaddingWidget(
+          builder: (_) => PaddingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sizedBox:
         return MaterialPageRoute(
-          builder: (_) => SizedBoxWidget(
+          builder: (_) => SizedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sizedOverflowBox:
         return MaterialPageRoute(
-          builder: (_) => SizedOverflowBoxWidget(
+          builder: (_) => SizedOverflowBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.transform:
         return MaterialPageRoute(
-          builder: (_) => TransformWidget(
+          builder: (_) => TransformWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.column:
         return MaterialPageRoute(
-          builder: (_) => ColumnWidget(
+          builder: (_) => ColumnWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.customMultiChildLayout:
         return MaterialPageRoute(
-          builder: (_) => CustomMultiChildLayoutWidget(
+          builder: (_) => CustomMultiChildLayoutWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.flow:
         return MaterialPageRoute(
-          builder: (_) => FlowWidget(
+          builder: (_) => FlowWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.gridView:
         return MaterialPageRoute(
-          builder: (_) => GridViewWidget(
+          builder: (_) => GridViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.indexedStack:
         return MaterialPageRoute(
-          builder: (_) => IndexedStackWidget(
+          builder: (_) => IndexedStackWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.layoutBuilder:
         return MaterialPageRoute(
-          builder: (_) => LayoutBuilderWidget(
+          builder: (_) => LayoutBuilderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.listBody:
         return MaterialPageRoute(
-          builder: (_) => ListBodyWidget(
+          builder: (_) => ListBodyWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.listView:
         return MaterialPageRoute(
-          builder: (_) => ListViewWidget(
+          builder: (_) => ListViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.row:
         return MaterialPageRoute(
-          builder: (_) => RowWidget(
+          builder: (_) => RowWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.stack:
         return MaterialPageRoute(
-          builder: (_) => StackWidget(
+          builder: (_) => StackWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.table:
         return MaterialPageRoute(
-          builder: (_) => TableWidget(
+          builder: (_) => TableWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.wrap:
         return MaterialPageRoute(
-          builder: (_) => WrapWidget(
+          builder: (_) => WrapWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.cupertinoSliverNavigationBar:
         return MaterialPageRoute(
-          builder: (_) => CupertinoSliverNavigationBarLayoutWidget(
+          builder: (_) => CupertinoSliverNavigationBarLayoutWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.customScrollView:
         return MaterialPageRoute(
-          builder: (_) => CustomScrollViewWidget(
+          builder: (_) => CustomScrollViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverAppBar:
         return MaterialPageRoute(
-          builder: (_) => SliverAppBarWidget(
+          builder: (_) => SliverAppBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverChildBuilderDelegate:
         return MaterialPageRoute(
-          builder: (_) => SliverChildBuilderDelegateWidget(
+          builder: (_) => SliverChildBuilderDelegateWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverChildListDelegate:
         return MaterialPageRoute(
-          builder: (_) => SliverChildListDelegateWidget(
+          builder: (_) => SliverChildListDelegateWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverFixedExtentList:
         return MaterialPageRoute(
-          builder: (_) => SliverFixedExtentListWidget(
+          builder: (_) => SliverFixedExtentListWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverGrid:
         return MaterialPageRoute(
-          builder: (_) => SliverGridWidget(
+          builder: (_) => SliverGridWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverList:
         return MaterialPageRoute(
-          builder: (_) => SliverListWidget(
+          builder: (_) => SliverListWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverPadding:
         return MaterialPageRoute(
-          builder: (_) => SliverPaddingWidget(
+          builder: (_) => SliverPaddingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverPersistentHeader:
         return MaterialPageRoute(
-          builder: (_) => SliverPersistentHeaderWidget(
+          builder: (_) => SliverPersistentHeaderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverToBoxAdaptor:
         return MaterialPageRoute(
-          builder: (_) => SliverToBoxAdaptorWidget(
+          builder: (_) => SliverToBoxAdaptorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -1239,247 +1451,247 @@ class MyRouter {
       // widget catalog material widgets
       case RoutePaths.appBar:
         return MaterialPageRoute(
-          builder: (_) => AppBarWidget(
+          builder: (_) => AppBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.bottomNavigationBar:
         return MaterialPageRoute(
-          builder: (_) => BottomNavigationBarWidget(
+          builder: (_) => BottomNavigationBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.drawer:
         return MaterialPageRoute(
-          builder: (_) => DrawerWidget(
+          builder: (_) => DrawerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.materialApp:
         return MaterialPageRoute(
-          builder: (_) => MaterialAppWidget(
+          builder: (_) => MaterialAppWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.scaffold:
         return MaterialPageRoute(
-          builder: (_) => ScaffoldWidget(
+          builder: (_) => ScaffoldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.sliverAppBar:
         return MaterialPageRoute(
-          builder: (_) => SliverAppBarMaterialWidget(
+          builder: (_) => SliverAppBarMaterialWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.tabBar:
         return MaterialPageRoute(
-          builder: (_) => TabBarWidget(
+          builder: (_) => TabBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.tabBarView:
         return MaterialPageRoute(
-          builder: (_) => TabBarViewWidget(
+          builder: (_) => TabBarViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.tabController:
         return MaterialPageRoute(
-          builder: (_) => TabControllerWidget(
+          builder: (_) => TabControllerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.tabPageSelector:
         return MaterialPageRoute(
-          builder: (_) => TabPageSelectorWidget(
+          builder: (_) => TabPageSelectorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.widgetsApp:
         return MaterialPageRoute(
-          builder: (_) => WidgetsAppWidget(
+          builder: (_) => WidgetsAppWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.dropdownButton:
         return MaterialPageRoute(
-          builder: (_) => DropdownButtonWidget(
+          builder: (_) => DropdownButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.elevatedButton:
         return MaterialPageRoute(
-          builder: (_) => ElevatedButtonWidget(
+          builder: (_) => ElevatedButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.floatingActionButton:
         return MaterialPageRoute(
-          builder: (_) => FloatingActionButtonWidget(
+          builder: (_) => FloatingActionButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.iconButton:
         return MaterialPageRoute(
-          builder: (_) => IconButtonWidget(
+          builder: (_) => IconButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.outlineButton:
         return MaterialPageRoute(
-          builder: (_) => OutlinedButtonWidget(
+          builder: (_) => OutlinedButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.popupMenuButton:
         return MaterialPageRoute(
-          builder: (_) => PopupMenuButtonWidget(
+          builder: (_) => PopupMenuButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.textButton:
         return MaterialPageRoute(
-          builder: (_) => TextButtonWidget(
+          builder: (_) => TextButtonWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.checkBox:
         return MaterialPageRoute(
-          builder: (_) => CheckboxWidget(
+          builder: (_) => CheckboxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.showDatePicker:
         return MaterialPageRoute(
-          builder: (_) => ShowDatePickerWidget(
+          builder: (_) => ShowDatePickerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.radio:
         return MaterialPageRoute(
-          builder: (_) => RadioWidget(
+          builder: (_) => RadioWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.slider:
         return MaterialPageRoute(
-          builder: (_) => SliderWidget(
+          builder: (_) => SliderWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.switchMaterial:
         return MaterialPageRoute(
-          builder: (_) => SwitchWidget(
+          builder: (_) => SwitchWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.textField:
         return MaterialPageRoute(
-          builder: (_) => TextFieldWidget(
+          builder: (_) => TextFieldWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.alertDialog:
         return MaterialPageRoute(
-          builder: (_) => AlertDialogWidget(
+          builder: (_) => AlertDialogWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.bottomSheet:
         return MaterialPageRoute(
-          builder: (_) => BottomSheetWidget(
+          builder: (_) => BottomSheetWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.expansionPanel:
         return MaterialPageRoute(
-          builder: (_) => ExpansionPanelWidget(
+          builder: (_) => ExpansionPanelWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.simpleDialog:
         return MaterialPageRoute(
-          builder: (_) => SimpleDialogWidget(
+          builder: (_) => SimpleDialogWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.snackBar:
         return MaterialPageRoute(
-          builder: (_) => SnackBarWidget(
+          builder: (_) => SnackBarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.card:
         return MaterialPageRoute(
-          builder: (_) => CardWidget(
+          builder: (_) => CardWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.chip:
         return MaterialPageRoute(
-          builder: (_) => ChipWidget(
+          builder: (_) => ChipWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.circularProgressIndicator:
         return MaterialPageRoute(
-          builder: (_) => CircularProgressIndicatorWidget(
+          builder: (_) => CircularProgressIndicatorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.dataTable:
         return MaterialPageRoute(
-          builder: (_) => DataTableWidget(
+          builder: (_) => DataTableWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.gridViewMaterial:
         return MaterialPageRoute(
-          builder: (_) => GridViewWidget(
+          builder: (_) => GridViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.iconMaterial:
         return MaterialPageRoute(
-          builder: (_) => IconMaterialWidget(
+          builder: (_) => IconMaterialWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.imageMaterial:
         return MaterialPageRoute(
-          builder: (_) => ImageMaterialWidget(
+          builder: (_) => ImageMaterialWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.linearProgressIndicator:
         return MaterialPageRoute(
-          builder: (_) => LinearProgressIndicatorWidget(
+          builder: (_) => LinearProgressIndicatorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.tooltip:
         return MaterialPageRoute(
-          builder: (_) => TooltipWidget(
+          builder: (_) => TooltipWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.divider:
         return MaterialPageRoute(
-          builder: (_) => DividerWidget(
+          builder: (_) => DividerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.listTile:
         return MaterialPageRoute(
-          builder: (_) => ListTileWidget(
+          builder: (_) => ListTileWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.stepper:
         return MaterialPageRoute(
-          builder: (_) => StepperWidget(
+          builder: (_) => StepperWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -1487,61 +1699,61 @@ class MyRouter {
       // widget catalog painting and effects widgets
       case RoutePaths.backDropFilter:
         return MaterialPageRoute(
-          builder: (_) => BackdropFilterWidget(
+          builder: (_) => BackdropFilterWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.clipOval:
         return MaterialPageRoute(
-          builder: (_) => ClipOvalWidget(
+          builder: (_) => ClipOvalWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.clipPath:
         return MaterialPageRoute(
-          builder: (_) => ClipPathWidget(
+          builder: (_) => ClipPathWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.clipRect:
         return MaterialPageRoute(
-          builder: (_) => ClipRectWidget(
+          builder: (_) => ClipRectWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.customPaint:
         return MaterialPageRoute(
-          builder: (_) => CustomPaintWidget(
+          builder: (_) => CustomPaintWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.decoratedBox:
         return MaterialPageRoute(
-          builder: (_) => DecoratedBoxWidget(
+          builder: (_) => DecoratedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.fractionalTranslation:
         return MaterialPageRoute(
-          builder: (_) => FractionalTranslationWidget(
+          builder: (_) => FractionalTranslationWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.opacity:
         return MaterialPageRoute(
-          builder: (_) => OpacityWidget(
+          builder: (_) => OpacityWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.rotatedBox:
         return MaterialPageRoute(
-          builder: (_) => RotatedBoxWidget(
+          builder: (_) => RotatedBoxWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.transform:
         return MaterialPageRoute(
-          builder: (_) => TransformWidget(
+          builder: (_) => TransformWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -1549,79 +1761,79 @@ class MyRouter {
       // widget catalog scrolling widgets
       case RoutePaths.customScrollView:
         return MaterialPageRoute(
-          builder: (_) => CustomScrollViewScrollingWidget(
+          builder: (_) => CustomScrollViewScrollingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.draggableScrollableSheet:
         return MaterialPageRoute(
-          builder: (_) => DraggableScrollableSheetScrollingWidget(
+          builder: (_) => DraggableScrollableSheetScrollingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.gridView:
         return MaterialPageRoute(
-          builder: (_) => GridViewScrollingWidget(
+          builder: (_) => GridViewScrollingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.listView:
         return MaterialPageRoute(
-          builder: (_) => ListViewScrollingWidget(
+          builder: (_) => ListViewScrollingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.nestedScrollView:
         return MaterialPageRoute(
-          builder: (_) => NestedScrollViewWidget(
+          builder: (_) => NestedScrollViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.notificationListener:
         return MaterialPageRoute(
-          builder: (_) => NotificationListenerWidget(
+          builder: (_) => NotificationListenerWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.pageView:
         return MaterialPageRoute(
-          builder: (_) => PageViewWidget(
+          builder: (_) => PageViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.refreshIndicator:
         return MaterialPageRoute(
-          builder: (_) => RefreshIndicatorWidget(
+          builder: (_) => RefreshIndicatorWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.reorderableListView:
         return MaterialPageRoute(
-          builder: (_) => ReorderableListViewWidget(
+          builder: (_) => ReorderableListViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.scrollConfiguration:
         return MaterialPageRoute(
-          builder: (_) => ScrollConfigurationWidget(
+          builder: (_) => ScrollConfigurationWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.scrollable:
         return MaterialPageRoute(
-          builder: (_) => ScrollableScrollingWidget(
+          builder: (_) => ScrollableScrollingWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.scrollbar:
         return MaterialPageRoute(
-          builder: (_) => ScrollbarWidget(
+          builder: (_) => ScrollbarWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.singleChildScrollView:
         return MaterialPageRoute(
-          builder: (_) => SingleChildScrollViewWidget(
+          builder: (_) => SingleChildScrollViewWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -1629,19 +1841,19 @@ class MyRouter {
       // widget catalog styling widgets
       case RoutePaths.mediaQuery:
         return MaterialPageRoute(
-          builder: (_) => MediaQueryWidget(
+          builder: (_) => MediaQueryWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.paddingStyling:
         return MaterialPageRoute(
-          builder: (_) => PaddingStyleWidget(
+          builder: (_) => PaddingStyleWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.theme:
         return MaterialPageRoute(
-          builder: (_) => ThemeWidget(
+          builder: (_) => ThemeWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
@@ -1649,19 +1861,19 @@ class MyRouter {
       // widget catalog text widgets
       case RoutePaths.defaultTextStyle:
         return MaterialPageRoute(
-          builder: (_) => DefaultTextStyleWidget(
+          builder: (_) => DefaultTextStyleWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.richText:
         return MaterialPageRoute(
-          builder: (_) => RichTextWidget(
+          builder: (_) => RichTextWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );
       case RoutePaths.text:
         return MaterialPageRoute(
-          builder: (_) => TextWidget(
+          builder: (_) => TextWidgetView(
             appBarTitle: arguments['appBarTitle'],
           ),
         );

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_drawer.dart';
-
 class ArchitectureView extends StatelessWidget {
   String appBarTitle;
 
@@ -13,7 +11,7 @@ class ArchitectureView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        drawer: MainDrawer(),
+        // drawer: MainDrawer(),
         body: Text('Architecture screen'));
   }
 }

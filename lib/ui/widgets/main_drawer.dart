@@ -25,8 +25,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Dart fundamentals'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.dartFundamentals,
+              Navigator.of(context).pushNamed(RoutePaths.dartFundamentals,
                   arguments: {"appBarTitle": "Dart fundamentals"});
             },
           ),
@@ -34,8 +33,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Flutter fundamentals'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.flutterFundamentals,
+              Navigator.of(context).pushNamed(RoutePaths.flutterFundamentals,
                   arguments: {"appBarTitle": "Flutter fundamentals"});
             },
           ),
@@ -43,8 +41,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('UI manipulation'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.uiManipulation,
+              Navigator.of(context).pushNamed(RoutePaths.uiManipulation,
                   arguments: {"appBarTitle": "Basic UI manipulation"});
             },
           ),
@@ -52,8 +49,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Widgets catalog'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.widgetsCatalog,
+              Navigator.of(context).pushNamed(RoutePaths.widgetsCatalog,
                   arguments: {"appBarTitle": "Widgets catalog"});
             },
           ),
@@ -61,7 +57,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Navigation'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(RoutePaths.navigation,
+              Navigator.of(context).pushNamed(RoutePaths.navigation,
                   arguments: {"appBarTitle": "Navigation"});
             },
           ),
@@ -69,8 +65,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('State management'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.stateManagement,
+              Navigator.of(context).pushNamed(RoutePaths.stateManagement,
                   arguments: {"appBarTitle": "State management"});
             },
           ),
@@ -78,8 +73,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Native device features'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.nativeDeviceFeatures,
+              Navigator.of(context).pushNamed(RoutePaths.nativeDeviceFeatures,
                   arguments: {"appBarTitle": "Native device features"});
             },
           ),
@@ -87,8 +81,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Architecture'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.architecture,
+              Navigator.of(context).pushNamed(RoutePaths.architecture,
                   arguments: {"appBarTitle": "Architecture"});
             },
           ),
@@ -96,8 +89,7 @@ class MainDrawer extends StatelessWidget {
             leading: Icon(Icons.link),
             title: Text('Best practices'),
             onTap: () {
-              Navigator.of(context).pushReplacementNamed(
-                  RoutePaths.bestPractices,
+              Navigator.of(context).pushNamed(RoutePaths.bestPractices,
                   arguments: {"appBarTitle": "Best practices"});
             },
           ),

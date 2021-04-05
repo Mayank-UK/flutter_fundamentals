@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_drawer.dart';
-
 class PageNotFoundView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

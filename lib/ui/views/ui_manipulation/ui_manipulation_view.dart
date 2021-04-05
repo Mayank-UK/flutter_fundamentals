@@ -1,45 +1,23 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_drawer.dart';
-import '../../widgets/custom_listview.dart';
+import '../../widgets/main_appbar.dart';
+import '../../widgets/custom_gridview.dart';
 import '../../../core/router/router.dart';
 
 class UiManipulationView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
-    ListViewItem(
+  List<GridViewItem> _gridList = [
+    GridViewItem(title: 'Alignment', route: RoutePaths.alignment),
+    GridViewItem(title: 'Borders', route: RoutePaths.borders),
+    GridViewItem(
+        title: 'Colors and backgrounds', route: RoutePaths.colorsBackgrounds),
+    GridViewItem(
         title: 'Dimensions and constraints',
-        description: 'Dimensions and constraints description',
         route: RoutePaths.dimensionsConstraints),
-    ListViewItem(
-        title: 'Spacing',
-        description: 'Spacing description',
-        route: RoutePaths.spacing),
-    ListViewItem(
-        title: 'Colors and backgrounds',
-        description: 'Colors and backgrounds description',
-        route: RoutePaths.colorsBackgrounds),
-    ListViewItem(
-        title: 'Alignment',
-        description: 'Alignment description',
-        route: RoutePaths.alignment),
-    ListViewItem(
-        title: 'Positioning',
-        description: 'Positioning description',
-        route: RoutePaths.positioning),
-    ListViewItem(
-        title: 'Visibility',
-        description: 'Visibility description',
-        route: RoutePaths.visibility),
-    ListViewItem(
-        title: 'Text', description: 'Text description', route: RoutePaths.text),
-    ListViewItem(
-        title: 'Borders',
-        description: 'Borders description',
-        route: RoutePaths.borders),
-    ListViewItem(
-        title: 'Effects',
-        description: 'Effects description',
-        route: RoutePaths.effects),
+    GridViewItem(title: 'Effects', route: RoutePaths.effects),
+    GridViewItem(title: 'Positioning', route: RoutePaths.positioning),
+    GridViewItem(title: 'Spacing', route: RoutePaths.spacing),
+    GridViewItem(title: 'Text', route: RoutePaths.text),
+    GridViewItem(title: 'Visibility', route: RoutePaths.visibility),
   ];
 
   String appBarTitle;
@@ -49,12 +27,10 @@ class UiManipulationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(this.appBarTitle),
-      ),
-      drawer: MainDrawer(),
-      body: TappableListView(
-        itemList: _itemList,
+      appBar: MainAppBar(appBarTitle: this.appBarTitle),
+      // drawer: MainDrawer(),
+      body: CustomGridView(
+        gridList: this._gridList,
       ),
     );
   }

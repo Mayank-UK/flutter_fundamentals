@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_drawer.dart';
-
-import './../../../core/router/router.dart';
+import '../../widgets/main_appbar.dart';
 
 class DartFundamentalsView extends StatelessWidget {
   String appBarTitle;
@@ -12,10 +10,8 @@ class DartFundamentalsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(this.appBarTitle),
-      ),
-      drawer: MainDrawer(),
+      appBar: MainAppBar(appBarTitle: this.appBarTitle),
+      // drawer: MainDrawer(),
       body: Text('Dart fundamentals screen'),
     );
   }
