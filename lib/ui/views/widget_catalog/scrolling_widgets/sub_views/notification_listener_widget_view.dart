@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class NotificationListenerWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'NotificationListener';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  NotificationListenerWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

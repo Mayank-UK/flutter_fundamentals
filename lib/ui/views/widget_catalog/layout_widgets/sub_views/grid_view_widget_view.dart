@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class GridViewWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'GridView';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  GridViewWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

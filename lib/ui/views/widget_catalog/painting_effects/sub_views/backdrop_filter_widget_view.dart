@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class BackdropFilterWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'BackdropFilter';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  BackdropFilterWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

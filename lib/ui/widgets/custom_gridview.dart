@@ -27,7 +27,7 @@ class CustomGridView extends StatelessWidget {
           onTap: () {
             Navigator.of(context).pushNamed(
               item.route,
-              arguments: {'appBarTitle': '${item.title}'},
+              // arguments: {'appBarTitle': '${item.title}'},
             );
           },
           child: Ink(

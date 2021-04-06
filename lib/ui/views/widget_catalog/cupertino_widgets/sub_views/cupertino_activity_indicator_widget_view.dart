@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoActivityIndicatorWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoAcivityIndicator';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoActivityIndicatorWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class WrapWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Wrap';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  WrapWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

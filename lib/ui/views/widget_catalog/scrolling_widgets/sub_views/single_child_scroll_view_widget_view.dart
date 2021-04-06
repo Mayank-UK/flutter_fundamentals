@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class SingleChildScrollViewWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'SingleChildScrollView';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  SingleChildScrollViewWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class SemanticsWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Semantics';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  SemanticsWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

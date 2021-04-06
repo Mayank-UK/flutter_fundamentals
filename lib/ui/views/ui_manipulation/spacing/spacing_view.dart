@@ -7,19 +7,17 @@ import './../../../../core/router/router.dart';
 class SpacingView extends StatelessWidget {
   List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Margin',
-      description: 'Spacing from the surrounding elements.',
-      route: RoutePaths.spacing,
-    ),
-    ListViewItem(
         title: 'Padding',
         description: 'Spacing between parent and it\'s children.',
-        route: RoutePaths.spacing),
+        route: RoutePaths.paddingSpacing),
+    ListViewItem(
+      title: 'Margin',
+      description: 'Spacing from the surrounding elements.',
+      route: RoutePaths.marginSpacing,
+    ),
   ];
 
-  String appBarTitle;
-
-  SpacingView({@required this.appBarTitle});
+  String appBarTitle = 'spacing';
 
   @override
   Widget build(BuildContext context) {

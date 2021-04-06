@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoSegmentedControlWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoSegmentedControl';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoSegmentedControlWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

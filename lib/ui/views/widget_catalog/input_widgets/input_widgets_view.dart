@@ -34,15 +34,12 @@ class InputWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  InputWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Input widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -51,7 +48,7 @@ class InputWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  InputWidgetsView({@required this.appBarTitle});
+  InputWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -72,7 +69,7 @@ class InputWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

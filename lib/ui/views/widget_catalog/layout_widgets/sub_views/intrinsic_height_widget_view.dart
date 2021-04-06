@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class IntrinsicHeightWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'IntrinsicHeight';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  IntrinsicHeightWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

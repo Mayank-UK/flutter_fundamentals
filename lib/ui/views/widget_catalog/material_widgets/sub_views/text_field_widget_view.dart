@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class TextFieldWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'TextField';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  TextFieldWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

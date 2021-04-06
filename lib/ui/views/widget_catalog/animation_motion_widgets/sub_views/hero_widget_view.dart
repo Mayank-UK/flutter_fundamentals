@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class HeroWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Hero';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  HeroWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

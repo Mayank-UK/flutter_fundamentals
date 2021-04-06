@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class SliverFixedExtentListWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'SliverFixedExtentList';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  SliverFixedExtentListWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

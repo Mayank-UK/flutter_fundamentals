@@ -13,9 +13,7 @@ class BordersView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  BordersView({@required this.appBarTitle});
+  String appBarTitle = 'Borders';
 
   @override
   Widget build(BuildContext context) {

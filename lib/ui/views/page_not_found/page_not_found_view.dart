@@ -7,7 +7,6 @@ class PageNotFoundView extends StatelessWidget {
         appBar: AppBar(
           title: Text('404 error'),
         ),
-        // drawer: MainDrawer(),
         body: Text('Page not found screen'));
   }
 }

@@ -27,15 +27,12 @@ class TextWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  TextWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Text widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -44,7 +41,7 @@ class TextWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  TextWidgetsView({@required this.appBarTitle});
+  TextWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +62,7 @@ class TextWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

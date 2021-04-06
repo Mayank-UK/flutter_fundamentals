@@ -253,15 +253,12 @@ class LayoutWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  LayoutWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Layout widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -270,7 +267,7 @@ class LayoutWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  LayoutWidgetsView({@required this.appBarTitle});
+  LayoutWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -291,7 +288,7 @@ class LayoutWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

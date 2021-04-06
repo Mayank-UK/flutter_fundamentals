@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoPageTransitionWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoPageTransition';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoPageTransitionWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class RotatedBoxWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'RotatedBox';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  RotatedBoxWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

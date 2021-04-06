@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class NavigationView extends StatelessWidget {
-  String appBarTitle;
-
-  NavigationView({@required this.appBarTitle});
+  String appBarTitle = 'Navigation';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +9,6 @@ class NavigationView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        // drawer: MainDrawer(),
         body: Text('Navigation screen'));
   }
 }

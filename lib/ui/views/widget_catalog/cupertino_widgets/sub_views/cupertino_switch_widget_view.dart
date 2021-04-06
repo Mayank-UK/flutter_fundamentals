@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoSwitchWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoSwitch';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoSwitchWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

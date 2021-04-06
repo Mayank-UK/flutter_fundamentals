@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class AnimatedListStateWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'AnimatedListState';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  AnimatedListStateWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -4,7 +4,6 @@ import '../../../../core/router/router.dart';
 
 import '../../../widgets/main_appbar.dart';
 import '../../../widgets/custom_listview.dart';
-import '../../../widgets/code_preview.dart';
 
 class AnimationWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -125,15 +124,12 @@ class AnimationWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  AnimationWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Animation widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -142,7 +138,7 @@ class AnimationWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  AnimationWidgetsView({@required this.appBarTitle});
+  AnimationWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -163,7 +159,7 @@ class AnimationWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

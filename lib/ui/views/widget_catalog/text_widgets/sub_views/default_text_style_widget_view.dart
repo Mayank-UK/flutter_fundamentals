@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class DefaultTextStyleWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'DefaultTextStyle';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  DefaultTextStyleWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

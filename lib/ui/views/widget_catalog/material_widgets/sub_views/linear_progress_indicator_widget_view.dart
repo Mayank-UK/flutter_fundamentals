@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class LinearProgressIndicatorWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'LinearProgressIndicator';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  LinearProgressIndicatorWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

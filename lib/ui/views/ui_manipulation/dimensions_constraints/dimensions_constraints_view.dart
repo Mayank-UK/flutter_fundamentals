@@ -9,17 +9,16 @@ class DimesnionsContraintsView extends StatelessWidget {
     ListViewItem(
       title: 'Height and max/min-height',
       description: 'Manipulating vertical length of a widget.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.heightWidth,
     ),
     ListViewItem(
-        title: 'Width and max/min-width',
-        description: 'Manipulating horizontal breath of a widget.',
-        route: RoutePaths.spacing),
+      title: 'Width and max/min-width',
+      description: 'Manipulating horizontal breath of a widget.',
+      route: RoutePaths.constraints,
+    ),
   ];
 
-  String appBarTitle;
-
-  DimesnionsContraintsView({@required this.appBarTitle});
+  String appBarTitle = 'Dimensions and constraints';
 
   @override
   Widget build(BuildContext context) {

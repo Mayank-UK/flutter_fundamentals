@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class IconMaterialWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Icon';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  IconMaterialWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

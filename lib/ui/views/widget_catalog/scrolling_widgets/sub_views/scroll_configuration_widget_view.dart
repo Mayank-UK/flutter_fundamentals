@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class ScrollConfigurationWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'ScrollConfiguration';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  ScrollConfigurationWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

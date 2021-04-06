@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class PopupMenuButtonWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'PopupMenuButton';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  PopupMenuButtonWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

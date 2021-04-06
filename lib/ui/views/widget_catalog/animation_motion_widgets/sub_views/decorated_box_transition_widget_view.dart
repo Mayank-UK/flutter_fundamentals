@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class DecoratedBoxTransitionWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'DecoratedBoxTransition';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  DecoratedBoxTransitionWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

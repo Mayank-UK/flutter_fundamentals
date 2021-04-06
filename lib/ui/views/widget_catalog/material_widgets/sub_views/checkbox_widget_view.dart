@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CheckboxWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Checkbox';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CheckboxWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

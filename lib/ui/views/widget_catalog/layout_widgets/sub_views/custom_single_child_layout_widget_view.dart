@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CustomSingleChildLayoutWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CustomSingleChildLayout';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CustomSingleChildLayoutWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

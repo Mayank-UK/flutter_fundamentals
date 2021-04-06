@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class TransformWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Transform';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  TransformWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

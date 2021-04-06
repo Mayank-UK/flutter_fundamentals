@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CustomScrollViewWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CustomScrollView';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CustomScrollViewWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class LimitedBoxWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'LimitedBox';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  LimitedBoxWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class ChipWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Chip';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  ChipWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

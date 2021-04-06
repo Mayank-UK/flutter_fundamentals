@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class FractionallySizedBoxWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'FractionallySizedBox';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  FractionallySizedBoxWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

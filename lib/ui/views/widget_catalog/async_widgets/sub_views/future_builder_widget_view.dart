@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class FutureBuilderWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'FutureBuilder';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  FutureBuilderWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

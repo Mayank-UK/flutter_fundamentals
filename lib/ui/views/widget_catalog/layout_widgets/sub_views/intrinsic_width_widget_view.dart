@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class IntrinsicWidthWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'IntrinsicWidth';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  IntrinsicWidthWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

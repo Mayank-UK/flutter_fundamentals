@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FlutterFundamentalsView extends StatelessWidget {
-  String appBarTitle;
-
-  FlutterFundamentalsView({@required this.appBarTitle});
+  String appBarTitle = 'Flutter fundamentals';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +9,6 @@ class FlutterFundamentalsView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        // drawer: MainDrawer(),
         body: Text('Flutter fundamentals'));
   }
 }

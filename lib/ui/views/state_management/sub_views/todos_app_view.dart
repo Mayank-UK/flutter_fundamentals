@@ -122,7 +122,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todos'),
+        title: Text('Todos application'),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.add),
@@ -241,7 +241,7 @@ class TaskListItem extends StatelessWidget {
   }
 }
 
-class TodosApp extends StatelessWidget {
+class TodosAppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

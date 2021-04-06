@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoContextMenuWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoContextMenu';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoContextMenuWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

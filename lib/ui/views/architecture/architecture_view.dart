@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ArchitectureView extends StatelessWidget {
-  String appBarTitle;
-
-  ArchitectureView({@required this.appBarTitle});
+  String appBarTitle = 'Architecture';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +9,6 @@ class ArchitectureView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        // drawer: MainDrawer(),
         body: Text('Architecture screen'));
   }
 }

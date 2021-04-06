@@ -7,7 +7,7 @@ import '../../widgets/custom_gridview.dart';
 /* class WidgetCatalogView extends StatelessWidget {
   String appBarTitle;
 
-  WidgetCatalogView({@required this.appBarTitle});
+  WidgetCatalogView();
 
   @override
   Widget build(BuildContext context) {
@@ -208,15 +208,12 @@ class WidgetCatalogView extends StatelessWidget {
     GridViewItem(title: 'Text', route: RoutePaths.textWidgets),
   ];
 
-  String appBarTitle;
-
-  WidgetCatalogView({@required this.appBarTitle});
+  String appBarTitle = 'Widget catalog';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomGridView(
         gridList: _gridList,
       ),

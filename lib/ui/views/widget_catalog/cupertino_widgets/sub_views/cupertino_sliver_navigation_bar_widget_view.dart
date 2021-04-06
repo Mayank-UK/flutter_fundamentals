@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoSliverNavigationBarWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoSliverNavigationBar';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoSliverNavigationBarWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

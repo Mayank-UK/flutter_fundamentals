@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class ReorderableListViewWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'ReorderableListView';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  ReorderableListViewWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

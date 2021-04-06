@@ -251,15 +251,12 @@ class MaterialWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  MaterialWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Material widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -268,7 +265,7 @@ class MaterialWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  MaterialWidgetsView({@required this.appBarTitle});
+  MaterialWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -289,7 +286,7 @@ class MaterialWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

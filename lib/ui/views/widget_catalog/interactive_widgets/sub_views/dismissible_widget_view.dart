@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class DismissibleWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Dismissible';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  DismissibleWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

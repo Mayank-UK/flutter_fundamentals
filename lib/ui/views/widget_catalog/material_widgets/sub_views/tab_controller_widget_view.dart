@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class TabControllerWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'TabController';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  TabControllerWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

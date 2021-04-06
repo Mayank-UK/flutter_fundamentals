@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class ScaffoldWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Scaffold';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  ScaffoldWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

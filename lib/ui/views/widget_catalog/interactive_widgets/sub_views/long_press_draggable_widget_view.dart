@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class LongPressDraggableWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'LongPressDraggable';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  LongPressDraggableWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -7,19 +7,16 @@ import './../../../../core/router/router.dart';
 class AlignmentView extends StatelessWidget {
   List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Title',
-      description: 'Description',
-      route: RoutePaths.spacing,
-    ),
+        title: 'Horizontal alignment',
+        description: 'Horizontal alignment description.',
+        route: RoutePaths.horizontalAlignment),
     ListViewItem(
-        title: 'Title', description: 'Description', route: RoutePaths.spacing),
-    ListViewItem(
-        title: 'Title', description: 'Description', route: RoutePaths.spacing),
+        title: 'Vertical alignment',
+        description: 'Vertical alignment description',
+        route: RoutePaths.verticalAlignment),
   ];
 
-  String appBarTitle;
-
-  AlignmentView({@required this.appBarTitle});
+  String appBarTitle = 'Alignment';
 
   @override
   Widget build(BuildContext context) {

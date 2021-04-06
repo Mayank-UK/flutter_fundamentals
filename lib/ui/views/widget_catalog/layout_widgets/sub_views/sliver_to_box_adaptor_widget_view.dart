@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class SliverToBoxAdaptorWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'SliverToBoxAdaptor';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  SliverToBoxAdaptorWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class PageViewWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'PageView';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  PageViewWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

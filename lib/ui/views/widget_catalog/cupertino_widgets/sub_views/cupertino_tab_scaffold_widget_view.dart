@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoTabScaffoldWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoTabScaffold';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoTabScaffoldWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

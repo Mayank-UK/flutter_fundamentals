@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoTextFieldWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoTextField';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoTextFieldWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

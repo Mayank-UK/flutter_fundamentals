@@ -36,7 +36,6 @@ class CodePreviewTabs extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
         body: TabBarView(
           children: [
             this.previewTab,

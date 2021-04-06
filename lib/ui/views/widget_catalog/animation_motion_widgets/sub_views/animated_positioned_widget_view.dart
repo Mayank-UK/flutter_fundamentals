@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class AnimatedPositionedWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'AnimatedPositioned';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  AnimatedPositionedWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -4,11 +4,8 @@ import '../../../../widgets/code_preview.dart';
 
 class CupertinoDialogFullScreenDialogTransitionWidgetView
     extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoDialogFullScreenDialTransition';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoDialogFullScreenDialogTransitionWidgetView(
-      {@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -7,19 +7,17 @@ import './../../../../core/router/router.dart';
 class PositioningView extends StatelessWidget {
   List<ListViewItem> _itemList = [
     ListViewItem(
-      title: '2D',
-      description: 'Positioning in a plain',
-      route: RoutePaths.spacing,
+      title: 'Plane positioning',
+      description: 'Positioning in a plain.',
+      route: RoutePaths.planePositioning,
     ),
     ListViewItem(
-        title: '3D',
-        description: 'Positioning in a 3D space',
-        route: RoutePaths.spacing),
+        title: 'Depth positioning',
+        description: 'Positioning at a depth.',
+        route: RoutePaths.depthPositioning),
   ];
 
-  String appBarTitle;
-
-  PositioningView({@required this.appBarTitle});
+  String appBarTitle = 'Positioning';
 
   @override
   Widget build(BuildContext context) {

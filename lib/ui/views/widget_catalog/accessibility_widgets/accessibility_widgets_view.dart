@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../widgets/main_appbar.dart';
 import '../../../../core/router/router.dart';
 import '../../../widgets/custom_listview.dart';
-import '../../../widgets/code_preview.dart';
 
 class AccessibilityWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -26,15 +25,12 @@ class AccessibilityWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  AccessibilityWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Accessibility widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -60,7 +56,7 @@ class AccessibilityWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

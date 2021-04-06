@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CircularProgressIndicatorWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CircularProgressIndicator';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CircularProgressIndicatorWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class AnimatedModalBarrierWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'AnimatedModalBarrier';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  AnimatedModalBarrierWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -9,17 +9,15 @@ class EffectsView extends StatelessWidget {
     ListViewItem(
       title: 'Shadows',
       description: 'Shadows of widgets.',
-      route: RoutePaths.spacing,
+      route: RoutePaths.shadows,
     ),
     ListViewItem(
         title: 'Opacity',
         description: 'Opacity of widgets.',
-        route: RoutePaths.spacing),
+        route: RoutePaths.opacityEffect),
   ];
 
-  String appBarTitle;
-
-  EffectsView({@required this.appBarTitle});
+  String appBarTitle = 'Effects';
 
   @override
   Widget build(BuildContext context) {

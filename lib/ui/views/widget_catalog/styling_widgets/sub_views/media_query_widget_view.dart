@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class MediaQueryWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'MediaQuery';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  MediaQueryWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

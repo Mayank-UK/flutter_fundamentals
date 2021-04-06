@@ -84,15 +84,12 @@ class ScrollingWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  ScrollingWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Scrolling widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -101,7 +98,7 @@ class ScrollingWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  ScrollingWidgetsView({@required this.appBarTitle});
+  ScrollingWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -122,7 +119,7 @@ class ScrollingWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

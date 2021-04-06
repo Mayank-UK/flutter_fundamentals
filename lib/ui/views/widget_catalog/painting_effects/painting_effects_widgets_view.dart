@@ -65,15 +65,12 @@ class PaintingEffectsWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  PaintingEffectsWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'PaintingEffects';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -82,7 +79,7 @@ class PaintingEffectsWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  PaintingEffectsWidgetsView({@required this.appBarTitle});
+  PaintingEffectsWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -103,7 +100,7 @@ class PaintingEffectsWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

@@ -9,17 +9,16 @@ class ColorsBackgroundsView extends StatelessWidget {
     ListViewItem(
       title: 'Color',
       description: 'Text color',
-      route: RoutePaths.spacing,
+      route: RoutePaths.colors,
     ),
     ListViewItem(
-        title: 'Background',
-        description: 'Background color',
-        route: RoutePaths.spacing),
+      title: 'Background',
+      description: 'Background color',
+      route: RoutePaths.backgrounds,
+    ),
   ];
 
-  String appBarTitle;
-
-  ColorsBackgroundsView({@required this.appBarTitle});
+  String appBarTitle = 'Colors and backgrounds';
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class AspectRatioWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'AspectRatio';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  AspectRatioWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

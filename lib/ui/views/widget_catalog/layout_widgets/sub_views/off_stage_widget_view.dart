@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class OffStageWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'OffStage';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  OffStageWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

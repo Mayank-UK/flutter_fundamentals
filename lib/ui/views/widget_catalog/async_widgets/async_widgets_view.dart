@@ -20,15 +20,12 @@ class AsyncWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  AsyncWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Async';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -37,7 +34,7 @@ class AsyncWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  AsyncWidgetsView({@required this.appBarTitle});
+  AsyncWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -58,7 +55,7 @@ class AsyncWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

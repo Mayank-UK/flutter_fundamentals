@@ -20,15 +20,12 @@ class UiManipulationView extends StatelessWidget {
     GridViewItem(title: 'Visibility', route: RoutePaths.visibility),
   ];
 
-  String appBarTitle;
-
-  UiManipulationView({@required this.appBarTitle});
+  String appBarTitle = 'UI manipulation';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomGridView(
         gridList: this._gridList,
       ),

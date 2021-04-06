@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class GestureDetectorWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'GestureDetector';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  GestureDetectorWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

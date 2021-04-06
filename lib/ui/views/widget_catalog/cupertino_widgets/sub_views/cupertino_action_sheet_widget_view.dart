@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class CupertinoActionSheetWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'CupertinoActionSheet';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  CupertinoActionSheetWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

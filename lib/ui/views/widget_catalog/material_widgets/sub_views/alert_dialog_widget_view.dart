@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class AlertDialogWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'AlertDialog';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  AlertDialogWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class InteractiveViewerWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'InteractiveViewer';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  InteractiveViewerWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

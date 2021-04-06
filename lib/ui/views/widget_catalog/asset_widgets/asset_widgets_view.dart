@@ -33,13 +33,12 @@ class AssetWidgetsView extends StatelessWidget {
 
   String appBarTitle;
 
-  AssetWidgetsView({@required this.appBarTitle});
+  AssetWidgetsView();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -48,7 +47,7 @@ class AssetWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  AssetWidgetsView({@required this.appBarTitle});
+  AssetWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +68,7 @@ class AssetWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

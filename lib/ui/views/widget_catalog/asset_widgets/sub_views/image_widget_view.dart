@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class ImageWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'ImageWidget';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  ImageWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

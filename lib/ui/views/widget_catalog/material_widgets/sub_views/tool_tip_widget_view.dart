@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class TooltipWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Tooltip';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  TooltipWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

@@ -154,15 +154,12 @@ class CupertinoWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  CupertinoWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Cupertino widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -171,7 +168,7 @@ class CupertinoWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  CupertinoWidgetsView({@required this.appBarTitle});
+  CupertinoWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -192,7 +189,7 @@ class CupertinoWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(

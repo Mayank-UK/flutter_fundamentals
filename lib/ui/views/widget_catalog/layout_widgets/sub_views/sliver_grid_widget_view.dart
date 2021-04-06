@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class SliverGridWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'SliverGrid';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  SliverGridWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

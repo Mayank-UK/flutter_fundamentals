@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class PaddingStyleWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Padding';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  PaddingStyleWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

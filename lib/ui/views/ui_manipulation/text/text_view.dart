@@ -21,9 +21,7 @@ class TextView extends StatelessWidget {
         route: RoutePaths.spacing),
   ];
 
-  String appBarTitle;
-
-  TextView({@required this.appBarTitle});
+  String appBarTitle = 'Text';
 
   @override
   Widget build(BuildContext context) {

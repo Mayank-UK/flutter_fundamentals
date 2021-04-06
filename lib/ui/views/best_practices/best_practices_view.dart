@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class BestPracticesView extends StatelessWidget {
-  String appBarTitle;
-
-  BestPracticesView({@required this.appBarTitle});
+  String appBarTitle = 'Best practices';
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +9,6 @@ class BestPracticesView extends StatelessWidget {
         appBar: AppBar(
           title: Text(this.appBarTitle),
         ),
-        // drawer: MainDrawer(),
         body: Text('Best practices screen'));
   }
 }

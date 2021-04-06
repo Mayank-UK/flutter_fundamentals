@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class FormWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'Form';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  FormWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

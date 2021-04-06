@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../widgets/code_preview.dart';
 
 class ClipOvalWidgetView extends StatelessWidget {
-  String appBarTitle;
+  String appBarTitle = 'ClipOval';
   String codeTabMarkdownLocation = 'assets/markdowns/test.md';
-
-  ClipOvalWidgetView({@required this.appBarTitle});
 
   @override
   Widget build(BuildContext context) {

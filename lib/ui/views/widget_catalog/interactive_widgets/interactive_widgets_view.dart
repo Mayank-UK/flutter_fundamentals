@@ -80,15 +80,12 @@ class InteractiveWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  InteractiveWidgetsView({@required this.appBarTitle});
+  String appBarTitle = 'Interactive widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      // drawer: MainDrawer(),
       body: CustomListView(
         itemList: _itemList,
       ),
@@ -97,7 +94,7 @@ class InteractiveWidgetsView extends StatelessWidget {
 
   /* String appBarTitle;
 
-  InteractiveWidgetsView({@required this.appBarTitle});
+  InteractiveWidgetsView();
 
   @override
   Widget build(BuildContext context) {
@@ -118,7 +115,7 @@ class InteractiveWidgetsView extends StatelessWidget {
             ],
           ),
         ),
-        // drawer: MainDrawer(),
+        
         body: TabBarView(children: [
           Center(
             child: SingleChildScrollView(
