@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../core/router/router.dart';
-
 class MainDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,7 +12,7 @@ class MainDrawer extends StatelessWidget {
               color: Colors.blue,
             ),
             child: Text(
-              'Flutter fundamentals',
+              'Flutter developer\'s guide',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,
@@ -22,76 +20,19 @@ class MainDrawer extends StatelessWidget {
             ),
           ),
           ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Dart fundamentals'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.dartFundamentals,
-                  arguments: {"appBarTitle": "Dart fundamentals"});
-            },
+            leading: Icon(Icons.rate_review),
+            title: Text('Rate on Google Play'),
+            onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Flutter fundamentals'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.flutterFundamentals,
-                  arguments: {"appBarTitle": "Flutter fundamentals"});
-            },
+            leading: Icon(Icons.code),
+            title: Text('Source code on GitHub'),
+            onTap: () {},
           ),
           ListTile(
-            leading: Icon(Icons.link),
-            title: Text('UI manipulation'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.uiManipulation,
-                  arguments: {"appBarTitle": "Basic UI manipulation"});
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Widgets catalog'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.widgetsCatalog,
-                  arguments: {"appBarTitle": "Widgets catalog"});
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Navigation'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.navigation,
-                  arguments: {"appBarTitle": "Navigation"});
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text('State management'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.stateManagement,
-                  arguments: {"appBarTitle": "State management"});
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Native device features'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.nativeDeviceFeatures,
-                  arguments: {"appBarTitle": "Native device features"});
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Architecture'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.architecture,
-                  arguments: {"appBarTitle": "Architecture"});
-            },
-          ),
-          ListTile(
-            leading: Icon(Icons.link),
-            title: Text('Best practices'),
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.bestPractices,
-                  arguments: {"appBarTitle": "Best practices"});
-            },
+            leading: Icon(Icons.settings),
+            title: Text('Dark mode'),
+            onTap: () {},
           ),
         ],
       ),
