@@ -1,21 +1,29 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/main_appbar.dart';
-import './../../../widgets/custom_listview.dart';
+import '../../../components/main_appbar_component.dart';
+import './../../../components/custom_listview_component.dart';
 import './../../../../core/router/router.dart';
 
 class DimesnionsContraintsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Height and max/min-height',
-      description: 'Manipulating vertical length of a widget.',
-      route: RoutePaths.heightWidth,
+      title: 'Fixed dimensions',
+      description: 'Dimensions in fixed values.',
+      route: RoutePaths.fixedDimensions,
     ),
     ListViewItem(
-      title: 'Width and max/min-width',
-      description: 'Manipulating horizontal breath of a widget.',
-      route: RoutePaths.constraints,
+        title: 'Percentage dimensions',
+        description: 'Dimensions in percentage to the parent.',
+        route: RoutePaths.percentageDimensions),
+    ListViewItem(
+      title: 'Fractional full screen dimensions',
+      description: 'Dimensions in fraction to the whole screen.',
+      route: RoutePaths.fractionalDimensions,
     ),
+    ListViewItem(
+        title: 'Constraints',
+        description: 'Dimensions in max/min.',
+        route: RoutePaths.constraints),
   ];
 
   String appBarTitle = 'Dimensions and constraints';
@@ -23,8 +31,8 @@ class DimesnionsContraintsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomListViewComponent(
         itemList: _itemList,
       ),
     );

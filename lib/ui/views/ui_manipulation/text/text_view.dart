@@ -1,35 +1,134 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
 
-import '../../../widgets/main_appbar.dart';
-import './../../../widgets/custom_listview.dart';
-import './../../../../core/router/router.dart';
+import '../../../components/code_preview_component.dart';
+import '../../../components/section_wrapper_component_component.dart';
 
 class TextView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
-    ListViewItem(
-      title: 'Size',
-      description: 'The size of text.',
-      route: RoutePaths.spacing,
-    ),
-    ListViewItem(
-        title: 'Fonts',
-        description: 'Using different font families.',
-        route: RoutePaths.spacing),
-    ListViewItem(
-        title: 'Type',
-        description: 'Font style like bold, italics, etc',
-        route: RoutePaths.spacing),
-  ];
-
   String appBarTitle = 'Text';
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
-        itemList: _itemList,
-      ),
+    return CodePreviewTabsComponent(
+      appBarTitle: this.appBarTitle,
+      previewTab: _TextImplementation(),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _TextImplementation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: [
+        SectionWrapperComponent(
+          title: 'Font size',
+          content: [
+            Container(
+              child: Text(
+                  'Text size can be changed using "Text" widget\'s named parameter "style" which takes an object of "TextStyle" class.'),
+            ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              padding: EdgeInsets.all(8),
+              child: Text(
+                'Sample text of size 20',
+                style: TextStyle(
+                  fontSize: 20,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SectionWrapperComponent(
+          title: 'Font color',
+          content: [
+            Container(
+              child: Text(
+                  'Text size can be changed using "Text" widget\'s named parameter "style" which takes an object of "TextStyle" class.'),
+            ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              padding: EdgeInsets.all(8),
+              child: Text(
+                'Sample text with red color',
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.red,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SectionWrapperComponent(
+          title: 'Font style',
+          content: [
+            Container(
+              child: Text(
+                  'Text size can be changed using "Text" widget\'s named parameter "style" which takes an object of "TextStyle" class.'),
+            ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              padding: EdgeInsets.all(8),
+              child: Text(
+                'Sample text italic font style',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SectionWrapperComponent(
+          title: 'Font weight',
+          content: [
+            Container(
+              child: Text(
+                  'Text size can be changed using "Text" widget\'s named parameter "style" which takes an object of "TextStyle" class.'),
+            ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              padding: EdgeInsets.all(8),
+              child: Text(
+                'Sample text bold weight',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ],
+        ),
+        SectionWrapperComponent(
+          title: 'Font family',
+          content: [
+            Container(
+              child: Text(
+                  'Text size can be changed using "Text" widget\'s named parameter "style" which takes an object of "TextStyle" class.'),
+            ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              padding: EdgeInsets.all(8),
+              child: Text(
+                'Sample text different font family',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontFamily: 'Roboto-Light',
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../widgets/code_preview.dart';
+import '../../../../components/code_preview_component.dart';
 
 class CupertinoSliderWidgetView extends StatelessWidget {
   String appBarTitle = 'CupertinoSlider';
@@ -8,7 +8,7 @@ class CupertinoSliderWidgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CodePreviewTabs(
+    return CodePreviewTabsComponent(
       appBarTitle: this.appBarTitle,
       previewTab: Text('preview'),
       codeTabMarkdownLocation: this.codeTabMarkdownLocation,

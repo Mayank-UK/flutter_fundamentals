@@ -9,10 +9,10 @@ class ListViewItem {
       {@required this.title, @required this.description, @required this.route});
 }
 
-class CustomListView extends StatelessWidget {
+class CustomListViewComponent extends StatelessWidget {
   List<ListViewItem> itemList;
 
-  CustomListView({@required this.itemList});
+  CustomListViewComponent({@required this.itemList});
 
   @override
   Widget build(BuildContext context) {

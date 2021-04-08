@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../widgets/code_preview.dart';
+import '../../../../components/code_preview_component.dart';
 
 class CupertinoDialogFullScreenDialogTransitionWidgetView
     extends StatelessWidget {
@@ -9,7 +9,7 @@ class CupertinoDialogFullScreenDialogTransitionWidgetView
 
   @override
   Widget build(BuildContext context) {
-    return CodePreviewTabs(
+    return CodePreviewTabsComponent(
       appBarTitle: this.appBarTitle,
       previewTab: Text('preview'),
       codeTabMarkdownLocation: this.codeTabMarkdownLocation,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_appbar.dart';
+import '../../components/main_appbar_component.dart';
 
 class DartFundamentalsView extends StatelessWidget {
   String appBarTitle = 'Dart fundamentals';
@@ -8,7 +8,7 @@ class DartFundamentalsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
       body: Text('Dart fundamentals view'),
     );
   }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../widgets/code_preview.dart';
+import '../../../../components/code_preview_component.dart';
+import '../../../../components/section_wrapper_component_component.dart';
 
 class OutFlowView extends StatelessWidget {
   String appBarTitle = 'Out flow';
@@ -8,10 +9,25 @@ class OutFlowView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CodePreviewTabs(
+    return CodePreviewTabsComponent(
       appBarTitle: this.appBarTitle,
       previewTab: Text('preview'),
       codeTabMarkdownLocation: this.codeTabMarkdownLocation,
     );
   }
 }
+
+/* class  extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: [
+        SectionWrapperComponent(
+          title: '',
+          content: [],
+        ),
+      ],
+    );
+  }
+}
+ */

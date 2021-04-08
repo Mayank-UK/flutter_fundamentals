@@ -7,10 +7,10 @@ class GridViewItem {
   GridViewItem({@required String this.title, @required String this.route});
 }
 
-class CustomGridView extends StatelessWidget {
+class CustomGridViewComponent extends StatelessWidget {
   List<GridViewItem> gridList;
 
-  CustomGridView({@required this.gridList});
+  CustomGridViewComponent({@required this.gridList});
 
   @override
   Widget build(BuildContext context) {

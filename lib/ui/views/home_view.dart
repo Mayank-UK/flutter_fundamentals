@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './../../core/router/router.dart';
-import '../widgets/main_drawer.dart';
-import '../widgets/custom_gridview.dart';
+import '../components/main_drawer_component.dart';
+import '../components/custom_gridview_component.dart';
 
 class HomeView extends StatelessWidget {
   List<GridViewItem> _gridList = [
@@ -53,8 +53,8 @@ class HomeView extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Flutter developer\'s guide'),
         ),
-        drawer: MainDrawer(),
-        body: CustomGridView(
+        drawer: MainDrawerComponent(),
+        body: CustomGridViewComponent(
           gridList: _gridList,
         ),
       ),

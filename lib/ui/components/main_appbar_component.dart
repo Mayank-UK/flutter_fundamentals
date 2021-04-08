@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class MainAppBar extends StatelessWidget with PreferredSizeWidget {
+class MainAppBarComponent extends StatelessWidget with PreferredSizeWidget {
   String appBarTitle;
 
-  MainAppBar({@required this.appBarTitle});
+  MainAppBarComponent({@required this.appBarTitle});
 
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);

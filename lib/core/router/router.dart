@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 // home
@@ -252,15 +253,15 @@ import '../../ui/views/ui_manipulation/text/text_view.dart';
 import '../../ui/views/ui_manipulation/visibility/visibility_view.dart';
 
 // ui manipulation alignment
-import '../../ui/views/ui_manipulation/alignment/sub_views/horizontal_alignment_view.dart';
-import '../../ui/views/ui_manipulation/alignment/sub_views/vertical_alignment_view.dart';
 
 // ui manipulation colors and backgrounds
 import '../../ui/views/ui_manipulation/colors_backgrounds/sub_views/colors_view.dart';
 import '../../ui/views/ui_manipulation/colors_backgrounds/sub_views/backgrounds_view.dart';
 
 // ui manipulation dimensions and constraints
-import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/height_width_view.dart';
+import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/fixed_dimensions_view.dart';
+import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/percentage_dimensions_view.dart';
+import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/fractional_dimensions_view.dart';
 import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/constraints_view.dart';
 
 // ui manipulation effects
@@ -268,12 +269,12 @@ import '../../ui/views/ui_manipulation/effects/sub_views/shadows_view.dart';
 import '../../ui/views/ui_manipulation/effects/sub_views/opacity_view.dart';
 
 // ui manipulation positioning
-import '../../ui/views/ui_manipulation/positioning/sub_views/plane_positioning_view.dart';
-import '../../ui/views/ui_manipulation/positioning/sub_views/depth_positioning_view.dart';
 
 // ui manipulation spacing
 import '../../ui/views/ui_manipulation/spacing/sub_views/padding_view.dart';
 import '../../ui/views/ui_manipulation/spacing/sub_views/margin_view.dart';
+
+// ui manipulation text
 
 // ui manipulation visibility
 import '../../ui/views/ui_manipulation/visibility/sub_views/in_flow_view.dart';
@@ -631,7 +632,7 @@ class RoutePaths {
   static const String alignment = '/ui-manipulation/alignment';
   static const String positioning = '/ui-manipulation/positioning';
   static const String visibility = '/ui-manipulation/visibility';
-  static const String textUiManipulation = '/ui-manipulation/text';
+  static const String textManipulation = '/ui-manipulation/text';
   static const String borders = '/ui-manipulation/borders';
   static const String effects = '/ui-manipulation/effects';
 
@@ -645,7 +646,11 @@ class RoutePaths {
   static const String backgrounds = '/ui-manipulation/backgrounds';
 
   // ui manipulation dimensions and constraints
-  static const String heightWidth = '/ui-manipulation/height-width';
+  static const String fixedDimensions = '/ui-manipulation/fixed-dimensions';
+  static const String percentageDimensions =
+      '/ui-manipulation/percentage-dimensions';
+  static const String fractionalDimensions =
+      '/ui-manipulation/fractional-dimensions';
   static const String constraints = '/ui-manipulation/constraints';
 
   // ui manipulation effects
@@ -659,6 +664,8 @@ class RoutePaths {
   // ui manipulation spacing
   static const String paddingSpacing = '/ui-manipulation/padding';
   static const String marginSpacing = '/ui-manipulation/margin';
+
+  // ui manipulation text
 
   // ui manipulation visibility
   static const String inFlow = '/ui-manipulation/in-flow';
@@ -1558,7 +1565,7 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => VisibilityView(),
         );
-      case RoutePaths.text:
+      case RoutePaths.textManipulation:
         return MaterialPageRoute(
           builder: (_) => TextView(),
         );
@@ -1572,14 +1579,6 @@ class MyRouter {
         );
 
       // ui manipulation alignment routes
-      case RoutePaths.horizontalAlignment:
-        return MaterialPageRoute(
-          builder: (_) => HorizontalAlignmentView(),
-        );
-      case RoutePaths.verticalAlignment:
-        return MaterialPageRoute(
-          builder: (_) => VerticalAlignmentView(),
-        );
 
       // ui manipulation colors and backgrounds routes
       case RoutePaths.colors:
@@ -1592,9 +1591,17 @@ class MyRouter {
         );
 
       // ui manipulation height and constraints
-      case RoutePaths.heightWidth:
+      case RoutePaths.fixedDimensions:
         return MaterialPageRoute(
-          builder: (_) => HeightWidthView(),
+          builder: (_) => FixedDimensionsView(),
+        );
+      case RoutePaths.percentageDimensions:
+        return MaterialPageRoute(
+          builder: (_) => PercentageDimensionsView(),
+        );
+      case RoutePaths.fractionalDimensions:
+        return MaterialPageRoute(
+          builder: (_) => FractionalDimensionsView(),
         );
       case RoutePaths.constraints:
         return MaterialPageRoute(
@@ -1612,14 +1619,6 @@ class MyRouter {
         );
 
       // ui manipulation positioning
-      case RoutePaths.planePositioning:
-        return MaterialPageRoute(
-          builder: (_) => PlanePositioningView(),
-        );
-      case RoutePaths.depthPositioning:
-        return MaterialPageRoute(
-          builder: (_) => DepthPositioningView(),
-        );
 
       // ui manipulation spacing
       case RoutePaths.paddingSpacing:
@@ -1630,6 +1629,8 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => MarginSpacingView(),
         );
+
+      // ui manipulation text
 
       // ui manipulation visibility
       case RoutePaths.inFlow:

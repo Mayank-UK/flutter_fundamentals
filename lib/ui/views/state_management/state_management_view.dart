@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../core/router/router.dart';
-import '../../widgets/main_appbar.dart';
-import '../../widgets/custom_listview.dart';
+import '../../components/main_appbar_component.dart';
+import '../../components/custom_listview_component.dart';
 
 class StateManagementView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -21,8 +21,8 @@ class StateManagementView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomListViewComponent(
         itemList: _itemList,
       ),
     );

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-class WidgetInfo extends StatelessWidget {
+class WidgetInfoComponent extends StatelessWidget {
   String title;
   String description;
 
-  WidgetInfo({@required String this.title, @required String this.description});
+  WidgetInfoComponent(
+      {@required String this.title, @required String this.description});
 
   @override
   Widget build(BuildContext context) {

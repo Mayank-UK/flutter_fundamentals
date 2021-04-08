@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/main_appbar.dart';
-import './../../../widgets/custom_listview.dart';
+import '../../../components/main_appbar_component.dart';
+import './../../../components/custom_listview_component.dart';
 import './../../../../core/router/router.dart';
 
 class ColorsBackgroundsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Color',
+      title: 'Text Color',
       description: 'Text color',
       route: RoutePaths.colors,
     ),
@@ -23,8 +23,8 @@ class ColorsBackgroundsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomListViewComponent(
         itemList: _itemList,
       ),
     );

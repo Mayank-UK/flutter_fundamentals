@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_appbar.dart';
-import '../../widgets/custom_gridview.dart';
+import '../../components/main_appbar_component.dart';
+import '../../components/custom_gridview_component.dart';
 import '../../../core/router/router.dart';
 
 class UiManipulationView extends StatelessWidget {
@@ -16,7 +16,7 @@ class UiManipulationView extends StatelessWidget {
     GridViewItem(title: 'Effects', route: RoutePaths.effects),
     GridViewItem(title: 'Positioning', route: RoutePaths.positioning),
     GridViewItem(title: 'Spacing', route: RoutePaths.spacing),
-    GridViewItem(title: 'Text', route: RoutePaths.text),
+    GridViewItem(title: 'Text', route: RoutePaths.textManipulation),
     GridViewItem(title: 'Visibility', route: RoutePaths.visibility),
   ];
 
@@ -25,8 +25,8 @@ class UiManipulationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomGridView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomGridViewComponent(
         gridList: this._gridList,
       ),
     );

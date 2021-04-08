@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/main_appbar.dart';
-import './../../../widgets/custom_listview.dart';
+import '../../../components/main_appbar_component.dart';
+import './../../../components/custom_listview_component.dart';
 import './../../../../core/router/router.dart';
 
 class EffectsView extends StatelessWidget {
@@ -22,8 +22,8 @@ class EffectsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomListViewComponent(
         itemList: _itemList,
       ),
     );

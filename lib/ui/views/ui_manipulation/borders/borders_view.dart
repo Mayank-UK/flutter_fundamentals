@@ -1,27 +1,99 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/main_appbar.dart';
-import './../../../widgets/custom_listview.dart';
-import './../../../../core/router/router.dart';
+import '../../../components/code_preview_component.dart';
+import '../../../components/section_wrapper_component_component.dart';
 
 class BordersView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
-    ListViewItem(
-      title: 'Title',
-      description: 'Description',
-      route: RoutePaths.spacing,
-    ),
-  ];
-
   String appBarTitle = 'Borders';
+  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
-        itemList: _itemList,
-      ),
+    return CodePreviewTabsComponent(
+      appBarTitle: this.appBarTitle,
+      previewTab: _BordersImplementation(),
+      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _BordersImplementation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: [
+        SectionWrapperComponent(
+          title: 'Using \'Container\' widget (preferred way)',
+          content: [
+            Container(
+              child: Text(
+                  '"Container" widget has a named parameter "decoration", which takes an object of "BoxDecoration" class with specified values.'),
+            ),
+            Wrap(
+              spacing: 8,
+              children: [
+                Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.blueAccent,
+                      width: 2,
+                    ),
+                  ),
+                  child: Text("Text"),
+                ),
+                Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(
+                        color: Colors.blueAccent,
+                        width: 3.0,
+                      ),
+                      right: BorderSide(
+                        color: Colors.blueAccent,
+                        width: 3.0,
+                      ),
+                    ),
+                  ),
+                  child: Text("Text"),
+                ),
+                Container(
+                  padding: EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.blueAccent,
+                      width: 2,
+                    ),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(8),
+                    ),
+                  ),
+                  child: Text("Text"),
+                ),
+              ],
+            ),
+          ],
+        ),
+        SectionWrapperComponent(
+          title: 'Using \'DecoratedBox\' widget',
+          content: [
+            Container(
+              child: Text(
+                  '"DecoratedBox" widget has a named parameter "decoration", which takes an object of "BoxDecoration" class.'),
+            ),
+            DecoratedBox(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.blueAccent),
+              ),
+              child: Container(
+                padding: EdgeInsets.all(8),
+                child: Text('Text'),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../widgets/main_appbar.dart';
+import '../../components/main_appbar_component.dart';
 import '../../../core/router/router.dart';
-import '../../widgets/custom_gridview.dart';
+import '../../components/custom_gridview_component.dart';
 
 /* class WidgetCatalogView extends StatelessWidget {
   String appBarTitle;
@@ -12,7 +12,7 @@ import '../../widgets/custom_gridview.dart';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
       drawer: MainDrawer(),
       body: GridView.count(
         // without this property, GridView is not visible
@@ -213,8 +213,8 @@ class WidgetCatalogView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomGridView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomGridViewComponent(
         gridList: _gridList,
       ),
     );

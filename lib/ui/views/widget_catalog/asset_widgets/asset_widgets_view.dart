@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/router/router.dart';
 
-import '../../../widgets/main_appbar.dart';
-import '../../../widgets/custom_listview.dart';
-import '../../../widgets/code_preview.dart';
+import '../../../components/main_appbar_component.dart';
+import '../../../components/custom_listview_component.dart';
+import '../../../components/code_preview_component.dart';
 
 class AssetWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -38,8 +38,8 @@ class AssetWidgetsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomListViewComponent(
         itemList: _itemList,
       ),
     );
@@ -106,7 +106,7 @@ class AssetWidgetsView extends StatelessWidget {
                   Container(
                     child: const Image(
                       image: NetworkImage(
-                          'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+                          'https://flutter.github.io/assets-for-api-docs/assets/components/owl.jpg'),
                     ),
                   ),
                   WidgetInfo(

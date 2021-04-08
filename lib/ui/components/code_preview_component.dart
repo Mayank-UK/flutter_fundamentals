@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
 
-class CodePreviewTabs extends StatelessWidget {
+class CodePreviewTabsComponent extends StatelessWidget {
   String appBarTitle;
   Widget previewTab;
   String codeTabMarkdownLocation;
 
-  CodePreviewTabs(
+  CodePreviewTabsComponent(
       {@required this.appBarTitle,
       @required this.previewTab,
       @required this.codeTabMarkdownLocation});
@@ -38,7 +38,9 @@ class CodePreviewTabs extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            this.previewTab,
+            SingleChildScrollView(
+              child: this.previewTab,
+            ),
             FutureBuilder(
               future: getFileData(this.codeTabMarkdownLocation),
               builder: (context, snapshot) {

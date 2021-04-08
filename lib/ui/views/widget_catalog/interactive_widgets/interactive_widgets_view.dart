@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../widgets/main_appbar.dart';
+import '../../../components/main_appbar_component.dart';
 
 import '../../../../core/router/router.dart';
-import '../../../widgets/custom_listview.dart';
-import '../../../widgets/code_preview.dart';
+import '../../../components/custom_listview_component.dart';
+import '../../../components/code_preview_component.dart';
 
 class InteractiveWidgetsView extends StatelessWidget {
   List<ListViewItem> _itemList = [
@@ -85,8 +85,8 @@ class InteractiveWidgetsView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBar(appBarTitle: this.appBarTitle),
-      body: CustomListView(
+      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      body: CustomListViewComponent(
         itemList: _itemList,
       ),
     );

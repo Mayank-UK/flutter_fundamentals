@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../widgets/code_preview.dart';
+import '../../../../components/code_preview_component.dart';
 
 class SliverAppBarMaterialWidgetView extends StatelessWidget {
   String appBarTitle = 'SliverAppBar';
@@ -8,7 +8,7 @@ class SliverAppBarMaterialWidgetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CodePreviewTabs(
+    return CodePreviewTabsComponent(
       appBarTitle: this.appBarTitle,
       previewTab: Text('preview'),
       codeTabMarkdownLocation: this.codeTabMarkdownLocation,
