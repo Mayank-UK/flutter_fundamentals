@@ -32,7 +32,10 @@ class _ColorsImplementation extends StatelessWidget {
             Container(
               child: Text(
                 'Text',
-                style: TextStyle(color: Colors.red),
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20,
+                ),
               ),
             ),
           ],
@@ -46,7 +49,10 @@ class _ColorsImplementation extends StatelessWidget {
             ),
             Container(
               child: DefaultTextStyle(
-                style: TextStyle(color: Colors.red),
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 20,
+                ),
                 child: Text(
                   'Text',
                 ),

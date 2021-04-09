@@ -30,21 +30,37 @@ class CustomListViewComponent extends StatelessWidget {
             child: Container(
               margin: EdgeInsets.all(8),
               child: Ink(
-                color: Colors.teal[300],
-                padding: EdgeInsets.only(
-                  top: 0,
-                  right: 8,
-                  bottom: 8,
-                  left: 8,
+                decoration: BoxDecoration(
+                  color: Colors.blueGrey,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 4,
+                      offset: Offset(2, 2),
+                    ),
+                  ],
                 ),
-                width: 200,
                 child: Container(
-                  child: Column(
-                    // crossAxisAlignment: Alignment.bottomCenter,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: EdgeInsets.all(8),
+                  width: 200,
+                  child: Wrap(
+                    direction: Axis.vertical,
+                    spacing: 8,
                     children: [
-                      Text(itemList[index].title),
-                      Text(itemList[index].description),
+                      Text(
+                        itemList[index].title,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        itemList[index].description,
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ),
                     ],
                   ),
                 ),

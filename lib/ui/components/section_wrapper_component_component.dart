@@ -24,7 +24,7 @@ class SectionWrapperComponent extends StatelessWidget {
             margin: EdgeInsets.only(bottom: 16),
             child: Text(
               this.title,
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(fontSize: 20),
             ),
           ),
           ...this.content,

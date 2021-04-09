@@ -27,15 +27,33 @@ class CustomGridViewComponent extends StatelessWidget {
           onTap: () {
             Navigator.of(context).pushNamed(
               item.route,
-              // arguments: {'appBarTitle': '${item.title}'},
             );
           },
           child: Ink(
-            color: Colors.teal[300],
-            height: 200,
-            padding: EdgeInsets.all(8),
-            width: 200,
-            child: Text(item.title),
+            decoration: BoxDecoration(
+              color: Colors.blueGrey,
+              borderRadius: BorderRadius.circular(8),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 4,
+                  offset: Offset(2, 2),
+                ),
+              ],
+            ),
+            child: Container(
+              height: 200,
+              padding: EdgeInsets.all(8),
+              width: 200,
+              alignment: Alignment.centerLeft,
+              child: Text(
+                item.title,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
+            ),
           ),
         );
       }).toList(),

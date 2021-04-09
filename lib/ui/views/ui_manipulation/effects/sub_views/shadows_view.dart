@@ -30,22 +30,19 @@ class _ShadowImplementation extends StatelessWidget {
                   '"Container" widget has a named parameter "decoration", which takes an object of "BoxDecoration" class.'),
             ),
             Container(
-              alignment: Alignment.center,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black26,
-                      blurRadius: 4,
-                      offset: Offset(4, 8),
-                    ),
-                  ],
-                ),
-                height: 100,
-                width: 100,
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(20),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black26,
+                    blurRadius: 4,
+                    offset: Offset(4, 8),
+                  ),
+                ],
               ),
+              height: 100,
+              width: 100,
             )
           ],
         ),
@@ -53,7 +50,10 @@ class _ShadowImplementation extends StatelessWidget {
           title: 'Using "PhysicalModel" widget',
           content: [
             Container(
-              alignment: Alignment.center,
+              child: Text(
+                  '"PhysicalModel" widget has named properties like elevation, shadowColor, etc for defining shadow.'),
+            ),
+            Container(
               child: PhysicalModel(
                 color: Colors.amber,
                 elevation: 8,

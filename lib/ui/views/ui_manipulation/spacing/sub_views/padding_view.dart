@@ -30,12 +30,9 @@ class _PaddingSpacingImplementation extends StatelessWidget {
                   '"Container" widget has a named parameter "padding", which takes an object of "EdgeInsets" class.'),
             ),
             Container(
-              alignment: Alignment.center,
-              child: Container(
-                color: Colors.amber,
-                padding: EdgeInsets.all(8),
-                child: Text('Padding of 8'),
-              ),
+              color: Colors.amber,
+              padding: EdgeInsets.all(8),
+              child: Text('Padding of 8'),
             ),
           ],
         ),
@@ -46,18 +43,15 @@ class _PaddingSpacingImplementation extends StatelessWidget {
               child: Text(
                   '"Padding" widget has a named parameter "padding", which takes an object of "EdgeInsets" class.'),
             ),
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                color: Colors.amber,
-                child: Padding(
-                  padding: EdgeInsets.all(8),
-                  child: Container(
-                    child: Text('Padding of 8'),
-                  ),
+            Container(
+              color: Colors.amber,
+              child: Padding(
+                padding: EdgeInsets.all(8),
+                child: Container(
+                  child: Text('Padding of 8'),
                 ),
               ),
-            )
+            ),
           ],
         )
       ],

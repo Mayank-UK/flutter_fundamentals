@@ -11,9 +11,14 @@ class HomeView extends StatelessWidget {
     GridViewItem(
         title: 'Flutter fundamentals', route: RoutePaths.flutterFundamentals),
     GridViewItem(title: 'UI manipulation', route: RoutePaths.uiManipulation),
-    GridViewItem(title: 'Widgets catalog', route: RoutePaths.widgetsCatalog),
+    GridViewItem(title: 'Lifecycle', route: RoutePaths.lifecycle),
     GridViewItem(title: 'Navigation', route: RoutePaths.navigation),
     GridViewItem(title: 'State management', route: RoutePaths.stateManagement),
+    GridViewItem(title: 'Testing', route: RoutePaths.testing),
+    GridViewItem(title: 'Widget catalog', route: RoutePaths.widgetsCatalog),
+    GridViewItem(
+        title: 'Supporting classes and enums',
+        route: RoutePaths.supportingClassesEnums),
     GridViewItem(
         title: 'Native device features',
         route: RoutePaths.nativeDeviceFeatures),

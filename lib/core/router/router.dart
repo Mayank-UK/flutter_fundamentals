@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
 // home
@@ -15,8 +14,19 @@ import '../../ui/views/state_management/state_management_view.dart';
 import '../../ui/views/native_device_features/native_device_features_view.dart';
 import '../../ui/views/architecture/architecture_view.dart';
 import '../../ui/views/best_practices/best_practices_view.dart';
+import '../../ui/views/supporting_classes_enums/supporting_classes_enums_view.dart';
+import '../../ui/views/testing/testing_view.dart';
+import '../../ui/views/lifecycle/lifecycle_view.dart';
 
-// widget catalog main
+// supporting classes sub_views
+import '../../ui/views/supporting_classes_enums/sub_views/supporting_classes_view.dart';
+import '../../ui/views/supporting_classes_enums/sub_views/supproting_enums_view.dart';
+
+// lifecycle sub_views
+import '../../ui/views/lifecycle/sub_views/application_lifecycle_view.dart';
+import '../../ui/views/lifecycle/sub_views/widget_lifecycle_view.dart';
+
+// widget catalog main category
 import '../../ui/views/widget_catalog/accessibility_widgets/accessibility_widgets_view.dart';
 import '../../ui/views/widget_catalog/animation_motion_widgets/animation_widgets_view.dart';
 import '../../ui/views/widget_catalog/asset_widgets/asset_widgets_view.dart';
@@ -243,44 +253,69 @@ import '../../ui/views/widget_catalog/text_widgets/sub_views/text_widget_view.da
 
 // ui manipulation category
 import '../../ui/views/ui_manipulation/alignment/alignment_view.dart';
+import '../../ui/views/ui_manipulation/interactive_behavior/interactive_behavior_view.dart';
 import '../../ui/views/ui_manipulation/borders/borders_view.dart';
 import '../../ui/views/ui_manipulation/colors_backgrounds/colors_backgrounds_view.dart';
 import '../../ui/views/ui_manipulation/dimensions_constraints/dimensions_constraints_view.dart';
 import '../../ui/views/ui_manipulation/effects/effects_view.dart';
+import '../../ui/views/ui_manipulation/icons_images/icons_images_view.dart';
 import '../../ui/views/ui_manipulation/positioning/positioning_view.dart';
 import '../../ui/views/ui_manipulation/spacing/spacing_view.dart';
+import '../../ui/views/ui_manipulation/theme/theme_view.dart';
 import '../../ui/views/ui_manipulation/text/text_view.dart';
 import '../../ui/views/ui_manipulation/visibility/visibility_view.dart';
+import '../../ui/views/ui_manipulation/layout/layout_view.dart';
+import '../../ui/views/ui_manipulation/form/form_view.dart';
+import '../../ui/views/ui_manipulation/responsive_adaptive_ui/responsive_adaptive_ui_view.dart';
 
-// ui manipulation alignment
+// ui manipulation alignment sub_views
 
-// ui manipulation colors and backgrounds
+// ui manipulation interactive behavior sub_views
+import '../../ui/views/ui_manipulation/interactive_behavior/sub_views/click_behavior_view.dart';
+import '../../ui/views/ui_manipulation/interactive_behavior/sub_views/hover_behavior_view.dart';
+import '../../ui/views/ui_manipulation/interactive_behavior/sub_views/focus_behavior_view.dart';
+
+// ui manipulation colors and backgrounds sub_views
 import '../../ui/views/ui_manipulation/colors_backgrounds/sub_views/colors_view.dart';
 import '../../ui/views/ui_manipulation/colors_backgrounds/sub_views/backgrounds_view.dart';
 
-// ui manipulation dimensions and constraints
+// ui manipulation dimensions and constraints sub_views
 import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/fixed_dimensions_view.dart';
 import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/percentage_dimensions_view.dart';
 import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/fractional_dimensions_view.dart';
 import '../../ui/views/ui_manipulation/dimensions_constraints/sub_views/constraints_view.dart';
 
-// ui manipulation effects
+// ui manipulation effects sub_views
 import '../../ui/views/ui_manipulation/effects/sub_views/shadows_view.dart';
 import '../../ui/views/ui_manipulation/effects/sub_views/opacity_view.dart';
 
-// ui manipulation positioning
+// ui manipulation form sub_views
 
-// ui manipulation spacing
+// ui manipulation icons and images sub_views
+
+// ui manipulation layout sub_views
+import '../../ui/views/ui_manipulation/layout/sub_views/page_layout_view.dart';
+import '../../ui/views/ui_manipulation/layout/sub_views/basic_layout_view.dart';
+
+// ui manipulation positioning sub_views
+
+// ui manipulation spacing sub_views
 import '../../ui/views/ui_manipulation/spacing/sub_views/padding_view.dart';
 import '../../ui/views/ui_manipulation/spacing/sub_views/margin_view.dart';
 
-// ui manipulation text
+// ui manipulation theme sub_views
 
-// ui manipulation visibility
+// ui manipulation text sub_views
+
+// ui manipulation visibility sub_views
 import '../../ui/views/ui_manipulation/visibility/sub_views/in_flow_view.dart';
 import '../../ui/views/ui_manipulation/visibility/sub_views/out_flow_view.dart';
 
-// state management
+// ui manipulation responsive and adaptive ui sub_views
+import '../../ui/views/ui_manipulation/responsive_adaptive_ui/sub_views/responsive_ui_view.dart';
+import '../../ui/views/ui_manipulation/responsive_adaptive_ui/sub_views/adaptive_ui_view.dart';
+
+// state management sub_views
 import '../../ui/views/state_management/sub_views/state_management_basics_view.dart';
 import '../../ui/views/state_management/sub_views/todos_app_view.dart';
 
@@ -298,8 +333,21 @@ class RoutePaths {
   static const String nativeDeviceFeatures = '/native-device-features';
   static const String architecture = '/architecture';
   static const String bestPractices = '/best-practices';
+  static const String supportingClassesEnums = '/supporting-classes-enums';
+  static const String testing = '/testing';
+  static const String lifecycle = '/lifecycle';
 
-  // widget catalog category widgets
+  // supporting classes and enums routes
+  static const String supportingClasses =
+      '/supporting-classes-enums/supporting-classes';
+  static const String supportingEnums =
+      '/supporting-classes-enums/supporting-enums';
+
+  // lifecycle routes
+  static const String applicationLifecycle = '/lifecycle/application-lifecycle';
+  static const String widgetLifecycle = '/lifecycle/widget-lifecycle';
+
+  // widget catalog category widgets routes
   static const String accessibilityWidgets =
       '/widgets-catalog/accessibility-widgets';
   static const String animationMotionWidgets =
@@ -318,7 +366,7 @@ class RoutePaths {
   static const String stylingWidgets = '/widgets-catalog/styling-widgets';
   static const String textWidgets = '/widgets-catalog/text-widgets';
 
-  // widget catalog accessibility widgets
+  // widget catalog accessibility widgets sub routes
   static const String excludeSemanticsWidget =
       '/widgets-catalog/accessibility-widgets/exclude-semantics';
   static const String mergeSemanticsWidget =
@@ -326,7 +374,7 @@ class RoutePaths {
   static const String semanticsWidget =
       '/widgets-catalog/accessibility-widgets/semantics';
 
-  // widget catalog animations and motion widgets
+  // widget catalog animations and motion widgets sub routes
   static const String animatedAlign =
       '/widgets-catalog/animation-motion/animated-align';
   static const String animatedBuilder =
@@ -369,17 +417,17 @@ class RoutePaths {
   static const String slideTransition =
       '/widgets-catalog/animation-motion/slide-transition';
 
-  // widget catalog assets, icons and images widgets
+  // widget catalog assets, icons and images widgets sub routes
   static const String assetBundle = '/widgets-catalog/assets/asset-bundle';
   static const String icon = '/widgets-catalog/assets/icon';
   static const String image = '/widgets-catalog/assets/image';
   static const String rawImage = '/widgets-catalog/assets/raw-image';
 
-  // widget catalog async widgets
+  // widget catalog async widgets sub routes
   static const String futureBuilder = '/widgets-catalog/async/future-builder';
   static const String streamBuilder = '/widgets-catalog/async/stream-builder';
 
-  // widget catalog cupertino widgets
+  // widget catalog cupertino widgets sub routes
   static const String cupertinoActionSheet =
       '/widgets-catalog/cupertino/cupertino-action-sheet';
   static const String cupertinoActivityIndicator =
@@ -433,14 +481,14 @@ class RoutePaths {
   static const String cupertinoTimePicker =
       '/widgets-catalog/cupertino/cupertino-time-picker';
 
-  // widget catalog input widgets
+  // widget catalog input widgets sub routes
   static const String autocomplete = '/widgets-catalog/input/autocomplete';
   static const String form = '/widgets-catalog/input/form';
   static const String formField = '/widgets-catalog/input/form-field';
   static const String rawKeyboardListener =
       '/widgets-catalog/input/raw-keyboard-listener';
 
-  // widget catalog interactive widgets
+  // widget catalog interactive widgets sub routes
   static const String absorbPointer = '/widgets-catalog/interactive';
   static const String dismissible = '/widgets-catalog/interactive';
   static const String dragTarget = '/widgets-catalog/interactive';
@@ -454,7 +502,7 @@ class RoutePaths {
   static const String heroInteractive = '/widgets-catalog/interactive/hero';
   static const String navigator = '/widgets-catalog/interactive/navigator';
 
-  // widget catalog layout widgets
+  // widget catalog layout widgets sub routes
   static const String align = '/widgets-catalog/layout/align';
   static const String aspectRatio = '/widgets-catalog/layout/aspect-ration';
   static const String baseline = '/widgets-catalog/layout/baseline';
@@ -512,7 +560,7 @@ class RoutePaths {
   static const String sliverToBoxAdaptor =
       '/widgets-catalog/layout/sliver-to-box-adaptor';
 
-  // widget catalog material widgets
+  // widget catalog material widgets sub routes
   static const String appBar = '/widgets-catalog/material/app-bar';
   static const String bottomNavigationBar =
       '/widgets-catalog/material/bottom-navigation-bar';
@@ -569,7 +617,7 @@ class RoutePaths {
   static const String listTile = '/widgets-catalog/material/list-tile';
   static const String stepper = '/widgets-catalog/material/stepper';
 
-  // widget catalog painting and effects widgets
+  // widget catalog painting and effects widgets sub routes
   static const String backDropFilter =
       '/widgets-catalog/painting-effects/back-drop-filter';
   static const String clipOval = '/widgets-catalog/painting-effects/clip-oval';
@@ -587,7 +635,7 @@ class RoutePaths {
   static const String transformPaintingEffects =
       '/widgets-catalog/painting-effects/transform';
 
-  // widget catalog scrolling widgets
+  // widget catalog scrolling widgets sub routes
   static const String customScrollViewScrolling =
       '/widgets-catalog/scrolling/custom-scroll-view';
   static const String draggableScrollableSheetScrolling =
@@ -613,39 +661,59 @@ class RoutePaths {
   static const String singleChildScrollView =
       '/widgets-catalog/scrolling/single-child-scroll-view';
 
-  // widget catalog styling widgets
+  // widget catalog styling widgets sub routes
   static const String mediaQuery = '/widgets-catalog/styling/media-query';
   static const String paddingStyling = '/widgets-catalog/styling/padding';
   static const String theme = '/widgets-catalog/styling/theme';
 
-  // widget catalog text widgets
+  // widget catalog text widgets sub routes
   static const String defaultTextStyle =
       '/widgets-catalog/text/default-text-style';
   static const String richText = '/widgets-catalog/text/rich-text';
   static const String text = '/widgets-catalog/text/text';
 
-  // ui manipulation category
+  // ui manipulation category routes
+  static const String layout = '/ui-manipulation/layout';
+  static const String alignment = '/ui-manipulation/alignment';
+  static const String interactiveBehavior =
+      '/ui-manipulation/interactive-behavior';
+  static const String borders = '/ui-manipulation/borders';
+  static const String colorsBackgrounds = '/ui-manipulation/colorsBackgrounds';
   static const String dimensionsConstraints =
       '/ui-manipulation/dimensions-constraints';
-  static const String spacing = '/ui-manipulation/spacing';
-  static const String colorsBackgrounds = '/ui-manipulation/colorsBackgrounds';
-  static const String alignment = '/ui-manipulation/alignment';
-  static const String positioning = '/ui-manipulation/positioning';
-  static const String visibility = '/ui-manipulation/visibility';
-  static const String textManipulation = '/ui-manipulation/text';
-  static const String borders = '/ui-manipulation/borders';
   static const String effects = '/ui-manipulation/effects';
+  static const String iconsImages = '/ui-manipulation/icons-images';
+  static const String positioning = '/ui-manipulation/positioning';
+  static const String spacing = '/ui-manipulation/spacing';
+  static const String themeManipulation = '/ui-manipulation/theme';
+  static const String textManipulation = '/ui-manipulation/text';
+  static const String visibility = '/ui-manipulation/visibility';
+  static const String formUiManipulation = '/ui-manipulation/form';
+  static const String responsiveAdaptiveUi =
+      '/ui-manipulation/responsive-adaptive-ui';
 
-  // ui manipulation alignment
+  // ui manipulation layout sub routes
+  static const String pageLayout = '/ui-manipulation/layout/page-layout';
+  static const String basicLayout = '/ui-manipulation/layout/basic-layout';
+
+  // ui manipulation alignment sub routes
   static const String horizontalAlignment =
       '/ui-manipulation/alignment/horizontal';
   static const String verticalAlignment = '/ui-manipulation/alignment/vertical';
 
-  // ui manipulation colors and backgrounds
+  // ui manipulation interactive behavior sub routes
+  static const String clickBehavior =
+      '/ui-manipulation/interactive-behavior/click-behavior';
+  static const String hoverBehavior =
+      '/ui-manipulation/interactive-behavior/hover-behavior';
+  static const String focusBehavior =
+      '/ui-manipulation/interactive-behavior/focus-behavior';
+
+  // ui manipulation colors and backgrounds sub routes
   static const String colors = '/ui-manipulation/colors';
   static const String backgrounds = '/ui-manipulation/backgrounds';
 
-  // ui manipulation dimensions and constraints
+  // ui manipulation dimensions and constraints sub routes
   static const String fixedDimensions = '/ui-manipulation/fixed-dimensions';
   static const String percentageDimensions =
       '/ui-manipulation/percentage-dimensions';
@@ -653,23 +721,31 @@ class RoutePaths {
       '/ui-manipulation/fractional-dimensions';
   static const String constraints = '/ui-manipulation/constraints';
 
-  // ui manipulation effects
+  // ui manipulation effects sub routes
   static const String shadows = '/ui-manipulation/shadows';
   static const String opacityEffect = '/ui-manipulation/opacity';
 
-  // ui manipulation positioning
+  // ui manipulation positioning sub routes
   static const String planePositioning = '/ui-manipulation/plane-positioning';
   static const String depthPositioning = '/ui-manipulation/depth-positioning';
 
-  // ui manipulation spacing
+  // ui manipulation spacing sub routes
   static const String paddingSpacing = '/ui-manipulation/padding';
   static const String marginSpacing = '/ui-manipulation/margin';
 
-  // ui manipulation text
+  // ui manipulation theme sub routes
 
-  // ui manipulation visibility
+  // ui manipulation text sub routes
+
+  // ui manipulation visibility sub routes
   static const String inFlow = '/ui-manipulation/in-flow';
   static const String outFlow = '/ui-manipulation/out-flow';
+
+  // ui manipulation responsive and adaptive sub routes
+  static const String responsiveUi =
+      '/ui-manipulation/responsive-adaptive-ui/responsive-ui';
+  static const String adaptiveUi =
+      '/ui-manipulation/responsive-adaptive-ui/adaptive-ui';
 
   // state management paths
   static const String state_management_basics = '/state-management/basics';
@@ -677,12 +753,13 @@ class RoutePaths {
       '/state-management/todos-example';
 }
 
+// router
 class MyRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     final arguments = settings.arguments as Map<String, String>;
 
     switch (settings.name) {
-      // home routes
+      // home
       case RoutePaths.home:
         return MaterialPageRoute(builder: (_) => HomeView());
       case RoutePaths.dartFundamentals:
@@ -697,16 +774,30 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => UiManipulationView(),
         );
+      case RoutePaths.lifecycle:
+        return MaterialPageRoute(
+          builder: (_) => LifecycleView(),
+        );
       case RoutePaths.widgetsCatalog:
         return MaterialPageRoute(
           builder: (_) => WidgetCatalogView(),
+        );
+      case RoutePaths.supportingClassesEnums:
+        return MaterialPageRoute(
+          builder: (_) => SupportingClassesEnumsView(),
         );
       case RoutePaths.navigation:
         return MaterialPageRoute(
           builder: (_) => NavigationView(),
         );
       case RoutePaths.stateManagement:
-        return MaterialPageRoute(builder: (_) => StateManagementView());
+        return MaterialPageRoute(
+          builder: (_) => StateManagementView(),
+        );
+      case RoutePaths.testing:
+        return MaterialPageRoute(
+          builder: (_) => TestingView(),
+        );
       case RoutePaths.nativeDeviceFeatures:
         return MaterialPageRoute(
           builder: (_) => NativeDeviceFeaturesView(),
@@ -720,7 +811,27 @@ class MyRouter {
           builder: (_) => BestPracticesView(),
         );
 
-      // widget catalog category widgets routes
+      // supporting classes and enums sub_views
+      case RoutePaths.supportingClasses:
+        return MaterialPageRoute(
+          builder: (_) => SupportingClassesView(),
+        );
+      case RoutePaths.supportingEnums:
+        return MaterialPageRoute(
+          builder: (_) => SupportingEnumsView(),
+        );
+
+      // lifecycle sub_views
+      case RoutePaths.applicationLifecycle:
+        return MaterialPageRoute(
+          builder: (_) => ApplicationLifecycleView(),
+        );
+      case RoutePaths.widgetLifecycle:
+        return MaterialPageRoute(
+          builder: (_) => WidgetLifecycleView(),
+        );
+
+      // widget catalog category widgets
       case RoutePaths.accessibilityWidgets:
         return MaterialPageRoute(
           builder: (_) => AccessibilityWidgetsView(),
@@ -774,7 +885,7 @@ class MyRouter {
           builder: (_) => TextWidgetsView(),
         );
 
-      // widget catalog accessibility widgets routes
+      // widget catalog accessibility widgets
       case RoutePaths.excludeSemanticsWidget:
         return MaterialPageRoute(
           builder: (_) => ExcludeSemanticsWidgetView(),
@@ -788,7 +899,7 @@ class MyRouter {
           builder: (_) => SemanticsWidgetView(),
         );
 
-      // widget catalog animations and motion widgets routes
+      // widget catalog animations and motion widgets
       case RoutePaths.animatedAlign:
         return MaterialPageRoute(
           builder: (_) => AnimatedAlignWidgetView(),
@@ -874,7 +985,7 @@ class MyRouter {
           builder: (_) => SlideTransitionWidgetView(),
         );
 
-      // widget catalog assets, icons and images widgets routes
+      // widget catalog assets, icons and images widgets
       case RoutePaths.assetBundle:
         return MaterialPageRoute(
           builder: (_) => AssetBundleWidgetView(),
@@ -892,7 +1003,7 @@ class MyRouter {
           builder: (_) => RawImageWidgetView(),
         );
 
-      // widget catalog async widgets routes
+      // widget catalog async widgets
       case RoutePaths.futureBuilder:
         return MaterialPageRoute(
           builder: (_) => FutureBuilderWidgetView(),
@@ -902,7 +1013,7 @@ class MyRouter {
           builder: (_) => StreamBuilderWidgetView(),
         );
 
-      // widget catalog cupertino widgets routes
+      // widget catalog cupertino widgets
       case RoutePaths.cupertinoActionSheet:
         return MaterialPageRoute(
           builder: (_) => CupertinoActionSheetWidgetView(),
@@ -1012,7 +1123,7 @@ class MyRouter {
           builder: (_) => CupertinoTimePickerWidgetView(),
         );
 
-      // widget catalog input widgets routes
+      // widget catalog input widgets
       case RoutePaths.autocomplete:
         return MaterialPageRoute(
           builder: (_) => AutoCompleteWidgetView(),
@@ -1030,7 +1141,7 @@ class MyRouter {
           builder: (_) => RawKeyboardListenerWidgetView(),
         );
 
-      // widget catalog interactive widgets routes
+      // widget catalog interactive widgets
       case RoutePaths.absorbPointer:
         return MaterialPageRoute(
           builder: (_) => AbsorbPointerWidgetView(),
@@ -1080,7 +1191,7 @@ class MyRouter {
           builder: (_) => NavigatorWidgetView(),
         );
 
-      // widget catalog layout widgets routes
+      // widget catalog layout widgets
       case RoutePaths.align:
         return MaterialPageRoute(
           builder: (_) => AlignWidgetView(),
@@ -1250,7 +1361,7 @@ class MyRouter {
           builder: (_) => SliverToBoxAdaptorWidgetView(),
         );
 
-      // widget catalog material widgets routes
+      // widget catalog material widgets
       case RoutePaths.appBar:
         return MaterialPageRoute(
           builder: (_) => AppBarWidgetView(),
@@ -1416,7 +1527,7 @@ class MyRouter {
           builder: (_) => StepperWidgetView(),
         );
 
-      // widget catalog painting and effects widgets routes
+      // widget catalog painting and effects widgets
       case RoutePaths.backDropFilter:
         return MaterialPageRoute(
           builder: (_) => BackdropFilterWidgetView(),
@@ -1458,7 +1569,7 @@ class MyRouter {
           builder: (_) => TransformWidgetView(),
         );
 
-      // widget catalog scrolling widgets routes
+      // widget catalog scrolling widgets
       case RoutePaths.customScrollView:
         return MaterialPageRoute(
           builder: (_) => CustomScrollViewScrollingWidgetView(),
@@ -1512,7 +1623,7 @@ class MyRouter {
           builder: (_) => SingleChildScrollViewWidgetView(),
         );
 
-      // widget catalog styling widgets routes
+      // widget catalog styling widgets
       case RoutePaths.mediaQuery:
         return MaterialPageRoute(
           builder: (_) => MediaQueryWidgetView(),
@@ -1526,7 +1637,7 @@ class MyRouter {
           builder: (_) => ThemeWidgetView(),
         );
 
-      // widget catalog text widgets routes
+      // widget catalog text widgets
       case RoutePaths.defaultTextStyle:
         return MaterialPageRoute(
           builder: (_) => DefaultTextStyleWidgetView(),
@@ -1540,26 +1651,50 @@ class MyRouter {
           builder: (_) => TextWidgetView(),
         );
 
-      // ui manipulation category routes
-      case RoutePaths.dimensionsConstraints:
+      // ui manipulation category
+      case RoutePaths.layout:
         return MaterialPageRoute(
-          builder: (_) => DimesnionsContraintsView(),
-        );
-      case RoutePaths.spacing:
-        return MaterialPageRoute(
-          builder: (_) => SpacingView(),
-        );
-      case RoutePaths.colorsBackgrounds:
-        return MaterialPageRoute(
-          builder: (_) => ColorsBackgroundsView(),
+          builder: (_) => LayoutView(),
         );
       case RoutePaths.alignment:
         return MaterialPageRoute(
           builder: (_) => AlignmentView(),
         );
+      case RoutePaths.interactiveBehavior:
+        return MaterialPageRoute(
+          builder: (_) => InteractiveBehaviorView(),
+        );
+      case RoutePaths.borders:
+        return MaterialPageRoute(
+          builder: (_) => BordersView(),
+        );
+      case RoutePaths.colorsBackgrounds:
+        return MaterialPageRoute(
+          builder: (_) => ColorsBackgroundsView(),
+        );
+      case RoutePaths.dimensionsConstraints:
+        return MaterialPageRoute(
+          builder: (_) => DimesnionsContraintsView(),
+        );
+      case RoutePaths.effects:
+        return MaterialPageRoute(
+          builder: (_) => EffectsView(),
+        );
+      case RoutePaths.iconsImages:
+        return MaterialPageRoute(
+          builder: (_) => IconsImagesView(),
+        );
       case RoutePaths.positioning:
         return MaterialPageRoute(
           builder: (_) => PositioningView(),
+        );
+      case RoutePaths.spacing:
+        return MaterialPageRoute(
+          builder: (_) => SpacingView(),
+        );
+      case RoutePaths.themeManipulation:
+        return MaterialPageRoute(
+          builder: (_) => ThemeView(),
         );
       case RoutePaths.visibility:
         return MaterialPageRoute(
@@ -1569,18 +1704,42 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => TextView(),
         );
-      case RoutePaths.borders:
+      case RoutePaths.formUiManipulation:
         return MaterialPageRoute(
-          builder: (_) => BordersView(),
+          builder: (_) => FormView(),
         );
-      case RoutePaths.effects:
+      case RoutePaths.responsiveAdaptiveUi:
         return MaterialPageRoute(
-          builder: (_) => EffectsView(),
+          builder: (_) => ResponsiveAdaptiveView(),
         );
 
-      // ui manipulation alignment routes
+      // ui manipulation layout
+      case RoutePaths.pageLayout:
+        return MaterialPageRoute(
+          builder: (_) => PageLayoutView(),
+        );
+      case RoutePaths.basicLayout:
+        return MaterialPageRoute(
+          builder: (_) => BasicLayoutView(),
+        );
 
-      // ui manipulation colors and backgrounds routes
+      // ui manipulation alignment
+
+      // ui manipulation interactive behavior
+      case RoutePaths.clickBehavior:
+        return MaterialPageRoute(
+          builder: (_) => ClickBehaviorView(),
+        );
+      case RoutePaths.hoverBehavior:
+        return MaterialPageRoute(
+          builder: (_) => HoverBehaviorView(),
+        );
+      case RoutePaths.focusBehavior:
+        return MaterialPageRoute(
+          builder: (_) => FocusBehaviorView(),
+        );
+
+      // ui manipulation colors and backgrounds
       case RoutePaths.colors:
         return MaterialPageRoute(
           builder: (_) => ColorsView(),
@@ -1630,6 +1789,8 @@ class MyRouter {
           builder: (_) => MarginSpacingView(),
         );
 
+      // ui manipulation theme
+
       // ui manipulation text
 
       // ui manipulation visibility
@@ -1642,7 +1803,17 @@ class MyRouter {
           builder: (_) => OutFlowView(),
         );
 
-      // state management routes
+      // ui manipulation responsive adaptive ui
+      case RoutePaths.responsiveUi:
+        return MaterialPageRoute(
+          builder: (_) => ResponsiveUiView(),
+        );
+      case RoutePaths.adaptiveUi:
+        return MaterialPageRoute(
+          builder: (_) => AdaptiveUiView(),
+        );
+
+      // state management
       case RoutePaths.state_management_basics:
         return MaterialPageRoute(
           builder: (_) => StateManagementBasicsView(),
