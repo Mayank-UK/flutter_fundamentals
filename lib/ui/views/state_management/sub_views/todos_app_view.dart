@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 // model
 class Task {
-  String title;
+  final String title;
   bool completed;
 
   Task({@required this.title, this.completed = false});
@@ -154,7 +154,7 @@ class _HomeScreenState extends State<HomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Todos'),
+        title: const Text('Todos'),
         leading: new IconButton(
           icon: new Icon(Icons.arrow_back),
           onPressed: () {
@@ -228,7 +228,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Add Task'),
+        title: const Text('Add Task'),
       ),
       body: ListView(
         children: <Widget>[
@@ -244,10 +244,10 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                     onChanged: (checked) => setState(() {
                       completedStatus = checked;
                     }),
-                    title: Text('Complete?'),
+                    title: const Text('Complete?'),
                   ),
-                  RaisedButton(
-                    child: Text('Add'),
+                  ElevatedButton(
+                    child: const Text('Add'),
                     onPressed: onAdd,
                   ),
                 ],

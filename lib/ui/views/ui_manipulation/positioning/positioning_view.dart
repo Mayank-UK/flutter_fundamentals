@@ -4,15 +4,15 @@ import '../../../components/code_preview_component.dart';
 import './../../../components/section_wrapper_component_component.dart';
 
 class PositioningView extends StatelessWidget {
-  String appBarTitle = 'Positioning';
-  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _appBarTitle = 'Positioning';
+  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
-      appBarTitle: this.appBarTitle,
+      appBarTitle: this._appBarTitle,
       previewTab: _PositioningImplementation(),
-      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
@@ -21,7 +21,7 @@ class _PositioningImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: <Widget>[
         SectionWrapperComponent(
           title: 'Using "Stack" widget with "Positioned" widget',
           content: [
@@ -38,7 +38,7 @@ class _PositioningImplementation extends StatelessWidget {
               height: 300,
               width: double.infinity,
               child: Stack(
-                children: [
+                children: <Widget>[
                   Positioned(
                     bottom: 20,
                     left: 20,

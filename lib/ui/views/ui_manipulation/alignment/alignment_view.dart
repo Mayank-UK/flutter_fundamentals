@@ -4,15 +4,15 @@ import '../../../components/code_preview_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
 
 class AlignmentView extends StatelessWidget {
-  String appBarTitle = 'Alignment';
-  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _appBarTitle = 'Alignment';
+  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
-      appBarTitle: this.appBarTitle,
+      appBarTitle: this._appBarTitle,
       previewTab: _AlignmentImplementation(),
-      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
@@ -21,7 +21,7 @@ class _AlignmentImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: <Widget>[
         SectionWrapperComponent(
           title: 'Using parent "Container" widget',
           content: [
@@ -38,7 +38,7 @@ class _AlignmentImplementation extends StatelessWidget {
               child: Container(
                 color: Colors.red,
                 padding: EdgeInsets.all(16),
-                child: Text('Text'),
+                child: const Text('Text'),
               ),
             ),
             Container(
@@ -50,7 +50,7 @@ class _AlignmentImplementation extends StatelessWidget {
               child: Container(
                 color: Colors.red,
                 padding: EdgeInsets.all(16),
-                child: Text('Text'),
+                child: const Text('Text'),
               ),
             ),
             Container(
@@ -62,7 +62,7 @@ class _AlignmentImplementation extends StatelessWidget {
               child: Container(
                 color: Colors.red,
                 padding: EdgeInsets.all(16),
-                child: Text('Text'),
+                child: const Text('Text'),
               ),
             ),
           ],
@@ -79,13 +79,13 @@ class _AlignmentImplementation extends StatelessWidget {
               margin: EdgeInsets.only(bottom: 8),
               padding: EdgeInsets.all(8),
               child: Wrap(
-                children: [
+                children: <Widget>[
                   Align(
                     alignment: Alignment.topLeft,
                     child: Container(
                       color: Colors.red,
                       padding: EdgeInsets.all(16),
-                      child: Text('Text'),
+                      child: const Text('Text'),
                     ),
                   ),
                   Align(
@@ -93,7 +93,7 @@ class _AlignmentImplementation extends StatelessWidget {
                     child: Container(
                       color: Colors.red,
                       padding: EdgeInsets.all(16),
-                      child: Text('Text'),
+                      child: const Text('Text'),
                     ),
                   ),
                   Align(
@@ -101,7 +101,7 @@ class _AlignmentImplementation extends StatelessWidget {
                     child: Container(
                       color: Colors.red,
                       padding: EdgeInsets.all(16),
-                      child: Text('Text'),
+                      child: const Text('Text'),
                     ),
                   ),
                 ],

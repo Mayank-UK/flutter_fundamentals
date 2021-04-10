@@ -4,15 +4,15 @@ import '../../../../components/code_preview_component.dart';
 import '../../../../components/section_wrapper_component_component.dart';
 
 class BackgroundsView extends StatelessWidget {
-  String appBarTitle = 'Backgrounds';
-  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _appBarTitle = 'Backgrounds';
+  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
-      appBarTitle: this.appBarTitle,
+      appBarTitle: this._appBarTitle,
       previewTab: _BackgroundImplementation(),
-      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
@@ -21,7 +21,7 @@ class _BackgroundImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: <Widget>[
         SectionWrapperComponent(
           title: 'Particular element\'s background using "Container" widget',
           content: [
@@ -34,7 +34,7 @@ class _BackgroundImplementation extends StatelessWidget {
               color: Colors.amber,
               height: 100,
               width: 100,
-              child: Text('text'),
+              child: const Text('text'),
             ),
           ],
         ),
@@ -57,7 +57,7 @@ class _BackgroundImplementation extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.amber),
                 height: 100,
                 width: 100,
-                child: Text('text'),
+                child: const Text('text'),
               ),
             ),
             */
@@ -83,7 +83,7 @@ class _BackgroundImplementation extends StatelessWidget {
                 decoration: BoxDecoration(color: Colors.amber),
                 height: 100,
                 width: 100,
-                child: Text('text'),
+                child: const Text('text'),
               ),
             ),
             */

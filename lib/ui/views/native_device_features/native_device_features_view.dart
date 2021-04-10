@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class NativeDeviceFeaturesView extends StatelessWidget {
-  String appBarTitle = 'Native device features';
+  final String _appBarTitle = 'Native device features';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
         ),
-        body: Text('Native device features screen'));
+        body: const Text('Native device features screen'));
   }
 }

@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
-import '../../../components/code_preview_component.dart';
 
-import '../../../../core/router/router.dart';
-import '../../../components/custom_listview_component.dart';
+import '../../../../core/router/routes.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class InputWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'Autocomplete',
       description:
@@ -34,19 +33,19 @@ class InputWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Input widgets';
+  final String _appBarTitle = 'Input widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   InputWidgetsView();
 
@@ -57,25 +56,25 @@ class InputWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Input widgets',
@@ -93,7 +92,7 @@ class InputWidgetsView extends StatelessWidget {
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: <Widget> [
                         Container(
                           child: MyCustomForm(),
                         ),
@@ -105,7 +104,7 @@ class InputWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),
@@ -155,11 +154,11 @@ class MyCustomFormState extends State<MyCustomForm> {
               if (_formKey.currentState.validate()) {
                 // If the form is valid, display a snackbar. In the real world,
                 // you'd often call a server or save the information in a database.
-                ScaffoldMessenger.of(context)
-                    .showSnackBar(SnackBar(content: Text('Processing Data')));
+                ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(content: const Text('Processing Data')));
               }
             },
-            child: Text('Submit'),
+            child: const Text('Submit'),
           ),
         ],
       ),

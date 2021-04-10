@@ -4,15 +4,15 @@ import '../../../components/code_preview_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
 
 class BordersView extends StatelessWidget {
-  String appBarTitle = 'Borders';
-  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _appBarTitle = 'Borders';
+  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
-      appBarTitle: this.appBarTitle,
+      appBarTitle: this._appBarTitle,
       previewTab: _BordersImplementation(),
-      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
@@ -21,7 +21,7 @@ class _BordersImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: <Widget>[
         SectionWrapperComponent(
           title: 'Using \'Container\' widget (preferred way)',
           content: [
@@ -31,7 +31,7 @@ class _BordersImplementation extends StatelessWidget {
             ),
             Wrap(
               spacing: 8,
-              children: [
+              children: <Widget>[
                 Container(
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
@@ -88,7 +88,7 @@ class _BordersImplementation extends StatelessWidget {
               ),
               child: Container(
                 padding: EdgeInsets.all(8),
-                child: Text('Text'),
+                child: const Text('Text'),
               ),
             ),
           ],

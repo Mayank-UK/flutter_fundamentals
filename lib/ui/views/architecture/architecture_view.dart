@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class ArchitectureView extends StatelessWidget {
-  String appBarTitle = 'Architecture';
+  final String _appBarTitle = 'Architecture';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
         ),
-        body: Text('Architecture screen'));
+        body: const Text('Architecture screen'));
   }
 }

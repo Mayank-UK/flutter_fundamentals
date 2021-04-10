@@ -1,42 +1,81 @@
 import 'package:flutter/material.dart';
 
 import '../../components/main_appbar_component.dart';
-import '../../components/custom_gridview_component.dart';
-import '../../../core/router/router.dart';
+import '../../components/custom_mid_stage_listview_component.dart';
+import '../../../core/router/routes.dart';
 
 class UiManipulationView extends StatelessWidget {
-  List<GridViewItem> _gridList = [
-    GridViewItem(title: 'Layout', route: RoutePaths.layout),
-    GridViewItem(
+  final List<ListViewItem> _itemList = [
+    ListViewItem(
+        title: 'Layout',
+        description: 'Description not available',
+        route: RoutePaths.layout),
+    ListViewItem(
         title: 'Dimensions and constraints',
+        description: 'Description not available',
         route: RoutePaths.dimensionsConstraints),
-    GridViewItem(title: 'Spacing', route: RoutePaths.spacing),
-    GridViewItem(
-        title: 'Colors and backgrounds', route: RoutePaths.colorsBackgrounds),
-    GridViewItem(title: 'Text', route: RoutePaths.textManipulation),
-    GridViewItem(title: 'Alignment', route: RoutePaths.alignment),
-    GridViewItem(title: 'Borders', route: RoutePaths.borders),
-    GridViewItem(title: 'Icons and images', route: RoutePaths.iconsImages),
-    GridViewItem(title: 'Effects', route: RoutePaths.effects),
-    GridViewItem(title: 'Positioning', route: RoutePaths.positioning),
-    GridViewItem(title: 'Visibility', route: RoutePaths.visibility),
-    GridViewItem(title: 'Theme', route: RoutePaths.themeManipulation),
-    GridViewItem(
-        title: 'Interactive behaviors', route: RoutePaths.interactiveBehavior),
-    GridViewItem(title: 'Form', route: RoutePaths.formUiManipulation),
-    GridViewItem(
-        title: 'Responsive and adaptive UI',
+    ListViewItem(
+        title: 'Spacing',
+        description: 'Description not available',
+        route: RoutePaths.spacing),
+    ListViewItem(
+        title: 'Colors and backgrounds',
+        description: 'Description not available',
+        route: RoutePaths.colorsBackgrounds),
+    ListViewItem(
+        title: 'Text',
+        description: 'Description not available',
+        route: RoutePaths.textManipulation),
+    ListViewItem(
+        title: 'Alignment',
+        description: 'Description not available',
+        route: RoutePaths.alignment),
+    ListViewItem(
+        title: 'Borders',
+        description: 'Description not available',
+        route: RoutePaths.borders),
+    ListViewItem(
+        title: 'Icons and images',
+        description: 'Description not available',
+        route: RoutePaths.iconsImages),
+    ListViewItem(
+        title: 'Effects',
+        description: 'Description not available',
+        route: RoutePaths.effects),
+    ListViewItem(
+        title: 'Positioning',
+        description: 'Description not available',
+        route: RoutePaths.positioning),
+    ListViewItem(
+        title: 'Visibility',
+        description: 'Description not available',
+        route: RoutePaths.visibility),
+    ListViewItem(
+        title: 'Theme',
+        description: 'Description not available',
+        route: RoutePaths.themeManipulation),
+    ListViewItem(
+        title: 'Interactive behaviors',
+        description: 'Description not available',
+        route: RoutePaths.interactiveBehavior),
+    ListViewItem(
+        title: 'Form',
+        description: 'Description not available',
+        route: RoutePaths.formUiManipulation),
+    ListViewItem(
+        title: 'Responsive and adaptive layout',
+        description: 'Description not available',
         route: RoutePaths.responsiveAdaptiveUi),
   ];
 
-  String appBarTitle = 'UI manipulation';
+  final String _appBarTitle = 'UI manipulation';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomGridViewComponent(
-        gridList: this._gridList,
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomMidStageListViewComponent(
+        itemList: this._itemList,
       ),
     );
   }

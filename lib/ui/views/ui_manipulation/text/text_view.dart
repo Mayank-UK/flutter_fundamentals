@@ -4,15 +4,15 @@ import '../../../components/code_preview_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
 
 class TextView extends StatelessWidget {
-  String appBarTitle = 'Text';
-  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _appBarTitle = 'Text';
+  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
-      appBarTitle: this.appBarTitle,
+      appBarTitle: this._appBarTitle,
       previewTab: _TextImplementation(),
-      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
@@ -21,7 +21,7 @@ class _TextImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: <Widget>[
         SectionWrapperComponent(
           title: 'Font size',
           content: [
@@ -126,7 +126,7 @@ class _TextImplementation extends StatelessWidget {
             ),
             Container(
               child: Text(
-                  '"TextStyle" object takes a named parameter "fontFamily", which takes a string value for font family, the fonts should be first defined in "pubspec.yaml" file before using them here.'),
+                  '"TextStyle" object takes a named parameter "fontFamily", which takes a final String value for font family, the fonts should be first defined in "pubspec.yaml" file before using them here.'),
             ),
             Container(
               color: Colors.amber,

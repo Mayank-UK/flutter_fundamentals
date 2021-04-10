@@ -5,8 +5,8 @@ class PageNotFoundView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('404 error'),
+          title: const Text('404 error'),
         ),
-        body: Text('Page not found screen'));
+        body: const Text('Page not found screen'));
   }
 }

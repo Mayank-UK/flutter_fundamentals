@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class Task {
-  String title;
+  final String title;
   bool completed;
 
   Task({@required this.title, this.completed = false});

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 
 class WidgetInfoComponent extends StatelessWidget {
-  String title;
-  String description;
+  final String title;
+  final String description;
 
-  WidgetInfoComponent(
-      {@required String this.title, @required String this.description});
+  WidgetInfoComponent({@required this.title, @required this.description});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +16,7 @@ class WidgetInfoComponent extends StatelessWidget {
       width: double.infinity,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
+        children: <Widget>[
           Text(this.title),
           Container(
             margin: EdgeInsets.only(top: 8, right: 8, bottom: 8, left: 16),

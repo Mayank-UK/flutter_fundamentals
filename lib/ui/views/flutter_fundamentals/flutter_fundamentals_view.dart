@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class FlutterFundamentalsView extends StatelessWidget {
-  String appBarTitle = 'Flutter fundamentals';
+  final String _appBarTitle = 'Flutter fundamentals';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
         ),
-        body: Text('Flutter fundamentals'));
+        body: const Text('Flutter fundamentals'));
   }
 }

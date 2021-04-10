@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 
-import '../../../../core/router/router.dart';
-import '../../../components/custom_listview_component.dart';
-import '../../../components/code_preview_component.dart';
+import '../../../../core/router/routes.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class MaterialWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'AppBar',
       description:
@@ -251,19 +250,19 @@ class MaterialWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Material widgets';
+  final String _appBarTitle = 'Material widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   MaterialWidgetsView();
 
@@ -274,25 +273,25 @@ class MaterialWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Material widgets',
@@ -306,7 +305,7 @@ class MaterialWidgetsView extends StatelessWidget {
                         'A Material Design app bar. An app bar consists of a toolbar and potentially other widgets, such as a TabBar and a FlexibleSpaceBar.',
                   ),
                   Container(
-                    child: AppBar(title: Text('AppBar')),
+                    child: AppBar(title: const Text('AppBar')),
                   ),
                   WidgetInfo(
                     title: 'BottomNavigationBar',
@@ -376,7 +375,7 @@ class MaterialWidgetsView extends StatelessWidget {
                   ),
                   Container(
                     child: ElevatedButton.icon(
-                      label: Text('Button'),
+                      label: const Text('Button'),
                       icon: Icon(Icons.web),
                       onPressed: () {},
                     ),
@@ -412,7 +411,7 @@ class MaterialWidgetsView extends StatelessWidget {
                   ),
                   Container(
                     child: OutlinedButton.icon(
-                      label: Text('Button'),
+                      label: const Text('Button'),
                       icon: Icon(Icons.web),
                       onPressed: () {},
                     ),
@@ -447,7 +446,7 @@ class MaterialWidgetsView extends StatelessWidget {
                   ),
                   Container(
                     child: TextButton(
-                      child: Text('Button'),
+                      child: const Text('Button'),
                       onPressed: () {},
                     ),
                   ),
@@ -512,11 +511,11 @@ class MaterialWidgetsView extends StatelessWidget {
                   ),
                   Container(
                     child: AlertDialog(
-                      title: Text('AlertDialog Title'),
-                      content: Text('This is a demo alert dialog.'),
+                      title: const Text('AlertDialog Title'),
+                      content: const Text('This is a demo alert dialog.'),
                       actions: [
                         TextButton(
-                          child: Text('Approve'),
+                          child: const Text('Approve'),
                           onPressed: () {
                             // Navigator.of(context).pop();
                           },
@@ -580,7 +579,7 @@ class MaterialWidgetsView extends StatelessWidget {
                         children: <Widget>[
                           const ListTile(
                             leading: Icon(Icons.album),
-                            title: Text('The Enchanted Nightingale'),
+                            title: const Text('The Enchanted Nightingale'),
                             subtitle: Text(
                                 'Music by Julie Gable. Lyrics by Sidney Stein.'),
                           ),
@@ -612,9 +611,9 @@ class MaterialWidgetsView extends StatelessWidget {
                     child: Chip(
                       avatar: CircleAvatar(
                         backgroundColor: Colors.grey.shade800,
-                        child: Text('AB'),
+                        child: const Text('AB'),
                       ),
-                      label: Text('Aaron Burr'),
+                      label: const Text('Aaron Burr'),
                     ),
                   ),
                   WidgetInfo(
@@ -657,23 +656,23 @@ class MaterialWidgetsView extends StatelessWidget {
                       rows: const <DataRow>[
                         DataRow(
                           cells: <DataCell>[
-                            DataCell(Text('Sarah')),
-                            DataCell(Text('19')),
-                            DataCell(Text('Student')),
+                            DataCell(const Text('Sarah')),
+                            DataCell(const Text('19')),
+                            DataCell(const Text('Student')),
                           ],
                         ),
                         DataRow(
                           cells: <DataCell>[
-                            DataCell(Text('Janine')),
-                            DataCell(Text('43')),
-                            DataCell(Text('Professor')),
+                            DataCell(const Text('Janine')),
+                            DataCell(const Text('43')),
+                            DataCell(const Text('Professor')),
                           ],
                         ),
                         DataRow(
                           cells: <DataCell>[
-                            DataCell(Text('William')),
-                            DataCell(Text('27')),
-                            DataCell(Text('Associate Professor')),
+                            DataCell(const Text('William')),
+                            DataCell(const Text('27')),
+                            DataCell(const Text('Associate Professor')),
                           ],
                         ),
                       ],
@@ -767,7 +766,7 @@ class MaterialWidgetsView extends StatelessWidget {
                       message: 'My Account',
                       child: ElevatedButton(
                           onPressed: () {},
-                          child: Text('hover over for tooltip')),
+                          child: const Text('hover over for tooltip')),
                     ),
                   ),
                   WidgetInfo(
@@ -795,13 +794,13 @@ class MaterialWidgetsView extends StatelessWidget {
                         Expanded(
                           child: ListTile(
                             leading: FlutterLogo(),
-                            title: Text('These ListTiles are expanded '),
+                            title: const Text('These ListTiles are expanded '),
                           ),
                         ),
                         Expanded(
                           child: ListTile(
                             trailing: FlutterLogo(),
-                            title: Text('to fill the available space.'),
+                            title: const Text('to fill the available space.'),
                           ),
                         ),
                       ],
@@ -820,7 +819,7 @@ class MaterialWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),
@@ -864,7 +863,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBarWidget> {
 
   Widget build(BuildContext context) {
     return Column(
-      children: [
+      children: <Widget>[
         Center(
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
@@ -947,9 +946,9 @@ class _MyCheckBoxWidgetState extends State<MyCheckBoxWidget> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
+      children: <Widget>[
         Checkbox(value: _rememberMe, onChanged: _onRememberMeChanged),
-        Text('Remember me')
+        const Text('Remember me')
       ],
     );
   }
@@ -987,7 +986,7 @@ class _MyshowDatePickerState extends State<MyshowDatePicker> {
           ),
           ElevatedButton(
             onPressed: () => _selectDate(context),
-            child: Text('Select date'),
+            child: const Text('Select date'),
           ),
         ],
       ),
@@ -1198,7 +1197,7 @@ class _MyBottomSheetWidgetState extends State<MyBottomSheetWidget> {
   Widget build(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
+      children: <Widget>[
         Text(
           'Click the floating action button to show bottom sheet.',
         ),

@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
 import '../../components/main_appbar_component.dart';
-import '../../../core/router/router.dart';
-import '../../components/custom_gridview_component.dart';
+import '../../../core/router/routes.dart';
+// import '../../components/custom_gridview_component.dart';
+import '../../components/custom_mid_stage_listview_component.dart';
 
 /* class WidgetCatalogView extends StatelessWidget {
-  String appBarTitle;
+  final String _appBarTitle;
 
   WidgetCatalogView();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
       drawer: MainDrawer(),
       body: GridView.count(
         // without this property, GridView is not visible
@@ -187,35 +188,69 @@ import '../../components/custom_gridview_component.dart';
 } */
 
 class WidgetCatalogView extends StatelessWidget {
-  List<GridViewItem> _gridList = [
-    GridViewItem(
-        title: 'Accessibility', route: RoutePaths.accessibilityWidgets),
-    GridViewItem(
+  final List<ListViewItem> _itemList = [
+    ListViewItem(
+        title: 'Accessibility',
+        description: 'Description not available',
+        route: RoutePaths.accessibilityWidgets),
+    ListViewItem(
         title: 'Animations and motion',
+        description: 'Description not available',
         route: RoutePaths.animationMotionWidgets),
-    GridViewItem(
-        title: 'Assets, icons and images', route: RoutePaths.assetWidgets),
-    GridViewItem(title: 'Async', route: RoutePaths.asyncWidgets),
-    GridViewItem(title: 'Cupertino', route: RoutePaths.cupertinoWidgets),
-    GridViewItem(title: 'Input', route: RoutePaths.inputWidgets),
-    GridViewItem(title: 'Interactive', route: RoutePaths.interactiveWidgets),
-    GridViewItem(title: 'Layout', route: RoutePaths.layoutWidgets),
-    GridViewItem(title: 'Material', route: RoutePaths.materialWidgets),
-    GridViewItem(
-        title: 'Painting and effects', route: RoutePaths.paintingEffectWidgets),
-    GridViewItem(title: 'Scrolling', route: RoutePaths.scrollingWidgets),
-    GridViewItem(title: 'Styling', route: RoutePaths.stylingWidgets),
-    GridViewItem(title: 'Text', route: RoutePaths.textWidgets),
+    ListViewItem(
+        title: 'Assets, icons and images',
+        description: 'Description not available',
+        route: RoutePaths.assetWidgets),
+    ListViewItem(
+        title: 'Async',
+        description: 'Description not available',
+        route: RoutePaths.asyncWidgets),
+    ListViewItem(
+        title: 'Cupertino',
+        description: 'Description not available',
+        route: RoutePaths.cupertinoWidgets),
+    ListViewItem(
+        title: 'Input',
+        description: 'Description not available',
+        route: RoutePaths.inputWidgets),
+    ListViewItem(
+        title: 'Interactive',
+        description: 'Description not available',
+        route: RoutePaths.interactiveWidgets),
+    ListViewItem(
+        title: 'Layout',
+        description: 'Description not available',
+        route: RoutePaths.layoutWidgets),
+    ListViewItem(
+        title: 'Material',
+        description: 'Description not available',
+        route: RoutePaths.materialWidgets),
+    ListViewItem(
+        title: 'Painting and effects',
+        description: 'Description not available',
+        route: RoutePaths.paintingEffectWidgets),
+    ListViewItem(
+        title: 'Scrolling',
+        description: 'Description not available',
+        route: RoutePaths.scrollingWidgets),
+    ListViewItem(
+        title: 'Styling',
+        description: 'Description not available',
+        route: RoutePaths.stylingWidgets),
+    ListViewItem(
+        title: 'Text',
+        description: 'Description not available',
+        route: RoutePaths.textWidgets),
   ];
 
-  String appBarTitle = 'Widget catalog';
+  final String _appBarTitle = 'Widget catalog';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomGridViewComponent(
-        gridList: _gridList,
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomMidStageListViewComponent(
+        itemList: _itemList,
       ),
     );
   }

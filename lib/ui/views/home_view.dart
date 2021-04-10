@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import './../../core/router/router.dart';
+import './../../core/router/routes.dart';
 import '../components/main_drawer_component.dart';
 import '../components/custom_gridview_component.dart';
 
 class HomeView extends StatelessWidget {
-  List<GridViewItem> _gridList = [
+  final List<GridViewItem> _gridList = [
     GridViewItem(
         title: 'Dart fundamentals', route: RoutePaths.dartFundamentals),
     GridViewItem(
@@ -14,6 +14,7 @@ class HomeView extends StatelessWidget {
     GridViewItem(title: 'Lifecycle', route: RoutePaths.lifecycle),
     GridViewItem(title: 'Navigation', route: RoutePaths.navigation),
     GridViewItem(title: 'State management', route: RoutePaths.stateManagement),
+    GridViewItem(title: 'Debugging', route: RoutePaths.debugging),
     GridViewItem(title: 'Testing', route: RoutePaths.testing),
     GridViewItem(title: 'Widget catalog', route: RoutePaths.widgetsCatalog),
     GridViewItem(
@@ -34,16 +35,16 @@ class HomeView extends StatelessWidget {
             context: context,
             builder: (context) {
               return AlertDialog(
-                content: Text('Are you sure you want to exit?'),
+                content: const Text('Are you sure you want to exit?'),
                 actions: <Widget>[
-                  FlatButton(
-                    child: Text('No'),
+                  ElevatedButton(
+                    child: const Text('No'),
                     onPressed: () {
                       Navigator.of(context).pop(false);
                     },
                   ),
-                  FlatButton(
-                    child: Text('Yes, exit'),
+                  ElevatedButton(
+                    child: const Text('Yes, exit'),
                     onPressed: () {
                       Navigator.of(context).pop(true);
                     },

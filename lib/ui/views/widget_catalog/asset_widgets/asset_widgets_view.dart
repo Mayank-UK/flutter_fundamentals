@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/router/router.dart';
+import '../../../../core/router/routes.dart';
 
 import '../../../components/main_appbar_component.dart';
-import '../../../components/custom_listview_component.dart';
-import '../../../components/code_preview_component.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class AssetWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'AssetBundle',
       description:
-          'Asset bundles contain resources, such as images and strings, that can be used by an application. Access to these resources is asynchronous so that they can be transparently loaded over a network (e.g., from a NetworkAssetBundle) or from the local file system without blocking the application\'s user interface.',
+          'Asset bundles contain resources, such as images and final Strings, that can be used by an application. Access to these resources is asynchronous so that they can be transparently loaded over a network (e.g., from a NetworkAssetBundle) or from the local file system without blocking the application\'s user interface.',
       route: RoutePaths.assetBundle,
     ),
     ListViewItem(
@@ -31,21 +30,19 @@ class AssetWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle;
-
-  AssetWidgetsView();
+  final String _appBarTitle = 'Asset widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   AssetWidgetsView();
 
@@ -56,25 +53,25 @@ class AssetWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Assets',
@@ -85,7 +82,7 @@ class AssetWidgetsView extends StatelessWidget {
                   WidgetInfo(
                     title: 'AssetBundle',
                     description:
-                        '-Asset bundles contain resources, such as images and strings, that can be used by an application. Access to these resources is asynchronous so that they can be transparently loaded over a network (e.g., from a NetworkAssetBundle) or from the local file system without blocking the application\'s user interface.',
+                        '-Asset bundles contain resources, such as images and final Strings, that can be used by an application. Access to these resources is asynchronous so that they can be transparently loaded over a network (e.g., from a NetworkAssetBundle) or from the local file system without blocking the application\'s user interface.',
                   ),
                   WidgetInfo(
                     title: 'Icon',
@@ -119,7 +116,7 @@ class AssetWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),

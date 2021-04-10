@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 
-import '../../../../core/router/router.dart';
-import '../../../components/custom_listview_component.dart';
-import '../../../components/code_preview_component.dart';
+import '../../../../core/router/routes.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class ScrollingWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'CustomScrollView',
       description:
@@ -84,19 +83,19 @@ class ScrollingWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Scrolling widgets';
+  final String _appBarTitle = 'Scrolling widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   ScrollingWidgetsView();
 
@@ -107,25 +106,25 @@ class ScrollingWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Scrolling widgets',
@@ -155,7 +154,7 @@ class ScrollingWidgetsView extends StatelessWidget {
                               itemCount: 20,
                               itemBuilder: (BuildContext context, int index) {
                                 return ListTile(
-                                  title: Text('Item $index'),
+                                  title: const Text('Item $index'),
                                 );
                               }),
                         );
@@ -223,17 +222,17 @@ class ScrollingWidgetsView extends StatelessWidget {
                         Container(
                           height: 50,
                           color: Colors.amber[600],
-                          child: const Center(child: Text('Entry A')),
+                          child: const Center(child: const Text('Entry A')),
                         ),
                         Container(
                           height: 50,
                           color: Colors.amber[500],
-                          child: const Center(child: Text('Entry B')),
+                          child: const Center(child: const Text('Entry B')),
                         ),
                         Container(
                           height: 50,
                           color: Colors.amber[100],
-                          child: const Center(child: Text('Entry C')),
+                          child: const Center(child: const Text('Entry C')),
                         ),
                       ],
                     ),
@@ -271,17 +270,17 @@ class ScrollingWidgetsView extends StatelessWidget {
                           Container(
                             height: 50,
                             color: Colors.amber[600],
-                            child: const Center(child: Text('Entry A')),
+                            child: const Center(child: const Text('Entry A')),
                           ),
                           Container(
                             height: 50,
                             color: Colors.amber[500],
-                            child: const Center(child: Text('Entry B')),
+                            child: const Center(child: const Text('Entry B')),
                           ),
                           Container(
                             height: 50,
                             color: Colors.amber[100],
-                            child: const Center(child: Text('Entry C')),
+                            child: const Center(child: const Text('Entry C')),
                           ),
                         ],
                       ),
@@ -322,17 +321,17 @@ class ScrollingWidgetsView extends StatelessWidget {
                           Container(
                             height: 50,
                             color: Colors.amber[600],
-                            child: const Center(child: Text('Entry A')),
+                            child: const Center(child: const Text('Entry A')),
                           ),
                           Container(
                             height: 50,
                             color: Colors.amber[500],
-                            child: const Center(child: Text('Entry B')),
+                            child: const Center(child: const Text('Entry B')),
                           ),
                           Container(
                             height: 50,
                             color: Colors.amber[100],
-                            child: const Center(child: Text('Entry C')),
+                            child: const Center(child: const Text('Entry C')),
                           ),
                         ],
                       ),
@@ -348,7 +347,7 @@ class ScrollingWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),
@@ -370,13 +369,13 @@ class MyPageViewWidgetView extends StatelessWidget {
       controller: controller,
       children: const <Widget>[
         Center(
-          child: Text('First Page(Slide right)'),
+          child: const Text('First Page(Slide right)'),
         ),
         Center(
-          child: Text('Second Page'),
+          child: const Text('Second Page'),
         ),
         Center(
-          child: Text('Third Page'),
+          child: const Text('Third Page'),
         )
       ],
     );

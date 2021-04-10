@@ -4,15 +4,15 @@ import '../../../../components/code_preview_component.dart';
 import '../../../../components/section_wrapper_component_component.dart';
 
 class PercentageDimensionsView extends StatelessWidget {
-  String appBarTitle = 'Percentage dimensions';
-  String codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _appBarTitle = 'Percentage dimensions';
+  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
-      appBarTitle: this.appBarTitle,
+      appBarTitle: this._appBarTitle,
       previewTab: _PercentageDimensionsImplementation(),
-      codeTabMarkdownLocation: this.codeTabMarkdownLocation,
+      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
@@ -21,7 +21,7 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      children: [
+      children: <Widget>[
         SectionWrapperComponent(
           title: 'Using "FractionallySizedBox" widget',
           content: [
@@ -44,7 +44,7 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
                 child: Container(
                   color: Colors.red,
                   alignment: Alignment.center,
-                  child: Text('80% width and 50% height of parent'),
+                  child: const Text('80% width and 50% height of parent'),
                 ),
               ),
             ),
@@ -65,13 +65,13 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
               height: 200,
               width: double.infinity,
               child: Column(
-                children: [
+                children: <Widget>[
                   Expanded(
                     flex: 3,
                     child: Container(
                       alignment: Alignment.center,
                       color: Colors.amber,
-                      child: Text('75% height'),
+                      child: const Text('75% height'),
                     ),
                   ),
                   Expanded(
@@ -79,7 +79,7 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.center,
                       color: Colors.red,
-                      child: Text('25% height'),
+                      child: const Text('25% height'),
                     ),
                   ),
                 ],
@@ -89,13 +89,13 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
               height: 100,
               width: double.infinity,
               child: Wrap(
-                children: [
+                children: <Widget>[
                   Expanded(
                     flex: 3,
                     child: Container(
                       alignment: Alignment.center,
                       color: Colors.amber,
-                      child: Text('75% width'),
+                      child: const Text('75% width'),
                     ),
                   ),
                   Expanded(
@@ -103,7 +103,7 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.center,
                       color: Colors.red,
-                      child: Text('25% width'),
+                      child: const Text('25% width'),
                     ),
                   ),
                 ],

@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 
-import '../../../../core/router/router.dart';
-import '../../../components/custom_listview_component.dart';
-import '../../../components/code_preview_component.dart';
+import '../../../../core/router/routes.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class LayoutWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'Align',
       description:
@@ -253,19 +252,19 @@ class LayoutWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Layout widgets';
+  final String _appBarTitle = 'Layout widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   LayoutWidgetsView();
 
@@ -276,25 +275,25 @@ class LayoutWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Layout widgets',
@@ -374,7 +373,7 @@ class LayoutWidgetsView extends StatelessWidget {
                   Container(
                     child: ConstrainedBox(
                       constraints: const BoxConstraints(minHeight: 50),
-                      child: const Card(child: Text('Hello World!')),
+                      child: const Card(child: const Text('Hello World!')),
                     ),
                   ),
                   WidgetInfo(
@@ -401,7 +400,7 @@ class LayoutWidgetsView extends StatelessWidget {
                   ),
                   Container(
                     child: Row(
-                      children: [
+                      children: <Widget> [
                         Container(
                           height: 100,
                           width: 100,
@@ -411,7 +410,7 @@ class LayoutWidgetsView extends StatelessWidget {
                           child: Container(
                             color: Colors.red,
                             height: 100,
-                            child: Text('This is expanded to all the space'),
+                            child: const Text('This is expanded to all the space'),
                           ),
                         ),
                         Container(
@@ -448,7 +447,7 @@ class LayoutWidgetsView extends StatelessWidget {
                     child: FractionallySizedBox(
                       widthFactor: 0.5,
                       child: RaisedButton(
-                        child: Text('Click'),
+                        child: const Text('Click'),
                         color: Colors.green,
                         textColor: Colors.white,
                         onPressed: () {},
@@ -495,7 +494,7 @@ class LayoutWidgetsView extends StatelessWidget {
                           height: 50,
                           child: RaisedButton(
                             color: Color.fromARGB(100, 0, 128, 128),
-                            child: Text('Overflowing',
+                            child: const Text('Overflowing',
                                 style: TextStyle(color: Colors.white)),
                             onPressed: () {},
                           ),
@@ -511,7 +510,7 @@ class LayoutWidgetsView extends StatelessWidget {
                   Container(
                     child: Padding(
                       padding: EdgeInsets.all(16.0),
-                      child: Text('This text has padding of 16'),
+                      child: const Text('This text has padding of 16'),
                     ),
                   ),
                   WidgetInfo(
@@ -523,7 +522,7 @@ class LayoutWidgetsView extends StatelessWidget {
                     child: SizedBox(
                       width: 200.0,
                       height: 300.0,
-                      child: const Card(child: Text('Hello World!')),
+                      child: const Card(child: const Text('Hello World!')),
                     ),
                   ),
                   WidgetInfo(
@@ -567,7 +566,7 @@ class LayoutWidgetsView extends StatelessWidget {
                   ),
                   Container(
                     child: Column(
-                      children: [
+                      children: <Widget> [
                         Container(
                           color: Colors.red,
                           height: 100,
@@ -675,17 +674,17 @@ class LayoutWidgetsView extends StatelessWidget {
                         Container(
                           height: 50,
                           color: Colors.amber[600],
-                          child: const Center(child: Text('Entry A')),
+                          child: const Center(child: const Text('Entry A')),
                         ),
                         Container(
                           height: 50,
                           color: Colors.amber[500],
-                          child: const Center(child: Text('Entry B')),
+                          child: const Center(child: const Text('Entry B')),
                         ),
                         Container(
                           height: 50,
                           color: Colors.amber[100],
-                          child: const Center(child: Text('Entry C')),
+                          child: const Center(child: const Text('Entry C')),
                         ),
                       ],
                     ),
@@ -699,11 +698,11 @@ class LayoutWidgetsView extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Expanded(
-                          child: Text('Deliver features faster',
+                          child: const Text('Deliver features faster',
                               textAlign: TextAlign.center),
                         ),
                         Expanded(
-                          child: Text('Craft beautiful UIs',
+                          child: const Text('Craft beautiful UIs',
                               textAlign: TextAlign.center),
                         ),
                         Expanded(
@@ -817,26 +816,26 @@ class LayoutWidgetsView extends StatelessWidget {
                         Chip(
                           avatar: CircleAvatar(
                               backgroundColor: Colors.blue.shade900,
-                              child: Text('AH')),
-                          label: Text('Hamilton'),
+                              child: const Text('AH')),
+                          label: const Text('Hamilton'),
                         ),
                         Chip(
                           avatar: CircleAvatar(
                               backgroundColor: Colors.blue.shade900,
-                              child: Text('ML')),
-                          label: Text('Lafayette'),
+                              child: const Text('ML')),
+                          label: const Text('Lafayette'),
                         ),
                         Chip(
                           avatar: CircleAvatar(
                               backgroundColor: Colors.blue.shade900,
-                              child: Text('HM')),
-                          label: Text('Mulligan'),
+                              child: const Text('HM')),
+                          label: const Text('Mulligan'),
                         ),
                         Chip(
                           avatar: CircleAvatar(
                               backgroundColor: Colors.blue.shade900,
-                              child: Text('JL')),
-                          label: Text('Laurens'),
+                              child: const Text('JL')),
+                          label: const Text('Laurens'),
                         ),
                       ],
                     ),
@@ -900,7 +899,7 @@ class LayoutWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),
@@ -981,19 +980,19 @@ class _MyIndexedStackState extends State<MyIndexedStack> {
               Container(
                 color: Colors.pink,
                 child: Center(
-                  child: Text('Page 1'),
+                  child: const Text('Page 1'),
                 ),
               ),
               Container(
                 color: Colors.cyan,
                 child: Center(
-                  child: Text('Page 2'),
+                  child: const Text('Page 2'),
                 ),
               ),
               Container(
                 color: Colors.deepPurple,
                 child: Center(
-                  child: Text('Page 3'),
+                  child: const Text('Page 3'),
                 ),
               ),
             ],

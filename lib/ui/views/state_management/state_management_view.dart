@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/router/router.dart';
+import '../../../core/router/routes.dart';
 import '../../components/main_appbar_component.dart';
-import '../../components/custom_listview_component.dart';
+import '../../components/custom_final_stage_listview_component.dart';
 
 class StateManagementView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
         title: 'Basics',
         description: 'Basics of state management using provider.',
@@ -16,13 +16,13 @@ class StateManagementView extends StatelessWidget {
         route: RoutePaths.state_management_todos_example),
   ];
 
-  String appBarTitle = 'State management';
+  final String _appBarTitle = 'State management';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );

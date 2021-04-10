@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SectionWrapperComponent extends StatelessWidget {
-  String title;
-  List<Widget> content;
+  final String title;
+  final List<Widget> content;
 
   SectionWrapperComponent({
     @required this.title,
@@ -19,7 +19,7 @@ class SectionWrapperComponent extends StatelessWidget {
       child: Wrap(
         // direction: Axis.vertical,
         runSpacing: 16,
-        children: [
+        children: <Widget>[
           Container(
             margin: EdgeInsets.only(bottom: 16),
             child: Text(

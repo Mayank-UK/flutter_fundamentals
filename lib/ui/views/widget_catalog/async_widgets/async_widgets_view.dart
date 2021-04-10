@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/router/router.dart';
-import '../../../components/custom_listview_component.dart';
+import '../../../../core/router/routes.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 import '../../../components/main_appbar_component.dart';
-import '../../../components/code_preview_component.dart';
 
 class AsyncWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
         title: 'FutureBuilder',
         description:
@@ -20,19 +19,19 @@ class AsyncWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Async';
+  final String _appBarTitle = 'Async';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   AsyncWidgetsView();
 
@@ -43,25 +42,25 @@ class AsyncWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Async widgets',
@@ -84,7 +83,7 @@ class AsyncWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),

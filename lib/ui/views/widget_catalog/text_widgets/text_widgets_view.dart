@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 
-import '../../../../core/router/router.dart';
-import '../../../components/custom_listview_component.dart';
-import '../../../components/code_preview_component.dart';
+import '../../../../core/router/routes.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class TextWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'DefaultTextStyle',
       description:
@@ -27,19 +26,19 @@ class TextWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Text widgets';
+  final String _appBarTitle = 'Text widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   TextWidgetsView();
 
@@ -50,25 +49,25 @@ class TextWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Text(
                       'Text widgets',
@@ -86,7 +85,7 @@ class TextWidgetsView extends StatelessWidget {
                       style: TextStyle(fontSize: 36, color: Colors.blue),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: <Widget> [
                           const Text(
                             'The first text',
                           ),
@@ -126,14 +125,14 @@ class TextWidgetsView extends StatelessWidget {
                     description: '-A run of text with a single style.',
                   ),
                   Container(
-                    child: Text('This is written using text widget.'),
+                    child: const Text('This is written using text widget.'),
                   ),
                 ],
               ),
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),

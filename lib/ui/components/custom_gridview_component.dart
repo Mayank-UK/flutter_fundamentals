@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class GridViewItem {
-  String title;
-  String route;
+  final String title;
+  final String route;
 
-  GridViewItem({@required String this.title, @required String this.route});
+  GridViewItem({@required this.title, @required this.route});
 }
 
 class CustomGridViewComponent extends StatelessWidget {
-  List<GridViewItem> gridList;
+  final List<GridViewItem> gridList;
 
   CustomGridViewComponent({@required this.gridList});
 
@@ -31,7 +31,7 @@ class CustomGridViewComponent extends StatelessWidget {
           },
           child: Ink(
             decoration: BoxDecoration(
-              color: Colors.blueGrey,
+              color: Colors.pink,
               borderRadius: BorderRadius.circular(8),
               boxShadow: [
                 BoxShadow(
@@ -45,7 +45,6 @@ class CustomGridViewComponent extends StatelessWidget {
               height: 200,
               padding: EdgeInsets.all(8),
               width: 200,
-              alignment: Alignment.centerLeft,
               child: Text(
                 item.title,
                 style: TextStyle(

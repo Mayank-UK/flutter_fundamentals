@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
-import './../../../components/custom_listview_component.dart';
-import './../../../../core/router/router.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
+import './../../../../core/router/routes.dart';
 
-class DimesnionsContraintsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+class DimenionsContraintsView extends StatelessWidget {
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'Fixed dimensions',
       description: 'Dimensions in fixed values.',
@@ -26,13 +26,13 @@ class DimesnionsContraintsView extends StatelessWidget {
         route: RoutePaths.constraints),
   ];
 
-  String appBarTitle = 'Dimensions and constraints';
+  final String _appBarTitle = 'Dimensions and constraints';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );

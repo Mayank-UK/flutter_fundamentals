@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class BestPracticesView extends StatelessWidget {
-  String appBarTitle = 'Best practices';
+  final String _appBarTitle = 'Best practices';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
         ),
-        body: Text('Best practices screen'));
+        body: const Text('Best practices screen'));
   }
 }

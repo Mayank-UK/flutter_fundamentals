@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/router/router.dart';
+import '../../../../core/router/routes.dart';
 
 import '../../../components/main_appbar_component.dart';
-import '../../../components/custom_listview_component.dart';
+import '../../../components/custom_final_stage_listview_component.dart';
 
 class AnimationWidgetsView extends StatelessWidget {
-  List<ListViewItem> _itemList = [
+  final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'AnimatedAlign',
       description:
@@ -124,19 +124,19 @@ class AnimationWidgetsView extends StatelessWidget {
     ),
   ];
 
-  String appBarTitle = 'Animation widgets';
+  final String _appBarTitle = 'Animation widgets';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this.appBarTitle),
-      body: CustomListViewComponent(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
         itemList: _itemList,
       ),
     );
   }
 
-  /* String appBarTitle;
+  /* final String _appBarTitle;
 
   AnimationWidgetsView();
 
@@ -147,29 +147,29 @@ class AnimationWidgetsView extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this._appBarTitle),
           bottom: const TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Demo'),
+                child: const Text('Demo'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
         ),
         
-        body: TabBarView(children: [
+        body: TabBarView(children: <Widget> [
           Center(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: <Widget> [
                   Container(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: <Widget> [
                         Text(
                           'Animation widgets',
                           style: TextStyle(
@@ -284,7 +284,7 @@ class AnimationWidgetsView extends StatelessWidget {
             ),
           ),
           Center(
-            child: Text('Demo code here'),
+            child: const Text('Demo code here'),
           )
         ]),
       ),

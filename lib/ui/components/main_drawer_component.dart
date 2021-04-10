@@ -21,17 +21,17 @@ class MainDrawerComponent extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.rate_review),
-            title: Text('Rate on Google Play'),
+            title: const Text('Rate on Google Play'),
             onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.code),
-            title: Text('Source code on GitHub'),
+            title: const Text('Source code on GitHub'),
             onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.settings),
-            title: Text('Dark mode'),
+            title: const Text('Dark mode'),
             onTap: () {},
           ),
         ],
