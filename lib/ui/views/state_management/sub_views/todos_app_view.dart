@@ -1,146 +1,34 @@
-import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-// model
-class Task {
-  final String title;
-  bool completed;
+import './../../../../core/models/task.dart';
+import './../../../../core/providers/todos_model.dart';
 
-  Task({@required this.title, this.completed = false});
-
-  void toggleCompleted() {
-    completed = !completed;
-  }
-}
-
-// provider
-class TodosModel extends ChangeNotifier {
-  final List<Task> _tasks = [
-    Task(title: 'Finish the app'),
-    Task(title: 'Write a blog post'),
-    Task(title: 'Share with community'),
-  ];
-
-  UnmodifiableListView<Task> get allTasks => UnmodifiableListView(_tasks);
-  UnmodifiableListView<Task> get incompleteTasks =>
-      UnmodifiableListView(_tasks.where((todo) => !todo.completed));
-  UnmodifiableListView<Task> get completedTasks =>
-      UnmodifiableListView(_tasks.where((todo) => todo.completed));
-
-  void addTodo(Task task) {
-    _tasks.add(task);
-    notifyListeners();
-  }
-
-  void toggleTodo(Task task) {
-    final taskIndex = _tasks.indexOf(task);
-    _tasks[taskIndex].toggleCompleted();
-    notifyListeners();
-  }
-
-  void deleteTodo(Task task) {
-    _tasks.remove(task);
-    notifyListeners();
-  }
-}
-
-// todo item
-class TaskListItem extends StatelessWidget {
-  final Task task;
-
-  TaskListItem({@required this.task});
-
+// exposing provider
+class TodosAppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Checkbox(
-        value: task.completed,
-        onChanged: (bool checked) {
-          Provider.of<TodosModel>(context, listen: false).toggleTodo(task);
-        },
+    // remove this commented section after including it in markdown
+    // To be able to access providers across navigation, you need to provide it before MaterialApp as follows
+    /* return ChangeNotifierProvider(
+      create: (context) => TodosModel(),
+      child: MaterialApp(
+        title: 'Todos',
+        home: _HomeScreen(),
       ),
-      title: Text(task.title),
-      trailing: IconButton(
-        icon: Icon(
-          Icons.delete,
-          color: Colors.red,
-        ),
-        onPressed: () {
-          Provider.of<TodosModel>(context, listen: false).deleteTodo(task);
-        },
-      ),
-    );
-  }
-}
+    ); */
 
-// todo list
-class TaskList extends StatelessWidget {
-  final List<Task> tasks;
-
-  TaskList({@required this.tasks});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      children: getChildrenTasks(),
-    );
-  }
-
-  List<Widget> getChildrenTasks() {
-    return tasks.map((todo) => TaskListItem(task: todo)).toList();
-  }
-}
-
-// tab
-class AllTasksTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Consumer<TodosModel>(
-        builder: (context, todos, child) => TaskList(
-          tasks: todos.allTasks,
-        ),
-      ),
-    );
-  }
-}
-
-// tab
-class CompletedTasksTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Consumer<TodosModel>(
-        builder: (context, todos, child) => TaskList(
-          tasks: todos.completedTasks,
-        ),
-      ),
-    );
-  }
-}
-
-// tab
-class IncompleteTasksTab extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Consumer<TodosModel>(
-        builder: (context, todos, child) => TaskList(
-          tasks: todos.incompleteTasks,
-        ),
-      ),
-    );
+    return _HomeScreen();
   }
 }
 
 // main view
-class HomeScreen extends StatefulWidget {
+class _HomeScreen extends StatefulWidget {
   @override
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen>
+class _HomeScreenState extends State<_HomeScreen>
     with SingleTickerProviderStateMixin {
   TabController controller;
 
@@ -168,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen>
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => AddTaskScreen(),
+                  builder: (context) => _AddTaskScreen(),
                 ),
               );
             },
@@ -186,22 +74,111 @@ class _HomeScreenState extends State<HomeScreen>
       body: TabBarView(
         controller: controller,
         children: <Widget>[
-          AllTasksTab(),
-          IncompleteTasksTab(),
-          CompletedTasksTab(),
+          _AllTasksTab(),
+          _IncompleteTasksTab(),
+          _CompletedTasksTab(),
         ],
       ),
     );
   }
 }
 
+// todo item
+class _TaskListItem extends StatelessWidget {
+  final Task task;
+
+  _TaskListItem({@required this.task});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      leading: Checkbox(
+        value: task.completed,
+        onChanged: (bool checked) {
+          Provider.of<TodosModel>(context, listen: false).toggleTodo(task);
+        },
+      ),
+      title: Text(task.title),
+      trailing: IconButton(
+        icon: Icon(
+          Icons.delete,
+          color: Colors.red,
+        ),
+        onPressed: () {
+          Provider.of<TodosModel>(context, listen: false).deleteTodo(task);
+        },
+      ),
+    );
+  }
+}
+
+// todo list
+class _TaskList extends StatelessWidget {
+  final List<Task> tasks;
+
+  _TaskList({@required this.tasks});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: getChildrenTasks(),
+    );
+  }
+
+  List<Widget> getChildrenTasks() {
+    return tasks.map((todo) => _TaskListItem(task: todo)).toList();
+  }
+}
+
+// tab
+class _AllTasksTab extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Consumer<TodosModel>(
+        builder: (context, todos, child) => _TaskList(
+          tasks: todos.allTasks,
+        ),
+      ),
+    );
+  }
+}
+
+// tab
+class _CompletedTasksTab extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Consumer<TodosModel>(
+        builder: (context, todos, child) => _TaskList(
+          tasks: todos.completedTasks,
+        ),
+      ),
+    );
+  }
+}
+
+// tab
+class _IncompleteTasksTab extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Consumer<TodosModel>(
+        builder: (context, todos, child) => _TaskList(
+          tasks: todos.incompleteTasks,
+        ),
+      ),
+    );
+  }
+}
+
 // add task view
-class AddTaskScreen extends StatefulWidget {
+class _AddTaskScreen extends StatefulWidget {
   @override
   _AddTaskScreenState createState() => _AddTaskScreenState();
 }
 
-class _AddTaskScreenState extends State<AddTaskScreen> {
+class _AddTaskScreenState extends State<_AddTaskScreen> {
   final taskTitleController = TextEditingController();
   bool completedStatus = false;
 
@@ -255,21 +232,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             ),
           )
         ],
-      ),
-    );
-  }
-}
-
-// exposing provider
-class TodosAppView extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // To be able to access providers across navigation, you need to provide it before MaterialApp as follows
-    return ChangeNotifierProvider(
-      create: (context) => TodosModel(),
-      child: MaterialApp(
-        title: 'Todos',
-        home: HomeScreen(),
       ),
     );
   }

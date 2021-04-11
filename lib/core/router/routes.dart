@@ -6,16 +6,53 @@ class RoutePaths {
   static const String flutterFundamentals = '/flutter-fundamentals';
   static const String uiManipulation = '/ui-manipulation';
   static const String widgetsCatalog = '/widgets-catalog';
-  static const String navigation = '/navigation';
+  static const String navigationRouting = '/navigation-routing';
   static const String stateManagement =
       '/state-manaNative device featuresgement';
   static const String nativeDeviceFeatures = '/native-device-features';
   static const String architecture = '/architecture';
   static const String bestPractices = '/best-practices';
   static const String supportingClassesEnums = '/supporting-classes-enums';
+  static const String restAPI = '/rest-api';
   static const String debugging = '/debugging';
   static const String testing = '/testing';
   static const String lifecycle = '/lifecycle';
+  static const String productionBuildDeployment =
+      '/production-build-deployment';
+
+  // dart fundamentals routes
+  static const String importantConcepts = '/dart-fundaments/important-concepts';
+  static const String installation = '/dart-fundaments/installation';
+  static const String keywords = '/dart-fundaments/keywords';
+  static const String variables = '/dart-fundaments/variables';
+  static const String buildInTypes = '/dart-fundaments/build-in-types';
+  static const String functions = '/dart-fundaments/functions';
+  static const String operators = '/dart-fundaments/operators';
+  static const String conditionalExpression =
+      '/dart-fundaments/conditional-expressions';
+  static const String cascadeNotation = '/dart-fundaments/cascade-notation';
+  static const String controlFlowStatements =
+      '/dart-fundaments/control-flow-statements';
+  static const String exceptions = '/dart-fundaments/exceptions';
+  static const String classes = '/dart-fundaments/classes';
+  static const String generics = '/dart-fundaments/generics';
+  static const String generators = '/dart-fundaments/generics';
+  static const String librariesVisibility =
+      '/dart-fundaments/libraries-visibility';
+  static const String asynchrony = '/dart-fundamentals/asynchrony';
+  static const String callableClasses = '/dart-fundaments/callable-classes';
+  static const String isolates = '/dart-fundaments/isolates';
+  static const String typedefs = '/dart-fundaments/typedefs';
+  static const String comments = '/dart-fundaments/comments';
+
+  // flutter fundamentals routes
+  static const String importantConceptsFlutter =
+      '/flutter-fundamentals/important-concepts';
+  static const String installationSetup =
+      '/flutter-fundamentals/installation-setup';
+  static const String usingFlutter = '/flutter-fundamentals/using-flutter';
+  static const String aboutWidgets = '/flutter-fundamentals/about-widgets';
+  static const String flutter2 = '/flutter-fundamentals/flutter-2';
 
   // supporting classes and enums routes
   static const String supportingClasses =
@@ -23,9 +60,31 @@ class RoutePaths {
   static const String supportingEnums =
       '/supporting-classes-enums/supporting-enums';
 
+  // navigation routes
+  static const String imperativeRouting =
+      '/navigation-routing/imperative-routing';
+  static const String declarativeRouting =
+      '/navigation-routing/declarative-routing';
+
   // lifecycle routes
   static const String applicationLifecycle = '/lifecycle/application-lifecycle';
   static const String widgetLifecycle = '/lifecycle/widget-lifecycle';
+
+  // interaction with external resources routes
+
+  // testing routes
+  static const String unitTesting = '/testing/unit-testing';
+  static const String integrationTesting = '/testing/integration-testing';
+
+  // production build and deployment
+  static const String productionBuild =
+      '/production-build-deployment/product-build';
+  static const String androidDeployment =
+      '/production-build-deployment/android-deployment';
+  static const String iosDeployment =
+      '/production-build-deployment/ios-deployment';
+  static const String webDeployment =
+      '/production-build-deployment/web-deployment';
 
   // widget catalog category widgets routes
   static const String accessibilityWidgets =
@@ -368,6 +427,7 @@ class RoutePaths {
   static const String themeManipulation = '/ui-manipulation/theme';
   static const String textManipulation = '/ui-manipulation/text';
   static const String visibility = '/ui-manipulation/visibility';
+  static const String hyperlinks = '/ui-manipulation/hyper-links';
   static const String formUiManipulation = '/ui-manipulation/form';
   static const String responsiveAdaptiveUi =
       '/ui-manipulation/responsive-adaptive-ui';
@@ -429,6 +489,7 @@ class RoutePaths {
 
   // state management paths
   static const String state_management_basics = '/state-management/basics';
+  static const String providerStateManagement = '/state-management/provider';
   static const String state_management_todos_example =
       '/state-management/todos-example';
 }

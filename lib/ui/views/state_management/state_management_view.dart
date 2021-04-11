@@ -7,9 +7,14 @@ import '../../components/custom_final_stage_listview_component.dart';
 class StateManagementView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
-        title: 'Basics',
-        description: 'Basics of state management using provider.',
+        title: 'State management basics and stateful widgets',
+        description: 'Managing state using stateful widgets.',
         route: RoutePaths.state_management_basics),
+    ListViewItem(
+        title: '"Provider" package for state management',
+        description:
+            'Basics of state management using provider (officially supported).',
+        route: RoutePaths.providerStateManagement),
     ListViewItem(
         title: 'Todos application example',
         description: 'Implementation of a simple todo application.',

@@ -8,12 +8,12 @@ class LifecycleView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'Application lifecycle',
-      description: 'Description not available',
+      description: 'Doing stuff at various stages of an application lifecycle.',
       route: RoutePaths.applicationLifecycle,
     ),
     ListViewItem(
       title: 'Widget lifecycle',
-      description: 'Description not available',
+      description: 'Doing stuff at various stages of a widget lifecycle.',
       route: RoutePaths.widgetLifecycle,
     ),
   ];

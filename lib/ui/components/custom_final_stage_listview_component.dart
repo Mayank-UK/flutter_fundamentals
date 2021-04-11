@@ -48,11 +48,14 @@ class CustomFinalStageListViewComponent extends StatelessWidget {
                   // direction: Axis.vertical,
                   // spacing: 8,
                   children: <Widget>[
-                    Text(
-                      itemList[index].title,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                    Container(
+                      margin: EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        itemList[index].title,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                     Text(

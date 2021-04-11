@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_developer_guide/ui/views/navigation_routing/navigation_routing_view.dart';
+import 'package:flutter_developer_guide/ui/views/navigation_routing/sub_views/declarative_routing_view.dart';
+import 'package:flutter_developer_guide/ui/views/navigation_routing/sub_views/imperative_routing_view.dart';
 
 // routes
 import './routes.dart';
@@ -12,15 +15,50 @@ import '../../ui/views/dart_fundamentals/dart_fundamentals_view.dart';
 import '../../ui/views/flutter_fundamentals/flutter_fundamentals_view.dart';
 import '../../ui/views/ui_manipulation/ui_manipulation_view.dart';
 import '../../ui/views/widget_catalog/widget_catalog_view.dart';
-import '../../ui/views/navigation/navigation_view.dart';
+import '../../ui/views/navigation_routing/navigation_routing_view.dart';
 import '../../ui/views/state_management/state_management_view.dart';
 import '../../ui/views/native_device_features/native_device_features_view.dart';
 import '../../ui/views/architecture/architecture_view.dart';
 import '../../ui/views/best_practices/best_practices_view.dart';
 import '../../ui/views/supporting_classes_enums/supporting_classes_enums_view.dart';
+import '../../ui/views/interaction_external_resources/restApiView.dart';
 import '../../ui/views/debugging/debugging_view.dart';
 import '../../ui/views/testing/testing_view.dart';
 import '../../ui/views/lifecycle/lifecycle_view.dart';
+import '../../ui/views/production_build_deployment/production_build_deployment.dart';
+
+// dart fundamentals sub_views
+import '../../ui/views/dart_fundamentals/sub_views/important_concepts_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/installation_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/keywords_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/variables_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/built_in_typesView.dart';
+import '../../ui/views/dart_fundamentals/sub_views/functions_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/operators_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/conditional_expression_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/cascade_notation_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/control_flow_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/exceptions_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/classes_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/generics_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/libraries_visibility_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/asynchrony_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/generators_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/callable_classes_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/isolates_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/typedefs_view.dart';
+import '../../ui/views/dart_fundamentals/sub_views/comments_view.dart';
+
+// flutter fundamentals sub_views
+import '../../ui/views/flutter_fundamentals/sub_views/about_wigets_view.dart';
+import '../../ui/views/flutter_fundamentals/sub_views/flutter_2_view.dart';
+import '../../ui/views/flutter_fundamentals/sub_views/important_concepts_flutter_view.dart';
+import '../../ui/views/flutter_fundamentals/sub_views/installation_setup_flutter_view.dart';
+import '../../ui/views/flutter_fundamentals/sub_views/using_flutter_view.dart';
+
+// navigation and routing
+import '../../ui/views/supporting_classes_enums/sub_views/supporting_classes_view.dart';
+import '../../ui/views/supporting_classes_enums/sub_views/supporting_enums_view.dart';
 
 // supporting classes sub_views
 import '../../ui/views/supporting_classes_enums/sub_views/supporting_classes_view.dart';
@@ -29,6 +67,16 @@ import '../../ui/views/supporting_classes_enums/sub_views/supporting_enums_view.
 // lifecycle sub_views
 import '../../ui/views/lifecycle/sub_views/application_lifecycle_view.dart';
 import '../../ui/views/lifecycle/sub_views/widget_lifecycle_view.dart';
+
+// testing
+import '../../ui/views/testing/sub_views/unit_testing_view.dart';
+import '../../ui/views/testing/sub_views/integration_testing_view.dart';
+
+// production build and deployment
+import '../../ui/views/production_build_deployment/sub_views/production_build_view.dart';
+import '../../ui/views/production_build_deployment/sub_views/android_deployment_view.dart';
+import '../../ui/views/production_build_deployment/sub_views/ios_deployment_view.dart';
+import '../../ui/views/production_build_deployment/sub_views/web_deployment_view.dart';
 
 // widget catalog main category
 import '../../ui/views/widget_catalog/accessibility_widgets/accessibility_widgets_view.dart';
@@ -269,6 +317,7 @@ import '../../ui/views/ui_manipulation/theme/theme_view.dart';
 import '../../ui/views/ui_manipulation/text/text_view.dart';
 import '../../ui/views/ui_manipulation/visibility/visibility_view.dart';
 import '../../ui/views/ui_manipulation/layout/layout_view.dart';
+import '../../ui/views/ui_manipulation/hyperlinks/hyperlinks_view.dart';
 import '../../ui/views/ui_manipulation/form/form_view.dart';
 import '../../ui/views/ui_manipulation/responsive_adaptive_ui/responsive_adaptive_layout_view.dart';
 
@@ -321,6 +370,7 @@ import '../../ui/views/ui_manipulation/responsive_adaptive_ui/sub_views/adaptive
 
 // state management sub_views
 import '../../ui/views/state_management/sub_views/state_management_basics_view.dart';
+import '../../ui/views/state_management/sub_views/provider_state_management_view.dart';
 import '../../ui/views/state_management/sub_views/todos_app_view.dart';
 
 // router
@@ -354,13 +404,17 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => SupportingClassesEnumsView(),
         );
-      case RoutePaths.navigation:
+      case RoutePaths.navigationRouting:
         return MaterialPageRoute(
-          builder: (_) => NavigationView(),
+          builder: (_) => NavigationRoutingView(),
         );
       case RoutePaths.stateManagement:
         return MaterialPageRoute(
           builder: (_) => StateManagementView(),
+        );
+      case RoutePaths.restAPI:
+        return MaterialPageRoute(
+          builder: (_) => RestApiView(),
         );
       case RoutePaths.debugging:
         return MaterialPageRoute(
@@ -382,6 +436,124 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => BestPracticesView(),
         );
+      case RoutePaths.productionBuildDeployment:
+        return MaterialPageRoute(
+          builder: (_) => ProductionBuildDeploymentView(),
+        );
+
+      // dart fundamentals
+      case RoutePaths.importantConcepts:
+        return MaterialPageRoute(
+          builder: (_) => ImportantConceptsView(),
+        );
+      case RoutePaths.installation:
+        return MaterialPageRoute(
+          builder: (_) => InstallationView(),
+        );
+      case RoutePaths.keywords:
+        return MaterialPageRoute(
+          builder: (_) => KeywordsView(),
+        );
+      case RoutePaths.variables:
+        return MaterialPageRoute(
+          builder: (_) => VariablesView(),
+        );
+      case RoutePaths.buildInTypes:
+        return MaterialPageRoute(
+          builder: (_) => BuiltInTypesView(),
+        );
+      case RoutePaths.functions:
+        return MaterialPageRoute(
+          builder: (_) => FunctionsView(),
+        );
+      case RoutePaths.operators:
+        return MaterialPageRoute(
+          builder: (_) => OperatorsView(),
+        );
+      case RoutePaths.conditionalExpression:
+        return MaterialPageRoute(
+          builder: (_) => ConditionalExpressionView(),
+        );
+      case RoutePaths.cascadeNotation:
+        return MaterialPageRoute(
+          builder: (_) => CascadeNotationView(),
+        );
+      case RoutePaths.controlFlowStatements:
+        return MaterialPageRoute(
+          builder: (_) => ControlFlowStatementView(),
+        );
+      case RoutePaths.exceptions:
+        return MaterialPageRoute(
+          builder: (_) => ExceptionsView(),
+        );
+      case RoutePaths.classes:
+        return MaterialPageRoute(
+          builder: (_) => ClassesView(),
+        );
+      case RoutePaths.generics:
+        return MaterialPageRoute(
+          builder: (_) => GenericsView(),
+        );
+      case RoutePaths.generators:
+        return MaterialPageRoute(
+          builder: (_) => GeneratorsView(),
+        );
+      case RoutePaths.librariesVisibility:
+        return MaterialPageRoute(
+          builder: (_) => LibrariesVisibilityView(),
+        );
+      case RoutePaths.asynchrony:
+        return MaterialPageRoute(
+          builder: (_) => AsynchronyView(),
+        );
+      case RoutePaths.callableClasses:
+        return MaterialPageRoute(
+          builder: (_) => CallableClassesView(),
+        );
+      case RoutePaths.isolates:
+        return MaterialPageRoute(
+          builder: (_) => IsolatesView(),
+        );
+      case RoutePaths.typedefs:
+        return MaterialPageRoute(
+          builder: (_) => TypedefsView(),
+        );
+      case RoutePaths.comments:
+        return MaterialPageRoute(
+          builder: (_) => CommentsView(),
+        );
+
+      // flutter fundamentals
+      case RoutePaths.importantConceptsFlutter:
+        return MaterialPageRoute(
+          builder: (_) => ImportantConceptsFlutterView(),
+        );
+      case RoutePaths.installationSetup:
+        return MaterialPageRoute(
+          builder: (_) => InstallationSetupFlutterView(),
+        );
+      case RoutePaths.usingFlutter:
+        return MaterialPageRoute(
+          builder: (_) => UsingFlutterView(),
+        );
+      case RoutePaths.aboutWidgets:
+        return MaterialPageRoute(
+          builder: (_) => AboutWidgetsView(),
+        );
+      case RoutePaths.flutter2:
+        return MaterialPageRoute(
+          builder: (_) => Flutter2View(),
+        );
+
+      // navigation and routing
+      case RoutePaths.imperativeRouting:
+        return MaterialPageRoute(
+          builder: (_) => ImperativeRoutingView(),
+        );
+      case RoutePaths.declarativeRouting:
+        return MaterialPageRoute(
+          builder: (_) => DeclarativeRoutingView(),
+        );
 
       // supporting classes and enums sub_views
       case RoutePaths.supportingClasses:
@@ -401,6 +573,36 @@ class MyRouter {
       case RoutePaths.widgetLifecycle:
         return MaterialPageRoute(
           builder: (_) => WidgetLifecycleView(),
+        );
+
+      // interaction with external resources sub_views
+
+      // testing
+      case RoutePaths.unitTesting:
+        return MaterialPageRoute(
+          builder: (_) => UnitTestingView(),
+        );
+      case RoutePaths.integrationTesting:
+        return MaterialPageRoute(
+          builder: (_) => IntegrationTestingView(),
+        );
+
+      // production build and deployment
+      case RoutePaths.productionBuild:
+        return MaterialPageRoute(
+          builder: (_) => ProductionBuildView(),
+        );
+      case RoutePaths.androidDeployment:
+        return MaterialPageRoute(
+          builder: (_) => AndroidDeploymentView(),
+        );
+      case RoutePaths.iosDeployment:
+        return MaterialPageRoute(
+          builder: (_) => IosDeploymentView(),
+        );
+      case RoutePaths.webDeployment:
+        return MaterialPageRoute(
+          builder: (_) => WebDeploymentView(),
         );
 
       // widget catalog category widgets
@@ -1276,6 +1478,10 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => TextView(),
         );
+      case RoutePaths.hyperlinks:
+        return MaterialPageRoute(
+          builder: (_) => HyperlinksView(),
+        );
       case RoutePaths.formUiManipulation:
         return MaterialPageRoute(
           builder: (_) => FormView(),
@@ -1389,6 +1595,10 @@ class MyRouter {
       case RoutePaths.state_management_basics:
         return MaterialPageRoute(
           builder: (_) => StateManagementBasicsView(),
+        );
+      case RoutePaths.providerStateManagement:
+        return MaterialPageRoute(
+          builder: (_) => ProviderStateManagementView(),
         );
       case RoutePaths.state_management_todos_example:
         return MaterialPageRoute(

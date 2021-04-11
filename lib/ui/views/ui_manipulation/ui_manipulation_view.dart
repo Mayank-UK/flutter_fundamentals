@@ -8,63 +8,67 @@ class UiManipulationView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
         title: 'Layout',
-        description: 'Description not available',
+        description: 'Building the page structure.',
         route: RoutePaths.layout),
     ListViewItem(
         title: 'Dimensions and constraints',
-        description: 'Description not available',
+        description: 'Setting height, widths and constraints on widgets.',
         route: RoutePaths.dimensionsConstraints),
     ListViewItem(
         title: 'Spacing',
-        description: 'Description not available',
+        description: 'Margin and padding on widgets.',
         route: RoutePaths.spacing),
     ListViewItem(
         title: 'Colors and backgrounds',
-        description: 'Description not available',
+        description: 'Text and background colors.',
         route: RoutePaths.colorsBackgrounds),
     ListViewItem(
         title: 'Text',
-        description: 'Description not available',
+        description: 'Using and manipulating text in UI.',
         route: RoutePaths.textManipulation),
     ListViewItem(
         title: 'Alignment',
-        description: 'Description not available',
+        description: 'Specifying the alignment on widgets.',
         route: RoutePaths.alignment),
     ListViewItem(
         title: 'Borders',
-        description: 'Description not available',
+        description: 'Setting and modifying borders.',
         route: RoutePaths.borders),
     ListViewItem(
         title: 'Icons and images',
-        description: 'Description not available',
+        description: 'Using icons and images in layout.',
         route: RoutePaths.iconsImages),
     ListViewItem(
         title: 'Effects',
-        description: 'Description not available',
+        description: 'Things like shadows, opacity, etc',
         route: RoutePaths.effects),
     ListViewItem(
         title: 'Positioning',
-        description: 'Description not available',
+        description: 'Positioning UI elements in layout.',
         route: RoutePaths.positioning),
     ListViewItem(
         title: 'Visibility',
-        description: 'Description not available',
+        description: 'Make a UI element visible, transparent, or invisible.',
         route: RoutePaths.visibility),
     ListViewItem(
         title: 'Theme',
-        description: 'Description not available',
+        description: 'Define the styles one time and at one place.',
         route: RoutePaths.themeManipulation),
     ListViewItem(
         title: 'Interactive behaviors',
-        description: 'Description not available',
+        description: 'Interaction to click, hover, focus, etc',
         route: RoutePaths.interactiveBehavior),
     ListViewItem(
+        title: 'Hyperlinks',
+        description: 'Navigating to a resource location on web.',
+        route: RoutePaths.hyperlinks),
+    ListViewItem(
         title: 'Form',
-        description: 'Description not available',
+        description: 'Mechanism to take user input.',
         route: RoutePaths.formUiManipulation),
     ListViewItem(
         title: 'Responsive and adaptive layout',
-        description: 'Description not available',
+        description: 'Make application display properly on various devices.',
         route: RoutePaths.responsiveAdaptiveUi),
   ];
 

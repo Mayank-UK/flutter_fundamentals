@@ -12,8 +12,11 @@ class HomeView extends StatelessWidget {
         title: 'Flutter fundamentals', route: RoutePaths.flutterFundamentals),
     GridViewItem(title: 'UI manipulation', route: RoutePaths.uiManipulation),
     GridViewItem(title: 'Lifecycle', route: RoutePaths.lifecycle),
-    GridViewItem(title: 'Navigation', route: RoutePaths.navigation),
+    GridViewItem(
+        title: 'Navigation and routing', route: RoutePaths.navigationRouting),
     GridViewItem(title: 'State management', route: RoutePaths.stateManagement),
+    GridViewItem(title: 'Rest API', route: RoutePaths.restAPI),
+    GridViewItem(title: 'Architecture', route: RoutePaths.architecture),
     GridViewItem(title: 'Debugging', route: RoutePaths.debugging),
     GridViewItem(title: 'Testing', route: RoutePaths.testing),
     GridViewItem(title: 'Widget catalog', route: RoutePaths.widgetsCatalog),
@@ -23,8 +26,10 @@ class HomeView extends StatelessWidget {
     GridViewItem(
         title: 'Native device features',
         route: RoutePaths.nativeDeviceFeatures),
-    GridViewItem(title: 'Architecture', route: RoutePaths.architecture),
     GridViewItem(title: 'Best practices', route: RoutePaths.bestPractices),
+    GridViewItem(
+        title: 'Production build and deployment',
+        route: RoutePaths.productionBuildDeployment),
   ];
 
   @override

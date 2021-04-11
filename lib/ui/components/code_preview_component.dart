@@ -28,10 +28,10 @@ class CodePreviewTabsComponent extends StatelessWidget {
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
-                child: Text('Preview'),
+                child: const Text('Preview'),
               ),
               Tab(
-                child: Text('Code'),
+                child: const Text('Code'),
               ),
             ],
           ),
@@ -45,7 +45,7 @@ class CodePreviewTabsComponent extends StatelessWidget {
               future: getFileData(this.codeTabMarkdownLocation),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
-                  return Text('Loading Markdown Info...');
+                  return const Text('Loading Markdown Info...');
                 }
                 return Markdown(data: snapshot.data);
               },

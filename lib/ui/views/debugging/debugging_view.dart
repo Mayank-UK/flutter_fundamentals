@@ -1,32 +1,37 @@
 import 'package:flutter/material.dart';
 
-import '../../components/code_preview_component.dart';
-import '../../components/section_wrapper_component_component.dart';
+import '../../components/main_appbar_component.dart';
+import '../../../core/router/routes.dart';
+import '../../components/custom_final_stage_listview_component.dart';
 
 class DebuggingView extends StatelessWidget {
+  final List<ListViewItem> _itemList = [
+    ListViewItem(
+      title: '_',
+      description: 'Description not available',
+      route: RoutePaths.pageNotFound,
+    ),
+    ListViewItem(
+      title: '_',
+      description: 'Description not available',
+      route: RoutePaths.pageNotFound,
+    ),
+    ListViewItem(
+      title: '_',
+      description: 'Description not available',
+      route: RoutePaths.pageNotFound,
+    ),
+  ];
+
   final String _appBarTitle = 'Debugging';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
   Widget build(BuildContext context) {
-    return CodePreviewTabsComponent(
-      appBarTitle: this._appBarTitle,
-      previewTab: _DebuggingImplementation(),
-      codeTabMarkdownLocation: this._codeTabMarkdownLocation,
-    );
-  }
-}
-
-class _DebuggingImplementation extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Wrap(
-      children: <Widget>[
-        SectionWrapperComponent(
-          title: 'Debugging',
-          content: [],
-        ),
-      ],
+    return Scaffold(
+      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
+      body: CustomFinalStageListViewComponent(
+        itemList: _itemList,
+      ),
     );
   }
 }

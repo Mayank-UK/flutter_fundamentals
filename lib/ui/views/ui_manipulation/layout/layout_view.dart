@@ -7,14 +7,15 @@ import './../../../../core/router/routes.dart';
 class LayoutView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Page layout',
-      description: 'Structuring a full page.',
-      route: RoutePaths.pageLayout,
+      title: 'Basic layout widgets',
+      description: 'Basic layout widgets like container, row, column etc',
+      route: RoutePaths.basicLayout,
     ),
     ListViewItem(
-      title: 'Basic layout',
-      description: 'Basic layout like row, container, etc',
-      route: RoutePaths.basicLayout,
+      title: 'Application and page layout',
+      description:
+          'Structuring a the layout for whole application and individual pages.',
+      route: RoutePaths.pageLayout,
     ),
   ];
 

@@ -44,15 +44,19 @@ class CustomMidStageListViewComponent extends StatelessWidget {
               child: Container(
                 height: 128,
                 padding: EdgeInsets.all(8),
-                child: Wrap(
-                  direction: Axis.vertical,
-                  spacing: 8,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  // direction: Axis.vertical,
+                  // spacing: 8,
                   children: <Widget>[
-                    Text(
-                      itemList[index].title,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
+                    Container(
+                      margin: EdgeInsets.only(bottom: 8),
+                      child: Text(
+                        itemList[index].title,
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
                       ),
                     ),
                     Text(
