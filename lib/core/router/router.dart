@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_developer_guide/ui/views/navigation_routing/navigation_routing_view.dart';
-import 'package:flutter_developer_guide/ui/views/navigation_routing/sub_views/declarative_routing_view.dart';
-import 'package:flutter_developer_guide/ui/views/navigation_routing/sub_views/imperative_routing_view.dart';
+import 'package:flutter_developers_guide/ui/views/navigation_routing/navigation_routing_view.dart';
+import 'package:flutter_developers_guide/ui/views/navigation_routing/sub_views/declarative_routing_view.dart';
+import 'package:flutter_developers_guide/ui/views/navigation_routing/sub_views/imperative_routing_view.dart';
 
 // routes
 import './routes.dart';

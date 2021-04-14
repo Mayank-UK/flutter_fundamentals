@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../components/main_appbar_component.dart';
 import '../../components/section_wrapper_component_component.dart';
+import '../../components/text_block_component.dart';
 
 class ArchitectureView extends StatelessWidget {
   final String _appBarTitle = 'Architecture';
@@ -16,19 +17,13 @@ class ArchitectureView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'MVVM architecture pattern',
               content: [
-                Container(
-                  width: double.infinity,
-                  child: const Text('_'),
-                )
+                TextBlockComponent('In development'),
               ],
             ),
             SectionWrapperComponent(
               title: 'Directory structure',
               content: [
-                Container(
-                  width: double.infinity,
-                  child: const Text('_'),
-                )
+                TextBlockComponent('In development'),
               ],
             ),
           ],

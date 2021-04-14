@@ -1,3 +1,3 @@
-# flutter_developer_guide
+# flutter_developers_guide
 
-Flutter project for new flutter developer's.
+Flutter project for new flutter developers.

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
+import '../../../components/text_block_component.dart';
 
 class ExceptionsView extends StatelessWidget {
   final String _appBarTitle = 'Exceptions';
@@ -16,10 +17,7 @@ class ExceptionsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Exceptions',
               content: [
-                Container(
-                  width: double.infinity,
-                  child: const Text('_'),
-                )
+                TextBlockComponent('In development'),
               ],
             ),
           ],

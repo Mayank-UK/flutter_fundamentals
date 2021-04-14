@@ -33,11 +33,11 @@ class _ShadowImplementation extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.amber,
                 borderRadius: BorderRadius.circular(20),
-                boxShadow: [
+                boxShadow: <BoxShadow>[
                   BoxShadow(
                     color: Colors.black26,
-                    blurRadius: 4,
-                    offset: Offset(4, 8),
+                    blurRadius: 8,
+                    offset: Offset(0, 8),
                   ),
                 ],
               ),

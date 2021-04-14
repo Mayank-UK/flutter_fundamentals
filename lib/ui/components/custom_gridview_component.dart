@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_developers_guide/ui/design_system/design_system.dart';
 
 class GridViewItem {
   final String title;
@@ -18,9 +19,9 @@ class CustomGridViewComponent extends StatelessWidget {
       // without this property, GridView is not visible
       shrinkWrap: true,
       primary: false,
-      padding: const EdgeInsets.all(20),
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 10,
+      padding: const EdgeInsets.all(DSSpacing.sm),
+      crossAxisSpacing: DSSpacing.sm,
+      mainAxisSpacing: DSSpacing.sm,
       crossAxisCount: 2,
       children: gridList.map((item) {
         return InkWell(
@@ -31,26 +32,17 @@ class CustomGridViewComponent extends StatelessWidget {
           },
           child: Ink(
             decoration: BoxDecoration(
-              color: Colors.pink,
+              gradient: DSColors.SecondaryGradient,
               borderRadius: BorderRadius.circular(8),
               boxShadow: [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 4,
-                  offset: Offset(2, 2),
-                ),
+                DSShadows.buttonCard,
               ],
             ),
             child: Container(
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
+              padding: EdgeInsets.all(DSSpacing.sm),
               child: Text(
                 item.title,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                ),
+                style: DSTypography.h6Light,
               ),
             ),
           ),

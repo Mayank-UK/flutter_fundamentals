@@ -6,6 +6,8 @@ import './core/providers/provider_setup.dart';
 import './core/router/routes.dart';
 import './core/router/router.dart';
 
+import './ui/design_system/design_system.dart';
+
 void main() {
   runApp(MyAPP());
 }
@@ -17,6 +19,12 @@ class MyAPP extends StatelessWidget {
       providers: providers,
       child: MaterialApp(
         title: 'Flutter fundamentals',
+        theme: ThemeData(
+          // brightness: Brightness.dark,
+          primaryColor: DSColors.Primary,
+          accentColor: DSColors.Secondary,
+          fontFamily: 'Montserrat',
+        ),
         initialRoute: RoutePaths.home,
         onGenerateRoute: MyRouter.generateRoute,
       ),

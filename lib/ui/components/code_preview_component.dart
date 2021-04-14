@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:flutter_markdown/flutter_markdown.dart';
 
+import './../design_system/design_system.dart';
+
 class CodePreviewTabsComponent extends StatelessWidget {
   final String appBarTitle;
   final Widget previewTab;
@@ -24,7 +26,7 @@ class CodePreviewTabsComponent extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          title: Text(this.appBarTitle),
+          title: Text(this.appBarTitle, style: DSTypography.h5Light),
           bottom: TabBar(
             tabs: <Widget>[
               Tab(
@@ -45,7 +47,10 @@ class CodePreviewTabsComponent extends StatelessWidget {
               future: getFileData(this.codeTabMarkdownLocation),
               builder: (context, snapshot) {
                 if (!snapshot.hasData) {
-                  return const Text('Loading Markdown Info...');
+                  return const Text(
+                    'Loading Markdown Info...',
+                    style: DSTypography.body1Dark,
+                  );
                 }
                 return Markdown(data: snapshot.data);
               },

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_developers_guide/ui/design_system/design_system.dart';
+
 class ListViewItem {
   final String title;
   final String description;
@@ -16,62 +18,60 @@ class CustomMidStageListViewComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      itemCount: itemList.length,
-      itemBuilder: (BuildContext ctxt, int index) {
-        // return new Text(itemList[index].title);
-        return InkWell(
-          onTap: () {
-            Navigator.of(context).pushNamed(
-              itemList[index].route,
-              arguments: {'appBarTitle': '${itemList[index].title}'},
-            );
-          },
-          child: Container(
-            margin: EdgeInsets.all(8),
-            child: Ink(
-              decoration: BoxDecoration(
-                color: Colors.pink,
-                borderRadius: BorderRadius.circular(8),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey,
-                    blurRadius: 4,
-                    offset: Offset(2, 2),
-                  ),
-                ],
+    return Container(
+      padding: const EdgeInsets.only(bottom: DSSpacing.sm),
+      child: ListView.builder(
+        itemCount: itemList.length,
+        itemBuilder: (BuildContext ctxt, int index) {
+          // return new Text(itemList[index].title);
+          return InkWell(
+            onTap: () {
+              Navigator.of(context).pushNamed(
+                itemList[index].route,
+                arguments: {'appBarTitle': '${itemList[index].title}'},
+              );
+            },
+            child: Container(
+              margin: const EdgeInsets.only(
+                top: DSSpacing.sm,
+                right: DSSpacing.sm,
+                left: DSSpacing.sm,
               ),
-              child: Container(
-                height: 128,
-                padding: EdgeInsets.all(8),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  // direction: Axis.vertical,
-                  // spacing: 8,
-                  children: <Widget>[
-                    Container(
-                      margin: EdgeInsets.only(bottom: 8),
-                      child: Text(
-                        itemList[index].title,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+              child: Ink(
+                decoration: BoxDecoration(
+                  gradient: DSColors.SecondaryGradient,
+                  borderRadius: BorderRadius.circular(8),
+                  boxShadow: [
+                    DSShadows.buttonCard,
+                  ],
+                ),
+                child: Container(
+                  height: 128,
+                  padding: EdgeInsets.all(DSSpacing.sm),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    // direction: Axis.vertical,
+                    // spacing: 8,
+                    children: <Widget>[
+                      Container(
+                        margin: EdgeInsets.only(bottom: DSSpacing.sm),
+                        child: Text(
+                          itemList[index].title,
+                          style: DSTypography.h6Light,
                         ),
                       ),
-                    ),
-                    Text(
-                      itemList[index].description,
-                      style: TextStyle(
-                        color: Colors.white,
+                      Text(
+                        itemList[index].description,
+                        style: DSTypography.body1Light,
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }

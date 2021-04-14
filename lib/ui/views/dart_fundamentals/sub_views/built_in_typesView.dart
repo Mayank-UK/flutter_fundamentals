@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
+import '../../../components/text_block_component.dart';
 
 class BuiltInTypesView extends StatelessWidget {
   final String _appBarTitle = 'Build in types';
@@ -16,10 +17,7 @@ class BuiltInTypesView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Build in types',
               content: [
-                Container(
-                  width: double.infinity,
-                  child: const Text('_'),
-                )
+                TextBlockComponent('In development'),
               ],
             ),
           ],

@@ -62,7 +62,7 @@ class HomeView extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('Flutter developer\'s guide'),
+          title: const Text('Flutter developers guide'),
         ),
         drawer: MainDrawerComponent(),
         body: CustomGridViewComponent(

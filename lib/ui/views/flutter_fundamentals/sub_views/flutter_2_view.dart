@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../../components/main_appbar_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
+import '../../../components/text_block_component.dart';
 
 class Flutter2View extends StatelessWidget {
   final String _appBarTitle = 'Flutter 2.0';
@@ -16,10 +17,7 @@ class Flutter2View extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Flutter 2.0',
               content: [
-                Container(
-                  width: double.infinity,
-                  child: const Text('_'),
-                )
+                TextBlockComponent('_'),
               ],
             ),
           ],
