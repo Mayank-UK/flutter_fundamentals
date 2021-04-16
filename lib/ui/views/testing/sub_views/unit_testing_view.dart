@@ -27,7 +27,7 @@ class _UnitTestingImplementation extends StatelessWidget {
           content: [
             Container(
               width: double.infinity,
-              child: const Text('_'),
+              child: const Text('content will be available soon.'),
             ),
           ],
         ),

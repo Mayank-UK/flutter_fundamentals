@@ -17,7 +17,9 @@ class TypedefsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Typedefs',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'In Dart, functions are objects, just like strings and numbers are objects. A typedef, or function-type alias, gives a function type a name that you can use when declaring fields and return types. A typedef retains type information when a function type is assigned to a variable.',
+                ),
               ],
             ),
           ],

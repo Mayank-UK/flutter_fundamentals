@@ -17,7 +17,7 @@ class AndroidDeploymentView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Android deployment',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent('content will be available soon'),
               ],
             ),
           ],

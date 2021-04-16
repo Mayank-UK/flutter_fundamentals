@@ -6,7 +6,6 @@ import 'package:flutter_markdown/flutter_markdown.dart';
 
 class MarkdownPreviewComponent extends StatelessWidget {
   String markdownLocation;
-  // 'assets/markdowns/flutter_fundamentals/important_concepts/directory_structure_markdown.md';
 
   MarkdownPreviewComponent({@required this.markdownLocation});
 
@@ -17,8 +16,8 @@ class MarkdownPreviewComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: DSColors.BackgroundBodyDark,
       height: 400,
-      width: double.infinity,
       child: FutureBuilder(
         future: getFileData(this.markdownLocation),
         builder: (context, snapshot) {

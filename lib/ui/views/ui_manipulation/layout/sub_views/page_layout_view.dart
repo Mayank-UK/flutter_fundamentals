@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class PageLayoutView extends StatelessWidget {
   final String _appBarTitle = 'Application and page layout';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/layout/application_page_layout_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +62,7 @@ class _PageLayoutImplementation extends StatelessWidget {
           ],
         ),
         SectionWrapperComponent(
-          title: 'Using "Cupertino" at root(main.dart)',
+          title: 'Using "CupertinoApp" at root(main.dart)',
           content: [
             Container(
               child: Text(

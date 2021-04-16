@@ -17,7 +17,9 @@ class CommentsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Comments',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'Dart supports single-line comments, multi-line comments, and documentation comments.',
+                ),
               ],
             ),
           ],

@@ -17,7 +17,7 @@ class WebDeploymentView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Web deployment',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent('content will be available soon'),
               ],
             ),
           ],

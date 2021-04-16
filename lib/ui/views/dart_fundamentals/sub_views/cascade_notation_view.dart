@@ -17,7 +17,9 @@ class CascadeNotationView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Cascade notation',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'Use ".." double dot notation on an object to access it\'s methods in chain.',
+                ),
               ],
             ),
           ],

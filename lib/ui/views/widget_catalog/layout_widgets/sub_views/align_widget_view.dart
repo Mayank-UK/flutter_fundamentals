@@ -11,7 +11,7 @@ class AlignWidgetView extends StatelessWidget {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
       previewTab: const Text(
-        'In development',
+        'content will be available soon',
       ),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );

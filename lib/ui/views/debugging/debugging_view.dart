@@ -7,18 +7,21 @@ import '../../components/custom_final_stage_listview_component.dart';
 class DebuggingView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
+      title: 'DevTools',
+      description:
+          'A suite of performance and profiling tools that run in a browser.',
       route: RoutePaths.pageNotFound,
     ),
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
+      title: 'Code editor (enabled with the Flutter and Dart plugins)',
+      description:
+          'Support a built-in source-level debugger with the ability to set breakpoints, step through code, and examine values.',
       route: RoutePaths.pageNotFound,
     ),
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
+      title: 'Flutter inspector',
+      description:
+          'The inspector allows you to examine a visual representation of the widget tree, inspect individual widgets and their property values, enable the performance overlay, and more.',
       route: RoutePaths.pageNotFound,
     ),
   ];

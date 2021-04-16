@@ -17,7 +17,9 @@ class GenericsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Generics',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'Generics are often required for type safety, but they have more benefits than just allowing your code to run.',
+                ),
               ],
             ),
           ],

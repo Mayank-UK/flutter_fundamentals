@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class HoverBehaviorView extends StatelessWidget {
   final String _appBarTitle = 'Hover behavior';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/interactive_behaviours/hover_behavior_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _HoverBehaviorImplementation extends StatelessWidget {
     return Wrap(
       children: <Widget>[
         SectionWrapperComponent(
-          title: 'In development',
+          title: 'content will be available soon',
           content: [],
         ),
       ],

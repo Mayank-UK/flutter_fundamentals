@@ -27,12 +27,12 @@ class FlutterFundamentalsView extends StatelessWidget {
       description: 'General information and concepts about widgets.',
       route: RoutePaths.aboutWidgets,
     ),
-    ListViewItem(
+    /* ListViewItem(
       title: 'Flutter 2.0',
       description:
           'Latest release of flutter\'s biggest update with web and desktop support.',
       route: RoutePaths.flutter2,
-    ),
+    ), */
   ];
 
   final String _appBarTitle = 'Flutter fundamentals';

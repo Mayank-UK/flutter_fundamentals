@@ -17,7 +17,15 @@ class VariablesView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Variables',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'Variables store references.',
+                ),
+                TextBlockComponent(
+                  'Most of the concepts are similar to other programming languages like declaration, type, initialization, etc.',
+                ),
+                TextBlockComponent(
+                  'Use "?" with a variable to make it nullable.',
+                ),
               ],
             ),
           ],

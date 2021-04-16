@@ -11,7 +11,7 @@ class CupertinoDialogFullScreenDialogTransitionWidgetView
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('In development'),
+      previewTab: const Text('content will be available soon'),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }

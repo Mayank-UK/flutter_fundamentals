@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class BackgroundsView extends StatelessWidget {
   final String _appBarTitle = 'Backgrounds';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/colors_backgrounds/background_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -49,18 +50,6 @@ class _BackgroundImplementation extends StatelessWidget {
               child: Text(
                   'Example implementation can not be shown here as there can be only one "Scaffold" widget on a page.'),
             ),
-            // remove it after pasting in md file
-            /*
-            Scaffold(
-              body: Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(color: Colors.amber),
-                height: 100,
-                width: 100,
-                child: const Text('text'),
-              ),
-            ),
-            */
           ],
         ),
         SectionWrapperComponent(
@@ -75,18 +64,6 @@ class _BackgroundImplementation extends StatelessWidget {
               child: Text(
                   'Example implementation can not be shown here as there can be only one "MaterialApp" widget in an application.'),
             ),
-            // remove it after pasting in md file
-            /*
-            Scaffold(
-              body: Container(
-                alignment: Alignment.center,
-                decoration: BoxDecoration(color: Colors.amber),
-                height: 100,
-                width: 100,
-                child: const Text('text'),
-              ),
-            ),
-            */
           ],
         ),
       ],

@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class ClickBehaviorView extends StatelessWidget {
   final String _appBarTitle = 'Click behavior';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/interactive_behaviours/click_behavior_markdown.md';
 
   @override
   Widget build(BuildContext context) {

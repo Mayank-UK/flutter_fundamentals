@@ -17,7 +17,8 @@ class CallableClassesView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Callable classes',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                    'To allow an instance of your Dart class to be called like a function, implement the call() method.'),
               ],
             ),
           ],

@@ -21,7 +21,7 @@ import '../../ui/views/native_device_features/native_device_features_view.dart';
 import '../../ui/views/architecture/architecture_view.dart';
 import '../../ui/views/best_practices/best_practices_view.dart';
 import '../../ui/views/supporting_classes_enums/supporting_classes_enums_view.dart';
-import '../../ui/views/interaction_external_resources/restApiView.dart';
+import '../../ui/views/interaction_external_resources/rest_api_view.dart';
 import '../../ui/views/debugging/debugging_view.dart';
 import '../../ui/views/testing/testing_view.dart';
 import '../../ui/views/lifecycle/lifecycle_view.dart';
@@ -77,6 +77,12 @@ import '../../ui/views/production_build_deployment/sub_views/production_build_vi
 import '../../ui/views/production_build_deployment/sub_views/android_deployment_view.dart';
 import '../../ui/views/production_build_deployment/sub_views/ios_deployment_view.dart';
 import '../../ui/views/production_build_deployment/sub_views/web_deployment_view.dart';
+
+// native device features
+import '../../ui/views/native_device_features/sub_views/filesystem_view.dart';
+import '../../ui/views/native_device_features/sub_views/camera_view.dart';
+import '../../ui/views/native_device_features/sub_views/location_view.dart';
+import '../../ui/views/native_device_features/sub_views/bluetooth_view.dart';
 
 // widget catalog main category
 import '../../ui/views/widget_catalog/accessibility_widgets/accessibility_widgets_view.dart';
@@ -603,6 +609,24 @@ class MyRouter {
       case RoutePaths.webDeployment:
         return MaterialPageRoute(
           builder: (_) => WebDeploymentView(),
+        );
+
+      // native device features
+      case RoutePaths.fileSystem:
+        return MaterialPageRoute(
+          builder: (_) => FileSystemView(),
+        );
+      case RoutePaths.camera:
+        return MaterialPageRoute(
+          builder: (_) => CameraView(),
+        );
+      case RoutePaths.location:
+        return MaterialPageRoute(
+          builder: (_) => LocationView(),
+        );
+      case RoutePaths.bluetooth:
+        return MaterialPageRoute(
+          builder: (_) => BluetoothView(),
         );
 
       // widget catalog category widgets

@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class ColorsView extends StatelessWidget {
   final String _appBarTitle = 'Text Color';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/colors_backgrounds/text_color_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -67,20 +68,6 @@ class _ColorsImplementation extends StatelessWidget {
               child: Text(
                   '"MaterialApp" widget has a named parameter "theme" which takes an object of "ThemeData" class.'),
             ),
-            // remove it after pasting in msrkdown file
-            /* Container(
-              child: MaterialApp(
-                theme: ThemeData(
-                  textTheme: TextTheme(
-                    bodyText1: TextStyle(),
-                    bodyText2: TextStyle(),
-                  ).apply(
-                    bodyColor: Colors.orange,
-                    displayColor: Colors.blue,
-                  ),
-                ),
-              ),
-            ), */
           ],
         ),
       ],

@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class PaddingSpacingView extends StatelessWidget {
   final String _appBarTitle = 'Padding';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/spacing/padding_markdown.md';
 
   @override
   Widget build(BuildContext context) {

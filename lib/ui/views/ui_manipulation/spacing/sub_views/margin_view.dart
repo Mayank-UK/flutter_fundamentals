@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class MarginSpacingView extends StatelessWidget {
   final String _appBarTitle = 'Margin';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/spacing/margin_markdown.md';
 
   @override
   Widget build(BuildContext context) {

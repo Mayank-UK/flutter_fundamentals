@@ -47,8 +47,20 @@ flutter:
     # To add assets to your application, add an assets section, like this:
     assets:
         - assets/
-        - assets/markdowns/
-        # - assets/markdowns/flutter_fundamentals/important_concepts/
+        # add individual directories containing files, don't remove it after adding it once and seeing working as it caches the data
+        - assets/markdowns/architecture/
+        - assets/markdowns/flutter_fundamentals/
+        - assets/markdowns/lifecycle/
+        - assets/markdowns/navigation_routing/
+        - assets/markdowns/state_management/
+        - assets/markdowns/ui_manipulation/
+        - assets/markdowns/ui_manipulation/colors_backgrounds/
+        - assets/markdowns/ui_manipulation/dimensions_constraints/
+        - assets/markdowns/ui_manipulation/effects/
+        - assets/markdowns/ui_manipulation/interactive_behaviours/
+        - assets/markdowns/ui_manipulation/layout/
+        - assets/markdowns/ui_manipulation/responsive_adaptive_layout/
+        - assets/markdowns/ui_manipulation/spacing/
 
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.

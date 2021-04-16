@@ -17,7 +17,9 @@ class OperatorsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Operators',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'Dart has operators similar to other programming languages like "&&", "]]", etc.',
+                ),
               ],
             ),
           ],

@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class ConstraintsView extends StatelessWidget {
   final String _appBarTitle = 'Constraints';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/dimensions_constraints/constraints_markdown.md';
 
   @override
   Widget build(BuildContext context) {

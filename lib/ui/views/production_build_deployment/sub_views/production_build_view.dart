@@ -17,7 +17,7 @@ class ProductionBuildView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Production build',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent('content will be available soon'),
               ],
             ),
           ],

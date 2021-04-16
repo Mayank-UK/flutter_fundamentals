@@ -17,7 +17,12 @@ class InstallationView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Installation',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'Dart gets installed automatically with flutter installation.',
+                ),
+                TextBlockComponent(
+                  'You can also write dart code using online dart compilers like the one made available by flutter team.',
+                )
               ],
             ),
           ],

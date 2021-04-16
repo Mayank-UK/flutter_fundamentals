@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class PercentageDimensionsView extends StatelessWidget {
   final String _appBarTitle = 'Percentage dimensions';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/dimensions_constraints/percentage_dimensions_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +89,7 @@ class _PercentageDimensionsImplementation extends StatelessWidget {
             Container(
               height: 100,
               width: double.infinity,
-              child: Wrap(
+              child: Row(
                 children: <Widget>[
                   Expanded(
                     flex: 3,

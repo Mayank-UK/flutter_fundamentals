@@ -5,7 +5,8 @@ import '../../../components/section_wrapper_component_component.dart';
 
 class ThemeView extends StatelessWidget {
   final String _appBarTitle = 'Theme';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/theme_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +76,7 @@ class _ThemeImplementation extends StatelessWidget {
           ],
         ),
         SectionWrapperComponent(
-          title: 'Using "MaterialApp" widget',
+          title: 'Using "MaterialApp" or "CupertinoApp" widget',
           content: [
             Container(
               child: Text(

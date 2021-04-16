@@ -10,7 +10,7 @@ import '../../../components/markdown_preview_component.dart';
 class ImportantConceptsFlutterView extends StatelessWidget {
   final String _appBarTitle = 'Important concepts';
   final String _directoryStructureMarkdown =
-      'assets/markdowns/flutter_fundamentals/important_concepts/directory_structure_markdown.md';
+      'assets/markdowns/flutter_fundamentals/important_concepts_flutter_markdown.md';
 
   @override
   Widget build(BuildContext context) {

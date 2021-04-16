@@ -5,7 +5,8 @@ import '../../../components/section_wrapper_component_component.dart';
 
 class IconsImagesView extends StatelessWidget {
   final String _appBarTitle = 'Icons and images';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/icons_images_markdown.md';
 
   @override
   Widget build(BuildContext context) {

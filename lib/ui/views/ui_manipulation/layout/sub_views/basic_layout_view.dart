@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class BasicLayoutView extends StatelessWidget {
   final String _appBarTitle = 'Basic layout';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/layout/basic_layout_widgets_markdown.md';
 
   @override
   Widget build(BuildContext context) {

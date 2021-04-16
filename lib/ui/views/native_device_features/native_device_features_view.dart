@@ -7,24 +7,24 @@ import '../../components/custom_final_stage_listview_component.dart';
 class NativeDeviceFeaturesView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
-      route: RoutePaths.pageNotFound,
+      title: 'Filesystem',
+      description: 'Using the filesystem of the device.',
+      route: RoutePaths.fileSystem,
     ),
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
-      route: RoutePaths.pageNotFound,
+      title: 'Camera',
+      description: 'Using the camera of the device.',
+      route: RoutePaths.camera,
     ),
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
-      route: RoutePaths.pageNotFound,
+      title: 'Location',
+      description: 'Using the location and gps of the device.',
+      route: RoutePaths.location,
     ),
     ListViewItem(
-      title: '_',
-      description: 'Description not available',
-      route: RoutePaths.pageNotFound,
+      title: 'Bluetooth',
+      description: 'Using the bluetooth of the device.',
+      route: RoutePaths.bluetooth,
     ),
   ];
 

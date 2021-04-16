@@ -41,11 +41,11 @@ class DartFundamentalsView extends StatelessWidget {
       description: 'Special symbols with predefined operations.',
       route: RoutePaths.operators,
     ),
-    ListViewItem(
+    /* ListViewItem(
       title: 'Conditional expressions',
       description: 'Concisely evaluate if-else.',
       route: RoutePaths.conditionalExpression,
-    ),
+    ), */
     ListViewItem(
       title: 'Cascade notation',
       description: 'Cascade a sequence of operations on an object.',
@@ -69,7 +69,7 @@ class DartFundamentalsView extends StatelessWidget {
     ListViewItem(
       title: 'Generics',
       description: 'Writing type safe code.',
-      route: RoutePaths.generators,
+      route: RoutePaths.generics,
     ),
     ListViewItem(
       title: 'Libraries and visibility',

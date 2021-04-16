@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class FocusBehaviorView extends StatelessWidget {
   final String _appBarTitle = 'Focus behavior';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/interactive_behaviours/focus_behavior_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class _FocusBehaviorImplementation extends StatelessWidget {
     return Wrap(
       children: <Widget>[
         SectionWrapperComponent(
-          title: 'In development',
+          title: 'content will be available soon',
           content: [],
         ),
       ],

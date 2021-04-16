@@ -17,7 +17,7 @@ class IosDeploymentView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'IOS deployment',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent('content will be available soon'),
               ],
             ),
           ],

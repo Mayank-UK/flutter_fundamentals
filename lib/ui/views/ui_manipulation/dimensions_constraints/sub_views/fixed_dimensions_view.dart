@@ -5,7 +5,8 @@ import '../../../../components/section_wrapper_component_component.dart';
 
 class FixedDimensionsView extends StatelessWidget {
   final String _appBarTitle = 'Fixed dimensions';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/ui_manipulation/dimensions_constraints/fixed_dimensions_markdown.md';
 
   @override
   Widget build(BuildContext context) {

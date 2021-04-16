@@ -17,7 +17,11 @@ class ExceptionsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Exceptions',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                    'Your Dart code can throw and catch exceptions. Exceptions are errors indicating that something unexpected happened. If the exception isn’t caught, the isolate that raised the exception is suspended, and typically the isolate and its program are terminated.'),
+                TextBlockComponent(
+                  'Dart provides Exception and Error types, as well as numerous predefined subtypes. You can, of course, define your own exceptions. However, Dart programs can throw any non-null object—not just Exception and Error objects—as an exception.',
+                ),
               ],
             ),
           ],

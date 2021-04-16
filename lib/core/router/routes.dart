@@ -36,7 +36,7 @@ class RoutePaths {
   static const String exceptions = '/dart-fundaments/exceptions';
   static const String classes = '/dart-fundaments/classes';
   static const String generics = '/dart-fundaments/generics';
-  static const String generators = '/dart-fundaments/generics';
+  static const String generators = '/dart-fundaments/generators';
   static const String librariesVisibility =
       '/dart-fundaments/libraries-visibility';
   static const String asynchrony = '/dart-fundamentals/asynchrony';
@@ -85,6 +85,12 @@ class RoutePaths {
       '/production-build-deployment/ios-deployment';
   static const String webDeployment =
       '/production-build-deployment/web-deployment';
+
+  // native device features
+  static const String fileSystem = '/native-device-features/filesystem';
+  static const String camera = '/native-device-features/camera';
+  static const String location = '/native-device-features/location';
+  static const String bluetooth = '/native-device-features/bluetooth';
 
   // widget catalog category widgets routes
   static const String accessibilityWidgets =

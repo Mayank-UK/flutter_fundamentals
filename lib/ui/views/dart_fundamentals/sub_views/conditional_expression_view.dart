@@ -17,7 +17,8 @@ class ConditionalExpressionView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Conditional expression',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                    'Use single line expression to evaluate a value.'),
               ],
             ),
           ],

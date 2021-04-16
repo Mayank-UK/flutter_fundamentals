@@ -3,21 +3,12 @@ import 'package:provider/provider.dart';
 
 import './../../../../core/models/task.dart';
 import './../../../../core/providers/todos_model.dart';
+import './../../../../ui/components/markdown_preview_component.dart';
 
 // exposing provider
 class TodosAppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // remove this commented section after including it in markdown
-    // To be able to access providers across navigation, you need to provide it before MaterialApp as follows
-    /* return ChangeNotifierProvider(
-      create: (context) => TodosModel(),
-      child: MaterialApp(
-        title: 'Todos',
-        home: _HomeScreen(),
-      ),
-    ); */
-
     return _HomeScreen();
   }
 }
@@ -35,14 +26,17 @@ class _HomeScreenState extends State<_HomeScreen>
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 3, vsync: this);
+    controller = TabController(
+      length: 4,
+      vsync: this,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Todos'),
+        title: const Text('Todos app example'),
         leading: new IconButton(
           icon: new Icon(Icons.arrow_back),
           onPressed: () {
@@ -68,6 +62,7 @@ class _HomeScreenState extends State<_HomeScreen>
             Tab(text: 'All'),
             Tab(text: 'Incomplete'),
             Tab(text: 'Complete'),
+            Tab(text: 'Code'),
           ],
         ),
       ),
@@ -77,6 +72,7 @@ class _HomeScreenState extends State<_HomeScreen>
           _AllTasksTab(),
           _IncompleteTasksTab(),
           _CompletedTasksTab(),
+          _TodosCode(),
         ],
       ),
     );
@@ -145,6 +141,20 @@ class _AllTasksTab extends StatelessWidget {
 }
 
 // tab
+class _IncompleteTasksTab extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: Consumer<TodosModel>(
+        builder: (context, todos, child) => _TaskList(
+          tasks: todos.incompleteTasks,
+        ),
+      ),
+    );
+  }
+}
+
+// tab
 class _CompletedTasksTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -158,16 +168,14 @@ class _CompletedTasksTab extends StatelessWidget {
   }
 }
 
-// tab
-class _IncompleteTasksTab extends StatelessWidget {
+class _TodosCode extends StatelessWidget {
+  String _markdownLocation =
+      'assets/markdowns/state_management/todos_markdown.md';
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Consumer<TodosModel>(
-        builder: (context, todos, child) => _TaskList(
-          tasks: todos.incompleteTasks,
-        ),
-      ),
+    return MarkdownPreviewComponent(
+      markdownLocation: this._markdownLocation,
     );
   }
 }

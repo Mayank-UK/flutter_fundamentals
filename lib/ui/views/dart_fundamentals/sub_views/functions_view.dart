@@ -17,7 +17,12 @@ class FunctionsView extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Functions',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'A block of code that can be called to execute the code it contains in it\'s body.',
+                ),
+                TextBlockComponent(
+                  'Dart functions are similar to functions in other programming languages.',
+                )
               ],
             ),
           ],

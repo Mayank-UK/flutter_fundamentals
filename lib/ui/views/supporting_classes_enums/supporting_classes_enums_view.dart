@@ -8,12 +8,14 @@ class SupportingClassesEnumsView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
       title: 'Supporting classes',
-      description: 'Description not available',
+      description:
+          'Classes that are used within widgets to provide additional functionality like decoration, etc.',
       route: RoutePaths.supportingClasses,
     ),
     ListViewItem(
       title: 'Supporting enums',
-      description: 'Description not available',
+      description:
+          'Enums that holds a group of values for different things like alignment, axis, etc.',
       route: RoutePaths.supportingEnums,
     ),
   ];

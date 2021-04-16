@@ -1,0 +1,17 @@
+    lib/
+        main.dart
+        /core
+            /constants
+            /models
+            /providers
+                /provider_setup.dart
+            /router
+                /routes.dart
+                /router.dart
+            /services
+            /view_models
+        /ui
+            /components
+            /design_system
+                /design_system.dart
+            /views

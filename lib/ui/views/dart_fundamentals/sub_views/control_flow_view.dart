@@ -15,9 +15,44 @@ class ControlFlowStatementView extends StatelessWidget {
         child: Wrap(
           children: [
             SectionWrapperComponent(
-              title: 'Control flow statements',
+              title: 'if-else',
               content: [
-                TextBlockComponent('In development'),
+                TextBlockComponent(
+                  'For conditional logic.',
+                ),
+                TextBlockComponent(
+                  'Similar to other programming languages.',
+                ),
+              ],
+            ),
+            SectionWrapperComponent(
+              title: 'for loops',
+              content: [
+                TextBlockComponent('Similar to other programming languages.'),
+              ],
+            ),
+            SectionWrapperComponent(
+              title: 'while and do-while loops',
+              content: [
+                TextBlockComponent('Similar to other programming languages.'),
+              ],
+            ),
+            SectionWrapperComponent(
+              title: 'break and continue',
+              content: [
+                TextBlockComponent('Similar to other programming languages.'),
+              ],
+            ),
+            SectionWrapperComponent(
+              title: 'switch and case',
+              content: [
+                TextBlockComponent('Similar to other programming languages.'),
+              ],
+            ),
+            SectionWrapperComponent(
+              title: 'assert',
+              content: [
+                TextBlockComponent('Similar to other programming languages.'),
               ],
             ),
           ],

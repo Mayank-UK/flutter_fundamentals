@@ -17,7 +17,7 @@ class Flutter2View extends StatelessWidget {
             SectionWrapperComponent(
               title: 'Flutter 2.0',
               content: [
-                TextBlockComponent('_'),
+                TextBlockComponent('content will be available soon.'),
               ],
             ),
           ],
