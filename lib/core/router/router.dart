@@ -1,9 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_developers_guide/ui/views/navigation_routing/navigation_routing_view.dart';
-import 'package:flutter_developers_guide/ui/views/navigation_routing/sub_views/declarative_routing_view.dart';
-import 'package:flutter_developers_guide/ui/views/navigation_routing/sub_views/imperative_routing_view.dart';
 
 // routes
 import './routes.dart';
@@ -57,8 +52,8 @@ import '../../ui/views/flutter_fundamentals/sub_views/installation_setup_flutter
 import '../../ui/views/flutter_fundamentals/sub_views/using_flutter_view.dart';
 
 // navigation and routing
-import '../../ui/views/supporting_classes_enums/sub_views/supporting_classes_view.dart';
-import '../../ui/views/supporting_classes_enums/sub_views/supporting_enums_view.dart';
+import '../../ui/views/navigation_routing/sub_views/imperative_routing_view.dart';
+import '../../ui/views/navigation_routing/sub_views/declarative_routing_view.dart';
 
 // supporting classes sub_views
 import '../../ui/views/supporting_classes_enums/sub_views/supporting_classes_view.dart';
