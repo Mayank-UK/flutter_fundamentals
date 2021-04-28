@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 import '../../../../components/code_preview_component.dart';
+import '../../../../components/section_wrapper_component_component.dart';
+import '../../../../components/text_block_component.dart';
 
 class AnimatedBuilderWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedBuilder';
@@ -10,8 +13,70 @@ class AnimatedBuilderWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedBuilderWidgetImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _AnimatedBuilderWidgetImplementation extends StatefulWidget {
+  @override
+  __AnimatedBuilderWidgetImplementationState createState() =>
+      __AnimatedBuilderWidgetImplementationState();
+}
+
+class __AnimatedBuilderWidgetImplementationState
+    extends State<_AnimatedBuilderWidgetImplementation>
+    with TickerProviderStateMixin {
+  AnimationController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+
+    this._controller = AnimationController(
+      duration: const Duration(seconds: 10),
+      vsync: this,
+    )..repeat();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: <Widget>[
+        SectionWrapperComponent(
+          title: 'Simple use',
+          content: [
+            TextBlockComponent('AnimatedBuilder widget'),
+            Container(
+              child: AnimatedBuilder(
+                animation: _controller,
+                child: Container(
+                  width: 100.0,
+                  height: 100.0,
+                  color: Colors.amber,
+                  child: Container(
+                    alignment: Alignment.center,
+                    child: const Text('Whee!'),
+                  ),
+                ),
+                builder: (BuildContext context, Widget child) {
+                  return Transform.rotate(
+                    angle: _controller.value * 2.0 * math.pi,
+                    child: child,
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

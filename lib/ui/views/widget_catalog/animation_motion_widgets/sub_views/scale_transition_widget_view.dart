@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../components/code_preview_component.dart';
+import '../../../../components/section_wrapper_component_component.dart';
+import '../../../../components/text_block_component.dart';
 
 class ScaleTransitionWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ScaleTransition';
@@ -12,6 +14,23 @@ class ScaleTransitionWidgetView extends StatelessWidget {
       appBarTitle: this._appBarTitle,
       previewTab: const Text('content will be available soon'),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _ScaleTransitionImplementation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: <Widget>[
+        SectionWrapperComponent(
+          title: 'Simple use',
+          content: [
+            TextBlockComponent('text'),
+            Container(),
+          ],
+        ),
+      ],
     );
   }
 }
