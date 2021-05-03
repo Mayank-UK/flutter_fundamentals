@@ -12,7 +12,7 @@ class AnimatedModalBarrierWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedModalBarrierImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
@@ -25,13 +25,39 @@ class _AnimatedModalBarrierImplementation extends StatefulWidget {
 }
 
 class __AnimatedModalBarrierImplementationState
-    extends State<_AnimatedModalBarrierImplementation> {
-  bool isToggled = false;
+    extends State<_AnimatedModalBarrierImplementation>
+    with SingleTickerProviderStateMixin {
+  bool _isToggled = false;
+
+  AnimationController _animationController;
+  Animation<Color> _colorTweenAnimation;
+
+  @override
+  void initState() {
+    super.initState();
+
+    ColorTween _colorTween = ColorTween(
+      begin: Color.fromARGB(100, 255, 255, 255),
+      end: Color.fromARGB(100, 127, 127, 127),
+    );
+
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        seconds: 3,
+      ),
+    );
+
+    _colorTweenAnimation = _colorTween.animate(_animationController);
+  }
 
   void onPressed() {
     setState(() {
-      isToggled = !isToggled;
+      this._isToggled = !this._isToggled;
     });
+
+    _animationController.reset();
+    _animationController.forward();
   }
 
   @override
@@ -42,18 +68,34 @@ class __AnimatedModalBarrierImplementationState
           title: 'Simple use',
           content: [
             TextBlockComponent(
-              '',
+              '"AnimatedModalBarrier" has a named parameter "color" which is of type "Animation<Color>".',
             ),
             Container(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
-                      // child:
-                      ),
+                    height: 100.0,
+                    width: 250.0,
+                    child: Stack(
+                      alignment: AlignmentDirectional.center,
+                      children: <Widget>[
+                        ElevatedButton(
+                          onPressed: this.onPressed,
+                          child: Text('Tap to toggle modal barrier'),
+                        ),
+                        this._isToggled
+                            ? AnimatedModalBarrier(
+                                color: this._colorTweenAnimation,
+                                dismissible: false,
+                              )
+                            : Container(),
+                      ],
+                    ),
+                  ),
                   ElevatedButton(
                     onPressed: this.onPressed,
-                    child: Text(''),
+                    child: Text('Tap to toggle modal barrier'),
                   ),
                 ],
               ),

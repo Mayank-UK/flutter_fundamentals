@@ -12,13 +12,28 @@ class AnimatedPositionedWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedPositionedImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _AnimatedPositionedImplementation extends StatelessWidget {
+class _AnimatedPositionedImplementation extends StatefulWidget {
+  @override
+  __AnimatedPositionedImplementationState createState() =>
+      __AnimatedPositionedImplementationState();
+}
+
+class __AnimatedPositionedImplementationState
+    extends State<_AnimatedPositionedImplementation> {
+  bool _isToggled = false;
+
+  void onPressed() {
+    setState(() {
+      this._isToggled = !this._isToggled;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +41,40 @@ class _AnimatedPositionedImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              '"AnimatedPositioned" widget has named parameters "height", "width", "top", etc to specify the animation.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    height: 200,
+                    width: double.infinity,
+                    child: Stack(
+                      children: [
+                        AnimatedPositioned(
+                          width: this._isToggled ? 200.0 : 50.0,
+                          height: this._isToggled ? 50.0 : 200.0,
+                          top: this._isToggled ? 150.0 : 50.0,
+                          duration: const Duration(seconds: 2),
+                          curve: Curves.fastOutSlowIn,
+                          child: Container(
+                            height: 100,
+                            width: 100,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: this.onPressed,
+                    child: Text('Tap to toggle animation'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

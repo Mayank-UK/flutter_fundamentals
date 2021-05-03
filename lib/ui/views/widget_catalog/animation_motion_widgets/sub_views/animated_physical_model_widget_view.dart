@@ -12,13 +12,29 @@ class AnimatedPhysicalModelWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedPhysicalModelImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _AnimatedPhysicalModelImplementation extends StatelessWidget {
+class _AnimatedPhysicalModelImplementation extends StatefulWidget {
+  @override
+  __AnimatedPhysicalModelImplementationState createState() =>
+      __AnimatedPhysicalModelImplementationState();
+}
+
+class __AnimatedPhysicalModelImplementationState
+    extends State<_AnimatedPhysicalModelImplementation> {
+  bool _isToggled = false;
+
+  void _changeOpacity() {
+    setState(() {
+      this._isToggled = !this._isToggled;
+    });
+    ;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +42,36 @@ class _AnimatedPhysicalModelImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              '"AnimatedOpacity" widget has named parameters like "opacity", "duration", etc to specify the animation.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AnimatedPhysicalModel(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.fastOutSlowIn,
+                    elevation: this._isToggled ? 0 : 16,
+                    shape: BoxShape.rectangle,
+                    shadowColor: Colors.black,
+                    color: Colors.white,
+                    child: Container(
+                      height: 120.0,
+                      width: 120.0,
+                      color: Colors.blue[50],
+                      child: FlutterLogo(
+                        size: 60,
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    child: Text('Toggle logo opacity'),
+                    onPressed: _changeOpacity,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

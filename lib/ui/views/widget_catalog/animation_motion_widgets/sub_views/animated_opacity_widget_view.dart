@@ -12,13 +12,26 @@ class AnimatedOpacityWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedOpacityImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _AnimatedOpacityImplementation extends StatelessWidget {
+class _AnimatedOpacityImplementation extends StatefulWidget {
+  @override
+  __AnimatedOpacityImplementationState createState() =>
+      __AnimatedOpacityImplementationState();
+}
+
+class __AnimatedOpacityImplementationState
+    extends State<_AnimatedOpacityImplementation> {
+  double opacityLevel = 1.0;
+
+  void _changeOpacity() {
+    setState(() => opacityLevel = opacityLevel == 0 ? 1.0 : 0.0);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +39,27 @@ class _AnimatedOpacityImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              '"AnimatedOpacity" widget has named parameters like "opacity", "duration", etc to specify the animation.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AnimatedOpacity(
+                    opacity: opacityLevel,
+                    duration: Duration(seconds: 1),
+                    child: FlutterLogo(
+                      size: 64,
+                    ),
+                  ),
+                  ElevatedButton(
+                    child: Text('Toggle logo opacity'),
+                    onPressed: _changeOpacity,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],
