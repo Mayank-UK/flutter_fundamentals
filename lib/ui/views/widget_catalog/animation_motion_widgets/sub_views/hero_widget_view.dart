@@ -18,7 +18,20 @@ class HeroWidgetView extends StatelessWidget {
   }
 }
 
-class _HeroImplementation extends StatelessWidget {
+class _HeroImplementation extends StatefulWidget {
+  @override
+  __HeroImplementationState createState() => __HeroImplementationState();
+}
+
+class __HeroImplementationState extends State<_HeroImplementation> {
+  bool _isToggled = false;
+
+  void onPressed() {
+    setState(() {
+      this._isToggled = !this._isToggled;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +39,20 @@ class _HeroImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              'This widget is a bit tricky, will deal with it when needed.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  ElevatedButton(
+                    onPressed: this.onPressed,
+                    child: Text('Tap to toggle animation'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

@@ -12,13 +12,38 @@ class FadeTransitionWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _FadeTransitionImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _FadeTransitionImplementation extends StatelessWidget {
+class _FadeTransitionImplementation extends StatefulWidget {
+  @override
+  __FadeTransitionImplementationState createState() =>
+      __FadeTransitionImplementationState();
+}
+
+class __FadeTransitionImplementationState
+    extends State<_FadeTransitionImplementation> with TickerProviderStateMixin {
+  AnimationController _controller;
+
+  @override
+  void initState() {
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        seconds: 2,
+      ),
+    )..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +51,23 @@ class _FadeTransitionImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              '"FadeTransition" widget has named parameters like opacity, etc, which specify the animation.',
+            ),
+            Container(
+              child: FadeTransition(
+                opacity: CurvedAnimation(
+                  parent: _controller,
+                  curve: Curves.easeIn,
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(8),
+                  child: FlutterLogo(
+                    size: 64,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ],

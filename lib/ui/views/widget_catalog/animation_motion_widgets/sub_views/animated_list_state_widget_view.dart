@@ -37,7 +37,7 @@ class __AnimatedListStateImplementationState
           title: 'Simple use',
           content: [
             TextBlockComponent(
-              'Difficult to implement, only use it if it is necessary',
+              'Will be updated soon',
             ),
           ],
         ),

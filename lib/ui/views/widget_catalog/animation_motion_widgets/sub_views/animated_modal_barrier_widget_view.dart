@@ -36,19 +36,12 @@ class __AnimatedModalBarrierImplementationState
   void initState() {
     super.initState();
 
-    ColorTween _colorTween = ColorTween(
-      begin: Color.fromARGB(100, 255, 255, 255),
-      end: Color.fromARGB(100, 127, 127, 127),
-    );
-
     _animationController = AnimationController(
       vsync: this,
       duration: const Duration(
         seconds: 3,
       ),
     );
-
-    _colorTweenAnimation = _colorTween.animate(_animationController);
   }
 
   void onPressed() {
@@ -86,7 +79,10 @@ class __AnimatedModalBarrierImplementationState
                         ),
                         this._isToggled
                             ? AnimatedModalBarrier(
-                                color: this._colorTweenAnimation,
+                                color: ColorTween(
+                                  begin: Color.fromARGB(100, 255, 255, 255),
+                                  end: Color.fromARGB(100, 127, 127, 127),
+                                ).animate(_animationController),
                                 dismissible: false,
                               )
                             : Container(),

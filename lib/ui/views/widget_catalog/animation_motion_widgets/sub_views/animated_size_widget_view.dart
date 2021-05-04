@@ -12,13 +12,29 @@ class AnimatedSizeWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedSizeImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _AnimatedSizeImplementation extends StatelessWidget {
+class _AnimatedSizeImplementation extends StatefulWidget {
+  @override
+  __AnimatedSizeImplementationState createState() =>
+      __AnimatedSizeImplementationState();
+}
+
+class __AnimatedSizeImplementationState
+    extends State<_AnimatedSizeImplementation>
+    with SingleTickerProviderStateMixin {
+  bool _isToggled = false;
+
+  void onPressed() {
+    setState(() {
+      this._isToggled = !this._isToggled;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +42,30 @@ class _AnimatedSizeImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              '"AnimatedSize" widget has named parameters like vsync, curve, duration, etc, which define the animation.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AnimatedSize(
+                    vsync: this,
+                    curve: Curves.easeIn,
+                    duration: const Duration(
+                      seconds: 1,
+                    ),
+                    child: FlutterLogo(
+                      size: _isToggled ? 24 : 64,
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: this.onPressed,
+                    child: Text('Tap to toggle animation'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

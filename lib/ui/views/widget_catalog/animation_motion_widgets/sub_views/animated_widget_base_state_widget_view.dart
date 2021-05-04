@@ -26,7 +26,7 @@ class _AnimatedWidgetBaseStateImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
+            TextBlockComponent('Most of the time not used directly.'),
             Container(),
           ],
         ),

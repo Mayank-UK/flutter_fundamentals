@@ -27,11 +27,11 @@ class _AnimatedContainerImplementation extends StatefulWidget {
 class __AnimatedContainerImplementationState
     extends State<_AnimatedContainerImplementation> {
   @override
-  bool selected = false;
+  bool _selected = false;
 
   void onPressed() {
     setState(() {
-      selected = !selected;
+      _selected = !_selected;
     });
   }
 
@@ -50,10 +50,10 @@ class __AnimatedContainerImplementationState
                 children: [
                   Container(
                     child: AnimatedContainer(
-                      width: selected ? 200.0 : 100.0,
-                      height: selected ? 100.0 : 200.0,
-                      color: selected ? Colors.red : Colors.blue,
-                      alignment: selected
+                      width: _selected ? 200.0 : 100.0,
+                      height: _selected ? 100.0 : 200.0,
+                      color: _selected ? Colors.red : Colors.blue,
+                      alignment: _selected
                           ? Alignment.center
                           : AlignmentDirectional.topCenter,
                       duration: const Duration(seconds: 2),

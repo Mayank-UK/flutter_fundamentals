@@ -32,7 +32,6 @@ class __AnimatedPhysicalModelImplementationState
     setState(() {
       this._isToggled = !this._isToggled;
     });
-    ;
   }
 
   @override

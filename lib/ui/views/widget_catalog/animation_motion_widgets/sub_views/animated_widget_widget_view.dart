@@ -5,7 +5,7 @@ import '../../../../components/section_wrapper_component_component.dart';
 import '../../../../components/text_block_component.dart';
 
 class AnimatedWidgetWidgetView extends StatelessWidget {
-  final String _appBarTitle = 'Animated';
+  final String _appBarTitle = 'AnimatedWidget';
   final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
 
   @override
@@ -26,7 +26,9 @@ class _AnimatedWidgetWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
+            TextBlockComponent(
+              'A bit tricky widget to implement, leave it, will do it when needed.',
+            ),
             Container(),
           ],
         ),

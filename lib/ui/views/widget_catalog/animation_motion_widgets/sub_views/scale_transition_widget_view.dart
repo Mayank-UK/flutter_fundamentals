@@ -12,13 +12,37 @@ class ScaleTransitionWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _ScaleTransitionImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _ScaleTransitionImplementation extends StatelessWidget {
+class _ScaleTransitionImplementation extends StatefulWidget {
+  @override
+  __ScaleTransitionImplementationState createState() =>
+      __ScaleTransitionImplementationState();
+}
+
+class __ScaleTransitionImplementationState
+    extends State<_ScaleTransitionImplementation>
+    with TickerProviderStateMixin {
+  AnimationController _controller;
+
+  @override
+  void initState() {
+    _controller = AnimationController(
+      duration: const Duration(seconds: 2),
+      vsync: this,
+    )..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _controller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +50,18 @@ class _ScaleTransitionImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent('text'),
-            Container(),
+            TextBlockComponent(
+              '"ScaleTransition" widget has named parameters like scale, etc, which specify the animation.',
+            ),
+            Container(
+              child: ScaleTransition(
+                scale: CurvedAnimation(
+                  parent: _controller,
+                  curve: Curves.fastOutSlowIn,
+                ),
+                child: FlutterLogo(size: 64),
+              ),
+            ),
           ],
         ),
       ],
