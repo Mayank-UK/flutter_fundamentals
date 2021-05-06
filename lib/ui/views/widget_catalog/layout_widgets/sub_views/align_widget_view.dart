@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../components/code_preview_component.dart';
+import './../../../../components/section_wrapper_component_component.dart';
+import './../../../../components/text_block_component.dart';
 
 class AlignWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Align';
@@ -10,10 +12,35 @@ class AlignWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text(
-        'content will be available soon',
-      ),
+      previewTab: _AlignWidgetImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _AlignWidgetImplementation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: <Widget>[
+        SectionWrapperComponent(
+          title: 'Simple use',
+          content: [
+            TextBlockComponent(
+                '"Align" widget has a named parameter "alignment" which specify the alignment of the child.'),
+            Container(
+              child: Align(
+                alignment: Alignment.centerRight,
+                child: Container(
+                  color: Colors.amber,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

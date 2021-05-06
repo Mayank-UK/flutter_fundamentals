@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../../../../components/code_preview_component.dart';
+import './../../../../components/section_wrapper_component_component.dart';
+import './../../../../components/text_block_component.dart';
 
 class FutureBuilderWidgetView extends StatelessWidget {
   final String _appBarTitle = 'FutureBuilder';
@@ -10,8 +12,87 @@ class FutureBuilderWidgetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _FutureBuilderWidgetImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _FutureBuilderWidgetImplementation extends StatefulWidget {
+  @override
+  __FutureBuilderWidgetImplementationState createState() =>
+      __FutureBuilderWidgetImplementationState();
+}
+
+class __FutureBuilderWidgetImplementationState
+    extends State<_FutureBuilderWidgetImplementation> {
+  final Future<String> _calculation = Future<String>.delayed(
+    const Duration(seconds: 3),
+    () => 'Data Loaded',
+  );
+
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: <Widget>[
+        SectionWrapperComponent(
+          title: 'Simple use',
+          content: [
+            TextBlockComponent(
+                '"FutureBuilder" widget has named parameter like future, builder, etc, which specify the widget configuration.'),
+            Container(
+              child: FutureBuilder<String>(
+                future:
+                    _calculation, // a previously-obtained Future<String> or null
+                builder:
+                    (BuildContext context, AsyncSnapshot<String> snapshot) {
+                  List<Widget> children;
+                  if (snapshot.hasData) {
+                    children = <Widget>[
+                      const Icon(
+                        Icons.check_circle_outline,
+                        color: Colors.green,
+                        size: 60,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: Text('Result: ${snapshot.data}'),
+                      )
+                    ];
+                  } else if (snapshot.hasError) {
+                    children = <Widget>[
+                      const Icon(
+                        Icons.error_outline,
+                        color: Colors.red,
+                        size: 60,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: Text('Error: ${snapshot.error}'),
+                      )
+                    ];
+                  } else {
+                    children = const <Widget>[
+                      SizedBox(
+                        child: const CircularProgressIndicator(),
+                        width: 60,
+                        height: 60,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 16),
+                        child: const Text('Awaiting result...'),
+                      )
+                    ];
+                  }
+                  return Column(
+                    children: children,
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
