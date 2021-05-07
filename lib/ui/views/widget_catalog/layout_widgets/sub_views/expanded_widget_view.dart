@@ -26,8 +26,17 @@ class _ExpandedWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Expanded" widget takes up all the available space for it\'s child.',
+            ),
+            Container(
+              child: Expanded(
+                child: Container(
+                  color: Colors.amber,
+                  height: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

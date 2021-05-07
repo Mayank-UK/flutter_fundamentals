@@ -26,7 +26,7 @@ class _IntrinsicHeightWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent('Used rarely.'),
             Container(),
           ],
         ),

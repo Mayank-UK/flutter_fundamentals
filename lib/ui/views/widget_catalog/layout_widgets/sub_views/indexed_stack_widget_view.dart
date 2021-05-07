@@ -18,7 +18,14 @@ class IndexedStackWidgetView extends StatelessWidget {
   }
 }
 
-class _IndexedStackWidgetImplementation extends StatelessWidget {
+class _IndexStackWidgetImplementation extends StatefulWidget {
+  @override
+  __IndexStackWidgetImplementationState createState() =>
+      __IndexStackWidgetImplementationState();
+}
+
+class __IndexStackWidgetImplementationState
+    extends State<_IndexStackWidgetImplementation> {
   @override
   Widget build(BuildContext context) {
     return Wrap(

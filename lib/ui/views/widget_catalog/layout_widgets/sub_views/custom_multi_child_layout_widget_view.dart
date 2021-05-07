@@ -26,7 +26,7 @@ class _CustomMultiChildLayoutWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent('Rarely used widget.'),
             Container(),
           ],
         ),

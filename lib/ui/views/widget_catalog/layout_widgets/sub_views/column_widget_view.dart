@@ -26,8 +26,44 @@ class _ColumnWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Column" widget takes a number of children and places them vertically one after the another.',
+            ),
+            TextBlockComponent(
+              'It has a named parameter alignment, which specify the alignment of it\'s children.',
+            ),
+            Container(
+              child: Container(
+                color: Colors.amber,
+                padding: const EdgeInsets.all(8),
+                width: 100,
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.red,
+                      height: 50,
+                      width: 50,
+                    ),
+                    Container(
+                      height: 16,
+                    ),
+                    Container(
+                      color: Colors.red,
+                      height: 50,
+                      width: 50,
+                    ),
+                    Container(
+                      height: 16,
+                    ),
+                    Container(
+                      color: Colors.red,
+                      height: 50,
+                      width: 50,
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ],

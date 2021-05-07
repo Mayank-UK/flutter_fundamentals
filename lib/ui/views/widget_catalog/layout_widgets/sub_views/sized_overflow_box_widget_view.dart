@@ -27,7 +27,22 @@ class _SizedOverflowBoxWidgetImplementation extends StatelessWidget {
           title: 'Simple use',
           content: [
             TextBlockComponent(''),
-            Container(),
+            Container(
+              child: Container(
+                color: Colors.amber,
+                child: SizedOverflowBox(
+                  size: const Size(
+                    80.0,
+                    100.0,
+                  ),
+                  child: Container(
+                    height: 50.0,
+                    width: 200.0,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ],

@@ -26,8 +26,19 @@ class _TransformWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Transform" widget has a named parameter transform, which specify the the transformation for it\'s child.',
+            ),
+            Container(
+              child: Transform(
+                transform: Matrix4.skewY(0.1),
+                child: Container(
+                  color: Colors.amber,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

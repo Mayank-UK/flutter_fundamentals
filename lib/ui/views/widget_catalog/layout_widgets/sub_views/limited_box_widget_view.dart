@@ -27,7 +27,17 @@ class _LimitedBoxWidgetImplementation extends StatelessWidget {
           title: 'Simple use',
           content: [
             TextBlockComponent(''),
-            Container(),
+            Container(
+              child: LimitedBox(
+                maxHeight: 50,
+                maxWidth: 50,
+                child: Container(
+                  color: Colors.amber,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

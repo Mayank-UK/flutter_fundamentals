@@ -26,8 +26,21 @@ class _FractionallySizedBoxWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"FractionallySizedBox" widget has named parameters like heightFactor, widthFactor, which specify the height and width it\'s children according to the available space.',
+            ),
+            Container(
+              height: 100,
+              width: double.infinity,
+              child: FractionallySizedBox(
+                alignment: Alignment.centerLeft,
+                heightFactor: 0.5,
+                widthFactor: 0.5,
+                child: Container(
+                  color: Colors.amber,
+                ),
+              ),
+            ),
           ],
         ),
       ],

@@ -26,8 +26,22 @@ class _OverFlowBoxWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"OverflowBox" widget has named parameters like maxWidth, maxHeight, etc, which specify the overflowing nature of it\'s child.',
+            ),
+            Container(
+              color: Colors.amber,
+              height: 50,
+              child: OverflowBox(
+                maxWidth: 200,
+                maxHeight: 200,
+                child: Container(
+                  color: Colors.red,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

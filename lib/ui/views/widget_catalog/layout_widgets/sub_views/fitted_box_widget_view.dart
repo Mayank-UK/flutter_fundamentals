@@ -26,8 +26,19 @@ class _FittedBoxWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"FittedBox" widget has a named parameter fit, which specify how a child should fit inside the box.',
+            ),
+            Container(
+              child: FittedBox(
+                fit: BoxFit.cover,
+                child: Image(
+                  image: AssetImage('assets/images/demo.jpeg'),
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

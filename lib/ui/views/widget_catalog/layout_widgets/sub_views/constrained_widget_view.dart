@@ -26,8 +26,16 @@ class _ContainerWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Container" widget has named parameters like height, width, color, constraints, etc, which make it the most useful widget in flutter.',
+            ),
+            Container(
+              child: Container(
+                color: Colors.amber,
+                height: 100,
+                width: 100,
+              ),
+            ),
           ],
         ),
       ],
