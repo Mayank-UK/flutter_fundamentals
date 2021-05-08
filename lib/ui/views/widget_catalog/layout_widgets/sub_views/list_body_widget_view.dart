@@ -26,7 +26,9 @@ class _ListBodyWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent(
+              'This widget is rarely used directly, consider using  ListView.',
+            ),
             Container(),
           ],
         ),

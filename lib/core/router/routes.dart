@@ -234,18 +234,26 @@ class RoutePaths {
       '/widgets-catalog/input/raw-keyboard-listener';
 
   // widget catalog interactive widgets sub routes
-  static const String absorbPointer = '/widgets-catalog/interactive';
-  static const String dismissible = '/widgets-catalog/interactive';
-  static const String dragTarget = '/widgets-catalog/interactive';
-  static const String draggable = '/widgets-catalog/interactive';
-  static const String draggableScrollableSheet = '/widgets-catalog/interactive';
-  static const String gestureDetector = '/widgets-catalog/interactive';
-  static const String ignorePointer = '/widgets-catalog/interactive';
-  static const String interactiveViewer = '/widgets-catalog/interactive';
-  static const String longPressDraggable = '/widgets-catalog/interactive';
-  static const String scrollable = '/widgets-catalog/interactive';
-  static const String heroInteractive = '/widgets-catalog/interactive/hero';
-  static const String navigator = '/widgets-catalog/interactive/navigator';
+  static const String absorbPointer =
+      '/widgets-catalog/interactive/absorb_pointer';
+  static const String dismissible = '/widgets-catalog/interactive/dismissible';
+  static const String dragTarget = '/widgets-catalog/interactive/drag_target';
+  static const String draggable = '/widgets-catalog/interactive/draggable';
+  static const String draggableScrollableSheet =
+      '/widgets-catalog/interactive/draggable_scrollable_sheet';
+  static const String gestureDetector =
+      '/widgets-catalog/interactive/gesture_detector';
+  static const String ignorePointer =
+      '/widgets-catalog/interactive/ignore_pointer';
+  static const String interactiveViewer =
+      '/widgets-catalog/interactive/interactive_viewer';
+  static const String longPressDraggable =
+      '/widgets-catalog/interactive/long_press_draggable';
+  static const String scrollable = '/widgets-catalog/interactive/scrollable';
+  static const String heroInteractive =
+      '/widgets-catalog/interactive/hero/hero_interactive';
+  static const String navigator =
+      '/widgets-catalog/interactive/navigator/navigator';
 
   // widget catalog layout widgets sub routes
   static const String align = '/widgets-catalog/layout/align';

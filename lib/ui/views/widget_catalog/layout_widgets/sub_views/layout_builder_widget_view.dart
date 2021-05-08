@@ -19,6 +19,32 @@ class LayoutBuilderWidgetView extends StatelessWidget {
 }
 
 class _LayoutBuilderWidgetImplementation extends StatelessWidget {
+  Widget _buildNormalContainer() {
+    return Container(
+      height: 100.0,
+      width: 100.0,
+      color: Colors.red,
+    );
+  }
+
+  Widget _buildWideContainers() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: <Widget>[
+        Container(
+          height: 100.0,
+          width: 100.0,
+          color: Colors.red,
+        ),
+        Container(
+          height: 100.0,
+          width: 100.0,
+          color: Colors.yellow,
+        ),
+      ],
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +52,19 @@ class _LayoutBuilderWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+                '"LayoutBuilder" widget has a named parameter builder, which specify the function for building the layout tree.'),
+            Container(
+              child: LayoutBuilder(
+                builder: (BuildContext context, BoxConstraints constraints) {
+                  if (constraints.maxWidth > 600) {
+                    return _buildWideContainers();
+                  } else {
+                    return _buildNormalContainer();
+                  }
+                },
+              ),
+            ),
           ],
         ),
       ],

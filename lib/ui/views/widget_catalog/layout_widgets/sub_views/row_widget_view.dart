@@ -26,8 +26,33 @@ class _RowWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Row" widget has named parameters like mainAxisAlignment, crossAlignment, etc for specifying the layout of it\'s children.',
+            ),
+            Container(
+              color: Colors.amber,
+              padding: const EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

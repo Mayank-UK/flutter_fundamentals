@@ -19,6 +19,9 @@ class ListViewWidgetView extends StatelessWidget {
 }
 
 class _ListViewWidgetImplementation extends StatelessWidget {
+  final List<String> entries = <String>['A', 'B', 'C'];
+  final List<int> colorCodes = <int>[600, 500, 100];
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +29,28 @@ class _ListViewWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"ListView" widget has many builder like ListView.builder, ListView.separator, etc, for different layouts.',
+            ),
+            TextBlockComponent(
+              '"ListView" widget has named parameter like shrinkWrap, itemCount, itemBuilder, which specify the building of list.',
+            ),
+            Container(
+              child: ListView.builder(
+                shrinkWrap: true,
+                padding: const EdgeInsets.all(8),
+                itemCount: entries.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return Container(
+                    height: 50,
+                    color: Colors.amber[colorCodes[index]],
+                    child: Center(
+                      child: Text('Entry ${entries[index]}'),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ],

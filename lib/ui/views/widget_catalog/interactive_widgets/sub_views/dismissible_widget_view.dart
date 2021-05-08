@@ -18,7 +18,16 @@ class DismissibleWidgetView extends StatelessWidget {
   }
 }
 
-class _DismissibleWidgetImplementation extends StatelessWidget {
+class _DismissibleWidgetImplementation extends StatefulWidget {
+  @override
+  __DismissibleWidgetImplementationState createState() =>
+      __DismissibleWidgetImplementationState();
+}
+
+class __DismissibleWidgetImplementationState
+    extends State<_DismissibleWidgetImplementation> {
+  List<int> items = List<int>.generate(100, (int index) => index);
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +35,35 @@ class _DismissibleWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Dismissible" widget has named parameters like background, onDismissed, etc, which specify the layout of it\'s child.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: ListView.builder(
+                shrinkWrap: true,
+                itemCount: items.length,
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                itemBuilder: (BuildContext context, int index) {
+                  return Dismissible(
+                    key: ValueKey<int>(items[index]),
+                    background: Container(
+                      color: Colors.green,
+                    ),
+                    onDismissed: (DismissDirection direction) {
+                      setState(() {
+                        items.removeAt(index);
+                      });
+                    },
+                    child: ListTile(
+                      title: Text(
+                        'Item ${items[index]}',
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
           ],
         ),
       ],

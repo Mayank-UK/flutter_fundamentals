@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_developers_guide/ui/design_system/design_system.dart';
 
 import '../../../../components/code_preview_component.dart';
 import './../../../../components/section_wrapper_component_component.dart';
@@ -27,7 +28,24 @@ class _GestureDetectorWidgetImplementation extends StatelessWidget {
           title: 'Simple use',
           content: [
             TextBlockComponent(''),
-            Container(),
+            Container(
+              child: GestureDetector(
+                  onTap: () {
+                    final Widget snackBar =
+                        SnackBar(content: const Text('Click/tap registered'));
+                    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+                  },
+                  child: Container(
+                    alignment: Alignment.center,
+                    color: Colors.amber,
+                    height: 100,
+                    padding: const EdgeInsets.all(16),
+                    width: 200,
+                    child: Text(
+                      'Tap anywhere on this container',
+                    ),
+                  )),
+            ),
           ],
         ),
       ],

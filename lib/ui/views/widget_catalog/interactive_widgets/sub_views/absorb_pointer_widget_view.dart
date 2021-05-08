@@ -26,8 +26,38 @@ class _AbsorbPointerWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"AbsorbPointer" widget has a named parameter absorbing, which specify the behavior of it\'s child.',
+            ),
+            Container(
+              child: Stack(
+                alignment: AlignmentDirectional.center,
+                children: <Widget>[
+                  Container(
+                    width: 200.0,
+                    height: 100.0,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: null,
+                    ),
+                  ),
+                  Container(
+                    width: 100.0,
+                    height: 200.0,
+                    child: AbsorbPointer(
+                      absorbing: true,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.blue.shade200,
+                        ),
+                        onPressed: () {},
+                        child: null,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

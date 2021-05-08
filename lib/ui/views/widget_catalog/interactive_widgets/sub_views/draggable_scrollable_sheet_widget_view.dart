@@ -26,8 +26,29 @@ class _DraggableScrollableSheetWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+                '"DraggableScrollableSheet" widget has a named parameter builder, which takes a function and builds the layout of it\'s child.'),
+            Container(
+              height: 400,
+              child: SizedBox.expand(
+                child: DraggableScrollableSheet(
+                  builder: (BuildContext context,
+                      ScrollController scrollController) {
+                    return Container(
+                      color: Colors.amber,
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        controller: scrollController,
+                        itemCount: 25,
+                        itemBuilder: (BuildContext context, int index) {
+                          return ListTile(title: Text('Item $index'));
+                        },
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
           ],
         ),
       ],

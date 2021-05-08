@@ -26,8 +26,33 @@ class _WrapWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Wrap" widget has named parameters like direction, spacing, etc, which specify the layout of it\'s children',
+            ),
+            Container(
+              color: Colors.amber,
+              padding: const EdgeInsets.all(8),
+              child: Wrap(
+                spacing: 8,
+                children: [
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                  Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],
