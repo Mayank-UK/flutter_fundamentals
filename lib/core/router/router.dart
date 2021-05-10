@@ -177,7 +177,6 @@ import '../../ui/views/widget_catalog/interactive_widgets/sub_views/hero_interac
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/ignore_pointer_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/interactive_viewer_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/long_press_draggable_widget_view.dart';
-import '../../ui/views/widget_catalog/interactive_widgets/sub_views/navigation_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/scrollable_widget_view.dart';
 
 // widget catalog layout
@@ -260,7 +259,6 @@ import '../../ui/views/widget_catalog/material_widgets/sub_views/stepper_widget_
 import '../../ui/views/widget_catalog/material_widgets/sub_views/switch_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_bar_view_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_bar_widget_view.dart';
-import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_controller_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/tab_page_selector_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/text_button_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/text_field_widget_view.dart';
@@ -979,10 +977,6 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => HeroInteractiveWidgetView(),
         );
-      case RoutePaths.navigator:
-        return MaterialPageRoute(
-          builder: (_) => NavigatorWidgetView(),
-        );
 
       // widget catalog layout widgets
       case RoutePaths.align:
@@ -1186,10 +1180,6 @@ class MyRouter {
       case RoutePaths.tabBarView:
         return MaterialPageRoute(
           builder: (_) => TabBarViewWidgetView(),
-        );
-      case RoutePaths.tabController:
-        return MaterialPageRoute(
-          builder: (_) => TabControllerWidgetView(),
         );
       case RoutePaths.tabPageSelector:
         return MaterialPageRoute(

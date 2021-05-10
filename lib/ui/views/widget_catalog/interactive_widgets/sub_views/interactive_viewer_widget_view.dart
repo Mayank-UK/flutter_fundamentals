@@ -26,8 +26,25 @@ class _InteractiveViewerWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"InteractiveViewer" widget has named parameters like boundaryMargin, minScale, maxScale, etc, which specify the widget behavior.',
+            ),
+            Container(
+              alignment: Alignment.center,
+              color: Colors.amber,
+              height: 200,
+              width: 200,
+              child: InteractiveViewer(
+                boundaryMargin: const EdgeInsets.all(20.0),
+                minScale: 5,
+                maxScale: 20,
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  color: Colors.red,
+                ),
+              ),
+            ),
           ],
         ),
       ],

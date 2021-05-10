@@ -252,8 +252,6 @@ class RoutePaths {
   static const String scrollable = '/widgets-catalog/interactive/scrollable';
   static const String heroInteractive =
       '/widgets-catalog/interactive/hero/hero_interactive';
-  static const String navigator =
-      '/widgets-catalog/interactive/navigator/navigator';
 
   // widget catalog layout widgets sub routes
   static const String align = '/widgets-catalog/layout/align';
@@ -324,8 +322,6 @@ class RoutePaths {
       '/widgets-catalog/material/sliver-app-bar';
   static const String tabBar = '/widgets-catalog/material/tab-bar';
   static const String tabBarView = '/widgets-catalog/material/tab-bar-view';
-  static const String tabController =
-      '/widgets-catalog/material/tab-controller';
   static const String tabPageSelector =
       '/widgets-catalog/material/tab-page-selector';
   static const String widgetsApp = '/widgets-catalog/material/widgets-app';

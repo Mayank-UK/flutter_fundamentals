@@ -56,12 +56,6 @@ class MaterialWidgetsView extends StatelessWidget {
       route: RoutePaths.tabBarView,
     ),
     ListViewItem(
-      title: 'TabController',
-      description:
-          'Coordinates tab selection between a TabBar and a TabBarView.',
-      route: RoutePaths.tabController,
-    ),
-    ListViewItem(
       title: 'TabPageSelector',
       description:
           'Displays a row of small circular indicators, one per tab. The selected tab\'s indicator is highlighted. Often used in conjunction with a TabBarView.',

@@ -26,8 +26,17 @@ class _AppBarWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"AppBar" widget has named parameters like title, backgroundColor, drawer, actions, etc, which specify the app bar.',
+            ),
+            TextBlockComponent(
+              '"AppBar" by default creates a back button when when a route is pushed in navigator stack.',
+            ),
+            Container(
+              child: AppBar(
+                title: Text('AppBar'),
+              ),
+            ),
           ],
         ),
       ],

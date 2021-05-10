@@ -27,7 +27,43 @@ class _TabPageSelectorWidgetImplementation extends StatelessWidget {
           title: 'Simple use',
           content: [
             TextBlockComponent(''),
-            Container(),
+            Container(
+              child: DefaultTabController(
+                length: 3,
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.blueGrey,
+                      child: TabBar(
+                        indicatorColor: Colors.black,
+                        tabs: [
+                          Tab(icon: Icon(Icons.directions_car)),
+                          Tab(icon: Icon(Icons.directions_transit)),
+                          Tab(icon: Icon(Icons.directions_bike)),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      color: Colors.amber,
+                      height: 200,
+                      child: TabBarView(
+                        children: [
+                          Icon(Icons.directions_car),
+                          Icon(Icons.directions_transit),
+                          Icon(Icons.directions_bike),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(
+                        top: 16,
+                      ),
+                      child: TabPageSelector(),
+                    )
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ],

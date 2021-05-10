@@ -26,8 +26,7 @@ class _ScrollableWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent('This widget is rarely used directly.'),
           ],
         ),
       ],

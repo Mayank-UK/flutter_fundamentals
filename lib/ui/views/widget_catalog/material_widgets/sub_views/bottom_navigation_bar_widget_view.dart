@@ -26,8 +26,39 @@ class _BottomNavigationBarWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"BottomNavigationBar" widget has named parameter items, which takes a list of "BottomNavigationBarItem", which in turn has named parameters icon and title to specify the item.',
+            ),
+            Container(
+              child: BottomNavigationBar(
+                items: [
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.ac_unit,
+                    ),
+                    title: Text(
+                      'item_1',
+                    ),
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.ac_unit,
+                    ),
+                    title: Text(
+                      'item_2',
+                    ),
+                  ),
+                  BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.ac_unit,
+                    ),
+                    title: Text(
+                      'item_3',
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

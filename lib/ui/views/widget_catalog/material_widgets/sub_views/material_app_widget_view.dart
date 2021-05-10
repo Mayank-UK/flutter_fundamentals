@@ -26,7 +26,9 @@ class _MaterialAppWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent(
+              'A widget that sits at the root level and encloses all other widgets to create a UI based on google\'s material theme.',
+            ),
             Container(),
           ],
         ),

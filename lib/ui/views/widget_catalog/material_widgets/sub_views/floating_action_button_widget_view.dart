@@ -26,8 +26,15 @@ class _FloatingActionButtonWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"FloatingActionButton" has named parameters onPressed and child, which specify the button\'s behavior and it\'s content.',
+            ),
+            Container(
+              child: FloatingActionButton(
+                onPressed: () {},
+                child: Icon(Icons.add),
+              ),
+            ),
           ],
         ),
       ],

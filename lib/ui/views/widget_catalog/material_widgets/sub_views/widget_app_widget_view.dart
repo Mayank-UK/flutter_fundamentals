@@ -26,7 +26,7 @@ class _WidgetsAppWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent('This widget is rarely used directly.'),
             Container(),
           ],
         ),

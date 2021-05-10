@@ -18,7 +18,22 @@ class IgnorePointerWidgetView extends StatelessWidget {
   }
 }
 
-class _IgnorePointerWidgetImplementation extends StatelessWidget {
+class _IgnorePointerWidgetImplementation extends StatefulWidget {
+  @override
+  __IgnorePointerWidgetImplementationState createState() =>
+      __IgnorePointerWidgetImplementationState();
+}
+
+class __IgnorePointerWidgetImplementationState
+    extends State<_IgnorePointerWidgetImplementation> {
+  bool _isToggled = false;
+
+  void onPressed() {
+    setState(() {
+      this._isToggled = !this._isToggled;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +41,36 @@ class _IgnorePointerWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"IgnorePointer" widget has a named parameter ignore, which specifies weather to ignore the pointer or not.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    width: double.infinity,
+                    child: Stack(
+                      children: [
+                        IgnorePointer(
+                          ignoring: this._isToggled,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            child: Text(
+                              'Ignore pointer set to: ${this._isToggled}',
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  ElevatedButton(
+                    onPressed: this.onPressed,
+                    child: Text('Tap to toggle ignore pointer'),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

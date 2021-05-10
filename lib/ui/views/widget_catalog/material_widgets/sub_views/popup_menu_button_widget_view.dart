@@ -26,8 +26,32 @@ class _PopupMenuButtonWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"PopupMenuButton" widget has named parameters onSelected and itemBuilder, which specify the button\'s behavior and content.',
+            ),
+            TextBlockComponent(
+              '"PopupMenuButton" widget uses "PopMenuItem" as it\'s child, which in turn has named parameters child and value, the value is passed to a function that will be used for "onSelected".',
+            ),
+            Container(
+              color: Colors.blue,
+              child: PopupMenuButton(
+                itemBuilder: (BuildContext bc) => [
+                  PopupMenuItem(
+                    child: Text("New Chat"),
+                    value: "/newchat",
+                  ),
+                  PopupMenuItem(
+                    child: Text("New Group Chat"),
+                    value: "/new-group-chat",
+                  ),
+                  PopupMenuItem(
+                    child: Text("Settings"),
+                    value: "/settings",
+                  ),
+                ],
+                onSelected: (value) {},
+              ),
+            ),
           ],
         ),
       ],

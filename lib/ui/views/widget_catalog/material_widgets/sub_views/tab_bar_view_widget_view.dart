@@ -26,8 +26,40 @@ class _TabBarViewWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"TabBarView" widget takes children and displays them in sequence with "TabBar" widget children.',
+            ),
+            Container(
+              child: DefaultTabController(
+                length: 3,
+                child: Column(
+                  children: [
+                    Container(
+                      color: Colors.blueGrey,
+                      child: TabBar(
+                        indicatorColor: Colors.black,
+                        tabs: [
+                          Tab(icon: Icon(Icons.directions_car)),
+                          Tab(icon: Icon(Icons.directions_transit)),
+                          Tab(icon: Icon(Icons.directions_bike)),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      color: Colors.amber,
+                      height: 200,
+                      child: TabBarView(
+                        children: [
+                          Icon(Icons.directions_car),
+                          Icon(Icons.directions_transit),
+                          Icon(Icons.directions_bike),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ],

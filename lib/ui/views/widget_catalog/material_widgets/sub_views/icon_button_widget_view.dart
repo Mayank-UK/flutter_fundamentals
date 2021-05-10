@@ -26,8 +26,17 @@ class _IconButtonWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"IconButton" widget has named parameters like onPressed, icon, etc, which specify the widget\'s behavior and layout.',
+            ),
+            Container(
+              child: IconButton(
+                onPressed: () {},
+                icon: Icon(
+                  Icons.ac_unit,
+                ),
+              ),
+            ),
           ],
         ),
       ],

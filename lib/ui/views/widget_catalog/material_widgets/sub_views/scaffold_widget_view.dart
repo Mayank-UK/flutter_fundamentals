@@ -26,7 +26,9 @@ class _ScaffoldWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent(
+              '"Scaffold" widget is used mainly as the root widget for a page. It has named parameters like appBar, body, bottomNavigationBar, etc, which specify the layout of a page.',
+            ),
             Container(),
           ],
         ),

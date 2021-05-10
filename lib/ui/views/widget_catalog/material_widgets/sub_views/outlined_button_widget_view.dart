@@ -26,8 +26,17 @@ class _OutlinedButtonWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"OutlinedButton" widget has named parameters onPressed and child, which specify the button\'s behavior and content.',
+            ),
+            Container(
+              child: OutlinedButton(
+                onPressed: () {},
+                child: Text(
+                  'Button',
+                ),
+              ),
+            ),
           ],
         ),
       ],

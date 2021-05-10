@@ -26,8 +26,15 @@ class _ElevatedButtonWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"ElevatedButton" widget has named parameters onPressed and child which specify the button behavior and content.',
+            ),
+            Container(
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('Button'),
+              ),
+            ),
           ],
         ),
       ],

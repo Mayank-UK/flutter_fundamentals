@@ -26,8 +26,45 @@ class _SliverAppBarWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"SliverAppBar" widget has named parameter\'s like pinned, snap, floating, expandedHeight, etc, which specify the widget\'s behavior.',
+            ),
+            TextBlockComponent(
+              '"SliverAppBar" widget is used inside the "CustomScrollView" widget.',
+            ),
+            Container(
+              height: 500,
+              child: Scaffold(
+                body: CustomScrollView(
+                  slivers: <Widget>[
+                    SliverAppBar(
+                      pinned: true,
+                      snap: true,
+                      floating: true,
+                      expandedHeight: 160.0,
+                      flexibleSpace: const FlexibleSpaceBar(
+                        title: Text('SliverAppBar'),
+                        background: FlutterLogo(),
+                      ),
+                    ),
+                    SliverList(
+                      delegate: SliverChildBuilderDelegate(
+                        (BuildContext context, int index) {
+                          return Container(
+                            color: index.isOdd ? Colors.white : Colors.black12,
+                            height: 100.0,
+                            child: Center(
+                              child: Text('$index', textScaleFactor: 5),
+                            ),
+                          );
+                        },
+                        childCount: 20,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ],

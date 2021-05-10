@@ -26,8 +26,41 @@ class _DrawerWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Drawer" widget by default works inside "Scaffold" widget, "AppBar" widget automatically creates a hamburger menu when a drawer is specifies in "Scaffold" widget.',
+            ),
+            TextBlockComponent(
+              '"DrawerHeader" widget is used inside "Drawer" widget to specify a drawer header.',
+            ),
+            Container(
+              height: 500,
+              child: Scaffold(
+                appBar: AppBar(
+                  title: Text('AppBar'),
+                ),
+                drawer: Drawer(
+                  child: ListView(
+                    padding: EdgeInsets.zero,
+                    children: <Widget>[
+                      DrawerHeader(
+                        child: Text('Drawer Header'),
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                        ),
+                      ),
+                      ListTile(
+                        title: Text('Item 1'),
+                        onTap: () {},
+                      ),
+                      ListTile(
+                        title: Text('Item 2'),
+                        onTap: () {},
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ],

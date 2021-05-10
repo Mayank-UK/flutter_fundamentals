@@ -71,12 +71,6 @@ class InteractiveWidgetsView extends StatelessWidget {
           'A widget that marks its child as being a candidate for hero animations.',
       route: RoutePaths.heroInteractive,
     ),
-    ListViewItem(
-      title: 'Navigator',
-      description:
-          'A widget that manages a set of child widgets with a stack discipline. Many apps have a navigator near the top of their widget hierarchy to display their logical history using an Overlay with the most recently visited pages visually on top of the older pages. Using this pattern lets the navigator visually transition from one page to another by moving the widgets around in the overlay. Similarly, the navigator can be used to show a dialog by positioning the dialog widget above the current page.',
-      route: RoutePaths.navigator,
-    ),
   ];
 
   final String _appBarTitle = 'Interactive widgets';
