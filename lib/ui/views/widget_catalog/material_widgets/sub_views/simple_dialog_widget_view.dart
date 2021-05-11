@@ -19,6 +19,35 @@ class SimpleDialogWidgetView extends StatelessWidget {
 }
 
 class _SimpleDialogWidgetImplementation extends StatelessWidget {
+  void _showSimpleDialog(BuildContext ctx) {
+    showDialog(
+      context: ctx,
+      builder: (_) {
+        return SimpleDialog(
+          title: Text('The Title'),
+          children: [
+            SimpleDialogOption(
+              child: Text('Option 1'),
+              onPressed: () {
+                // Do something
+                print('You have selected the option 1');
+                Navigator.of(ctx).pop();
+              },
+            ),
+            SimpleDialogOption(
+              child: Text('Option 2'),
+              onPressed: () {
+                // Do something
+                print('You have selected the option 2');
+                Navigator.of(ctx).pop();
+              },
+            )
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +55,20 @@ class _SimpleDialogWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"SimpleDialog" widget is shown using the "showDialog" function callback, which is in turn called inside a function/method',
+            ),
+            TextBlockComponent(
+              '"SimpleDialog" widget has children "SimpleDialogOption" which have named parameters onPressed and child to specify the behavior and content of the widget.',
+            ),
+            Container(
+              child: ElevatedButton(
+                onPressed: () => this._showSimpleDialog(context),
+                child: Text(
+                  'show simple dialog',
+                ),
+              ),
+            ),
           ],
         ),
       ],

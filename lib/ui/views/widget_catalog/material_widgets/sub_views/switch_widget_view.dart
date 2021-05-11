@@ -18,7 +18,16 @@ class SwitchWidgetView extends StatelessWidget {
   }
 }
 
-class _SwitchWidgetImplementation extends StatelessWidget {
+class _SwitchWidgetImplementation extends StatefulWidget {
+  @override
+  __SwitchWidgetImplementationState createState() =>
+      __SwitchWidgetImplementationState();
+}
+
+class __SwitchWidgetImplementationState
+    extends State<_SwitchWidgetImplementation> {
+  bool status = false;
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +35,21 @@ class _SwitchWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Switch" widget has named parameters value and onChanged, which specifies the widget behavior and content.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: Switch(
+                value: status,
+                onChanged: (value) {
+                  print("VALUE : $value");
+                  setState(() {
+                    status = value;
+                  });
+                },
+              ),
+            ),
           ],
         ),
       ],

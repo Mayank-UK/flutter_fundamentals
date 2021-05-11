@@ -26,8 +26,17 @@ class _TextFieldWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"TextField" widget has named parameters like style, decoration, etc, which specify the widget\'s behavior and content.',
+            ),
+            TextBlockComponent(
+              'One major difference b/w "TextField" and "TextFormField" is validation, "TextFormField" has a named parameter to specify the validation logic.',
+            ),
+            Container(
+              child: TextField(
+                decoration: InputDecoration(hintText: 'placeholder'),
+              ),
+            ),
           ],
         ),
       ],

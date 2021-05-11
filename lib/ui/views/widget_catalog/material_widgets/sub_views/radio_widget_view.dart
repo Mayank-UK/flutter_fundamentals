@@ -18,7 +18,18 @@ class RadioWidgetView extends StatelessWidget {
   }
 }
 
-class _RadioWidgetImplementation extends StatelessWidget {
+enum SingingCharacter { lafayette, jefferson }
+
+class _RadioWidgetImplementation extends StatefulWidget {
+  @override
+  __RadioWidgetImplementationState createState() =>
+      __RadioWidgetImplementationState();
+}
+
+class __RadioWidgetImplementationState
+    extends State<_RadioWidgetImplementation> {
+  SingingCharacter _character = SingingCharacter.lafayette;
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +37,40 @@ class _RadioWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Radio" widget has named parameters onChanged, groupValue, and value which specify the widget\'s behavior.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: Column(
+                children: <Widget>[
+                  ListTile(
+                    title: const Text('Lafayette'),
+                    leading: Radio<SingingCharacter>(
+                      value: SingingCharacter.lafayette,
+                      groupValue: _character,
+                      onChanged: (SingingCharacter value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
+                  ),
+                  ListTile(
+                    title: const Text('Thomas Jefferson'),
+                    leading: Radio<SingingCharacter>(
+                      value: SingingCharacter.jefferson,
+                      groupValue: _character,
+                      onChanged: (SingingCharacter value) {
+                        setState(() {
+                          _character = value;
+                        });
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

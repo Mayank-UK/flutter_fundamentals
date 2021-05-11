@@ -19,6 +19,14 @@ class SnackBarWidgetView extends StatelessWidget {
 }
 
 class _SnackBarWidgetImplementation extends StatelessWidget {
+  void _onPressed(BuildContext context) {
+    final Widget snackBar = SnackBar(
+      content: const Text('Click/tap registered'),
+    );
+
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +34,18 @@ class _SnackBarWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"SnackBar" widget is shown using a function/method, which then calls "ScaffoldMessenger" to render the snackBar.',
+            ),
+            TextBlockComponent(
+              '"SnackBar" has named parameter content, which show takes the content of snackbar, which is mostly text.',
+            ),
+            Container(
+              child: ElevatedButton(
+                onPressed: () => this._onPressed(context),
+                child: Text('Show snackbar'),
+              ),
+            ),
           ],
         ),
       ],

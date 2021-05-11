@@ -26,8 +26,17 @@ class _TextButtonWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"TextButton" widget has named parameters onPressed and child, which specify the behavior and content of the button.',
+            ),
+            Container(
+              child: TextButton(
+                onPressed: () {},
+                child: Text(
+                  'Button',
+                ),
+              ),
+            ),
           ],
         ),
       ],

@@ -18,7 +18,16 @@ class SliderWidgetView extends StatelessWidget {
   }
 }
 
-class _SliderWidgetImplementation extends StatelessWidget {
+class _SliderWidgetImplementation extends StatefulWidget {
+  @override
+  __SliderWidgetImplementationState createState() =>
+      __SliderWidgetImplementationState();
+}
+
+class __SliderWidgetImplementationState
+    extends State<_SliderWidgetImplementation> {
+  double _currentSliderValue = 20;
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +35,24 @@ class _SliderWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Slider" widget has named parameters like value, min, man, division, label, etc, which specify the widget\'s behavior and it\'s content.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: Slider(
+                value: _currentSliderValue,
+                min: 0,
+                max: 100,
+                divisions: 5,
+                label: _currentSliderValue.round().toString(),
+                onChanged: (double value) {
+                  setState(() {
+                    _currentSliderValue = value;
+                  });
+                },
+              ),
+            ),
           ],
         ),
       ],

@@ -26,8 +26,15 @@ class _CheckboxWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Checkbox" widget has named parameters onChanges and value, which the specify the box\'s content and value.',
+            ),
+            Container(
+              child: Checkbox(
+                onChanged: (value) {},
+                value: true,
+              ),
+            ),
           ],
         ),
       ],
