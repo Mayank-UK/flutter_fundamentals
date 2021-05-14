@@ -293,9 +293,7 @@ import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scrollbar_widg
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/single_child_scroll_view_widget_view.dart';
 
 // widget catalog styling
-import '../../ui/views/widget_catalog/styling_widgets/sub_views/media_query_widget_view.dart';
 import '../../ui/views/widget_catalog/styling_widgets/sub_views/padding_style_widget_view.dart';
-import '../../ui/views/widget_catalog/styling_widgets/sub_views/theme_widget_view.dart';
 
 // widget catalog text
 import '../../ui/views/widget_catalog/text_widgets/sub_views/default_text_style_widget_view.dart';
@@ -1323,7 +1321,7 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => ClipPathWidgetView(),
         );
-      case RoutePaths.clipRect:
+      case RoutePaths.clipRRect:
         return MaterialPageRoute(
           builder: (_) => ClipRectWidgetView(),
         );
@@ -1407,17 +1405,9 @@ class MyRouter {
         );
 
       // widget catalog styling widgets
-      case RoutePaths.mediaQuery:
-        return MaterialPageRoute(
-          builder: (_) => MediaQueryWidgetView(),
-        );
       case RoutePaths.paddingStyling:
         return MaterialPageRoute(
           builder: (_) => PaddingStyleWidgetView(),
-        );
-      case RoutePaths.theme:
-        return MaterialPageRoute(
-          builder: (_) => ThemeWidgetView(),
         );
 
       // widget catalog text widgets

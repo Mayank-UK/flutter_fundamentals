@@ -27,7 +27,9 @@ class _GestureDetectorWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent(
+              '"GestureDetector" widget has named parameters like onTap, onDoubleTap, etc, which specify the widget\'s interactive behavior.',
+            ),
             Container(
               child: GestureDetector(
                   onTap: () {

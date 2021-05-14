@@ -26,8 +26,18 @@ class _FractionalTranslationWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"FractionalTranslation" widget has named parameter translation, which specifies the translation of it\'s child widget.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: FractionalTranslation(
+                translation: Offset(0.5, 0),
+                child: Text(
+                  "Hello world",
+                ),
+              ),
+            ),
           ],
         ),
       ],

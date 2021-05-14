@@ -371,7 +371,8 @@ class RoutePaths {
       '/widgets-catalog/painting-effects/back-drop-filter';
   static const String clipOval = '/widgets-catalog/painting-effects/clip-oval';
   static const String clipPath = '/widgets-catalog/painting-effects/clip-path';
-  static const String clipRect = '/widgets-catalog/painting-effects/clip-rect';
+  static const String clipRRect =
+      '/widgets-catalog/painting-effects/clip-r-rect';
   static const String customPaint =
       '/widgets-catalog/painting-effects/custom-paint';
   static const String decoratedBox =
@@ -411,9 +412,7 @@ class RoutePaths {
       '/widgets-catalog/scrolling/single-child-scroll-view';
 
   // widget catalog styling widgets sub routes
-  static const String mediaQuery = '/widgets-catalog/styling/media-query';
   static const String paddingStyling = '/widgets-catalog/styling/padding';
-  static const String theme = '/widgets-catalog/styling/theme';
 
   // widget catalog text widgets sub routes
   static const String defaultTextStyle =

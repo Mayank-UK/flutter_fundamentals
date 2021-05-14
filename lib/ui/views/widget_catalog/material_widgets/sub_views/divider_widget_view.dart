@@ -26,8 +26,17 @@ class _DividerWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Divider" widget has named parameters like height, thickness, indent, etc, which specify the widget\'s behavior and UI.',
+            ),
+            Container(
+              child: Divider(
+                height: 20,
+                thickness: 5,
+                indent: 20,
+                endIndent: 20,
+              ),
+            ),
           ],
         ),
       ],

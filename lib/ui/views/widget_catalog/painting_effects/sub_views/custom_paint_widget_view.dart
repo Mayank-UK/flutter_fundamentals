@@ -26,7 +26,7 @@ class _CustomPaintWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent('Will be updated later.'),
             Container(),
           ],
         ),

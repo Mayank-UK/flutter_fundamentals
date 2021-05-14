@@ -26,8 +26,14 @@ class _CircularProgressIndicatorWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"CircularProgressIndicator" widget has named parameters like backgroundColor, semanticsLabel, etc, which specify the widget\'s behavior.',
+            ),
+            Container(
+              child: CircularProgressIndicator(
+                semanticsLabel: 'Circular progress indicator',
+              ),
+            ),
           ],
         ),
       ],

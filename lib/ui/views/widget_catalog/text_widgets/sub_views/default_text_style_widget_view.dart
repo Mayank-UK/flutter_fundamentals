@@ -26,8 +26,30 @@ class _DefaultTextStyleWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"DefaultTextStyle" widget has named parameters like style, textAlign, etc, which specify the default text style of it\'s children.',
+            ),
+            Container(
+              child: DefaultTextStyle(
+                style: TextStyle(fontSize: 36, color: Colors.blue),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    const Text(
+                      'Default text',
+                    ),
+                    const Text(
+                      'Override default text',
+                      style: TextStyle(fontSize: 24),
+                    ),
+                    const Text(
+                      'Default text',
+                      style: TextStyle(color: Colors.red),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ],

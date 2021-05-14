@@ -26,8 +26,26 @@ class _RotatedBoxWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"RotatedBox" widget has named parameter quarterTurns, which rotate it\'s child.',
+            ),
+            Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Text('Sample text'),
+                  Container(
+                    margin: const EdgeInsets.only(top: 8),
+                  ),
+                  RotatedBox(
+                    quarterTurns: 3,
+                    child: const Text(
+                      'Sample text',
+                    ),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ],

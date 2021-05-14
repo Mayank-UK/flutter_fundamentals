@@ -26,8 +26,17 @@ class _TextWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Text" widget has named parameters like style, textAlign, textDecoration, etc, which specify the behavior and layout of this widget.',
+            ),
+            Container(
+              child: Text(
+                'Sample text',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ],
         ),
       ],

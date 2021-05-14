@@ -26,8 +26,14 @@ class _IconMaterialWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Icon" widget has named parameters like color, size, etc, which specify the icon.',
+            ),
+            Container(
+              child: Icon(
+                Icons.ac_unit,
+              ),
+            ),
           ],
         ),
       ],

@@ -26,8 +26,21 @@ class _ClipRectWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"ClipRRect" widget has named parameter borderRadius, which specifies the clipping of corners.',
+            ),
+            Container(
+              color: Colors.amber,
+              padding: const EdgeInsets.all(8),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Container(
+                  color: Colors.red,
+                  height: 80,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

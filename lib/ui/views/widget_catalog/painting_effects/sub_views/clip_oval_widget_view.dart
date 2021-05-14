@@ -26,8 +26,20 @@ class _ClipOvalWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"ClipOval" widget clips the borders of it\'s child widget to an oval shape.',
+            ),
+            Container(
+              color: Colors.amber,
+              padding: const EdgeInsets.all(8),
+              child: ClipOval(
+                child: Container(
+                  color: Colors.red,
+                  height: 80,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

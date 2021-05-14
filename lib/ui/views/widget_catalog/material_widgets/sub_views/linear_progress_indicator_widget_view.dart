@@ -26,8 +26,14 @@ class _LinearProgressIndicatorWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"LinearProgressIndicator" widget has named parameters like value, backgroundColor, semanticsLabel, etc, which specify the widget\'s behavior.',
+            ),
+            Container(
+              child: LinearProgressIndicator(
+                semanticsLabel: 'Linear progress indicator',
+              ),
+            ),
           ],
         ),
       ],

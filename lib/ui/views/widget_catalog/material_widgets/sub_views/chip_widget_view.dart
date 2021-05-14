@@ -26,8 +26,18 @@ class _ChipWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Chip" widgets has named parameters like avatar, label, etc, which specify the chip\'s layout.',
+            ),
+            Container(
+              child: Chip(
+                avatar: CircleAvatar(
+                  backgroundColor: Colors.grey.shade800,
+                  child: const Text('AB'),
+                ),
+                label: const Text('Aaron Burr'),
+              ),
+            ),
           ],
         ),
       ],

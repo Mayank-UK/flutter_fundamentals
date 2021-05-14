@@ -26,8 +26,17 @@ class _TooltipWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Tooltip" widget has named parameters like height, padding, decoration, message, etc, which specify the widget\'s behavior and UI.',
+            ),
+            Container(
+              child: Tooltip(
+                message: 'Tooltip demo',
+                child: TextButton(
+                    onPressed: () {},
+                    child: const Text('hover over for tooltip')),
+              ),
+            ),
           ],
         ),
       ],

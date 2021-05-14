@@ -26,8 +26,20 @@ class _PaddingStyleWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Padding" widget has named parameter padding, which specifies the padding.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Container(
+                  color: Colors.red,
+                  height: 100,
+                  width: 100,
+                ),
+              ),
+            ),
           ],
         ),
       ],

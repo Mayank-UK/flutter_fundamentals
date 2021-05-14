@@ -26,8 +26,33 @@ class _ListTileWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"ListTile" widget has named parameters like trailing, title, etc, which specify the widget\'s behavior and UI.',
+            ),
+            TextBlockComponent(
+              '"ListTile" widget is mainly used inside "ListView" widget, but can also be used separately.',
+            ),
+            Container(
+              color: Colors.amber,
+              child: ListView(
+                shrinkWrap: true,
+                children: <Widget>[
+                  Container(
+                    color: Colors.red,
+                    child: ListTile(
+                      leading: FlutterLogo(),
+                      title: const Text('These ListTiles are expanded '),
+                    ),
+                  ),
+                  Container(
+                    child: ListTile(
+                      trailing: FlutterLogo(),
+                      title: const Text('to fill the available space.'),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

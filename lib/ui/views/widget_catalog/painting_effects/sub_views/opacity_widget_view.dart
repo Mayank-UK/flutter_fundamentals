@@ -26,8 +26,24 @@ class _OpacityWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Opacity" widget has named parameter opacity, which specifies the opacity of the widget.',
+            ),
+            Container(
+              color: Colors.amber,
+              padding: const EdgeInsets.all(16),
+              child: FractionalTranslation(
+                translation: Offset(0.5, 0),
+                child: Opacity(
+                  opacity: 0.5,
+                  child: Container(
+                    color: Colors.red,
+                    height: 100,
+                    width: 100,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ],

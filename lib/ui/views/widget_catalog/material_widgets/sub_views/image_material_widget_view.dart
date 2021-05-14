@@ -26,8 +26,13 @@ class _ImageMaterialWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Image" widget has named parameters like height, width, fit, etc, which specify the widget\'s behavior.',
+            ),
+            Container(
+                child: Image(
+              image: AssetImage('assets/images/demo.jpeg'),
+            )),
           ],
         ),
       ],
