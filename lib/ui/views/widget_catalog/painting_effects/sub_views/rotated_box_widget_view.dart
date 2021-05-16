@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class RotatedBoxWidgetView extends StatelessWidget {
   final String _appBarTitle = 'RotatedBox';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/painting_effects/rotated_box_markdown.md';
 
   @override
   Widget build(BuildContext context) {

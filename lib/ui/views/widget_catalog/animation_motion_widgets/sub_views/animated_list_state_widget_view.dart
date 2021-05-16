@@ -8,7 +8,8 @@ import './../../../../design_system/design_system.dart';
 
 class AnimatedListStateWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedListState';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_list_state_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ScaffoldWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Scaffold';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/scaffold_markdown.md';
 
   @override
   Widget build(BuildContext context) {

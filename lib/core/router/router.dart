@@ -163,7 +163,6 @@ import '../../ui/views/widget_catalog/cupertino_widgets/sub_views/cupertino_time
 // widget catalog input
 import '../../ui/views/widget_catalog/input_widgets/sub_views/auto_complete_widget_view.dart';
 import '../../ui/views/widget_catalog/input_widgets/sub_views/form_field_widget_view.dart';
-import '../../ui/views/widget_catalog/input_widgets/sub_views/form_widget_view.dart';
 import '../../ui/views/widget_catalog/input_widgets/sub_views/raw_keyboard_listener_widget_view.dart';
 
 // widget catalog interactive
@@ -173,7 +172,6 @@ import '../../ui/views/widget_catalog/interactive_widgets/sub_views/drag_target_
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/draggable_scrollable_sheet_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/draggable_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/gesture_detector_widget_view.dart';
-import '../../ui/views/widget_catalog/interactive_widgets/sub_views/hero_interactive_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/ignore_pointer_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/interactive_viewer_widget_view.dart';
 import '../../ui/views/widget_catalog/interactive_widgets/sub_views/long_press_draggable_widget_view.dart';
@@ -186,8 +184,7 @@ import '../../ui/views/widget_catalog/layout_widgets/sub_views/baseline_widget_v
 import '../../ui/views/widget_catalog/layout_widgets/sub_views/center_widget_view.dart';
 import '../../ui/views/widget_catalog/layout_widgets/sub_views/column_widget_view.dart';
 import '../../ui/views/widget_catalog/layout_widgets/sub_views/constrained_box_widget_view.dart';
-import '../../ui/views/widget_catalog/layout_widgets/sub_views/constrained_widget_view.dart';
-import '../../ui/views/widget_catalog/layout_widgets/sub_views/cupertino_sliver_navigation_bar_layout_widget_view.dart';
+import '../../ui/views/widget_catalog/layout_widgets/sub_views/container_widget_view.dart';
 import '../../ui/views/widget_catalog/layout_widgets/sub_views/custom_multi_child_layout_widget_view.dart';
 import '../../ui/views/widget_catalog/layout_widgets/sub_views/custom_scroll_view_widget_view.dart';
 import '../../ui/views/widget_catalog/layout_widgets/sub_views/custom_single_child_layout_widget_view.dart';
@@ -239,10 +236,7 @@ import '../../ui/views/widget_catalog/material_widgets/sub_views/dropdown_button
 import '../../ui/views/widget_catalog/material_widgets/sub_views/elevated_button_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/expansion_panel_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/floating_action_button_widget_view.dart';
-// import '../../ui/views/widget_catalog/material_widgets/sub_views/grid_view_material_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/icon_button_widget_view.dart';
-import '../../ui/views/widget_catalog/material_widgets/sub_views/icon_material_widget_view.dart';
-import '../../ui/views/widget_catalog/material_widgets/sub_views/image_material_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/linear_progress_indicator_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/list_tile_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/material_app_widget_view.dart';
@@ -253,7 +247,6 @@ import '../../ui/views/widget_catalog/material_widgets/sub_views/scaffold_widget
 import '../../ui/views/widget_catalog/material_widgets/sub_views/show_date_picker_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/simple_dialog_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/slider_widget_view.dart';
-import '../../ui/views/widget_catalog/material_widgets/sub_views/sliver_app_bar_material_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/snack_bar_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/stepper_widget_view.dart';
 import '../../ui/views/widget_catalog/material_widgets/sub_views/switch_widget_view.dart';
@@ -278,22 +271,17 @@ import '../../ui/views/widget_catalog/painting_effects/sub_views/rotated_box_wid
 // import '../../ui/views/widget_catalog/painting_effects/sub_views/transform_painting_effects_widget_view.dart';
 
 // widget catalog scrolling
-import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/custom_scroll_view_scrolling_widget_view.dart';
-import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/draggable_scrollable_sheet_scrolling_widget_view.dart';
-import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/grid_view_scrolling_widget_view.dart';
-import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/list_view_scrolling_widget_view.dart';
+
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/nested_scroll_view_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/notification_listener_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/page_view_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/refresh_indicator_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/reorderable_list_view_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scroll_configuration_widget_view.dart';
-import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scrollable_scrolling_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/scrollbar_widget_view.dart';
 import '../../ui/views/widget_catalog/scrolling_widgets/sub_views/single_child_scroll_view_widget_view.dart';
 
 // widget catalog styling
-import '../../ui/views/widget_catalog/styling_widgets/sub_views/padding_style_widget_view.dart';
 
 // widget catalog text
 import '../../ui/views/widget_catalog/text_widgets/sub_views/default_text_style_widget_view.dart';
@@ -837,7 +825,7 @@ class MyRouter {
         );
       case RoutePaths.cupertinoFullScreenDialogTransition:
         return MaterialPageRoute(
-          builder: (_) => CupertinoDialogFullScreenDialogTransitionWidgetView(),
+          builder: (_) => CupertinoFullScreenDialogTransitionWidgetView(),
         );
       case RoutePaths.cupertinoNavigationBar:
         return MaterialPageRoute(
@@ -919,7 +907,7 @@ class MyRouter {
         );
       case RoutePaths.form:
         return MaterialPageRoute(
-          builder: (_) => FormWidgetView(),
+          builder: (_) => FormView(),
         );
       case RoutePaths.formField:
         return MaterialPageRoute(
@@ -970,10 +958,6 @@ class MyRouter {
       case RoutePaths.scrollable:
         return MaterialPageRoute(
           builder: (_) => ScrollableWidgetView(),
-        );
-      case RoutePaths.heroInteractive:
-        return MaterialPageRoute(
-          builder: (_) => HeroInteractiveWidgetView(),
         );
 
       // widget catalog layout widgets
@@ -1101,10 +1085,6 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => WrapWidgetView(),
         );
-      case RoutePaths.cupertinoSliverNavigationBar:
-        return MaterialPageRoute(
-          builder: (_) => CupertinoSliverNavigationBarLayoutWidgetView(),
-        );
       case RoutePaths.customScrollView:
         return MaterialPageRoute(
           builder: (_) => CustomScrollViewWidgetView(),
@@ -1166,10 +1146,6 @@ class MyRouter {
       case RoutePaths.scaffold:
         return MaterialPageRoute(
           builder: (_) => ScaffoldWidgetView(),
-        );
-      case RoutePaths.sliverAppBar:
-        return MaterialPageRoute(
-          builder: (_) => SliverAppBarMaterialWidgetView(),
         );
       case RoutePaths.tabBar:
         return MaterialPageRoute(
@@ -1279,13 +1255,9 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => GridViewWidgetView(),
         );
-      case RoutePaths.iconMaterial:
+      case RoutePaths.icon:
         return MaterialPageRoute(
-          builder: (_) => IconMaterialWidgetView(),
-        );
-      case RoutePaths.imageMaterial:
-        return MaterialPageRoute(
-          builder: (_) => ImageMaterialWidgetView(),
+          builder: (_) => IconWidgetView(),
         );
       case RoutePaths.linearProgressIndicator:
         return MaterialPageRoute(
@@ -1351,22 +1323,6 @@ class MyRouter {
         );
 
       // widget catalog scrolling widgets
-      case RoutePaths.customScrollView:
-        return MaterialPageRoute(
-          builder: (_) => CustomScrollViewScrollingWidgetView(),
-        );
-      case RoutePaths.draggableScrollableSheet:
-        return MaterialPageRoute(
-          builder: (_) => DraggableScrollableSheetScrollingWidgetView(),
-        );
-      case RoutePaths.gridView:
-        return MaterialPageRoute(
-          builder: (_) => GridViewScrollingWidgetView(),
-        );
-      case RoutePaths.listView:
-        return MaterialPageRoute(
-          builder: (_) => ListViewScrollingWidgetView(),
-        );
       case RoutePaths.nestedScrollView:
         return MaterialPageRoute(
           builder: (_) => NestedScrollViewWidgetView(),
@@ -1393,7 +1349,7 @@ class MyRouter {
         );
       case RoutePaths.scrollable:
         return MaterialPageRoute(
-          builder: (_) => ScrollableScrollingWidgetView(),
+          builder: (_) => ScrollableWidgetView(),
         );
       case RoutePaths.scrollbar:
         return MaterialPageRoute(
@@ -1405,10 +1361,6 @@ class MyRouter {
         );
 
       // widget catalog styling widgets
-      case RoutePaths.paddingStyling:
-        return MaterialPageRoute(
-          builder: (_) => PaddingStyleWidgetView(),
-        );
 
       // widget catalog text widgets
       case RoutePaths.defaultTextStyle:
@@ -1480,10 +1432,6 @@ class MyRouter {
       case RoutePaths.hyperlinks:
         return MaterialPageRoute(
           builder: (_) => HyperlinksView(),
-        );
-      case RoutePaths.formUiManipulation:
-        return MaterialPageRoute(
-          builder: (_) => FormView(),
         );
       case RoutePaths.responsiveAdaptiveUi:
         return MaterialPageRoute(

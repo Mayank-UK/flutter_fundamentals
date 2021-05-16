@@ -23,12 +23,10 @@ environment:
 dependencies:
     flutter:
         sdk: flutter
-    provider: 5.0.0
+    provider: ^5.0.0
     flutter_markdown: ^0.6.1
-
-    # The following adds the Cupertino Icons font to your application.
-    # Use with the CupertinoIcons class for iOS style icons.
-    cupertino_icons: ^1.0.0
+    http: ^0.13.3
+    camera: ^0.8.1
 
 dev_dependencies:
     flutter_test:
@@ -53,6 +51,7 @@ flutter:
         - assets/markdowns/lifecycle/
         - assets/markdowns/navigation_routing/
         - assets/markdowns/state_management/
+
         - assets/markdowns/ui_manipulation/
         - assets/markdowns/ui_manipulation/colors_backgrounds/
         - assets/markdowns/ui_manipulation/dimensions_constraints/
@@ -61,6 +60,21 @@ flutter:
         - assets/markdowns/ui_manipulation/layout/
         - assets/markdowns/ui_manipulation/responsive_adaptive_layout/
         - assets/markdowns/ui_manipulation/spacing/
+
+        - assets/markdowns/widget_catalog/
+        - assets/markdowns/widget_catalog/accessibility/
+        - assets/markdowns/widget_catalog/animation_motion/
+        - assets/markdowns/widget_catalog/assets_icons_images/
+        - assets/markdowns/widget_catalog/async/
+        - assets/markdowns/widget_catalog/cupertino/
+        - assets/markdowns/widget_catalog/input/
+        - assets/markdowns/widget_catalog/interactive/
+        - assets/markdowns/widget_catalog/layout/
+        - assets/markdowns/widget_catalog/material/
+        - assets/markdowns/widget_catalog/painting_effects/
+        - assets/markdowns/widget_catalog/scrolling/
+        - assets/markdowns/widget_catalog/styling/
+        - assets/markdowns/widget_catalog/text/
 
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoTabScaffoldWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoTabScaffold';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_tab_scaffold_markdown.md';
 
   @override
   Widget build(BuildContext context) {

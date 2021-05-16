@@ -6,7 +6,8 @@ import '../../../../components/text_block_component.dart';
 
 class DecoratedBoxTransitionWidgetView extends StatelessWidget {
   final String _appBarTitle = 'DecoratedBoxTransition';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/decorated_box_transition_markdown.md';
 
   @override
   Widget build(BuildContext context) {

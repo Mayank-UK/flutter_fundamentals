@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class GridViewWidgetView extends StatelessWidget {
   final String _appBarTitle = 'GridView';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/grid_view_markdown.md';
 
   @override
   Widget build(BuildContext context) {

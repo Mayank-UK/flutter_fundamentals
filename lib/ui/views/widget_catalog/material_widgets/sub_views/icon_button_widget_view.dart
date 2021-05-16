@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class IconButtonWidgetView extends StatelessWidget {
   final String _appBarTitle = 'IconButton';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/icon_button_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ShowDatePickerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ShowDatePicker';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/show_date_picker_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class TextWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Text';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/text/text_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class OutlinedButtonWidgetView extends StatelessWidget {
   final String _appBarTitle = 'OutlinedButton';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/outlined_button_markdown.md';
 
   @override
   Widget build(BuildContext context) {

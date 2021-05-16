@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class AbsorbPointerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AbsorbPointer';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/absorb_pointer_markdown.md';
 
   @override
   Widget build(BuildContext context) {

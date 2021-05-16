@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CustomSingleChildLayoutWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CustomSingleChildLayout';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/custom_single_child_layout_markdown.md';
 
   @override
   Widget build(BuildContext context) {

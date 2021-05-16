@@ -6,13 +6,14 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedWidgetBaseStateWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedWidgetBaseState';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_widget_base_state_markdown.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedWidgetBaseStateImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }

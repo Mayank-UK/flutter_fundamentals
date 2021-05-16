@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ExpandedWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Expanded';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/expanded_markdown.md';
 
   @override
   Widget build(BuildContext context) {

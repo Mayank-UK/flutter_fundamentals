@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class InteractiveViewerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'InteractiveViewer';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/interactive_viewer_markdown.md';
 
   @override
   Widget build(BuildContext context) {

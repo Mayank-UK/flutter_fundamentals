@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoPopupSurfaceWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoPopupSurfaceWidgetView';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_popup_surface_markdown.md';
 
   @override
   Widget build(BuildContext context) {

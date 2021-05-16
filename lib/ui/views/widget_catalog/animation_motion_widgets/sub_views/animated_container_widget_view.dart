@@ -6,7 +6,8 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedContainerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedContainer';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_container_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,13 +6,14 @@ import './../../../../components/text_block_component.dart';
 
 class RawImageWidgetView extends StatelessWidget {
   final String _appBarTitle = 'RawImage';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/assets_icons_images/raw_image_markdown.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _RawImageWidgetImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }

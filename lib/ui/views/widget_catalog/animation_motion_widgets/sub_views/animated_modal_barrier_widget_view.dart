@@ -6,7 +6,8 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedModalBarrierWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedModalBarrier';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_modal_barrier_markdown.md';
 
   @override
   Widget build(BuildContext context) {

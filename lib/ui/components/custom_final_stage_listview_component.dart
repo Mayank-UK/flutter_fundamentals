@@ -23,7 +23,6 @@ class CustomFinalStageListViewComponent extends StatelessWidget {
       child: ListView.builder(
         itemCount: itemList.length,
         itemBuilder: (BuildContext ctxt, int index) {
-          // return new Text(itemList[index].title);
           return InkWell(
             onTap: () {
               Navigator.of(context).pushNamed(
@@ -46,19 +45,17 @@ class CustomFinalStageListViewComponent extends StatelessWidget {
                   padding: EdgeInsets.all(8),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    // direction: Axis.vertical,
-                    // spacing: 8,
                     children: <Widget>[
-                      Container(
-                        margin: EdgeInsets.only(bottom: 8),
-                        child: Text(
-                          itemList[index].title,
-                          style: DSTypography.h6Light,
-                        ),
-                      ),
                       Text(
-                        itemList[index].description,
-                        style: DSTypography.body1Light,
+                        itemList[index].title,
+                        style: DSTypography.h6Light,
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(top: 8),
+                        child: Text(
+                          itemList[index].description,
+                          style: DSTypography.body1Light,
+                        ),
                       ),
                     ],
                   ),

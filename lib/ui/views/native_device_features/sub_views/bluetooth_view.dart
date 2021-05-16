@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../components/code_preview_component.dart';
 
+import '../../../components/code_preview_component.dart';
+import './../../../components/section_wrapper_component_component.dart';
+import './../../../components/text_block_component.dart';
+
 class BluetoothView extends StatelessWidget {
   final String _appBarTitle = 'Bluetooth';
   final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
@@ -10,8 +14,25 @@ class BluetoothView extends StatelessWidget {
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _BluetoothImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
+    );
+  }
+}
+
+class _BluetoothImplementation extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Wrap(
+      children: <Widget>[
+        SectionWrapperComponent(
+          title: 'Simple use',
+          content: [
+            TextBlockComponent('Content will be updated soon.'),
+            Container(),
+          ],
+        ),
+      ],
     );
   }
 }

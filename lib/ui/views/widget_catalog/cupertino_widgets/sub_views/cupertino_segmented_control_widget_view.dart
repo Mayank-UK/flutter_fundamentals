@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoSegmentedControlWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoSegmentedControl';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_segmented_control_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -2,244 +2,68 @@ import 'package:flutter/material.dart';
 
 import '../../components/main_appbar_component.dart';
 import '../../../core/router/routes.dart';
-// import '../../components/custom_gridview_component.dart';
 import '../../components/custom_mid_stage_listview_component.dart';
-
-/* class WidgetCatalogView extends StatelessWidget {
-  final String _appBarTitle;
-
-  WidgetCatalogView();
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: MainAppBarComponent(appBarTitle: this._appBarTitle),
-      drawer: MainDrawer(),
-      body: GridView.count(
-        // without this property, GridView is not visible
-        shrinkWrap: true,
-        primary: false,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        crossAxisCount: 2,
-        children: <Widget>[
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.accessibilityWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Accessibility"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context)
-                  .pushNamed(RoutePaths.animationMotionWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Animation and motion"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.assetWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Assets, icons and images"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.asyncWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Async"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.cupertinoWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Cupertino"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.inputWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Input"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.interactiveWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Interactive"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.layoutWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Layout"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.materialWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Material"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.paintingEffectWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Painting and effects"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.scrollingWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Scrolling"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.stylingWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Styling"),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushNamed(RoutePaths.textWidgets);
-            },
-            child: Ink(
-              color: Colors.teal[300],
-              height: 200,
-              padding: EdgeInsets.all(8),
-              width: 200,
-              child: const Text("Text"),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-} */
 
 class WidgetCatalogView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
         title: 'Accessibility',
-        description: 'Description not available',
+        description: 'Make your app accessible.',
         route: RoutePaths.accessibilityWidgets),
     ListViewItem(
         title: 'Animations and motion',
-        description: 'Description not available',
+        description: 'Bring animations to your app.',
         route: RoutePaths.animationMotionWidgets),
     ListViewItem(
         title: 'Assets, icons and images',
-        description: 'Description not available',
+        description: 'Manage assets, display images, and show icons.',
         route: RoutePaths.assetWidgets),
     ListViewItem(
         title: 'Async',
-        description: 'Description not available',
+        description: 'Async patterns to your Flutter application.',
         route: RoutePaths.asyncWidgets),
     ListViewItem(
         title: 'Cupertino',
-        description: 'Description not available',
+        description:
+            'Beautiful and high-fidelity widgets for current iOS design language.',
         route: RoutePaths.cupertinoWidgets),
     ListViewItem(
         title: 'Input',
-        description: 'Description not available',
+        description:
+            'Take user input in addition to input widgets in Material Components and Cupertino.',
         route: RoutePaths.inputWidgets),
     ListViewItem(
         title: 'Interactive',
-        description: 'Description not available',
+        description:
+            'Respond to touch events and route users to different views.',
         route: RoutePaths.interactiveWidgets),
     ListViewItem(
         title: 'Layout',
-        description: 'Description not available',
+        description:
+            'Arrange other widgets columns, rows, grids, and many other layouts.',
         route: RoutePaths.layoutWidgets),
     ListViewItem(
         title: 'Material',
-        description: 'Description not available',
+        description:
+            'Visual, behavioral, and motion-rich widgets implementing the Material Design guidelines.',
         route: RoutePaths.materialWidgets),
     ListViewItem(
         title: 'Painting and effects',
-        description: 'Description not available',
+        description:
+            'These widgets apply visual effects to the children without changing their layout, size, or position.',
         route: RoutePaths.paintingEffectWidgets),
     ListViewItem(
         title: 'Scrolling',
-        description: 'Description not available',
+        description: 'Scroll multiple widgets as children of the parent.',
         route: RoutePaths.scrollingWidgets),
     ListViewItem(
         title: 'Styling',
-        description: 'Description not available',
+        description:
+            'Manage the theme of your app, makes your app responsive to screen sizes, or add padding.',
         route: RoutePaths.stylingWidgets),
     ListViewItem(
         title: 'Text',
-        description: 'Description not available',
+        description: 'Display and style text.',
         route: RoutePaths.textWidgets),
   ];
 

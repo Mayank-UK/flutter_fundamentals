@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CenterWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Center';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/center_markdown.md';
 
   @override
   Widget build(BuildContext context) {

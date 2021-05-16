@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ClipOvalWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ClipOval';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/painting_effects/clip_oval_markdown.md';
 
   @override
   Widget build(BuildContext context) {

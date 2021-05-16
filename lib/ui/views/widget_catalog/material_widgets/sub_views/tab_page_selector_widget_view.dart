@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class TabPageSelectorWidgetView extends StatelessWidget {
   final String _appBarTitle = 'TabPageSelector';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/tab_page_selector_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class _TabPageSelectorWidgetImplementation extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      color: Colors.amber,
+                      color: Colors.white,
                       height: 200,
                       child: TabBarView(
                         children: [

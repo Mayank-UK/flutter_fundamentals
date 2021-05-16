@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoDialogWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoDialog';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_dialog_markdown.md';
 
   @override
   Widget build(BuildContext context) {

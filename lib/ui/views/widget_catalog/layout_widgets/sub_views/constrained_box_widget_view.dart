@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ConstrainedBoxWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ConstrainedBox';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/constrained_box_markdown.md';
 
   @override
   Widget build(BuildContext context) {

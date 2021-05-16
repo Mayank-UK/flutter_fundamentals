@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class StepperWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Stepper';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/stepper_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,6 @@ class __StepperWidgetImplementationState
               '"Stepper" widget has named parameters like currentStep, onStepCancel, onStepContinue, etc, which specify the stepper\'s behavior and UI.',
             ),
             Container(
-              color: Colors.amber,
               child: Stepper(
                 currentStep: _index,
                 onStepCancel: () {

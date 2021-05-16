@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class DefaultTextStyleWidgetView extends StatelessWidget {
   final String _appBarTitle = 'DefaultTextStyle';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/text/default_text_style_markdown.md';
 
   @override
   Widget build(BuildContext context) {

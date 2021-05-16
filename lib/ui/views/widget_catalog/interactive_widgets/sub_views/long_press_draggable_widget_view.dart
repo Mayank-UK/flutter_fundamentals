@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class LongPressDraggableWidgetView extends StatelessWidget {
   final String _appBarTitle = 'LongPressDraggable';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/long_press_draggable_markdown.md';
 
   @override
   Widget build(BuildContext context) {

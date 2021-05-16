@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class SwitchWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Switch';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/switch_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,6 @@ class __SwitchWidgetImplementationState
               '"Switch" widget has named parameters value and onChanged, which specifies the widget behavior and content.',
             ),
             Container(
-              color: Colors.amber,
               child: Switch(
                 value: status,
                 onChanged: (value) {

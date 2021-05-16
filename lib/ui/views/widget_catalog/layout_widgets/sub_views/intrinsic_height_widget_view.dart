@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class IntrinsicHeightWidgetView extends StatelessWidget {
   final String _appBarTitle = 'IntrinsicHeight';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/intrinsic_height_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ChipWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Chip';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/chip_markdown.md';
 
   @override
   Widget build(BuildContext context) {

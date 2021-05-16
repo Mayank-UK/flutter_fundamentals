@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class FutureBuilderWidgetView extends StatelessWidget {
   final String _appBarTitle = 'FutureBuilder';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/async/future_builder_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -42,8 +43,7 @@ class __FutureBuilderWidgetImplementationState
                 '"FutureBuilder" widget has named parameter like future, builder, etc, which specify the widget configuration.'),
             Container(
               child: FutureBuilder<String>(
-                future:
-                    _calculation, // a previously-obtained Future<String> or null
+                future: _calculation,
                 builder:
                     (BuildContext context, AsyncSnapshot<String> snapshot) {
                   List<Widget> children;

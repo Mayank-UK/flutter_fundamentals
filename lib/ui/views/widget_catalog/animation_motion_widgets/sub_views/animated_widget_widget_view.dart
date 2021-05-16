@@ -6,13 +6,14 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedWidgetWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedWidget';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_widget_markdown.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _AnimatedWidgetWidgetImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
@@ -27,7 +28,7 @@ class _AnimatedWidgetWidgetImplementation extends StatelessWidget {
           title: 'Simple use',
           content: [
             TextBlockComponent(
-              'A bit tricky widget to implement, leave it, will do it when needed.',
+              'Content will be updated soon.',
             ),
             Container(),
           ],

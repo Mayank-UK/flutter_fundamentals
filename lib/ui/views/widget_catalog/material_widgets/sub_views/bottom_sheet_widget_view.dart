@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class BottomSheetWidgetView extends StatelessWidget {
   final String _appBarTitle = 'BottomSheet';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/bottom_sheet_markdown.md';
 
   @override
   Widget build(BuildContext context) {

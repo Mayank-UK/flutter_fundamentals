@@ -7,7 +7,8 @@ import './../../../../components/text_block_component.dart';
 
 class IndexedStackWidgetView extends StatelessWidget {
   final String _appBarTitle = 'IndexedStack';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/indexed_stack_markdown.md';
 
   @override
   Widget build(BuildContext context) {

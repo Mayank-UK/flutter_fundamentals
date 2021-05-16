@@ -6,7 +6,8 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedAlignWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedAlign';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_align_markdown.md';
 
   @override
   Widget build(BuildContext context) {

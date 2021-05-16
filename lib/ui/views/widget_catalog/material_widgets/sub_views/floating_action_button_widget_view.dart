@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class FloatingActionButtonWidgetView extends StatelessWidget {
   final String _appBarTitle = 'FloatingActionButton';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/floating_action_button_markdown.md';
 
   @override
   Widget build(BuildContext context) {

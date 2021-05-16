@@ -6,7 +6,8 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedOpacityWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedOpacity';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_opacity_markdown.md';
 
   @override
   Widget build(BuildContext context) {

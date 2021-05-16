@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class DraggableWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Draggable';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/draggable_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,16 @@ class DraggableWidgetView extends StatelessWidget {
   }
 }
 
-class _DraggableWidgetImplementation extends StatelessWidget {
+class _DraggableWidgetImplementation extends StatefulWidget {
+  @override
+  __DraggableWidgetImplementationState createState() =>
+      __DraggableWidgetImplementationState();
+}
+
+class __DraggableWidgetImplementationState
+    extends State<_DraggableWidgetImplementation> {
+  int _acceptedData = 0;
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +36,64 @@ class _DraggableWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"Draggable" widget has named parameter data, which specify the data value for it.',
+            ),
+            Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  Draggable<int>(
+                    data: 10,
+                    child: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.amber,
+                      child: Center(
+                        child: Text("Draggable"),
+                      ),
+                    ),
+                    feedback: Container(
+                      color: Colors.deepOrange,
+                      height: 100,
+                      width: 100,
+                      child: Icon(Icons.directions_run),
+                    ),
+                    childWhenDragging: Container(
+                      height: 100.0,
+                      width: 100.0,
+                      color: Colors.pinkAccent,
+                      child: Center(
+                        child: Text("Child When Dragging"),
+                      ),
+                    ),
+                  ),
+                  DragTarget(
+                    builder: (
+                      BuildContext context,
+                      List<dynamic> accepted,
+                      List<dynamic> rejected,
+                    ) {
+                      return Container(
+                        color: Colors.red,
+                        height: 100.0,
+                        padding: const EdgeInsets.all(8),
+                        width: 100.0,
+                        child: Center(
+                          child: Text(
+                              "Value is updated to: ${this._acceptedData}"),
+                        ),
+                      );
+                    },
+                    onAccept: (int data) {
+                      setState(() {
+                        this._acceptedData += data;
+                      });
+                    },
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

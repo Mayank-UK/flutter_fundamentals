@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ScrollableWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Scrollable';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/scrollable_markdown.md';
 
   @override
   Widget build(BuildContext context) {

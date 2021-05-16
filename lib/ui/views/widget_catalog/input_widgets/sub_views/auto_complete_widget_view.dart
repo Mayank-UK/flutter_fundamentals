@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class AutoCompleteWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AutoComplete';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/input/auto_complete_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,9 @@ class _AutoCompleteWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent(
+              '"AutoComplete" widget has named parameters optionBuilder and onSelected, which specify the widget\'s behavior and layout.',
+            ),
             Container(
               child: Autocomplete<String>(
                 optionsBuilder: (TextEditingValue textEditingValue) {

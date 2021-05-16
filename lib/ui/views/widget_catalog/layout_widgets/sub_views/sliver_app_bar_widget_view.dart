@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class SliverAppBarWidgetView extends StatelessWidget {
   final String _appBarTitle = 'SliverAppBar';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/sliver_app_bar_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,9 @@ class _SliverAppBarWidgetImplementation extends StatelessWidget {
               '"SliverAppBar" widget is used inside the "CustomScrollView" widget.',
             ),
             Container(
+              color: Colors.white,
               height: 500,
+              padding: const EdgeInsets.all(8),
               child: Scaffold(
                 body: CustomScrollView(
                   slivers: <Widget>[

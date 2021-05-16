@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class SliverFixedExtentListWidgetView extends StatelessWidget {
   final String _appBarTitle = 'SliverFixedExtentList';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/sliver_fixed_extent_list_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,30 @@ class _SliverFixedExtentListWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"SliverFixedExtentList" widget has named parameter itemExtent, delegate, etc, which specify the widget\'s behavior and layout.',
+            ),
+            Container(
+              color: Colors.white,
+              height: 500,
+              padding: const EdgeInsets.all(8),
+              child: CustomScrollView(
+                slivers: <Widget>[
+                  SliverFixedExtentList(
+                    itemExtent: 50.0,
+                    delegate: SliverChildBuilderDelegate(
+                      (BuildContext context, int index) {
+                        return Container(
+                          alignment: Alignment.center,
+                          color: Colors.lightBlue[100 * (index % 9)],
+                          child: Text('list item $index'),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],

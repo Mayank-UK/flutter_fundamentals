@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoTextFieldWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoTextField';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_text_field_markdown.md';
 
   @override
   Widget build(BuildContext context) {

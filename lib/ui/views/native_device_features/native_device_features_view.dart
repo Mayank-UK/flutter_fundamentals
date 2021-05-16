@@ -7,9 +7,9 @@ import '../../components/custom_final_stage_listview_component.dart';
 class NativeDeviceFeaturesView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Filesystem',
-      description: 'Using the filesystem of the device.',
-      route: RoutePaths.fileSystem,
+      title: 'Bluetooth',
+      description: 'Using the bluetooth of the device.',
+      route: RoutePaths.bluetooth,
     ),
     ListViewItem(
       title: 'Camera',
@@ -17,14 +17,14 @@ class NativeDeviceFeaturesView extends StatelessWidget {
       route: RoutePaths.camera,
     ),
     ListViewItem(
+      title: 'Filesystem',
+      description: 'Using the filesystem of the device.',
+      route: RoutePaths.fileSystem,
+    ),
+    ListViewItem(
       title: 'Location',
       description: 'Using the location and gps of the device.',
       route: RoutePaths.location,
-    ),
-    ListViewItem(
-      title: 'Bluetooth',
-      description: 'Using the bluetooth of the device.',
-      route: RoutePaths.bluetooth,
     ),
   ];
 

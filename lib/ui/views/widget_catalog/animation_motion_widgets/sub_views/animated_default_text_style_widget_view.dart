@@ -7,7 +7,8 @@ import '../../../../components/text_block_component.dart';
 
 class AnimatedDefaultTextStyleWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AnimatedDefaultTextStyle';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/animated_default_text_style_markdown.md';
 
   @override
   Widget build(BuildContext context) {

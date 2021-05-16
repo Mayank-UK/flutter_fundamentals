@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class AlertDialogWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AlertDialog';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/alert_dialog_markdown.md';
 
   @override
   Widget build(BuildContext context) {

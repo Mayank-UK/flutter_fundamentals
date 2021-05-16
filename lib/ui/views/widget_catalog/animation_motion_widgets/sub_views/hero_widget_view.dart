@@ -6,32 +6,20 @@ import '../../../../components/text_block_component.dart';
 
 class HeroWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Hero';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/hero_markdown.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: const Text('content will be available soon'),
+      previewTab: _HeroWidgetImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _HeroImplementation extends StatefulWidget {
-  @override
-  __HeroImplementationState createState() => __HeroImplementationState();
-}
-
-class __HeroImplementationState extends State<_HeroImplementation> {
-  bool _isToggled = false;
-
-  void onPressed() {
-    setState(() {
-      this._isToggled = !this._isToggled;
-    });
-  }
-
+class _HeroWidgetImplementation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -40,22 +28,57 @@ class __HeroImplementationState extends State<_HeroImplementation> {
           title: 'Simple use',
           content: [
             TextBlockComponent(
-              'This widget is a bit tricky, will deal with it when needed.',
+              '"Hero" widget animates an item from one screen to another screen, if both screen\'s have a "Hero" widget.',
             ),
             Container(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  ElevatedButton(
-                    onPressed: this.onPressed,
-                    child: Text('Tap to toggle animation'),
-                  ),
-                ],
-              ),
+              child: _MainScreen(),
             ),
           ],
         ),
       ],
+    );
+  }
+}
+
+class _MainScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Hero(
+        tag: 'imageHero',
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(8),
+          child: Image.network(
+            'https://picsum.photos/250?image=9',
+            height: 100,
+            width: 100,
+          ),
+        ),
+      ),
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) {
+          return _SecondaryScreen();
+        }));
+      },
+    );
+  }
+}
+
+class _SecondaryScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Center(
+        child: Hero(
+          tag: 'imageHero',
+          child: Image.network(
+            'https://picsum.photos/250?image=9',
+          ),
+        ),
+      ),
+      onTap: () {
+        Navigator.pop(context);
+      },
     );
   }
 }

@@ -10,7 +10,7 @@ class StylingWidgetsView extends StatelessWidget {
     ListViewItem(
       title: 'Padding',
       description: 'A widget that insets its child by the given padding.',
-      route: RoutePaths.paddingStyling,
+      route: RoutePaths.padding,
     ),
   ];
 

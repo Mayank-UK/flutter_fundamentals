@@ -205,12 +205,12 @@ class MaterialWidgetsView extends StatelessWidget {
     ListViewItem(
       title: 'Icon',
       description: 'A Material Design icon.',
-      route: RoutePaths.iconMaterial,
+      route: RoutePaths.icon,
     ),
     ListViewItem(
       title: 'Image',
       description: 'A widget that displays an image.',
-      route: RoutePaths.imageMaterial,
+      route: RoutePaths.image,
     ),
     ListViewItem(
       title: 'LinearProgressIndicator',

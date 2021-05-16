@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class DecoratedBoxWidgetView extends StatelessWidget {
   final String _appBarTitle = 'DecoratedBox';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/painting_effects/decorated_box_markdown.md';
 
   @override
   Widget build(BuildContext context) {

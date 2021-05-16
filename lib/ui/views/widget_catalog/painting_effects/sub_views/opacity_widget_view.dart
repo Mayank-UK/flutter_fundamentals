@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class OpacityWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Opacity';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/painting_effects/opacity_markdown.md';
 
   @override
   Widget build(BuildContext context) {

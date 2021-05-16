@@ -69,7 +69,7 @@ class InteractiveWidgetsView extends StatelessWidget {
       title: 'Hero',
       description:
           'A widget that marks its child as being a candidate for hero animations.',
-      route: RoutePaths.heroInteractive,
+      route: RoutePaths.hero,
     ),
   ];
 

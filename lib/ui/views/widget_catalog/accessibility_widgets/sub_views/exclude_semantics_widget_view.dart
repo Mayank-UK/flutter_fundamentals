@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ExcludeSemanticsWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ExcludeSemantics';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/accessibility/exclude_semantics_markdown.md';
 
   @override
   Widget build(BuildContext context) {

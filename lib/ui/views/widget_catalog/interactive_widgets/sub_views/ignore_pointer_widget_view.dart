@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class IgnorePointerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'IgnorePointer';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/ignore_pointer_markdown.md';
 
   @override
   Widget build(BuildContext context) {

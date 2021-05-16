@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class RawKeyboardListenerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'RawKeyboardListener';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/input/raw_keyboard_listener_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class LimitedBoxWidgetView extends StatelessWidget {
   final String _appBarTitle = 'LimitedBox';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/limited_box_markdown.md';
 
   @override
   Widget build(BuildContext context) {

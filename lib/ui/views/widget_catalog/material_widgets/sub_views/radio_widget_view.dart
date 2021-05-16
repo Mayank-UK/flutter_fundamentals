@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class RadioWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Radio';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/radio_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +42,6 @@ class __RadioWidgetImplementationState
               '"Radio" widget has named parameters onChanged, groupValue, and value which specify the widget\'s behavior.',
             ),
             Container(
-              color: Colors.amber,
               child: Column(
                 children: <Widget>[
                   ListTile(

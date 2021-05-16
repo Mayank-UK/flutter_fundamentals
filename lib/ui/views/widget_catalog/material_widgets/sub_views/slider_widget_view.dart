@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class SliderWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Slider';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/slider_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +40,6 @@ class __SliderWidgetImplementationState
               '"Slider" widget has named parameters like value, min, man, division, label, etc, which specify the widget\'s behavior and it\'s content.',
             ),
             Container(
-              color: Colors.amber,
               child: Slider(
                 value: _currentSliderValue,
                 min: 0,

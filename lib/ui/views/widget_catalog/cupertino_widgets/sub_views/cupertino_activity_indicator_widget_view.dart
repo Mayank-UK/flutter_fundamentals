@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoActivityIndicatorWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoAcivityIndicator';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_activity_indicator_markdown.md';
 
   @override
   Widget build(BuildContext context) {

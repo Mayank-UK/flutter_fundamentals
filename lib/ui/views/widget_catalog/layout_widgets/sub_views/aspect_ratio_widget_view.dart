@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class AspectRatioWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AspectRatio';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/aspect_ratio_markdown.md';
 
   @override
   Widget build(BuildContext context) {

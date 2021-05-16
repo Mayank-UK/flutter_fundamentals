@@ -7,7 +7,8 @@ import './../../../../components/text_block_component.dart';
 
 class GestureDetectorWidgetView extends StatelessWidget {
   final String _appBarTitle = 'GestureDetector';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/gesture_detector_markdown.md';
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoTimePickerWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoTimePicker';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_time_picker_markdown.md';
 
   @override
   Widget build(BuildContext context) {

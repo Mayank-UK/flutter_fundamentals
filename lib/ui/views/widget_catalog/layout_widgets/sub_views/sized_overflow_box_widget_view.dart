@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class SizedOverflowBoxWidgetView extends StatelessWidget {
   final String _appBarTitle = 'SizedOverflowBox';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/sized_overflow_box_markdown.md';
 
   @override
   Widget build(BuildContext context) {

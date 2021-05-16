@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class FlowWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Flow';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/flow_markdown.md';
 
   @override
   Widget build(BuildContext context) {

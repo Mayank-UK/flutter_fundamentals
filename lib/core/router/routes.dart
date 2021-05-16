@@ -228,7 +228,6 @@ class RoutePaths {
 
   // widget catalog input widgets sub routes
   static const String autocomplete = '/widgets-catalog/input/autocomplete';
-  static const String form = '/widgets-catalog/input/form';
   static const String formField = '/widgets-catalog/input/form-field';
   static const String rawKeyboardListener =
       '/widgets-catalog/input/raw-keyboard-listener';
@@ -250,8 +249,6 @@ class RoutePaths {
   static const String longPressDraggable =
       '/widgets-catalog/interactive/long_press_draggable';
   static const String scrollable = '/widgets-catalog/interactive/scrollable';
-  static const String heroInteractive =
-      '/widgets-catalog/interactive/hero/hero_interactive';
 
   // widget catalog layout widgets sub routes
   static const String align = '/widgets-catalog/layout/align';
@@ -292,8 +289,6 @@ class RoutePaths {
   static const String stack = '/widgets-catalog/layout/stack';
   static const String table = '/widgets-catalog/layout/table';
   static const String wrap = '/widgets-catalog/layout/wrap';
-  static const String cupertinoSliverNavigationLayoutBar =
-      '/widgets-catalog/layout/cupertino-sliver-navigation-bar';
   static const String customScrollView =
       '/widgets-catalog/layout/custom-scroll-view';
   static const String sliverAppBar = '/widgets-catalog/layout/sliver-app-bar';
@@ -318,8 +313,6 @@ class RoutePaths {
   static const String drawer = '/widgets-catalog/material/drawer';
   static const String materialApp = '/widgets-catalog/material/material-app';
   static const String scaffold = '/widgets-catalog/material/scaffold';
-  static const String sliverAppBarMaterial =
-      '/widgets-catalog/material/sliver-app-bar';
   static const String tabBar = '/widgets-catalog/material/tab-bar';
   static const String tabBarView = '/widgets-catalog/material/tab-bar-view';
   static const String tabPageSelector =
@@ -357,8 +350,6 @@ class RoutePaths {
       '/widgets-catalog/material/circular-progress-indicator';
   static const String dataTable = '/widgets-catalog/material/data-table';
   static const String gridViewMaterial = '/widgets-catalog/material/grid-view';
-  static const String iconMaterial = '/widgets-catalog/material/icon-material';
-  static const String imageMaterial = '/widgets-catalog/material/image';
   static const String linearProgressIndicator =
       '/widgets-catalog/material/linear-progress-indicator';
   static const String tooltip = '/widgets-catalog/material/tooltip';
@@ -386,14 +377,6 @@ class RoutePaths {
       '/widgets-catalog/painting-effects/transform';
 
   // widget catalog scrolling widgets sub routes
-  static const String customScrollViewScrolling =
-      '/widgets-catalog/scrolling/custom-scroll-view';
-  static const String draggableScrollableSheetScrolling =
-      '/widgets-catalog/scrolling/draggable-scrollable-sheet';
-  static const String gridViewScrolling =
-      '/widgets-catalog/scrolling/grid-view';
-  static const String listViewScrolling =
-      '/widgets-catalog/scrolling/list-view';
   static const String nestedScrollView =
       '/widgets-catalog/scrolling/nested-scroll-view';
   static const String notificationListener =
@@ -412,7 +395,6 @@ class RoutePaths {
       '/widgets-catalog/scrolling/single-child-scroll-view';
 
   // widget catalog styling widgets sub routes
-  static const String paddingStyling = '/widgets-catalog/styling/padding';
 
   // widget catalog text widgets sub routes
   static const String defaultTextStyle =
@@ -437,7 +419,7 @@ class RoutePaths {
   static const String textManipulation = '/ui-manipulation/text';
   static const String visibility = '/ui-manipulation/visibility';
   static const String hyperlinks = '/ui-manipulation/hyper-links';
-  static const String formUiManipulation = '/ui-manipulation/form';
+  static const String form = '/ui-manipulation/form';
   static const String responsiveAdaptiveUi =
       '/ui-manipulation/responsive-adaptive-ui';
 

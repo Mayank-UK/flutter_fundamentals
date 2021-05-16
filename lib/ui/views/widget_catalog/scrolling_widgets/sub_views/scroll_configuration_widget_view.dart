@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ScrollConfigurationWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ScrollConfiguration';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/scrolling/scroll_configuration_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,9 @@ class _ScrollConfigurationWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
+            TextBlockComponent(
+              'Content will be updated soon.',
+            ),
             Container(),
           ],
         ),

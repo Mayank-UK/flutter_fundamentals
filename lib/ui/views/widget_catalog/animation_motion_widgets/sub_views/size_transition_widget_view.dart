@@ -6,7 +6,8 @@ import '../../../../components/text_block_component.dart';
 
 class SizeTransitionWidgetView extends StatelessWidget {
   final String _appBarTitle = 'SizeTransition';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/animation_motion/size_transition_markdown.md';
 
   @override
   Widget build(BuildContext context) {

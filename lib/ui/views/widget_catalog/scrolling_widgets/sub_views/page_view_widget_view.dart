@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class PageViewWidgetView extends StatelessWidget {
   final String _appBarTitle = 'PageView';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/scrolling/page_view_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,8 @@ class PageViewWidgetView extends StatelessWidget {
 }
 
 class _PageViewWidgetImplementation extends StatelessWidget {
+  final PageController _controller = PageController(initialPage: 0);
+
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -26,8 +29,31 @@ class _PageViewWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"PageView" widget has named parameters like scrollDirection, controller, etc, which specify the widget\'s behavior.',
+            ),
+            Container(
+              height: 500,
+              color: Colors.white,
+              child: PageView(
+                scrollDirection: Axis.horizontal,
+                controller: _controller,
+                children: <Widget>[
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text('First Page'),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text('Second Page'),
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    child: Text('Third Page'),
+                  )
+                ],
+              ),
+            ),
           ],
         ),
       ],

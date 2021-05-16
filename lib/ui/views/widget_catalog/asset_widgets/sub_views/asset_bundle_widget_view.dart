@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class AssetBundleWidgetView extends StatelessWidget {
   final String _appBarTitle = 'AssetBundle';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/assets_icons_images/asset_bundle_markdown.md';
 
   @override
   Widget build(BuildContext context) {

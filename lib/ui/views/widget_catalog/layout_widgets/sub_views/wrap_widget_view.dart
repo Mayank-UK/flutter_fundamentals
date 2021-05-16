@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class WrapWidgetView extends StatelessWidget {
   final String _appBarTitle = 'Wrap';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/wrap_markdown.md';
 
   @override
   Widget build(BuildContext context) {

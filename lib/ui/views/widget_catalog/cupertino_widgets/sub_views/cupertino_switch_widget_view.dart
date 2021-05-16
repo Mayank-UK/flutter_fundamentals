@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class CupertinoSwitchWidgetView extends StatelessWidget {
   final String _appBarTitle = 'CupertinoSwitch';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/cupertino/cupertino_switch_markdown.md';
 
   @override
   Widget build(BuildContext context) {

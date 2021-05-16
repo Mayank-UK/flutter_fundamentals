@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class DragTargetWidgetView extends StatelessWidget {
   final String _appBarTitle = 'DragTarget';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/interactive/drag_target_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +38,9 @@ class __DragTargetWidgetImplementationState
           content: [
             TextBlockComponent(
               '"DragTarget" widget is used mostly with "Draggable" widget.',
+            ),
+            TextBlockComponent(
+              'It has named parameters like builder, onAccept, which specify it\'s behavior and layout.',
             ),
             Container(
               child: Row(

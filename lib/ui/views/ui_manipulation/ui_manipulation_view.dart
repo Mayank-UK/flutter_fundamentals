@@ -65,7 +65,7 @@ class UiManipulationView extends StatelessWidget {
     ListViewItem(
         title: 'Form',
         description: 'Mechanism to take user input.',
-        route: RoutePaths.formUiManipulation),
+        route: RoutePaths.form),
     ListViewItem(
         title: 'Responsive and adaptive layout',
         description: 'Make application display properly on various devices.',

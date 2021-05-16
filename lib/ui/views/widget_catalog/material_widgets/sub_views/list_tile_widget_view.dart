@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class ListTileWidgetView extends StatelessWidget {
   final String _appBarTitle = 'ListTile';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/list_tile_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -41,13 +42,13 @@ class _ListTileWidgetImplementation extends StatelessWidget {
                     color: Colors.red,
                     child: ListTile(
                       leading: FlutterLogo(),
-                      title: const Text('These ListTiles are expanded '),
+                      title: const Text('ListTile'),
                     ),
                   ),
                   Container(
                     child: ListTile(
                       trailing: FlutterLogo(),
-                      title: const Text('to fill the available space.'),
+                      title: const Text('ListTile'),
                     ),
                   ),
                 ],

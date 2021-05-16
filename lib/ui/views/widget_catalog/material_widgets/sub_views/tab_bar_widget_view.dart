@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class TabBarWidgetView extends StatelessWidget {
   final String _appBarTitle = 'TabBar';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/material/tab_bar_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,7 @@ class _TabBarWidgetImplementation extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      color: Colors.amber,
+                      color: Colors.white,
                       height: 200,
                       child: TabBarView(
                         children: [

@@ -59,7 +59,7 @@ class BestPracticesView extends StatelessWidget {
                   'Specify types for class members, avoid using var when possible.',
                 ),
                 TextBlockComponent(
-                  'Avoid using "new" keyword, it makes code look cluttered.',
+                  'Avoid using "new" and "this" keyword, it makes code look cluttered and verbose.',
                 ),
                 TextBlockComponent(
                   'Handle errors using custom error screens.',
@@ -89,6 +89,29 @@ class BestPracticesView extends StatelessWidget {
                 ),
                 TextBlockComponent(
                   'Variables, constants, parameters, and named parameters should be in lowerCamelCase.',
+                ),
+                TextBlockComponent(
+                  'Write every tappable method name staring with "onTap...", or refresh method as "onRefresh...", etc.',
+                ),
+                TextBlockComponent(
+                  'Write every class member name with an underscore "_" by default, which marks them as private.',
+                ),
+              ],
+            ),
+            SectionWrapperComponent(
+              title: 'Refactoring',
+              content: [
+                TextBlockComponent(
+                  'Refactor every page into a separate widget class. Put "SingleChildScrollView" as the root widget having "Column" as child widget and put page content inside "Column" widget.',
+                ),
+                TextBlockComponent(
+                  'Refactor a page into different sections using methods/functions to use in build method.',
+                ),
+                TextBlockComponent(
+                  'Separate the widgets in individual methods/functions including their wrappers which will be used to specify their margin/padding/position.',
+                ),
+                TextBlockComponent(
+                  'Put the lifecycle methods at top, then non widget methods, then widget methods and at last build method.',
                 ),
               ],
             ),

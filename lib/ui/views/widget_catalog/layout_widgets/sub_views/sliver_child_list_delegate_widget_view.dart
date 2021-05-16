@@ -6,7 +6,8 @@ import './../../../../components/text_block_component.dart';
 
 class SliverChildListDelegateWidgetView extends StatelessWidget {
   final String _appBarTitle = 'SliverChildListDelegate';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/widget_catalog/layout/sliver_child_list_delegate_markdown.md';
 
   @override
   Widget build(BuildContext context) {
@@ -26,8 +27,32 @@ class _SliverChildListDelegateWidgetImplementation extends StatelessWidget {
         SectionWrapperComponent(
           title: 'Simple use',
           content: [
-            TextBlockComponent(''),
-            Container(),
+            TextBlockComponent(
+              '"SliverChildListDelegate" delegates a list to the "SliverList" widget.',
+            ),
+            Container(
+              color: Colors.white,
+              height: 500,
+              padding: const EdgeInsets.all(8),
+              child: CustomScrollView(
+                slivers: <Widget>[
+                  SliverList(
+                    delegate: SliverChildListDelegate(
+                      List.generate(
+                        10,
+                        (index) {
+                          return Container(
+                            color: Colors.amber,
+                            height: 100,
+                            margin: const EdgeInsets.only(bottom: 4),
+                          );
+                        },
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ],
