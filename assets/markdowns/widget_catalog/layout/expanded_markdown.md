@@ -1,1 +1,6 @@
-    code will be updated soon
+    Expanded(
+        child: Container(
+            color: Colors.amber,
+            height: 100,
+        ),
+    ),

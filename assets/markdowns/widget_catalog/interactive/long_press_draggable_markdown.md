@@ -1,1 +1,26 @@
-    code will be updated soon
+    LongPressDraggable<int>(
+        data: 10,
+        child: Container(
+            alignment: Alignment.center,
+            color: Colors.amber,
+            height: 100.0,
+            padding: const EdgeInsets.all(8),
+            width: 100.0,
+            child: Text("Long press draggable"),
+        ),
+        feedback: Container(
+            color: Colors.deepOrange,
+            height: 100,
+            padding: const EdgeInsets.all(8),
+            width: 100,
+            child: Icon(Icons.directions_run),
+        ),
+        childWhenDragging: Container(
+            alignment: Alignment.center,
+            color: Colors.pinkAccent,
+            height: 100.0,
+            padding: const EdgeInsets.all(8),
+            width: 100.0,
+            child: Text("Child When Dragging"),
+        ),
+    ),

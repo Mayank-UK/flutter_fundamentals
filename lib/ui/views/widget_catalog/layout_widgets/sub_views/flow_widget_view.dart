@@ -108,8 +108,9 @@ class __FlowWidgetImplementationState extends State<_FlowWidgetImplementation>
 }
 
 class FlowMenuDelegate extends FlowDelegate {
-  FlowMenuDelegate({@required this.menuAnimation})
-      : super(repaint: menuAnimation);
+  FlowMenuDelegate({
+    @required this.menuAnimation,
+  }) : super(repaint: menuAnimation);
 
   final Animation<double> menuAnimation;
 

@@ -1,1 +1,7 @@
-    code will be updated soon
+    MaterialApp(
+        title: 'Flutter fundamentals',
+        home: Scaffold(
+            appBar: AppBar(),
+            body: Text('body'),
+        ),
+    );

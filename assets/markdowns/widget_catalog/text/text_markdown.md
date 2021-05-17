@@ -1,1 +1,6 @@
-    code will be updated soon
+    Text(
+        'Sample text',
+        style: TextStyle(
+            fontWeight: FontWeight.bold,
+        ),
+    ),

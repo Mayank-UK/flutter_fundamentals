@@ -1,1 +1,7 @@
-    code will be updated soon
+    ClipOval(
+        child: Container(
+            color: Colors.red,
+            height: 80,
+            width: 100,
+        ),
+    ),

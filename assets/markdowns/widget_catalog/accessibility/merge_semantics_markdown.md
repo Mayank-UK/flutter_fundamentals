@@ -1,1 +1,11 @@
-    code will be updated soon
+    MergeSemantics(
+        child: Row(
+            children: <Widget>[
+            Checkbox(
+                value: true,
+                onChanged: (bool value) {},
+            ),
+            const Text("Settings"),
+            ],
+        ),
+    ),

@@ -6,7 +6,8 @@ import '../../../components/section_wrapper_component_component.dart';
 
 class SupportingEnumsView extends StatelessWidget {
   final String _appBarTitle = 'Most used supporting enums';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/supporting_classes_enums/supporting_enums_markdown.md';
 
   @override
   Widget build(BuildContext context) {

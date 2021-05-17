@@ -20,9 +20,6 @@ class ListViewWidgetView extends StatelessWidget {
 }
 
 class _ListViewWidgetImplementation extends StatelessWidget {
-  final List<String> entries = <String>['A', 'B', 'C'];
-  final List<int> colorCodes = <int>[600, 500, 100];
-
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -37,16 +34,19 @@ class _ListViewWidgetImplementation extends StatelessWidget {
               '"ListView" widget has named parameter like shrinkWrap, itemCount, itemBuilder, which specify the building of list.',
             ),
             Container(
+              height: 500,
               child: ListView.builder(
                 shrinkWrap: true,
                 padding: const EdgeInsets.all(8),
-                itemCount: entries.length,
+                itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
+                    alignment: Alignment.center,
+                    color: Colors.amber,
                     height: 50,
-                    color: Colors.amber[colorCodes[index]],
+                    margin: const EdgeInsets.only(bottom: 4),
                     child: Center(
-                      child: Text('Entry ${entries[index]}'),
+                      child: Text('Entry $index'),
                     ),
                   );
                 },

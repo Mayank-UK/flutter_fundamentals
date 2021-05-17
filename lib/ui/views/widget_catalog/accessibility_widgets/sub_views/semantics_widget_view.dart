@@ -31,13 +31,13 @@ class _SemanticsWidgetImplementation extends StatelessWidget {
                 '"Semantics" widget has named parameters like image, label, etc, which provide it with semantics.'),
             Container(
               child: Semantics(
+                image: true,
+                label: 'profile picture',
                 child: Image(
                   height: 64,
                   width: 64,
                   image: AssetImage('assets/images/demo.jpeg'),
                 ),
-                image: true,
-                label: 'profile picture',
               ),
             ),
           ],

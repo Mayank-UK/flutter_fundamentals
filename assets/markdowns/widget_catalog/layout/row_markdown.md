@@ -1,1 +1,20 @@
-    code will be updated soon
+    Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+            Container(
+            color: Colors.red,
+            height: 100,
+            width: 100,
+            ),
+            Container(
+            color: Colors.red,
+            height: 100,
+            width: 100,
+            ),
+            Container(
+            color: Colors.red,
+            height: 100,
+            width: 100,
+            ),
+        ],
+    ),

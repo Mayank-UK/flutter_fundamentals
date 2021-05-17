@@ -45,6 +45,9 @@ class CustomMidStageListViewComponent extends StatelessWidget {
                   ],
                 ),
                 child: Container(
+                  constraints: BoxConstraints(
+                    minHeight: 140,
+                  ),
                   padding: EdgeInsets.all(DSSpacing.sm),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -55,7 +58,7 @@ class CustomMidStageListViewComponent extends StatelessWidget {
                       ),
                       Container(
                         margin: EdgeInsets.only(
-                          top: DSSpacing.xs,
+                          top: DSSpacing.sm,
                         ),
                         child: Text(
                           itemList[index].description,

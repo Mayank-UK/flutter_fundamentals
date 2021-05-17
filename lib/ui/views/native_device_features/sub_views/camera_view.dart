@@ -9,7 +9,8 @@ import './../../../components/text_block_component.dart';
 
 class CameraView extends StatelessWidget {
   final String _appBarTitle = 'Camera';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/native_device_features/camera_markdown.md';
 
   @override
   Widget build(BuildContext context) {

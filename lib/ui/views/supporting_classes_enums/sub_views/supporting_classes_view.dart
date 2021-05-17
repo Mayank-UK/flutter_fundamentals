@@ -6,7 +6,8 @@ import '../../../components/section_wrapper_component_component.dart';
 
 class SupportingClassesView extends StatelessWidget {
   final String _appBarTitle = 'Most used supporting classes';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/supporting_classes_enums/supporting_classes_markdown.md';
 
   @override
   Widget build(BuildContext context) {

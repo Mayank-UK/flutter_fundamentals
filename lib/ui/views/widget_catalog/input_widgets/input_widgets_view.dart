@@ -20,7 +20,7 @@ class InputWidgetsView extends StatelessWidget {
       route: RoutePaths.form,
     ),
     ListViewItem(
-      title: 'FormField',
+      title: 'TextFormField',
       description:
           'A single form field. This widget maintains the current state of the form field, so that updates and validation errors are visually reflected in the UI.',
       route: RoutePaths.formField,

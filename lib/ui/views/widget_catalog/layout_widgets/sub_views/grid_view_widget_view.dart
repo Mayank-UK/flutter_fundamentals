@@ -28,6 +28,9 @@ class _GridViewWidgetImplementation extends StatelessWidget {
           title: 'Simple use',
           content: [
             TextBlockComponent(
+              '"GridView" widget has many methods like "GridView.count", "GridView.builder", etc',
+            ),
+            TextBlockComponent(
               '"GridView" widget has named parameters like crossAxisCount, crossAxisSpacing, mainAxisSpacing, etc, which specify the grid.',
             ),
             Container(

@@ -1,1 +1,4 @@
-    code will be updated soon
+    Icon(
+        Icons.person,
+        size: 64,
+    ),

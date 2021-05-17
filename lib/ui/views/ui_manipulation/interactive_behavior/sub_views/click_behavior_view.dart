@@ -4,7 +4,7 @@ import '../../../../components/code_preview_component.dart';
 import '../../../../components/section_wrapper_component_component.dart';
 
 class ClickBehaviorView extends StatelessWidget {
-  final String _appBarTitle = 'Click behavior';
+  final String _appBarTitle = 'Click/tap behavior';
   final String _codeTabMarkdownLocation =
       'assets/markdowns/ui_manipulation/interactive_behaviours/click_behavior_markdown.md';
 
@@ -29,6 +29,25 @@ class _ClickBehaviorImplementation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Wrap(
       children: <Widget>[
+        SectionWrapperComponent(
+          title: 'Using "InkWell" widget',
+          content: [
+            Container(
+              child: Text(
+                  '"InkWell" widget can be used to attach a click event on any widget, it has a named parameter "onTap", which takes a function or method for executing when a click/tap is detected.'),
+            ),
+            InkWell(
+              onTap: () => onTap(context),
+              child: Container(
+                alignment: Alignment.center,
+                color: Colors.amber,
+                height: 50,
+                width: 50,
+                child: const Text('Click'),
+              ),
+            ),
+          ],
+        ),
         SectionWrapperComponent(
           title: 'Using "GestureDetector" widget',
           content: [

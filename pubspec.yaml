@@ -76,6 +76,12 @@ flutter:
         - assets/markdowns/widget_catalog/styling/
         - assets/markdowns/widget_catalog/text/
 
+        - assets/markdowns/native_device_features/
+
+        - assets/markdowns/rest_api/
+
+        - assets/markdowns/supporting_classes_enums/
+
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.dev/assets-and-images/#resolution-aware.
 

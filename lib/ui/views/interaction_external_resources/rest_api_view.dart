@@ -10,7 +10,8 @@ import '../../components/text_block_component.dart';
 
 class RestApiView extends StatelessWidget {
   final String _appBarTitle = 'Rest API interaction';
-  final String _codeTabMarkdownLocation = 'assets/markdowns/test.md';
+  final String _codeTabMarkdownLocation =
+      'assets/markdowns/rest_api/rest_api_markdown.md';
 
   @override
   Widget build(BuildContext context) {

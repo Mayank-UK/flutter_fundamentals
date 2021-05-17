@@ -1,1 +1,3 @@
-    code will be updated soon
+    LinearProgressIndicator(
+        semanticsLabel: 'Linear progress indicator',
+    ),

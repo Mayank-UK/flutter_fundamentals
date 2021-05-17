@@ -7,7 +7,7 @@ import '../../../../core/router/routes.dart';
 class InteractiveBehaviorView extends StatelessWidget {
   final List<ListViewItem> _itemList = [
     ListViewItem(
-      title: 'Click behavior',
+      title: 'Click/tap behavior',
       description: 'When a user clicks an element.',
       route: RoutePaths.clickBehavior,
     ),

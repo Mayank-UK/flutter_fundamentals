@@ -1,1 +1,3 @@
-    code will be updated soon
+    CircularProgressIndicator(
+        semanticsLabel: 'Circular progress indicator',
+    ),

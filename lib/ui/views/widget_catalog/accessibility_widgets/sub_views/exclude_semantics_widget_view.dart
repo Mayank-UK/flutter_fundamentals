@@ -31,6 +31,7 @@ class _ExcludeSemanticsWidgetImplementation extends StatelessWidget {
                 '"ExcludeSemantics" widget, which removes the semantics from it\'s child tree.'),
             Container(
               child: ExcludeSemantics(
+                excluding: true,
                 child: Image(
                   height: 64,
                   width: 64,
@@ -38,7 +39,6 @@ class _ExcludeSemanticsWidgetImplementation extends StatelessWidget {
                     'assets/images/demo.jpeg',
                   ),
                 ),
-                excluding: true,
               ),
             ),
           ],
