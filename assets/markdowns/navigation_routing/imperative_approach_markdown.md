@@ -53,3 +53,27 @@
 
     and many more (read about them in documentation)...
     
+## passing arguments b/w routing
+
+### create the class definition for argument
+    class VideoIndexArgument {
+        final int index;
+
+        VideoIndexArgument({this.index});
+    }
+
+### Pass the arguments to the named parameter "arguments" of "Navigator"
+    Navigator.of(context).pushNamed(
+        RoutePaths.SomeView(),
+        arguments: VideoIndexArgument(index: index),
+    );
+
+### Finally cast the arguments to the class definition and pass it the the view using it's named parameters
+    case RoutePaths.someView:
+        final args = settings.arguments as VideoIndexArgument;
+
+        return MaterialPageRoute(
+          builder: (_) => IndividualVideoItemView(
+            videoIndex: args.index,
+          ),
+        );

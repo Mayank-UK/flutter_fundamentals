@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../components/code_preview_component.dart';
 import '../../../components/section_wrapper_component_component.dart';
 import '../../../components/text_block_component.dart';
+import './../../../components/content_group_wrapper_component.dart';
 
 class ImperativeRoutingView extends StatelessWidget {
   final String _appBarTitle = 'Imperative routing';
@@ -67,7 +68,7 @@ class _ImperativeRoutingImplementation extends StatelessWidget {
           ],
         ),
         SectionWrapperComponent(
-          title: 'Using named navigator routes',
+          title: 'Using named routes',
           content: [
             TextBlockComponent(
               'Mobile apps often manage a large number of routes and it\'s often easiest to refer to them by name. Route names, by convention, use a path-like structure (for example, "/a/b/c"). The app\'s home page route is named "/" by default.',
@@ -75,6 +76,23 @@ class _ImperativeRoutingImplementation extends StatelessWidget {
             TextBlockComponent(
               'The MaterialApp uses onGenerateRoute callback to generate all routes.',
             ),
+            ContentGroupWrapperComponent(
+              title: 'Passing arguments between views',
+              content: [
+                TextBlockComponent(
+                  '1) Create a class whose object will be passed.',
+                ),
+                TextBlockComponent(
+                  '2) Pass the object to the named parameter "arguments" of "Navigator".',
+                ),
+                TextBlockComponent(
+                  '3) Access the passed arguments by casting the "settings.arguments" to the class definition inside "generateRoute".',
+                ),
+                TextBlockComponent(
+                  '4) Pass the arguments to the view using it\'s named parameters.',
+                ),
+              ],
+            )
           ],
         ),
         /* SectionWrapperComponent(
