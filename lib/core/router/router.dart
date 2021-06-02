@@ -303,6 +303,7 @@ import '../../ui/views/ui_manipulation/text/text_view.dart';
 import '../../ui/views/ui_manipulation/visibility/visibility_view.dart';
 import '../../ui/views/ui_manipulation/layout/layout_view.dart';
 import '../../ui/views/ui_manipulation/hyperlinks/hyperlinks_view.dart';
+import '../../ui/views/ui_manipulation/media/media_view.dart';
 import '../../ui/views/ui_manipulation/form/form_view.dart';
 import '../../ui/views/ui_manipulation/responsive_adaptive_ui/responsive_adaptive_layout_view.dart';
 
@@ -348,6 +349,10 @@ import '../../ui/views/ui_manipulation/spacing/sub_views/margin_view.dart';
 // ui manipulation visibility sub_views
 import '../../ui/views/ui_manipulation/visibility/sub_views/in_flow_view.dart';
 import '../../ui/views/ui_manipulation/visibility/sub_views/out_flow_view.dart';
+
+// ui manipulation media sub_views
+import '../../ui/views/ui_manipulation/media/sub_views/video_view.dart';
+import '../../ui/views/ui_manipulation/media/sub_views/audio_view.dart';
 
 // ui manipulation responsive and adaptive ui sub_views
 import '../../ui/views/ui_manipulation/responsive_adaptive_ui/sub_views/responsive_layout_view.dart';
@@ -1433,6 +1438,10 @@ class MyRouter {
         return MaterialPageRoute(
           builder: (_) => HyperlinksView(),
         );
+      case RoutePaths.media:
+        return MaterialPageRoute(
+          builder: (_) => MediaView(),
+        );
       case RoutePaths.responsiveAdaptiveUi:
         return MaterialPageRoute(
           builder: (_) => ResponsiveAdaptiveLayoutView(),
@@ -1526,6 +1535,16 @@ class MyRouter {
       case RoutePaths.outFlow:
         return MaterialPageRoute(
           builder: (_) => OutFlowView(),
+        );
+
+      // ui manipulation media
+      case RoutePaths.video:
+        return MaterialPageRoute(
+          builder: (_) => VideoView(),
+        );
+      case RoutePaths.audio:
+        return MaterialPageRoute(
+          builder: (_) => AudioView(),
         );
 
       // ui manipulation responsive adaptive ui

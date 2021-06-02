@@ -18,13 +18,44 @@ class FormView extends StatelessWidget {
   }
 }
 
-class _FormImplementation extends StatelessWidget {
+class _FormImplementation extends StatefulWidget {
+  const _FormImplementation({Key key}) : super(key: key);
+
+  @override
+  __FormImplementationState createState() => __FormImplementationState();
+}
+
+class __FormImplementationState extends State<_FormImplementation> {
   final _formKey = GlobalKey<FormState>();
 
-  void onSubmit(BuildContext context) {
+  TextEditingController _emailFieldController;
+  TextEditingController _passwordFieldController;
+
+  @override
+  void initState() {
+    super.initState();
+
+    _emailFieldController = TextEditingController();
+    _passwordFieldController = TextEditingController();
+  }
+
+  @override
+  void dispose() {
+    _emailFieldController.dispose();
+    _passwordFieldController.dispose();
+
+    super.dispose();
+  }
+
+  void _onSubmit() {
     if (_formKey.currentState.validate()) {
-      ScaffoldMessenger.of(context)
-          .showSnackBar(SnackBar(content: const Text('Processing Data')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            'email: ${this._emailFieldController.text} && password: ${this._passwordFieldController.text}',
+          ),
+        ),
+      );
     }
   }
 
@@ -62,10 +93,33 @@ class _FormImplementation extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   TextFormField(
-                    // The validator receives the text that the user has entered.
+                    controller: _emailFieldController,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      icon: const Icon(
+                        Icons.email,
+                      ),
+                      hintText: 'Email',
+                    ),
                     validator: (value) {
                       if (value == null || value.isEmpty) {
-                        return 'Please enter some text';
+                        return 'Please enter user id';
+                      }
+                      return null;
+                    },
+                  ),
+                  TextFormField(
+                    controller: _passwordFieldController,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      icon: const Icon(
+                        Icons.password,
+                      ),
+                      hintText: 'Password',
+                    ),
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return 'Please enter user id';
                       }
                       return null;
                     },
@@ -73,7 +127,7 @@ class _FormImplementation extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 16.0),
                     child: ElevatedButton(
-                      onPressed: () => onSubmit(context),
+                      onPressed: _onSubmit,
                       child: const Text('Submit'),
                     ),
                   ),

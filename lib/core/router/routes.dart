@@ -419,6 +419,7 @@ class RoutePaths {
   static const String textManipulation = '/ui-manipulation/text';
   static const String visibility = '/ui-manipulation/visibility';
   static const String hyperlinks = '/ui-manipulation/hyper-links';
+  static const String media = '/ui-manipulation/media';
   static const String form = '/ui-manipulation/form';
   static const String responsiveAdaptiveUi =
       '/ui-manipulation/responsive-adaptive-ui';
@@ -471,6 +472,10 @@ class RoutePaths {
   // ui manipulation visibility sub routes
   static const String inFlow = '/ui-manipulation/in-flow';
   static const String outFlow = '/ui-manipulation/out-flow';
+
+  // ui manipulation media sub routes
+  static const String video = '/ui-manipulation/media/video';
+  static const String audio = '/ui-manipulation/media/audio';
 
   // ui manipulation responsive and adaptive sub routes
   static const String responsiveUi =
