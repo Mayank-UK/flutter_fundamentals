@@ -91,6 +91,7 @@ class RoutePaths {
   static const String camera = '/native-device-features/camera';
   static const String location = '/native-device-features/location';
   static const String bluetooth = '/native-device-features/bluetooth';
+  static const String share = '/native-device-features/share';
 
   // widget catalog category widgets routes
   static const String accessibilityWidgets =

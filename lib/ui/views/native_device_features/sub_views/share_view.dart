@@ -1,26 +1,32 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_developers_guide/ui/components/text_block_component.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../components/code_preview_component.dart';
-import '../../../components/section_wrapper_component_component.dart';
 
-class HyperlinksView extends StatelessWidget {
-  final String _appBarTitle = 'Hyperlinks';
+import './../../../components/section_wrapper_component_component.dart';
+import './../../../components/text_block_component.dart';
+
+class ShareView extends StatelessWidget {
+  final String _appBarTitle = 'Share';
   final String _codeTabMarkdownLocation =
-      'assets/markdowns/ui_manipulation/hyperlinks_markdown.md';
+      'assets/markdowns/native_device_features/share_markdown.md';
 
   @override
   Widget build(BuildContext context) {
     return CodePreviewTabsComponent(
       appBarTitle: this._appBarTitle,
-      previewTab: _HyperlinksImplementation(),
+      previewTab: _ShareImplementation(),
       codeTabMarkdownLocation: this._codeTabMarkdownLocation,
     );
   }
 }
 
-class _HyperlinksImplementation extends StatelessWidget {
+class _ShareImplementation extends StatelessWidget {
+  void _onTapShare() {
+    Share.share('test string');
+  }
+
   void _onTapWhatsapp() async {
     String whatsappUrl = 'https://api.whatsapp.com/send?text=\'test string\'';
 
@@ -32,7 +38,25 @@ class _HyperlinksImplementation extends StatelessWidget {
     return Wrap(
       children: <Widget>[
         SectionWrapperComponent(
-          title: 'Using \'url_launcher\' package',
+          title: 'Using \'share_plus\' package',
+          content: [
+            TextBlockComponent(
+              'Just import the package and use \'Share.share(\'String\')\' method.',
+            ),
+            TextBlockComponent(
+              'In native app mode it will open the share menu, while in web mode it will open the gmail.',
+            ),
+            Container(
+              child: ElevatedButton(
+                onPressed: _onTapShare,
+                child: Text('Share'),
+              ),
+            ),
+          ],
+        ),
+        SectionWrapperComponent(
+          title:
+              'Using \'url_launcher\' package to share to particular app or url',
           content: [
             TextBlockComponent(
               'Just import the package and use \'launch(\'String\')\' function.',

@@ -26,6 +26,11 @@ class NativeDeviceFeaturesView extends StatelessWidget {
       description: 'Using the location and gps of the device.',
       route: RoutePaths.location,
     ),
+    ListViewItem(
+      title: 'Share',
+      description: 'Sharing data with other apps and websites.',
+      route: RoutePaths.share,
+    ),
   ];
 
   final String _appBarTitle = 'Native device features';

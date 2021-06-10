@@ -78,6 +78,7 @@ import '../../ui/views/native_device_features/sub_views/filesystem_view.dart';
 import '../../ui/views/native_device_features/sub_views/camera_view.dart';
 import '../../ui/views/native_device_features/sub_views/location_view.dart';
 import '../../ui/views/native_device_features/sub_views/bluetooth_view.dart';
+import '../../ui/views/native_device_features/sub_views/share_view.dart';
 
 // widget catalog main category
 import '../../ui/views/widget_catalog/accessibility_widgets/accessibility_widgets_view.dart';
@@ -611,6 +612,10 @@ class MyRouter {
       case RoutePaths.bluetooth:
         return MaterialPageRoute(
           builder: (_) => BluetoothView(),
+        );
+      case RoutePaths.share:
+        return MaterialPageRoute(
+          builder: (_) => ShareView(),
         );
 
       // widget catalog category widgets
